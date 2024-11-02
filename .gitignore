@@ -1,0 +1,16 @@
+# Logs
+*.log
+
+# Temporary Files
+*.tmp
+
+# MacOS
+.DS_Store
+
+# Python Files
+__pycache__/
+*.pyc
+.env
+
+# Slides
+Slides/

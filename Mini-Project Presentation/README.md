@@ -20,7 +20,9 @@ Erklären Sie das spezifische Problem, das Sie lösen möchten, und formulieren 
 Beschreiben Sie, wie Sie vorhaben, das Problem zu lösen:
 
 	1.Prompt-Design: Wie Sie das LLM anleiten, die relevanten Entitäten und Beziehungen zu extrahieren.
-	2.Evaluierung: Kurz erwähnen, dass Sie die Genauigkeit der generierten Triples überprüfen und eventuell mit bestehenden Ontologien (z. B. DBpedia) abgleichen werden.
+        2.Triplets formen in Form von RDF(Resource Description Framework) und auch erklären woras RDF eigentlicht besteht!
+	3.Evaluierung: Kurz erwähnen, dass Sie die Genauigkeit der generierten Triples überprüfen und eventuell mit bestehenden Ontologien (z. B. DBpedia) abgleichen werden.
+        
 
 	Alternative :
 	1. Forschen mehr zu Knowledge Graphen und LLM's.

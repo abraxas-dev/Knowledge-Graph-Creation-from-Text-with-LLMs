@@ -5,4 +5,6 @@ What kind of articles are we using? (Logically it should be something related to
 
 What will we use DBpedia or Wikidata? (Pros and cons of each one would be good)!
 
-(
+Do we use turtle?
+
+Promt design in Detail!

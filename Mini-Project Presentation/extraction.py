@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-import json
 
 # URL of the Wikipedia page
 url = "https://en.wikipedia.org/wiki/Internet"
@@ -27,27 +26,19 @@ if response.status_code == 200:
     # Extract all paragraphs in the article
     paragraphs = soup.find_all('p')
 
-    # Extract introduction and body paragraphs, clean content
-    introduction = paragraphs[0].get_text(strip=True).replace("\n", "") if paragraphs else ""
-    body = [
-        p.get_text(strip=True).replace("\n", "").encode().decode('unicode_escape')
-        for p in paragraphs[1:] if p.get_text(strip=True)
-    ]
+    # Combine paragraphs into a single text block
+    content = "\n\n".join(p.get_text() for p in paragraphs)
 
-    # Prepare the structured JSON
-    output_data = {
-        "title": title,
-        "context": "This JSON contains an article about the Internet. The information is derived from Wikipedia and has been cleaned to remove tables, references, newline characters, and encoded Unicode sequences.",
-        "article": {
-            "introduction": introduction.encode().decode('unicode_escape'),
-            "body": body
-        }
-    }
+    # Combine title and content into plain text
+    plain_text = f"Title: {title}\n\n{content}"
 
-    # Save the JSON to a file
-    with open("internet_article_llm_cleaned.json", "w") as f:
-        json.dump(output_data, f, indent=4)
+    # Save the plain text to a file
+    with open("internet_article_raw.txt", "w", encoding="utf-8") as f:
+        f.write(plain_text)
 
-    print("Data saved to internet_article_llm_cleaned.json")
+    # Calculate the length of the text
+    text_length = len(plain_text)
+    print(f"Data saved to internet_article_raw1.txt")
+    print(f"Length of the text: {text_length} characters")
 else:
     print("Failed to retrieve the webpage")

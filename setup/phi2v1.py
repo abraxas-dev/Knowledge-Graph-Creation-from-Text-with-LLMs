@@ -19,7 +19,6 @@ Most traditional communication media, including telephone, radio, television, pa
 
 messages = [
     {"role": "system", "content": "You are an AI assistant specialized in creating knowledge graphs."},
-    {"role": "user", "content": "Can you provide ways to eat combinations of bananas and dragonfruits?"},
     {"role": "user", "content": "Create a knowledge graph from the following text: 'The Earth is the third planet in the solar system. It orbits the Sun in an elliptical path and has a natural satellite, the Moon. The Earth supports life thanks to its atmosphere and the presence of water.'"},
     {
         "role": "assistant",

@@ -62,4 +62,4 @@ generation_args = {
 }
 output = pipe(formatted_messages, **generation_args)
 
-print(output[0]['generated_text'])
+print(output)

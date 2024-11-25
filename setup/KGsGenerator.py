@@ -5,11 +5,11 @@ import torch
 
 class KGsGeneratorWithPipeline:
 
-    def __init__(self, input_dir, output_dir, promt_template, pipe_type, model_name, max_chunk_length: int = 450, batch_size: int = 1):
+    def __init__(self, input_dir, output_dir, prompt_template, pipe_type, model_name, max_chunk_length: int = 450, batch_size: int = 1):
 
         self.input_dir = Path(input_dir)
         self.output_dir = Path(output_dir)
-        self.promt_template = promt_template
+        self.prompt_template = prompt_template
         self.pipe_type = pipe_type
         self.model_name = model_name
         self.max_chunk_length = max_chunk_length
@@ -26,7 +26,7 @@ class KGsGeneratorWithPipeline:
             self.pipe = pipeline(
                 self.pipe_type,
                 model = self.model_name,
-                device = 0 if torch.cuda.is_available() == "cuda" else -1,
+                device = "cuda" if torch.cuda.is_available() else "cpu",
                 model_kwargs = {
                     "torch_dtype": torch.bfloat16,
                     "low_cpu_mem_usage": True
@@ -36,28 +36,56 @@ class KGsGeneratorWithPipeline:
             print(f"Failed to initialize pipeline : {str(e)}")
             raise
 
-    def generate_promt(self, request):
+    def generate_prompt(self, request):
         try:
-            return self.basic_template + request
+            return self.prompt_template.format(text=request)
         except Exception as e:
             print(f"Failed to generate a promt : {str(e)}")
             raise
     
-    def generate_triples(self, file_path):
+    def generate_response(self, file_path):
         try:
             with open(file_path, "r") as f:
                 text = f.read()
-            request = self.generate_promt(text)
+            request = self.generate_prompt(text)
             response = self.pipe(request)
-            triples = response[0]['generated_text'].split("\n")
-            return [tuple(triple.split(",")) for triple in triples]
+            return response[0]['generated_text']
         
         except Exception as e:
-            print(f"Failed to generate triples : {str(e)}")
+            print(f"Failed to generate a response : {str(e)}")
             raise
 
+    def save_response(self, filename, response):
+        try:
+            output_file = self.output_dir / f"{filename}_response.txt"
+            with open(output_file, 'w', encoding='utf-8') as f:
+                f.write(response)
+            print(f"Response saved to: {output_file}")
+        except Exception as e:
+            print(f"Failed to save response: {str(e)}")
+            raise
+
+    def process_file(self, file_path):
+        try:
+            print(f"Processing file: {file_path}")
+            with open(file_path, 'r', encoding='utf-8') as f:
+                text = f.read()
+            response = self.generate_response(text)
+            self.save_response(file_path.stem, response)
+            print(f"Successfully processed {file_path}")
+            
+        except Exception as e:
+            print(f"Failed to process a file {file_path}: {str(e)}")
+
     def process(self):
-        pass
+        try:
+            txt_files = list(self.input_dir.glob("*.txt"))
+            for file_path in txt_files:
+                self.process_file(file_path)
+
+        except Exception as e:
+            print(f"Failed to process : {str(e)}")
+            raise
 
 def main():
 
@@ -67,9 +95,11 @@ def main():
     max_chunk_length = 123
     batch_size = 1
     pipe_type = "Type"
-    promt_template = ""
-    
-    generator = KGsGeneratorWithPipeline(input_dir, output_dir, promt_template, pipe_type, model_name, max_chunk_length, batch_size)
+    prompt_template = """
+    {text}
+    """
+
+    generator = KGsGeneratorWithPipeline(input_dir, output_dir, prompt_template, pipe_type, model_name, max_chunk_length, batch_size)
     generator.process()
 
 if __name__ == "__main__":

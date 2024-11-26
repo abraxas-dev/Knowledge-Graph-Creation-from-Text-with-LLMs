@@ -29,7 +29,7 @@ class KGsGeneratorWithPipeline:
                 device = "cuda" if torch.cuda.is_available() else "cpu",
                 model_kwargs = {
                     "torch_dtype": torch.bfloat16,
-                    "low_cpu_mem_usage": True
+                    "low_cpu_mem_usage": True,
                 }
             )
         except Exception as e:
@@ -43,12 +43,10 @@ class KGsGeneratorWithPipeline:
             print(f"Failed to generate a promt : {str(e)}")
             raise
     
-    def generate_response(self, file_path):
+    def generate_response(self, text):
         try:
-            with open(file_path, "r") as f:
-                text = f.read()
             request = self.generate_prompt(text)
-            response = self.pipe(request)
+            response = self.pipe(request, max_new_tokens=400)
             return response[0]['generated_text']
         
         except Exception as e:
@@ -89,13 +87,14 @@ class KGsGeneratorWithPipeline:
 
 def main():
 
-    input_dir = "Path"
-    output_dir = "Path"
-    model_name = "Name"
+    input_dir = ""
+    output_dir = ""
+    model_name = "microsoft/Phi-3.5-mini-instruct"
     max_chunk_length = 123
     batch_size = 1
-    pipe_type = "Type"
+    pipe_type = "text-generation"
     prompt_template = """
+    Generate Triples for the following text:
     {text}
     """
 

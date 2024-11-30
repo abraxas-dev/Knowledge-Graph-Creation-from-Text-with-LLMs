@@ -53,24 +53,39 @@ if response.status_code == 200:
     # Extract the article title
     title = soup.title.string.strip()
 
-    # Extract all paragraphs in the article
-    paragraphs = soup.find_all('p')
+    # Extract all headings and paragraphs in the article
+    sections = soup.find_all(['h2', 'h3', 'p'])
 
-    # Combine paragraphs into a single text block
-    content = "\n\n".join(p.get_text() for p in paragraphs)
+    # Directory to save text files
+    output_directory = "internet_article_sections"
+    if not os.path.exists(output_directory):
+        os.makedirs(output_directory)
 
-    # Combine title and content into plain text
-    plain_text = f"Title: {title}\n\n{content}"
+    current_section_title = "Introduction"
+    current_section_content = ""
 
-    # Prepare the JSON data in chunks without breaking sentences
-    json_data_chunks = text_to_json_chunks(title, plain_text, chunk_size=2000)
+    # Iterate through all sections to separate content under headings
+    for element in sections:
+        if element.name in ['h2', 'h3']:
+            # Save the previous section content to a text file
+            if current_section_content.strip():
+                section_filename = os.path.join(output_directory, f"{current_section_title}.txt")
+                with open(section_filename, "w", encoding="utf-8") as section_file:
+                    section_file.write(current_section_content.strip())
 
-    # Save all chunks to a single JSON file
-    output_file = "internet_article_chunks_combined.json"
-    with open(output_file, "w", encoding="utf-8") as json_file:
-        json.dump(json_data_chunks, json_file, ensure_ascii=False, indent=4)
+            # Update the section title and reset content
+            current_section_title = element.get_text().strip().replace("/", "-")
+            current_section_content = ""
+        elif element.name == 'p':
+            # Append paragraph content to the current section
+            current_section_content += element.get_text().strip() + "\n\n"
 
-    print(f"Data saved to {output_file}")
-    print(f"Length of the text: {len(plain_text)} characters")
+    # Save the last section content to a text file
+    if current_section_content.strip():
+        section_filename = os.path.join(output_directory, f"{current_section_title}.txt")
+        with open(section_filename, "w", encoding="utf-8") as section_file:
+            section_file.write(current_section_content.strip())
+
+    print(f"Sections saved to the directory: {output_directory}")
 else:
     print("Failed to retrieve the webpage")

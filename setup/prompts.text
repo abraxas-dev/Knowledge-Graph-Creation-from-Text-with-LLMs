@@ -1,0 +1,61 @@
+Model used is : microsoft/Phi-3.5-mini-instruct
+
+Sentence 1 : The most prominent component of the Internet model is the Internet Protocol (IP). IP enables internetworking and, in essence, establishes the Internet itself. Two versions of the Internet Protocol exist, IPv4 and IPv6.
+
+Prompt One Shot : Extract RDF triples from the following text. Each triple should be of the form (subject, predicate, object).
+
+    Example:
+    Text: "The Eiffel Tower is located in Paris, France, and was completed in 1889."
+    Output:
+    1. (Eiffel Tower, is located in, Paris)
+
+    Text to extract triples from:
+    {text}
+
+
+Result: # Answer:
+1. (Internet Protocol, is a component of, Internet model)
+2. (Internet Protocol, enables, internetworking)
+3. (Internet Protocol, establishes, Internet)
+4. (Internet Protocol, has versions, IPv4 and IPv6)
+
+Time needed : 150.15 seconds
+
+----------------------------------------
+
+Prompt Zero Shot: Extract RDF triples from the following text. Each triple should be of the form (subject, predicate, object).
+
+    Text to extract triples from:
+    {text}
+
+Result: Solution:
+
+    (The Internet Protocol, is a component of, the Internet model)
+    (The Internet Protocol, enables, internetworking)
+    (The Internet Protocol, establishes, the Internet)
+    (The Internet Protocol, exists in versions of, IPv4 and IPv6)
+Time needed 222.80 seconds
+
+----------------------------------------
+
+Prompt Few Shot : Extract RDF triples from the following text. Each triple should be of the form (subject, predicate, object).
+
+Example:
+Text: "The Eiffel Tower is located in Paris, France, and was completed in 1889."
+Output:
+1. (Eiffel Tower, is located in, Paris)
+2. (Paris, is in, France)
+3. (Eiffel Tower, was completed in, 1889)
+
+Text to extract triples from:
+{text}
+
+Result:     
+Output:
+1. (Internet model, has component, Internet Protocol)
+2. (Internet Protocol, enables, internetworking)
+3. (Internet Protocol, establishes, Internet)
+4. (Internet Protocol, has version, IPv4)
+5. (Internet Protocol, has version, IPv6)
+
+Time needed 138.26 seconds

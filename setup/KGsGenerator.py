@@ -66,11 +66,14 @@ class KGsGeneratorWithPipeline:
     def process_file(self, file_path):
         try:
             print(f"Processing file: {file_path}")
+            start_time = time.time()
             with open(file_path, 'r', encoding='utf-8') as f:
                 text = f.read()
             response = self.generate_response(text)
+            end_time = time.time()  # End time measurement
+            elapsed_time = end_time - start_time
             self.save_response(file_path.stem, response)
-            print(f"Successfully processed {file_path}")
+            print(f"Successfully processed {file_path} in {elapsed_time:.2f} seconds")
             
         except Exception as e:
             print(f"Failed to process a file {file_path}: {str(e)}")

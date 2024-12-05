@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import tqdm
 from transformers import pipeline
 import torch
 
@@ -81,6 +82,22 @@ class KGsGeneratorWithPipeline:
     def process(self):
         try:
             txt_files = list(self.input_dir.glob("*.txt"))
+            total_files = len(txt_files)
+
+            if total_files == 0:
+                print("No .txt files found in the input directory")
+                return
+
+            progress_bar = tqdm(
+                total=total_files,
+                desc="Summarizing emails",
+                unit="file",
+                bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]"
+            )
+
+            successful = 0
+            failed = 0
+
             for file_path in txt_files:
                 self.process_file(file_path)
 

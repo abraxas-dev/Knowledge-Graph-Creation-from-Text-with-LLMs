@@ -6,6 +6,8 @@ The project is part of the **Practical Course: Data Engineering**.
 ## Project Structure
 The project is divided into **four main components**, each addressing a key stage of the Knowledge Graph creation pipeline:
 
+![Logo](images/logo.png)
+
 ### 1. **Data Collection**
 - Identify and extract relevant Wikipedia articles (e.g., "Soup").
 - Preprocess and clean the text, removing unnecessary elements to ensure high-quality input data.

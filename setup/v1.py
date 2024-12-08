@@ -11,7 +11,7 @@ class KGsGeneratorWithModel:
     Processes text files and generates structured knowledge representations.
     """
 
-    def __init__(self, input_dir, output_dir, prompt_template, model_name, max_chunk_length: int = 450, batch_size: int = 1):
+    def __init__(self, input_dir, output_dir, system_message, prompt_template, model_name, max_chunk_length: int = 450, batch_size: int = 1):
         """
         Initialize the KG Generator with specified parameters.
         
@@ -25,6 +25,7 @@ class KGsGeneratorWithModel:
         """
         self.input_dir = Path(input_dir)
         self.output_dir = Path(output_dir)
+        self.system_message = system_message
         self.prompt_template = prompt_template
         self.model_name = model_name
         self.max_chunk_length = max_chunk_length
@@ -66,15 +67,18 @@ class KGsGeneratorWithModel:
 
     def generate_prompt(self, request):
         """
-        Format the input text using the prompt template.
+        Format the input text using system message and user prompt template.
         
         Args:
-            request: Input text to be formatted
+            text: Input text to be formatted
         Returns:
-            Formatted prompt string
+            Formatted prompt string with system message and user input
         """
         try:
-            return self.prompt_template.format(text=request)
+            formatted_prompt = f"""{self.system_message}
+
+            {self.prompt_template.format(text=request)}"""
+            return formatted_prompt
         except Exception as e:
             print(f"Failed to generate a prompt: {str(e)}")
             raise
@@ -192,13 +196,18 @@ def main():
     model_name = "microsoft/Phi-3.5-mini-instruct"  # Model to use
     max_chunk_length = 123  # Maximum length of text chunks
     batch_size = 1  # Number of chunks to process at once
+    system_message = """
+    You are a Knowledge Graph expert specialized in extracting structured information from text.
+    Your task is to analyze the given text and extract meaningful triples in the format:
+    <subject> <predicate> <object>
+    """
     prompt_template = """
     Generate Triples for the following text:
     {text}
     """
 
     # Initialize and run the generator
-    generator = KGsGeneratorWithModel(input_dir, output_dir, prompt_template, model_name, max_chunk_length, batch_size)
+    generator = KGsGeneratorWithModel(input_dir, output_dir, system_message, prompt_template, model_name, max_chunk_length, batch_size)
     generator.process()
 
 if __name__ == "__main__":

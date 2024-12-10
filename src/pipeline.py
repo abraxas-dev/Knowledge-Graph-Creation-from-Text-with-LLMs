@@ -14,7 +14,8 @@ class Pipeline:
         
         self.extractor = Extractor(
             raw_data_path=self.config["extractor"]["urls"],
-            processed_data_path=self.config["data_paths"]["processed_data_path"]
+            processed_data_path=self.config["data_paths"]["processed_data_path"],
+            chunk_size=self.config["extractor"]["chunk_size"]
         )
         self.triple_generator = TripleGenerator(
             api_key=self.config["llm"]["api_key"],
@@ -28,7 +29,7 @@ class Pipeline:
         )
 
     def run(self):
-        
+
         print("Pipeline execution started.")
         
         # Extraction

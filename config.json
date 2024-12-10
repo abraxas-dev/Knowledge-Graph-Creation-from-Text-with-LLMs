@@ -5,9 +5,9 @@
     },
     "extractor": {
       "urls": [
-        "https://en.wikipedia.org/wiki/Artificial_intelligence",
-        "https://en.wikipedia.org/wiki/Machine_learning"
-      ]
+        "https://en.wikipedia.org/wiki/Artificial_intelligence"
+      ],
+      "chunk_size": 1500
     },
     "llm": {
       "api_key": "your-llm-api-key-here", 

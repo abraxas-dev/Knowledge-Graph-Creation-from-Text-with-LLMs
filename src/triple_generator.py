@@ -100,7 +100,8 @@ class TripleGenerator:
             # Generate response
             outputs = self.model.generate(
                 **inputs,
-                max_new_tokens=400,
+                max_new_tokens=self.max_tokens,
+                temperature=self.temperature,
                 pad_token_id=self.tokenizer.eos_token_id
             )
             

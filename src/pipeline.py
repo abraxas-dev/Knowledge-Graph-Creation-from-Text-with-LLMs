@@ -35,8 +35,7 @@ class Pipeline:
         # Extraction
         print("Step 1: Extracting and preprocessing data...")
         self.extractor.preprocess()
-        processed_files = self.extractor.get_processed_files()
-        print(f"Processed files: {processed_files}")
+    
         
         # Triple Generation
         print("Step 2: Generating triples...")

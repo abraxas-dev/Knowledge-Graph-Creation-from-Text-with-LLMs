@@ -5,7 +5,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import time
 
-class KGsGeneratorWithModel:
+class TripleGenerator:
     """
     A class for generating Knowledge Graph triples from text using a language model.
     Processes text files and generates structured knowledge representations.
@@ -186,7 +186,7 @@ class KGsGeneratorWithModel:
             print(f"Failed to process : {str(e)}")
             raise
 
-def main():
+if __name__ == "__main__":
     """
     Main entry point of the script.
     Sets up configuration and runs the KG generation process.
@@ -207,8 +207,5 @@ def main():
     """
 
     # Initialize and run the generator
-    generator = KGsGeneratorWithModel(input_dir, output_dir, system_message, prompt_template, model_name, max_chunk_length, batch_size)
+    generator = TripleGenerator(input_dir, output_dir, system_message, prompt_template, model_name, max_chunk_length, batch_size)
     generator.process()
-
-if __name__ == "__main__":
-    main()

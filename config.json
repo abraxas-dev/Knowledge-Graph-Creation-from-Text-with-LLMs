@@ -1,0 +1,21 @@
+{
+    "data_paths": {
+      "processed_data_path": "data/processed/", 
+      "triples_path": "data/triples/"          
+    },
+    "extractor": {
+      "urls": [
+        "https://en.wikipedia.org/wiki/Artificial_intelligence",
+        "https://en.wikipedia.org/wiki/Machine_learning"
+      ]
+    },
+    "llm": {
+      "api_key": "your-llm-api-key-here", 
+      "model_name": "microsoft/Phi-3.5-mini-instruct", 
+      "system_message": "You are a Knowledge Graph expert specialized in extracting structured information from text. Your task is to analyze the given text and extract meaningful triples in the format: <subject> <predicate> <object>.", 
+      "prompt_message": "Generate Triples for the following text:\n{text}", 
+      "temperature": 0, 
+      "max_tokens": 400
+    }
+  }
+  

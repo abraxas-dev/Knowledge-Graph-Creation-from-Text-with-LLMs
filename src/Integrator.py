@@ -57,11 +57,12 @@ class Integrator:
 
         sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
         query = f"""
-        SELECT ?property ?propertyLabel WHERE {{
-            ?property wikibase:propertyType wikibase:WikibaseProperty;
-                     rdfs:label ?propertyLabel.
-            FILTER(LANG(?propertyLabel) = "{language}")
-            FILTER(CONTAINS(LCASE(?propertyLabel), LCASE("{predicate}")))
+        SELECT ?property ?propertyLabel
+        WHERE {{
+            ?property a wikibase:Property .
+            ?property rdfs:label ?propertyLabel .
+        FILTER(LANG(?propertyLabel) = "{language}")
+        FILTER(CONTAINS(?propertyLabel, "{predicate}"))
         }}
         LIMIT 1
         """

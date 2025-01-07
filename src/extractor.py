@@ -84,3 +84,14 @@ class Extractor:
 
             self.save_chunks_to_files(chunks, output_directory)
             print(f"Processed and saved content for {url} in {output_directory}")
+
+
+if __name__ == "__main__":
+    # Sample test configuration
+    test_urls = ["https://en.wikipedia.org/wiki/Artificial_intelligence"]
+    output_path = "test_processed_data"
+    chunk_size = 1500
+
+    # Create and run the extractor
+    extractor = Extractor(test_urls, output_path, chunk_size)
+    extractor.preprocess()

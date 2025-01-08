@@ -13,7 +13,7 @@ class Pipeline:
             self.config = json.load(file)
         
         self.extractor = Extractor(
-            raw_data_path=self.config["extractor"]["urls"],
+            urls=self.config["extractor"]["urls"],
             processed_data_path=self.config["data_paths"]["processed_data_path"],
             chunk_size=self.config["extractor"]["chunk_size"]
         )

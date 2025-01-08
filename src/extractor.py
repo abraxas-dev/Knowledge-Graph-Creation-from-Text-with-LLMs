@@ -4,96 +4,94 @@ from bs4 import BeautifulSoup
 import nltk
 from nltk.tokenize import sent_tokenize
 
-# Download punkt tokenizer
 nltk.download('punkt')
 
-# Function to fetch webpage content
-def fetch_webpage(url):
-    response = requests.get(url)
-    if response.status_code == 200:
-        return response.content
-    else:
-        raise Exception(f"Failed to retrieve the webpage: {response.status_code}")
 
-# Function to clean and parse HTML content
-def parse_and_clean_html(html_content):
-    soup = BeautifulSoup(html_content, 'lxml')
-    
-    # Remove all tables
-    for table in soup.find_all('table'):
-        table.decompose()
+class Extractor:
+    def __init__(self, urls, processed_data_path, chunk_size=1500):
+        self.urls = urls  # List of URLs from config
+        self.processed_data_path = processed_data_path
+        self.chunk_size = chunk_size
 
-    # Remove all references
-    for ref in soup.find_all('sup', {'class': 'reference'}):
-        ref.decompose()
-    
-    return soup
+        if not os.path.exists(processed_data_path):
+            os.makedirs(processed_data_path)
 
-# Function to split text into chunks
-def split_text_into_chunks(text, chunk_size=2000):
-    sentences = sent_tokenize(text)
-    chunks = []
-    current_chunk = ""
-    
-    for sentence in sentences:
-        if len(current_chunk) + len(sentence) + 1 <= chunk_size:
-            current_chunk += " " + sentence if current_chunk else sentence
-        else:
+    def fetch_webpage(self, url):
+        """Fetch webpage content."""
+        try:
+            response = requests.get(url)
+            response.raise_for_status()
+            return response.content
+        except requests.RequestException as e:
+            print(f"Failed to fetch URL {url}: {e}")
+            return None
+
+    def parse_and_clean_html(self, html_content):
+        """Clean and parse HTML content."""
+        soup = BeautifulSoup(html_content, 'lxml')
+
+        for table in soup.find_all('table'):
+            table.decompose()
+        for ref in soup.find_all('sup', {'class': 'reference'}):
+            ref.decompose()
+
+        return soup
+
+    def split_text_into_chunks(self, text):
+        """Split text into chunks."""
+        sentences = sent_tokenize(text)
+        chunks = []
+        current_chunk = ""
+
+        for sentence in sentences:
+            if len(current_chunk) + len(sentence) + 1 <= self.chunk_size:
+                current_chunk += " " + sentence if current_chunk else sentence
+            else:
+                chunks.append(current_chunk)
+                current_chunk = sentence
+
+        if current_chunk:
             chunks.append(current_chunk)
-            current_chunk = sentence
 
-    if current_chunk:
-        chunks.append(current_chunk)
-    
-    return chunks
+        return chunks
 
-# Function to save sections to files
-def save_sections_to_files(sections, output_directory):
-    if not os.path.exists(output_directory):
-        os.makedirs(output_directory)
+    def save_chunks_to_files(self, chunks, output_directory, base_name="chunk"):
+        """Save text chunks into files."""
+        for idx, chunk in enumerate(chunks):
+            filename = os.path.join(output_directory, f"{base_name}_{idx + 1}.txt")
+            with open(filename, "w", encoding="utf-8") as file:
+                file.write(chunk.strip())
 
-    for section_title, section_content in sections.items():
-        if section_content.strip():
-            section_filename = os.path.join(output_directory, f"{section_title}.txt")
-            with open(section_filename, "w", encoding="utf-8") as section_file:
-                section_file.write(section_content.strip())
+    def preprocess(self):
+        """Main method to process all URLs."""
+        for url in self.urls:
+            print(f"Processing URL: {url}")
 
-# Main function to extract and save content from a webpage
-def main(url, output_directory):
-    try:
-        html_content = fetch_webpage(url)
-        soup = parse_and_clean_html(html_content)
-        
-        # Extract the title
-        title = soup.title.string.strip()
+            html_content = self.fetch_webpage(url)
+            if not html_content:
+                continue
 
-        # Extract sections
-        elements = soup.find_all(['h2', 'h3', 'p'])
-        sections = {}
-        current_section_title = "Introduction"
-        current_section_content = ""
+            soup = self.parse_and_clean_html(html_content)
 
-        for element in elements:
-            if element.name in ['h2', 'h3']:
-                if current_section_content.strip():
-                    sections[current_section_title] = current_section_content
-                current_section_title = element.get_text().strip().replace("/", "-")
-                current_section_content = ""
-            elif element.name == 'p':
-                current_section_content += element.get_text().strip() + "\n\n"
-        
-        if current_section_content.strip():
-            sections[current_section_title] = current_section_content
+            # Extract plain text from cleaned HTML
+            text = " ".join([p.get_text() for p in soup.find_all('p')])
+            chunks = self.split_text_into_chunks(text)
 
-        # Save sections to files
-        save_sections_to_files(sections, output_directory)
-        print(f"Sections saved to the directory: {output_directory}")
+            # Use domain name as directory name
+            domain_name = url.split("//")[-1].split("/")[0]
+            output_directory = os.path.join(self.processed_data_path, domain_name)
+            os.makedirs(output_directory, exist_ok=True)
 
-    except Exception as e:
-        print(f"An error occurred: {e}")
+            self.save_chunks_to_files(chunks, output_directory)
+            print(f"Processed and saved content for {url} in {output_directory}")
 
-# Run the script
+
 if __name__ == "__main__":
-    URL = "https://en.wikipedia.org/wiki/Internet"
-    OUTPUT_DIRECTORY = "internet_article_sections"
-    main(URL, OUTPUT_DIRECTORY)
+    # Sample test configuration
+    test_urls = ["https://en.wikipedia.org/wiki/Artificial_intelligence"]
+    output_path = "test_processed_data"
+    chunk_size = 1500
+
+    # Create and run the extractor
+    extractor = Extractor(test_urls, output_path, chunk_size)
+    extractor.preprocess()

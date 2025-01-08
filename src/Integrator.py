@@ -1,11 +1,12 @@
 import json
 from rdflib import Graph, Namespace, URIRef, Literal
 from rdflib.namespace import RDF, RDFS, XSD
-from typing import List, Tuple, Dict
+from typing import List, Tuple, Dict, Union
 import requests
 from SPARQLWrapper import SPARQLWrapper, JSON
 from time import sleep
 from urllib.parse import quote
+from sentence_transformers import SentenceTransformer, util
 
 class Integrator:
     def __init__(self):
@@ -17,6 +18,62 @@ class Integrator:
         
         self.entity_cache = {}
         self.property_cache = {}
+
+        self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        self.properties = {}
+    
+    def load_wikidata_properties(self) -> Dict[str, Dict[str, Union[str, float, List[str]]]]:
+        """
+        Lädt alle Wikidata-Properties mit Labels, Beschreibungen, Aliassen und generiert Embeddings
+        !!! Es funktioniert zurzeit nicht ganz !
+        """
+        sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
+        sparql.addCustomHttpHeader('User-Agent', 'Bot/1.0')
+        query = """
+        SELECT ?property ?propertyLabel ?propertyDescription ?altLabel
+        WHERE {
+        ?property a wikibase:Property .
+        SERVICE wikibase:label { 
+        bd:serviceParam wikibase:language "en" .
+        ?property rdfs:label ?propertyLabel .
+        }
+        OPTIONAL { ?property skos:altLabel ?altLabel . FILTER(LANG(?altLabel) = "en") }
+        }
+        LIMIT 50
+        """
+        
+        sparql.setQuery(query)
+        sparql.setReturnFormat(JSON)
+        sparql.setTimeout(15)
+        try:
+            results = sparql.query().convert()
+            for result in results["results"]["bindings"]:
+                prop_id = result["property"]["value"].split("/")[-1]
+                label = result["propertyLabel"]["value"]
+                description = result.get("propertyDescription", {}).get("value", "")
+                alt_label = result.get("altLabel", {}).get("value", "")
+
+                combined_text = f"{label} {description} {alt_label}".strip()
+                print(combined_text)
+                embedding = self.embedding_model.encode(combined_text) if combined_text else None
+
+            
+                if prop_id not in self.properties:
+                    self.properties[prop_id] = {
+                        "label": label,
+                        "description": description,
+                        "also_known_as": [],
+                        "embedding": embedding
+                    }
+
+                
+                if alt_label:
+                    self.properties[prop_id]["also_known_as"].append(alt_label)
+
+            print(f"Loaded {len(self.properties)} properties with embeddings")
+        except Exception as e:
+            print(f"Error loading properties: {e}")
+
 
     def query_wikidata_entity(self, label: str, language: str = "en") -> str:
         """
@@ -155,6 +212,8 @@ if __name__ == "__main__":
     ]
     
     pipeline = Integrator()
+    #pipeline.load_wikidata_properties()
+
     pipeline.process_triples(example_triples)
     
     stats = pipeline.get_statistics()

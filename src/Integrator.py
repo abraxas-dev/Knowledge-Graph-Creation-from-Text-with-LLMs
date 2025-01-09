@@ -7,6 +7,8 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from time import sleep
 from urllib.parse import quote
 from sentence_transformers import SentenceTransformer, util
+import numpy as np
+import pandas as pd
 
 class Integrator:
     def __init__(self):
@@ -22,7 +24,7 @@ class Integrator:
         self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
         self.properties = {}
     
-    def load_wikidata_properties(self) -> Dict[str, Dict[str, Union[str, float, List[str]]]]:
+    def load_wikidata_properties(self, output_file="wikidata-properties.json") -> Dict[str, Dict[str, Union[str, float, List[str]]]]:
         """
         Lädt alle Wikidata-Properties mit Labels, Beschreibungen, Aliassen und generiert Embeddings
         !!! Es funktioniert zurzeit nicht ganz !
@@ -37,6 +39,7 @@ class Integrator:
         bd:serviceParam wikibase:language "en" .
         ?property rdfs:label ?propertyLabel .
         }
+        OPTIONAL { ?property schema:description ?propertyDescription . FILTER(LANG(?propertyDescription) = "en") }
         OPTIONAL { ?property skos:altLabel ?altLabel . FILTER(LANG(?altLabel) = "en") }
         }
         LIMIT 50
@@ -44,7 +47,9 @@ class Integrator:
         
         sparql.setQuery(query)
         sparql.setReturnFormat(JSON)
-        sparql.setTimeout(15)
+        sparql.setTimeout(60)
+        properties = {}
+
         try:
             results = sparql.query().convert()
             for result in results["results"]["bindings"]:
@@ -53,27 +58,65 @@ class Integrator:
                 description = result.get("propertyDescription", {}).get("value", "")
                 alt_label = result.get("altLabel", {}).get("value", "")
 
-                combined_text = f"{label} {description} {alt_label}".strip()
-                print(combined_text)
-                embedding = self.embedding_model.encode(combined_text) if combined_text else None
-
-            
-                if prop_id not in self.properties:
-                    self.properties[prop_id] = {
+                if prop_id not in properties:
+                    properties[prop_id] = {
                         "label": label,
                         "description": description,
-                        "also_known_as": [],
-                        "embedding": embedding
+                        "aliases": [],
+                        "embeddings": []
                     }
-
                 
+                # Füge Alias hinzu
                 if alt_label:
-                    self.properties[prop_id]["also_known_as"].append(alt_label)
+                    properties[prop_id]["aliases"].append(alt_label)
+                    alias_embedding = self.embedding_model.encode(alt_label)
+                    properties[prop_id]["embeddings"].append(alias_embedding.tolist())  # Konvertiere zu JSON-kompatibel
+                
+                # Berechne Embedding für die Description, falls vorhanden
+                if description:
+                    description_embedding = self.embedding_model.encode(description)
+                    properties[prop_id]["embeddings"].append(description_embedding.tolist())  # Konvertiere zu JSON-kompatibel
 
-            print(f"Loaded {len(self.properties)} properties with embeddings")
+            # Berechne Mean Embedding für jede Property
+            for prop_id, prop_data in properties.items():
+                if prop_data["embeddings"]:
+                    mean_embedding = np.mean(prop_data["embeddings"], axis=0).tolist()
+                else:
+                    mean_embedding = self.embedding_model.encode(prop_data["label"]).tolist()
+                properties[prop_id]["mean_embedding"] = mean_embedding
+            
+            for prop_id, prop_data in properties.items():
+                for key, value in prop_data.items():
+                    if isinstance(value, np.ndarray):
+                        print(f"Found ndarray in {prop_id}: {key}")  # Debugging
+
+            with open(output_file, "w") as file:
+                json.dump(properties, file, indent=4)
+            print(f"Properties saved to {output_file}")
+        
         except Exception as e:
-            print(f"Error loading properties: {e}")
+            print(f"Error fetching properties: {e}")
 
+    def load_embeddings(file_path="wikidata_properties.json"):
+        """
+        Lädt die gespeicherten Embeddings aus einer Datei und speichert sie in einem Dictionary.
+        """
+        try:
+            with open(file_path, "r") as file:
+                properties = json.load(file)
+            
+            embedding_dict = {
+                prop_id: {
+                    "label": prop_data["label"],
+                    "embedding": prop_data["mean_embedding"]
+                }
+                for prop_id, prop_data in properties.items()
+            }
+            print(f"Loaded {len(embedding_dict)} properties from {file_path}")
+            return embedding_dict
+        except Exception as e:
+            print(f"Error loading embeddings: {e}")
+            return {}
 
     def query_wikidata_entity(self, label: str, language: str = "en") -> str:
         """
@@ -212,11 +255,11 @@ if __name__ == "__main__":
     ]
     
     pipeline = Integrator()
-    #pipeline.load_wikidata_properties()
+    pipeline.load_wikidata_properties()
 
-    pipeline.process_triples(example_triples)
+    #pipeline.process_triples(example_triples)
     
-    stats = pipeline.get_statistics()
-    print("Statistiken:", json.dumps(stats, indent=2))
+    #stats = pipeline.get_statistics()
+    #print("Statistiken:", json.dumps(stats, indent=2))
     
-    pipeline.save_graph("wikidata_knowledge_graph.ttl")
+    #pipeline.save_graph("wikidata_knowledge_graph.ttl")

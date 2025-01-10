@@ -9,6 +9,7 @@ from urllib.parse import quote
 from sentence_transformers import SentenceTransformer, util
 import numpy as np
 import pandas as pd
+import os 
 
 class Integrator:
     def __init__(self):
@@ -53,7 +54,6 @@ class Integrator:
             ?property rdfs:label ?propertyLabel .
           }
         }
-        LIMIT 50
         """
         
         sparql.setQuery(query)
@@ -98,6 +98,36 @@ class Integrator:
         except Exception as e:
             print(f"Error loading embeddings: {e}")
             return {}
+        
+    def find_best_match(self, predicate: str, file_path="wikidata-properties.json"):
+        """
+        Berechnet den Best-Match für ein Prädikat basierend auf der Kosinus-Ähnlichkeit.
+        """
+        
+        if not self.properties:
+            print("No properties loaded. Please ensure the file exists or run 'load_wikidata_properties' first.")
+            return None
+        
+        # Berechne das Embedding für das gesuchte Prädikat
+        predicate_embedding = self.embedding_model.encode(predicate)
+
+        best_match = None
+        highest_similarity = -1
+
+        # Vergleiche mit allen gespeicherten Properties
+        for prop_id, prop_data in self.properties.items():
+            stored_embedding = prop_data["embedding"]
+            similarity = util.cos_sim(predicate_embedding, stored_embedding).item()
+            
+            if similarity > highest_similarity:
+                highest_similarity = similarity
+                best_match = {
+                    "property_id": prop_id,
+                    "label": prop_data["label"],
+                    "similarity": highest_similarity
+                }
+        
+        return best_match
 
     def query_wikidata_entity(self, label: str, language: str = "en") -> str:
         """
@@ -129,38 +159,27 @@ class Integrator:
             print(f"Fehler beim Suchen der Entität {label}: {e}")
             return None
 
-    def query_wikidata_property(self, predicate: str, language: str = "en") -> str:
+    def query_wikidata_property(self, predicate: str, file_path: str = "wikidata-properties.json",language: str = "en") -> str:
         """
-        Sucht nach einer Wikidata-Property basierend auf einem Prädikat
+        Überprüft, ob die Datei mit den Properties existiert. Wenn ja, lädt sie die Properties
+        und führt die Best-Match-Methode aus. Falls nicht, ruft sie 'load_wikidata_properties' auf.
         """
-        if predicate in self.property_cache:
-            return self.property_cache[predicate]
+        if not os.path.exists(file_path):
+            print(f"File '{file_path}' not found. Generating properties...")
+            self.load_wikidata_properties(output_file=file_path)
 
-        sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
-        query = f"""
-        SELECT ?property ?propertyLabel
-        WHERE {{
-            ?property a wikibase:Property .
-            ?property rdfs:label ?propertyLabel .
-        FILTER(LANG(?propertyLabel) = "{language}")
-        FILTER(CONTAINS(?propertyLabel, "{predicate}"))
-        }}
-        LIMIT 1
-        """
-        
-        try:
-            sparql.setQuery(query)
-            sparql.setReturnFormat(JSON)
-            results = sparql.query().convert()
-            
-            if results["results"]["bindings"]:
-                property_id = results["results"]["bindings"][0]["property"]["value"].split("/")[-1]
-                self.property_cache[predicate] = property_id
-                return property_id
-            return None
-        except Exception as e:
-            print(f"Fehler beim Suchen der Property {predicate}: {e}")
-            return None
+        # Lade die Properties und führe die Best-Match-Methode aus
+        self.load_embeddings(file_path=file_path)
+        best_match = self.find_best_match(predicate)
+
+        if best_match:
+            print(f"Best Match for '{predicate}':")
+            print(f"Property ID: {best_match['property_id']}")
+            print(f"Label: {best_match['label']}")
+            print(f"Similarity: {best_match['similarity']:.4f}")
+            return best_match["property_id"]
+        else:
+            print(f"No match found for predicate '{predicate}'.")
 
     def process_triple(self, triple: Tuple[str, str, str]) -> None:
         """
@@ -236,11 +255,11 @@ if __name__ == "__main__":
     ]
     
     pipeline = Integrator()
-    #pipeline.load_wikidata_properties()
-    pipeline.load_embeddings()
-    #pipeline.process_triples(example_triples)
+    pipeline.load_wikidata_properties()
+    #pipeline.load_embeddings()
+    pipeline.process_triples(example_triples)
     
-    #stats = pipeline.get_statistics()
-    #print("Statistiken:", json.dumps(stats, indent=2))
+    stats = pipeline.get_statistics()
+    print("Statistiken:", json.dumps(stats, indent=2))
     
-    #pipeline.save_graph("wikidata_knowledge_graph.ttl")
+    pipeline.save_graph("wikidata_knowledge_graph.ttl")

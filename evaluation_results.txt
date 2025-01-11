@@ -1,0 +1,15 @@
+Exact Matching Metrics:
+  Precision: 0.4000
+  Recall: 0.6667
+  F1: 0.5000
+
+Relaxed Matching Metrics:
+  Precision: 0.6000
+  Recall: 0.7500
+  F1: 0.6667
+
+ROUGE Metrics:
+  ROUGE-1: 0.8929
+  ROUGE-2: 0.7077
+  ROUGE-L: 0.8929
+

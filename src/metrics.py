@@ -1,88 +1,115 @@
+import re
 from sklearn.metrics import precision_score, recall_score, f1_score
 from rouge import Rouge
-import re
 
-# Normalize triples (basic preprocessing for comparison)
-def normalize_text(text):
-    return re.sub(r"[^\w\s]", "", text.lower().strip())
+class TripleEvaluator:
+    def __init__(self, generated_triples, ground_truth_triples):
+        # Initialize the triples and normalize them
+        self.generated_triples = list(map(self.normalize_triple, generated_triples))
+        self.ground_truth_triples = list(map(self.normalize_triple, ground_truth_triples))
+        self.results = {}
 
-def normalize_triple(triple):
-    return tuple(map(normalize_text, triple))
+    @staticmethod
+    def normalize_text(text):
+        """Normalize text by converting to lowercase and removing special characters."""
+        return re.sub(r"[^\w\s]", "", text.lower().strip())
 
-# Exact match comparison
-def exact_match(generated, ground_truth):
-    generated = set(map(normalize_triple, generated))
-    ground_truth = set(map(normalize_triple, ground_truth))
-    tp = len(generated & ground_truth)
-    fp = len(generated - ground_truth)
-    fn = len(ground_truth - generated)
-    precision = tp / (tp + fp) if (tp + fp) > 0 else 0
-    recall = tp / (tp + fn) if (tp + fn) > 0 else 0
-    f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
-    return {"Precision": precision, "Recall": recall, "F1": f1}
+    @staticmethod
+    def normalize_triple(triple):
+        """Normalize each element of the triple."""
+        return tuple(map(TripleEvaluator.normalize_text, triple))
 
-# Relaxed comparison (substring or partial match)
-def relaxed_match(generated, ground_truth):
+    @staticmethod
     def relaxed_compare(el1, el2):
+        """Check if one element is a substring of the other."""
         return el1 in el2 or el2 in el1
-    
-    def triple_relaxed_equal(tr1, tr2):
-        return all(relaxed_compare(e1, e2) for e1, e2 in zip(tr1, tr2))
 
-    tp = sum(
-        1 for g in generated
-        for gt in ground_truth if triple_relaxed_equal(g, gt)
-    )
-    fp = len(generated) - tp
-    fn = len(ground_truth) - tp
-    precision = tp / (tp + fp) if (tp + fp) > 0 else 0
-    recall = tp / (tp + fn) if (tp + fn) > 0 else 0
-    f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
-    return {"Precision": precision, "Recall": recall, "F1": f1}
+    @staticmethod
+    def relaxed_triple_match(triple1, triple2):
+        """Check if two triples match using relaxed criteria."""
+        return all(TripleEvaluator.relaxed_compare(e1, e2) for e1, e2 in zip(triple1, triple2))
 
-# ROUGE metrics for triples
-def rouge_evaluation(generated, ground_truth):
-    rouge = Rouge()
-    gen_text = " ".join([" ".join(triple) for triple in generated])
-    gt_text = " ".join([" ".join(triple) for triple in ground_truth])
-    scores = rouge.get_scores(gen_text, gt_text, avg=True)
-    return {
-        "ROUGE-1": scores["rouge-1"]["f"],
-        "ROUGE-2": scores["rouge-2"]["f"],
-        "ROUGE-L": scores["rouge-l"]["f"],
-    }
+    def exact_y_true(self):
+        """Check if generated triples exactly match ground truth triples."""
+        return [1 if triple in self.ground_truth_triples else 0 for triple in self.generated_triples]
 
-# Combined metrics function
-def evaluate_triples(generated, ground_truth):
-    normalized_gen = list(map(normalize_triple, generated))
-    normalized_gt = list(map(normalize_triple, ground_truth))
+    def relaxed_y_true(self):
+        """Check if generated triples match ground truth triples under relaxed criteria."""
+        return [
+            1 if any(self.relaxed_triple_match(g, gt) for gt in self.ground_truth_triples) else 0
+            for g in self.generated_triples
+        ]
 
-    exact = exact_match(normalized_gen, normalized_gt)
-    relaxed = relaxed_match(normalized_gen, normalized_gt)
-    rouge = rouge_evaluation(normalized_gen, normalized_gt)
+    @staticmethod
+    def evaluate_metrics(y_true, y_pred):
+        """Compute precision, recall, and F1 score."""
+        precision = precision_score(y_true, y_pred)
+        recall = recall_score(y_true, y_pred)
+        f1 = f1_score(y_true, y_pred)
+        return {"Precision": precision, "Recall": recall, "F1": f1}
 
-    return {
-        "Exact Match Metrics": exact,
-        "Relaxed Match Metrics": relaxed,
-        "ROUGE Metrics": rouge,
-    }
+    def rouge_evaluation(self):
+        """Compute ROUGE metrics."""
+        rouge = Rouge()
+        gen_text = " ".join([" ".join(triple) for triple in self.generated_triples])
+        gt_text = " ".join([" ".join(triple) for triple in self.ground_truth_triples])
+        scores = rouge.get_scores(gen_text, gt_text, avg=True)
+        return {
+            "ROUGE-1": scores["rouge-1"]["f"],
+            "ROUGE-2": scores["rouge-2"]["f"],
+            "ROUGE-L": scores["rouge-l"]["f"],
+        }
 
-# Example Triples
-generated_triples = [
-    ("Barack Obama", "was born in", "Hawaii"),
-    ("Python", "is a", "programming language"),
-]
+    def evaluate(self):
+        """Evaluate exact, relaxed, and ROUGE metrics."""
+        y_pred = [1] * len(self.generated_triples)
 
-ground_truth_triples = [
-    ("Barack Obama", "born in", "Hawaii"),
-    ("Python", "is a", "language"),
-]
+        # Exact matching
+        y_true_exact = self.exact_y_true()
+        self.results["Exact Matching Metrics"] = self.evaluate_metrics(y_true_exact, y_pred)
 
-# Evaluate
-results = evaluate_triples(generated_triples, ground_truth_triples)
+        # Relaxed matching
+        y_true_relaxed = self.relaxed_y_true()
+        self.results["Relaxed Matching Metrics"] = self.evaluate_metrics(y_true_relaxed, y_pred)
 
-# Print Results
-for metric, values in results.items():
-    print(f"{metric}:")
-    for key, value in values.items():
-        print(f"  {key}: {value:.4f}")
+        # ROUGE evaluation
+        self.results["ROUGE Metrics"] = self.rouge_evaluation()
+
+        return self.results
+
+    def write_results_to_file(self, filename):
+        """Write evaluation results to an external file."""
+        with open(filename, "w") as f:
+            for match_type, metrics in self.results.items():
+                f.write(f"{match_type}:\n")
+                for metric, value in metrics.items():
+                    f.write(f"  {metric}: {value:.4f}\n")
+                f.write("\n")
+
+# Main execution
+if __name__ == "__main__":
+    # Example triples
+    generated_triples = [
+        ("Barack Obama", "was born in", "Hawaii"),
+        ("Python", "is a", "programming language"),
+    ]
+
+    ground_truth_triples = [
+        ("Barack Obama", "born in", "Hawaii"),
+        ("Python", "is a", "language"),
+    ]
+
+    # Initialize the evaluator
+    evaluator = TripleEvaluator(generated_triples, ground_truth_triples)
+
+    # Perform evaluation
+    results = evaluator.evaluate()
+
+    # Print results
+    for match_type, metrics in results.items():
+        print(f"{match_type}:")
+        for metric, value in metrics.items():
+            print(f"  {metric}: {value:.4f}")
+
+    # Write results to a file
+    evaluator.write_results_to_file("evaluation_results.txt")

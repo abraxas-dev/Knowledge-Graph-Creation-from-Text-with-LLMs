@@ -105,21 +105,33 @@ class TripleEvaluator:
 if __name__ == "__main__":
     # Example triples
     generated_triples = [
-        ("Elon Musk", "founded", "SpaceX"),
-        ("Python", "is popular ", "data science"),
-        ("The Eiffel Tower", "is located in", "Paris"),
-        ("Leonardo da Vinci", "painted", "the Mona Lisa"),
-        ("Albert Einstein", "developed", "the theory of relativity")
+    ("Isaac Newton", "formulated", "laws of motion"),
+    ("Isaac Newton", "discovered", "gravity"),
+    ("Marie Curie", "conducted pioneering research on", "radioactivity"),
+    ("Marie Curie", "won", "two Nobel Prizes"),
+    ("Eiffel Tower", "located in", "Paris"),
+    ("Eiffel Tower", "completed in", "1889"),
+    ("Barack Obama", "was the president of", "United States"),
+    ("Obama", "born in", "Hawaii"),
+    ("Python", "used for", "AI"),
+    ("Python", "popular in", "data science")
     ]
 
     ground_truth_triples = [
-        ("Elon Musk", "founded", "SpaceX"),
-        ("Python", "is popular in", "data science"),
-        ("The Eiffel Tower", "is in", "Paris"),
-        ("Leonardo da Vinci", "is the artist of", "the Mona Lisa"),
-        ("Obama", "born in", "KNP"),
-        ("Albert Einstein", "developed", "the theory of relativity")
-    ]
+    ("Isaac Newton", "formulated", "laws of motion"),
+    ("Isaac Newton", "discovered", "gravity"),
+    ("Marie Curie", "conducted research on", "radioactivity"),
+    ("Marie Curie", "won", "two Nobel Prizes"),
+    ("The Eiffel Tower", "is located in", "Paris"),
+    ("The Eiffel Tower", "was completed in", "1889"),
+    ("Barack Obama", "served as", "44th president of the United States"),
+    ("Barack Obama", "was born in", "Hawaii"),
+    ("Python", "is used for", "data science"),
+    ("Python", "is popular for", "artificial intelligence"),
+    ("Just", "false", "negatives"),
+    ("Just", "false", "negatives"),
+    ("Just", "false", "negatives")
+     ]
 
     # Initialize the evaluator
     evaluator = TripleEvaluator(generated_triples, ground_truth_triples)

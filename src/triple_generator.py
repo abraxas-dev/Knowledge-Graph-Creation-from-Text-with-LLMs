@@ -172,7 +172,7 @@ class TripleGenerator:
                 return
 
             # Initialize progress bar
-            progress_bar = tqdm(
+            progress_bar = tqdm.tqdm(
                 total=total_files,
                 desc="Summarizing emails",
                 unit="file",
@@ -192,15 +192,20 @@ if __name__ == "__main__":
     Main entry point of the script.
     Sets up configuration and runs the KG generation process.
     """
-    input_dir = ""  # Directory containing input text files
-    output_dir = ""  # Directory where responses will be saved
+    input_dir = "text"  # Directory containing input text files
+    output_dir = "wtv"  # Directory where responses will be saved
     model_name = "microsoft/Phi-3.5-mini-instruct"  # Model to use
     max_chunk_length = 123  # Maximum length of text chunks
     batch_size = 1  # Number of chunks to process at once
     system_message = """
-    You are a Knowledge Graph expert specialized in extracting structured information from text.
-    Your task is to analyze the given text and extract meaningful triples in the format:
-    <subject> <predicate> <object>
+    Extract RDF triples from the following text. Each triple should be of the form (subject, predicate, object).
+
+Example:
+Text: "The Eiffel Tower is located in Paris, France, and was completed in 1889."
+Output:
+1. (Eiffel Tower, is located in, Paris)
+2. (Paris, is in, France)
+3. (Eiffel Tower, was completed in, 1889)
     """
     prompt_template = """
     Generate Triples for the following text:

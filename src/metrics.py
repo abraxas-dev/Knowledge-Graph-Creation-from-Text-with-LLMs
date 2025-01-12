@@ -45,7 +45,7 @@ class TripleEvaluator:
         print("y_true (Relaxed):", y_true)
         return y_true
 
-    def compute_metrics(self, y_true, y_pred):
+    def f1_evaluation(self, y_true, y_pred):
         """Compute precision, recall, and F1 score manually."""
         TP = sum(yt == 1 and yp == 1 for yt, yp in zip(y_true, y_pred))  # True Positives
         FP = sum(yt == 0 and yp == 1 for yt, yp in zip(y_true, y_pred))  # False Positives
@@ -80,11 +80,11 @@ class TripleEvaluator:
 
         # Exact matching
         y_true_exact = self.exact_y_true()
-        self.results["Exact Matching Metrics"] = self.compute_metrics(y_true_exact, y_pred)
+        self.results["Exact Matching Metrics"] = self.f1_evaluation(y_true_exact, y_pred)
 
         # Relaxed matching
         y_true_relaxed = self.relaxed_y_true()
-        self.results["Relaxed Matching Metrics"] = self.compute_metrics(y_true_relaxed, y_pred)
+        self.results["Relaxed Matching Metrics"] = self.f1_evaluation(y_true_relaxed, y_pred)
 
         # ROUGE evaluation
         self.results["ROUGE Metrics"] = self.rouge_evaluation()

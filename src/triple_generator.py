@@ -10,8 +10,7 @@ class TripleGenerator:
     A class for generating Knowledge Graph triples from text using a language model.
     Processes text files and generates structured knowledge representations.
     """
-
-    def __init__(self, input_dir, output_dir, system_message, prompt_template, model_name, max_chunk_length: int = 450, batch_size: int = 1):
+    def __init__(self, api_key, input_dir, output_dir, system_message, prompt_template, model_name, temperature, max_new_tokens: int = 450, batch_size: int = 1):
         """
         Initialize the KG Generator with specified parameters.
         
@@ -23,13 +22,15 @@ class TripleGenerator:
             max_chunk_length: Maximum length of text chunks to process
             batch_size: Number of chunks to process simultaneously
         """
+        self.api_key = api_key
         self.input_dir = Path(input_dir)
         self.output_dir = Path(output_dir)
         self.system_message = system_message
         self.prompt_template = prompt_template
         self.model_name = model_name
-        self.max_chunk_length = max_chunk_length
+        self.max_new_tokens = max_new_tokens
         self.batch_size = batch_size
+        self.temperature = temperature
 
         self._initialize_output_dir()
         self._initialize_model()
@@ -100,8 +101,8 @@ class TripleGenerator:
             # Generate response
             outputs = self.model.generate(
                 **inputs,
-                max_new_tokens=self.max_tokens,
                 temperature=self.temperature,
+                max_new_tokens = self.max_new_tokens,
                 pad_token_id=self.tokenizer.eos_token_id
             )
             
@@ -174,7 +175,7 @@ class TripleGenerator:
             # Initialize progress bar
             progress_bar = tqdm.tqdm(
                 total=total_files,
-                desc="Summarizing emails",
+                desc="Processing data chunks",
                 unit="file",
                 bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]"
             )

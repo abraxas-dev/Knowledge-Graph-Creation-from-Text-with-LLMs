@@ -4,10 +4,17 @@ from bs4 import BeautifulSoup
 import nltk
 from nltk.tokenize import sent_tokenize
 
-nltk.download('punkt')
+# Download required NLTK data
+try:
+    nltk.download('punkt')
+    nltk.download('punkt_tab')
+    nltk.download('averaged_perceptron_tagger')
+except Exception as e:
+    print(f"Error downloading NLTK data: {e}")
 
 
 class Extractor:
+    
     def __init__(self, urls, processed_data_path, chunk_size=1500):
         self.urls = urls  # List of URLs from config
         self.processed_data_path = processed_data_path
@@ -79,7 +86,7 @@ class Extractor:
 
             # Use domain name as directory name
             domain_name = url.split("//")[-1].split("/")[0]
-            output_directory = os.path.join(self.processed_data_path, domain_name)
+            output_directory = os.path.join(self.processed_data_path)
             os.makedirs(output_directory, exist_ok=True)
 
             self.save_chunks_to_files(chunks, output_directory)

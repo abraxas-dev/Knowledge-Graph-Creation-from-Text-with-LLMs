@@ -1,7 +1,8 @@
 {
     "data_paths": {
-      "processed_data_path": "./data/processed/", 
-      "triples_path": "./data/triples/"          
+      "processed_data_path": "./data/processed", 
+      "triples_path": "./data/triples",
+      "knowledge_graph_path": "./data/knowledge_graph"
     },
     "extractor": {
       "urls": [
@@ -10,12 +11,15 @@
       "chunk_size": 1500
     },
     "llm": {
-      "api_key": "your-llm-api-key-here", 
+      "api_key": "your-api-key-if-needed", 
       "model_name": "microsoft/Phi-3.5-mini-instruct", 
-      "system_message": "You are a Knowledge Graph expert specialized in extracting structured information from text. Your task is to analyze the given text and extract meaningful triples in the format: <subject> <predicate> <object>.", 
-      "prompt_template": "Generate Triples for the following text:\n{text}", 
-      "temperature": 0, 
-      "max_new_tokens": 400
+      "system_message": "You are a Knowledge Graph expert specialized in extracting structured information from text. Extract meaningful triples in the format: <subject> <predicate> <object>", 
+      "prompt_template": "Generate triples for the following text:\n\n{text}", 
+      "temperature": 0.7, 
+      "max_new_tokens": 450
+    },
+    "integrator": {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
     }
   }
   

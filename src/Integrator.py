@@ -12,7 +12,17 @@ import pandas as pd
 import os 
 
 class Integrator:
-    def __init__(self):
+    def __init__(self, input_dir: str, output_dir: str, embedding_model: str):
+        """
+        Initialize the Integrator with input and output directories.
+        
+        Args:
+            input_dir: Directory containing input triple files (.txt)
+            output_dir: Directory where the final knowledge graph will be saved
+            embedding_model: Name of the sentence transformer model to use
+        """
+        self.input_dir = input_dir
+        self.output_dir = output_dir
         self.g = Graph()
         self.wd = Namespace("http://www.wikidata.org/entity/")
         self.wdt = Namespace("http://www.wikidata.org/prop/direct/")
@@ -22,7 +32,7 @@ class Integrator:
         self.entity_cache = {}
         self.property_cache = {}
 
-        self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        self.embedding_model = SentenceTransformer(embedding_model)
         self.properties = {}
     
     def load_wikidata_properties(self, output_file="wikidata-properties.json") -> Dict[str, Dict[str, Union[str, float, List[str]]]]:
@@ -245,6 +255,74 @@ class Integrator:
             "unique_objects": len(set(self.g.objects()))
         }
 
+    def read_triples_from_file(self, file_path: str) -> List[Tuple[str, str, str]]:
+        """
+        Read triples from a text file.
+        Expected format: Each line should contain a triple in the format "<subject> <predicate> <object>"
+        
+        Args:
+            file_path: Path to the text file containing triples
+            
+        Returns:
+            List of tuples, where each tuple contains (subject, predicate, object)
+        """
+        triples = []
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if not line or line.startswith('#'):  # Skip empty lines and comments
+                        continue
+                    
+                    # Remove angle brackets if present
+                    line = line.replace('<', '').replace('>', '')
+                    
+                    # Split the line into subject, predicate, object
+                    parts = line.split(' ', 2)
+                    if len(parts) == 3:
+                        subject, predicate, obj = parts
+                        triples.append((subject.strip(), predicate.strip(), obj.strip()))
+                    else:
+                        print(f"Warning: Skipping malformed triple in {file_path}: {line}")
+                        
+            return triples
+        except Exception as e:
+            print(f"Error reading file {file_path}: {str(e)}")
+            return []
+
+    def process_directory(self) -> None:
+        """
+        Process all triple files in the input directory.
+        Reads each .txt file, extracts triples, and adds them to the knowledge graph.
+        """
+        try:
+            # Get list of text files
+            txt_files = [f for f in os.listdir(self.input_dir) if f.endswith('.txt')]
+            
+            if not txt_files:
+                print(f"No .txt files found in {self.input_dir}")
+                return
+                
+            print(f"Found {len(txt_files)} files to process")
+            
+            # Process each file
+            for filename in txt_files:
+                file_path = os.path.join(self.input_dir, filename)
+                print(f"\nProcessing file: {filename}")
+                
+                # Read triples from file
+                triples = self.read_triples_from_file(file_path)
+                print(f"Found {len(triples)} triples in {filename}")
+                
+                # Process the triples
+                self.process_triples(triples)
+                
+            print("\nFinished processing all files")
+            
+        except Exception as e:
+            print(f"Error processing directory: {str(e)}")
+            raise
+
 if __name__ == "__main__":
     example_triples = [
     ("Albert Einstein", "born in", "Ulm"),  # P19: place of birth
@@ -254,12 +332,12 @@ if __name__ == "__main__":
     
     ]
     
-    pipeline = Integrator()
-    pipeline.load_wikidata_properties()
-    #pipeline.load_embeddings()
-    pipeline.process_triples(example_triples)
+    pipeline = Integrator(input_dir="../data/triples", output_dir="../data/knowledge_graph", embedding_model="sentence-transformers/all-MiniLM-L6-v2")
+    #pipeline.load_wikidata_properties()
+    pipeline.load_embeddings()
+    pipeline.process_directory()
     
     stats = pipeline.get_statistics()
     print("Statistiken:", json.dumps(stats, indent=2))
     
-    pipeline.save_graph("wikidata_knowledge_graph.ttl")
+    pipeline.save_graph("../data/knowledge_graph/stats")

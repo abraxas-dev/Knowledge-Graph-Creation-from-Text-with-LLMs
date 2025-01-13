@@ -1,7 +1,7 @@
 from src.pipeline import Pipeline
 
 def main():
-    config_path = "./config.json"  # Path to your config file
+    config_path = "./config.json"
     pipeline = Pipeline(config_path)
     pipeline.run()
 

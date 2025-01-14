@@ -6,7 +6,8 @@
     },
     "extractor": {
       "urls": [
-        "https://en.wikipedia.org/wiki/Artificial_intelligence"
+        "https://en.wikipedia.org/wiki/Artificial_intelligence",
+        "https://en.wikipedia.org/wiki/Internet"
       ],
       "chunk_size": 1500
     },

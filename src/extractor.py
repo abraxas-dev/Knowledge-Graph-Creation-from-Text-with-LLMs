@@ -7,16 +7,21 @@ from nltk.tokenize import sent_tokenize
 # Download required NLTK data
 try:
     nltk.download('punkt')
-    nltk.download('punkt_tab')
-    nltk.download('averaged_perceptron_tagger')
 except Exception as e:
     print(f"Error downloading NLTK data: {e}")
 
 
 class Extractor:
-    
     def __init__(self, urls, processed_data_path, chunk_size=1500):
-        self.urls = urls  # List of URLs from config
+        """
+        Initialize the extractor with URLs, output path, and chunk size.
+
+        Args:
+            urls (list): List of URLs to process.
+            processed_data_path (str): Path to save processed data.
+            chunk_size (int): Maximum size of each text chunk.
+        """
+        self.urls = urls  # List of URLs to process
         self.processed_data_path = processed_data_path
         self.chunk_size = chunk_size
 
@@ -74,29 +79,35 @@ class Extractor:
         for url in self.urls:
             print(f"Processing URL: {url}")
 
+            # Fetch webpage content
             html_content = self.fetch_webpage(url)
             if not html_content:
-                continue
+                continue  # Skip to the next URL if fetching fails
 
+            # Parse and clean HTML
             soup = self.parse_and_clean_html(html_content)
 
             # Extract plain text from cleaned HTML
             text = " ".join([p.get_text() for p in soup.find_all('p')])
             chunks = self.split_text_into_chunks(text)
 
-            # Use domain name as directory name
-            domain_name = url.split("//")[-1].split("/")[0]
-            output_directory = os.path.join(self.processed_data_path)
+            # Create a folder based on the page title
+            page_title = soup.title.string.strip().replace(" ", "_") if soup.title else "unknown_page"
+            output_directory = os.path.join(self.processed_data_path, page_title)
             os.makedirs(output_directory, exist_ok=True)
 
+            # Save the chunks in the specific folder
             self.save_chunks_to_files(chunks, output_directory)
             print(f"Processed and saved content for {url} in {output_directory}")
 
 
 if __name__ == "__main__":
     # Sample test configuration
-    test_urls = ["https://en.wikipedia.org/wiki/Artificial_intelligence"]
-    output_path = "test_processed_data"
+    test_urls = [
+        "https://en.wikipedia.org/wiki/Artificial_intelligence",
+        "https://en.wikipedia.org/wiki/Internet"
+    ]
+    output_path = "./test_processed_data"
     chunk_size = 1500
 
     # Create and run the extractor

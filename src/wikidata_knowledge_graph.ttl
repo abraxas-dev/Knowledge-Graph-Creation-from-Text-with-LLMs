@@ -1,9 +1,8 @@
-@prefix ns1: <http://example.org/property/> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
-wd:Q937 ns1:born_in wd:Q3012 ;
-    ns1:worked_on wd:Q43514 ;
+wd:Q937 wdt:P157 wd:Q138518 ;
     wdt:P166 wd:Q38104 ;
-    wdt:P2579 wd:Q138518 .
+    wdt:P19 wd:Q3012 ;
+    wdt:P9681 wd:Q43514 .
 

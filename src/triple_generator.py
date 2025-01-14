@@ -193,20 +193,21 @@ if __name__ == "__main__":
     Main entry point of the script.
     Sets up configuration and runs the KG generation process.
     """
-    input_dir = "text"  # Directory containing input text files
-    output_dir = "wtv"  # Directory where responses will be saved
+    input_dir = "/Users/abraxas/Desktop/Desktop/Studium/7 Semester/Data Engineering/src/test_processed_data/en.wikipedia.org_Artificial_intelligence_-_Wikipedia"  # Directory containing input text files
+    output_dir = "./wtv"  # Directory where responses will be saved
     model_name = "microsoft/Phi-3.5-mini-instruct"  # Model to use
-    max_chunk_length = 123  # Maximum length of text chunks
+    max_new_tokens = 400  # Maximum length of text chunks
     batch_size = 1  # Number of chunks to process at once
+    temperature = 0
     system_message = """
     Extract RDF triples from the following text. Each triple should be of the form (subject, predicate, object).
 
-Example:
-Text: "The Eiffel Tower is located in Paris, France, and was completed in 1889."
-Output:
-1. (Eiffel Tower, is located in, Paris)
-2. (Paris, is in, France)
-3. (Eiffel Tower, was completed in, 1889)
+    Example:
+    Text: "The Eiffel Tower is located in Paris, France, and was completed in 1889."
+    Output:
+    1. (Eiffel Tower, is located in, Paris)
+    2. (Paris, is in, France)
+    3. (Eiffel Tower, was completed in, 1889)
     """
     prompt_template = """
     Generate Triples for the following text:
@@ -214,5 +215,5 @@ Output:
     """
 
     # Initialize and run the generator
-    generator = TripleGenerator(input_dir, output_dir, system_message, prompt_template, model_name, max_chunk_length, batch_size)
+    generator = TripleGenerator("", input_dir, output_dir, system_message, prompt_template, model_name, temperature, max_new_tokens, batch_size)
     generator.process()

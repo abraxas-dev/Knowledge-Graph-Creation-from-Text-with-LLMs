@@ -21,11 +21,7 @@ class Extractor:
             processed_data_path (str): Path to save processed data.
             chunk_size (int): Maximum size of each text chunk.
         """
-<<<<<<< HEAD
         self.urls = urls  # List of URLs to process
-=======
-        self.urls = urls  # List of URLs from config
->>>>>>> fb7c501c5af400d9fcb45f75a18ba4dbe480a4b5
         self.processed_data_path = processed_data_path
         self.chunk_size = chunk_size
 
@@ -95,21 +91,14 @@ class Extractor:
             text = " ".join([p.get_text() for p in soup.find_all('p')])
             chunks = self.split_text_into_chunks(text)
 
-<<<<<<< HEAD
             # Create a folder based on the page title
             page_title = soup.title.string.strip().replace(" ", "_") if soup.title else "unknown_page"
             output_directory = os.path.join(self.processed_data_path, page_title)
-=======
-            # Create a folder based on the domain name and page title
-            domain_name = url.split("//")[-1].split("/")[0]
-            page_title = soup.title.string.strip().replace(" ", "_") if soup.title else "unknown_page"
-            folder_name = f"{domain_name}_{page_title}"
-            output_directory = os.path.join(self.processed_data_path, folder_name)
->>>>>>> fb7c501c5af400d9fcb45f75a18ba4dbe480a4b5
             os.makedirs(output_directory, exist_ok=True)
 
             # Save the chunks in the specific folder
             self.save_chunks_to_files(chunks, output_directory)
+            print(f"Processed and saved content for {url} in {output_directory}")
 
 
 if __name__ == "__main__":

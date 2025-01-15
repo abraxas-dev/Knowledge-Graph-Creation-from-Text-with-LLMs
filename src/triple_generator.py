@@ -13,14 +13,6 @@ class TripleGenerator:
     def __init__(self, api_key, input_dir, output_dir, system_message, prompt_template, model_name, temperature, max_new_tokens: int = 450, batch_size: int = 1):
         """
         Initialize the KG Generator with specified parameters.
-        
-        Args:
-            input_dir: Directory containing input text files
-            output_dir: Directory where generated responses will be saved
-            prompt_template: Template string for formatting prompts
-            model_name: Name/path of the pretrained model to use
-            max_chunk_length: Maximum length of text chunks to process
-            batch_size: Number of chunks to process simultaneously
         """
         self.api_key = api_key
         self.input_dir = Path(input_dir)
@@ -31,6 +23,7 @@ class TripleGenerator:
         self.max_new_tokens = max_new_tokens
         self.batch_size = batch_size
         self.temperature = temperature
+        self.generated_triples = []  # Store the generated triples here
 
         self._initialize_output_dir()
         self._initialize_model()
@@ -42,22 +35,16 @@ class TripleGenerator:
     def _initialize_model(self):
         """
         Initialize the language model and tokenizer.
-        Sets up the model on GPU if available, otherwise on CPU.
         """
         try:
-            # Determine device (GPU/CPU)
             device = "cuda" if torch.cuda.is_available() else "cpu"
-            
-            # Initialize tokenizer
             self.tokenizer = AutoTokenizer.from_pretrained(
                 self.model_name,
                 trust_remote_code=True
             )
-            
-            # Initialize model with optimizations
             self.model = AutoModelForCausalLM.from_pretrained(
                 self.model_name,
-                torch_dtype=torch.bfloat16,  # Use bfloat16 for better memory efficiency
+                torch_dtype=torch.bfloat16,
                 low_cpu_mem_usage=True,
                 trust_remote_code=True
             ).to(device)
@@ -69,11 +56,6 @@ class TripleGenerator:
     def generate_prompt(self, request):
         """
         Format the input text using system message and user prompt template.
-        
-        Args:
-            text: Input text to be formatted
-        Returns:
-            Formatted prompt string with system message and user input
         """
         try:
             formatted_prompt = f"""{self.system_message}
@@ -87,118 +69,112 @@ class TripleGenerator:
     def generate_response(self, text):
         """
         Generate a response using the language model.
-        
-        Args:
-            text: Input text to process
-        Returns:
-            Generated response string
         """
         try:
-            # Format prompt and tokenize
             prompt = self.generate_prompt(text)
             inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
-            
-            # Generate response
             outputs = self.model.generate(
                 **inputs,
                 temperature=self.temperature,
-                max_new_tokens = self.max_new_tokens,
+                max_new_tokens=self.max_new_tokens,
                 pad_token_id=self.tokenizer.eos_token_id
             )
-            
-            # Decode response and remove prompt
             response = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
             response = response[len(prompt):]  # Remove the input prompt
             return response
-        
         except Exception as e:
             print(f"Failed to generate a response: {str(e)}")
             raise
 
-    def save_response(self, filename, response):
+    def parse_response_to_triples(self, response):
         """
-        Save the generated response to a file.
-        
-        Args:
-            filename: Name of the file to save (without extension)
-            response: Generated response text to save
+        Parse the response text into formatted triples.
+        Removes numbering and converts to a list of tuples.
         """
+        triples = []
         try:
-            output_file = self.output_dir / f"{filename}_response.txt"
-            with open(output_file, 'w', encoding='utf-8') as f:
-                f.write(response)
-            print(f"Response saved to: {output_file}")
+            lines = response.strip().split("\n")
+            for line in lines:
+                line = line.lstrip("0123456789. ")  # Remove numbering (e.g., "1. ")
+                parts = line.strip("()").split(", ")
+                if len(parts) == 3:
+                    # Clean formatting for each part of the triple
+                    formatted_triple = tuple(part.strip('"').strip() for part in parts)
+                    triples.append(formatted_triple)
+            return triples
         except Exception as e:
-            print(f"Failed to save response: {str(e)}")
+            print(f"Failed to parse response into triples: {str(e)}")
             raise
 
     def process_file(self, file_path):
         """
-        Process a single input file and generate its response.
-        
-        Args:
-            file_path: Path to the input file
+        Process a single input file and generate its triples.
         """
         try:
             print(f"Processing file: {file_path}")
             start_time = time.time()
-            
-            # Read input file
             with open(file_path, 'r', encoding='utf-8') as f:
                 text = f.read()
-            
-            # Generate and save response
             response = self.generate_response(text)
+            triples = self.parse_response_to_triples(response)
+            self.generated_triples.extend(triples)
             end_time = time.time()
-            elapsed_time = end_time - start_time
-            
-            self.save_response(file_path.stem, response)
-            print(f"Successfully processed {file_path} in {elapsed_time:.2f} seconds")
-            
+            print(f"Successfully processed {file_path} in {end_time - start_time:.2f} seconds")
         except Exception as e:
-            print(f"Failed to process a file {file_path}: {str(e)}")
+            print(f"Failed to process file {file_path}: {str(e)}")
+
+    def save_triples_to_file(self, triples, file_path):
+        """
+        Save the generated triples to a file in the specified format.
+        """
+        try:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                for triple in triples:
+                    formatted_triple = f'("{triple[0]}", "{triple[1]}", "{triple[2]}");'
+                    f.write(formatted_triple + "\n")
+            print(f"Triples saved to {file_path}")
+        except Exception as e:
+            print(f"Failed to save triples to file: {str(e)}")
+            raise
 
     def process(self):
         """
         Process all text files in the input directory.
-        Shows progress bar and handles errors.
+        After processing, store the triples in the 'example_triples' variable and save to a file.
         """
         try:
-            # Get list of text files
             txt_files = list(self.input_dir.glob("*.txt"))
-            total_files = len(txt_files)
-
-            if total_files == 0:
-                print("No .txt files found in the input directory")
+            if not txt_files:
+                print("No .txt files found in the input directory.")
                 return
-
-            # Initialize progress bar
-            progress_bar = tqdm.tqdm(
-                total=total_files,
-                desc="Processing data chunks",
-                unit="file",
-                bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]"
-            )
-
-            # Process each file
-            for file_path in txt_files:
+            
+            all_triples = []
+            for file_path in tqdm.tqdm(txt_files, desc="Processing files", unit="file"):
                 self.process_file(file_path)
+                all_triples.extend(self.generated_triples)
+
+            # Save to example_triples variable
+            global example_triples  # Use global to define the variable for later use
+            example_triples = all_triples
+
+            # Save triples to a file
+            output_file = self.output_dir / "generated_triples.txt"
+            self.save_triples_to_file(example_triples, output_file)
+
+            
 
         except Exception as e:
-            print(f"Failed to process : {str(e)}")
+            print(f"Failed to process files: {str(e)}")
             raise
 
+
 if __name__ == "__main__":
-    """
-    Main entry point of the script.
-    Sets up configuration and runs the KG generation process.
-    """
-    input_dir = "/Users/abraxas/Desktop/Desktop/Studium/7 Semester/Data Engineering/src/test_processed_data/en.wikipedia.org_Artificial_intelligence_-_Wikipedia"  # Directory containing input text files
-    output_dir = "./wtv"  # Directory where responses will be saved
-    model_name = "microsoft/Phi-3.5-mini-instruct"  # Model to use
-    max_new_tokens = 400  # Maximum length of text chunks
-    batch_size = 1  # Number of chunks to process at once
-    temperature = 0
+    input_dir = "text"
+    output_dir = "./wtv"
+    model_name = "meta-llama/Llama-3.2-3B-Instruct"
+    max_new_tokens = 100
+    batch_size = 1
+    temperature = 0.1  # Ensure this is > 0
     system_message = """
     Extract RDF triples from the following text. Each triple should be of the form (subject, predicate, object).
 
@@ -213,7 +189,5 @@ if __name__ == "__main__":
     Generate Triples for the following text:
     {text}
     """
-
-    # Initialize and run the generator
     generator = TripleGenerator("", input_dir, output_dir, system_message, prompt_template, model_name, temperature, max_new_tokens, batch_size)
     generator.process()

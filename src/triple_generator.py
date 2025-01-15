@@ -158,34 +158,76 @@ class TripleGenerator:
         except Exception as e:
             print(f"Failed to process a file {file_path}: {str(e)}")
 
+    def process_directory(self, directory):
+        """
+        Process all text files in a specific directory.
+        
+        Args:
+            directory: Path object pointing to the directory to process
+        """
+        try:
+            txt_files = list(directory.glob("*.txt"))
+            if not txt_files:
+                print(f"No .txt files found in {directory}")
+                return
+
+            print(f"\nProcessing directory: {directory.name}")
+            for file_path in txt_files:
+                self.process_file(file_path)
+            print(f"Completed processing directory: {directory.name}")
+
+        except Exception as e:
+            print(f"Failed to process directory {directory}: {str(e)}")
+            raise
+
     def process(self):
         """
-        Process all text files in the input directory.
+        Process files in the input directory. If there are subdirectories, process those.
+        Otherwise, process .txt files directly in the input directory.
         Shows progress bar and handles errors.
         """
         try:
-            # Get list of text files
-            txt_files = list(self.input_dir.glob("*.txt"))
-            total_files = len(txt_files)
+            # Check for subdirectories first
+            subdirs = [d for d in self.input_dir.iterdir() if d.is_dir()]
+            
+            if subdirs:
+                # Process subdirectories
+                print(f"Found {len(subdirs)} subdirectories to process")
+                progress_bar = tqdm.tqdm(
+                    total=len(subdirs),
+                    desc="Processing subdirectories",
+                    unit="dir",
+                    bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]"
+                )
 
-            if total_files == 0:
-                print("No .txt files found in the input directory")
-                return
+                for subdir in subdirs:
+                    self.process_directory(subdir)
+                    progress_bar.update(1)
 
-            # Initialize progress bar
-            progress_bar = tqdm.tqdm(
-                total=total_files,
-                desc="Processing data chunks",
-                unit="file",
-                bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]"
-            )
+                progress_bar.close()
+            else:
+                # Process files directly in input directory
+                txt_files = list(self.input_dir.glob("*.txt"))
+                if not txt_files:
+                    print("No .txt files found in the input directory")
+                    return
 
-            # Process each file
-            for file_path in txt_files:
-                self.process_file(file_path)
+                print(f"Processing {len(txt_files)} files in root directory")
+                progress_bar = tqdm.tqdm(
+                    total=len(txt_files),
+                    desc="Processing files",
+                    unit="file",
+                    bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]"
+                )
+
+                for file_path in txt_files:
+                    self.process_file(file_path)
+                    progress_bar.update(1)
+
+                progress_bar.close()
 
         except Exception as e:
-            print(f"Failed to process : {str(e)}")
+            print(f"Failed to process: {str(e)}")
             raise
 
 if __name__ == "__main__":

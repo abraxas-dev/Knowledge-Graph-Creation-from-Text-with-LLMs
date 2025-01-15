@@ -10,6 +10,7 @@ from sentence_transformers import SentenceTransformer, util
 import numpy as np
 import pandas as pd
 import os 
+from pathlib import Path
 
 class Integrator:
     def __init__(self, input_dir: str, output_dir: str, embedding_model: str):
@@ -292,36 +293,56 @@ class Integrator:
 
     def process_directory(self) -> None:
         """
-        Process all triple files in the input directory.
-        Reads each .txt file, extracts triples, and adds them to the knowledge graph.
+        Process files in the input directory. If there are subdirectories, process those.
+        Otherwise, process .txt files directly in the input directory.
         """
         try:
-            # Get list of text files
-            txt_files = [f for f in os.listdir(self.input_dir) if f.endswith('.txt')]
+            # Check for subdirectories first
+            subdirs = [d for d in Path(self.input_dir).iterdir() if d.is_dir()]
             
-            if not txt_files:
-                print(f"No .txt files found in {self.input_dir}")
-                return
+            if subdirs:
+                # Process subdirectories
+                print(f"Found {len(subdirs)} subdirectories to process")
                 
-            print(f"Found {len(txt_files)} files to process")
-            
-            # Process each file
-            for filename in txt_files:
-                file_path = os.path.join(self.input_dir, filename)
-                print(f"\nProcessing file: {filename}")
+                for subdir in subdirs:
+                    print(f"\nProcessing subdirectory: {subdir.name}")
+                    txt_files = list(subdir.glob("*.txt"))
+                    if not txt_files:
+                        print(f"No .txt files found in {subdir}")
+                        continue
+                        
+                    print(f"Found {len(txt_files)} files in {subdir.name}")
+                    self._process_files(txt_files)
+                    print(f"Completed processing subdirectory: {subdir.name}")
                 
-                # Read triples from file
-                triples = self.read_triples_from_file(file_path)
-                print(f"Found {len(triples)} triples in {filename}")
+                print("\nFinished processing all subdirectories")
+            else:
+                # Process files directly in input directory
+                txt_files = [f for f in Path(self.input_dir).glob("*.txt")]
+                if not txt_files:
+                    print(f"No .txt files found in {self.input_dir}")
+                    return
                 
-                # Process the triples
-                self.process_triples(triples)
-                
-            print("\nFinished processing all files")
+                print(f"Processing {len(txt_files)} files in root directory")
+                self._process_files(txt_files)
+                print("Finished processing all files in root directory")
             
         except Exception as e:
             print(f"Error processing directory: {str(e)}")
             raise
+
+    def _process_files(self, files) -> None:
+        """
+        Process a list of files.
+        
+        Args:
+            files: List of Path objects pointing to files to process
+        """
+        for file_path in files:
+            print(f"Processing file: {file_path.name}")
+            triples = self.read_triples_from_file(str(file_path))
+            print(f"Found {len(triples)} triples in {file_path.name}")
+            self.process_triples(triples)
 
 if __name__ == "__main__":
     example_triples = [

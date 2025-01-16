@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 import os 
 from pathlib import Path
+import time
 
 class Integrator:
     def __init__(self, input_dir: str, output_dir: str, embedding_model: str):
@@ -292,43 +293,48 @@ class Integrator:
             return []
 
     def process_directory(self) -> None:
-        """
-        Process files in the input directory. If there are subdirectories, process those.
-        Otherwise, process .txt files directly in the input directory.
-        """
         try:
-            # Check for subdirectories first
+            print("\n" + "="*50)
+            print("🔄 Starting Integration Process")
+            print("="*50)
+            
+            start_time = time.time()
+            
+            # Check for subdirectories
             subdirs = [d for d in Path(self.input_dir).iterdir() if d.is_dir()]
             
             if subdirs:
-                # Process subdirectories
-                print(f"Found {len(subdirs)} subdirectories to process")
+                print(f"📁 Found {len(subdirs)} subdirectories to process")
                 
                 for subdir in subdirs:
-                    print(f"\nProcessing subdirectory: {subdir.name}")
+                    print(f"\n📂 Processing subdirectory: {subdir.name}")
                     txt_files = list(subdir.glob("*.txt"))
                     if not txt_files:
-                        print(f"No .txt files found in {subdir}")
+                        print(f"⚠️  No .txt files found in {subdir}")
                         continue
                         
-                    print(f"Found {len(txt_files)} files in {subdir.name}")
+                    print(f"📄 Found {len(txt_files)} files in {subdir.name}")
                     self._process_files(txt_files)
-                    print(f"Completed processing subdirectory: {subdir.name}")
-                
-                print("\nFinished processing all subdirectories")
+                    print(f"✅ Completed processing subdirectory: {subdir.name}")
             else:
-                # Process files directly in input directory
                 txt_files = [f for f in Path(self.input_dir).glob("*.txt")]
                 if not txt_files:
-                    print(f"No .txt files found in {self.input_dir}")
+                    print("⚠️  No .txt files found in input directory")
                     return
                 
-                print(f"Processing {len(txt_files)} files in root directory")
+                print(f"📄 Processing {len(txt_files)} files in root directory")
                 self._process_files(txt_files)
-                print("Finished processing all files in root directory")
+            
+            end_time = time.time()
+            total_time = end_time - start_time
+            
+            print("\n" + "="*50)
+            print(f"✅ Integration Complete!")
+            print(f"⏱️  Total processing time: {total_time:.2f} seconds")
+            print("="*50 + "\n")
             
         except Exception as e:
-            print(f"Error processing directory: {str(e)}")
+            print("❌ Integration failed!")
             raise
 
     def _process_files(self, files) -> None:

@@ -45,25 +45,32 @@ class TripleGenerator:
         Sets up the model on GPU if available, otherwise on CPU.
         """
         try:
-            # Determine device (GPU/CPU)
-            device = "cuda" if torch.cuda.is_available() else "cpu"
+            print("\n" + "="*50)
+            print("🔄 Initializing Triple Generator Model...")
+            print("="*50)
             
-            # Initialize tokenizer
+            self.device = "cuda" if torch.cuda.is_available() else "cpu"
+            print(f"📍 Using device: {self.device}")
+            
+            print("🔄 Loading tokenizer...")
             self.tokenizer = AutoTokenizer.from_pretrained(
                 self.model_name,
                 trust_remote_code=True
             )
             
-            # Initialize model with optimizations
+            print("🔄 Loading model...")
             self.model = AutoModelForCausalLM.from_pretrained(
                 self.model_name,
-                torch_dtype=torch.bfloat16,  # Use bfloat16 for better memory efficiency
+                torch_dtype=torch.bfloat16,
                 low_cpu_mem_usage=True,
                 trust_remote_code=True
-            ).to(device)
-            self.device = device
+            ).to(self.device)
+            
+            print("✅ Model initialization complete!")
+            print("="*50 + "\n")
+            
         except Exception as e:
-            print(f"Failed to initialize model: {str(e)}")
+            print("❌ Model initialization failed!")
             raise
 
     def generate_prompt(self, request):
@@ -140,23 +147,24 @@ class TripleGenerator:
             file_path: Path to the input file
         """
         try:
-            print(f"Processing file: {file_path}")
+            print(f"\n�� Processing file: {file_path}")
             start_time = time.time()
             
-            # Read input file
             with open(file_path, 'r', encoding='utf-8') as f:
                 text = f.read()
             
-            # Generate and save response
+            print("🔄 Generating response...")
             response = self.generate_response(text)
             end_time = time.time()
             elapsed_time = end_time - start_time
             
             self.save_response(file_path.stem, response)
-            print(f"Successfully processed {file_path} in {elapsed_time:.2f} seconds")
+            print(f"✅ File processed in {elapsed_time:.2f} seconds")
+            print(f"�� Response saved for {file_path.stem}")
             
         except Exception as e:
-            print(f"Failed to process a file {file_path}: {str(e)}")
+            print(f"❌ Failed to process file {file_path}")
+            raise
 
     def process_directory(self, directory):
         """

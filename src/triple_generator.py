@@ -23,7 +23,6 @@ class TripleGenerator:
         self.max_new_tokens = max_new_tokens
         self.batch_size = batch_size
         self.temperature = temperature
-        self.generated_triples = []  # Store the generated triples here
 
         self._initialize_output_dir()
         self._initialize_model()
@@ -86,29 +85,39 @@ class TripleGenerator:
             print(f"Failed to generate a response: {str(e)}")
             raise
 
-    def parse_response_to_triples(self, response):
+    def parse_and_save_triples(self, response, output_file):
         """
-        Parse the response text into formatted triples.
-        Removes numbering and converts to a list of tuples.
+        Parse the response text into formatted triples and write each directly to the file.
         """
-        triples = []
         try:
             lines = response.strip().split("\n")
-            for line in lines:
-                line = line.lstrip("0123456789. ")  # Remove numbering (e.g., "1. ")
-                parts = line.strip("()").split(", ")
-                if len(parts) == 3:
-                    # Clean formatting for each part of the triple
-                    formatted_triple = tuple(part.strip('"').strip() for part in parts)
-                    triples.append(formatted_triple)
-            return triples
+            with open(output_file, 'a', encoding='utf-8') as f:
+                for line in lines:
+                    line = line.lstrip("0123456789. ")  # Remove numbering (e.g., "1. ")
+                    parts = line.strip("()").split(", ")
+                    if len(parts) == 3:
+                        # Clean formatting for each part of the triple and write directly to file
+                        formatted_triple = f'("{parts[0].strip()}", "{parts[1].strip()}", "{parts[2].strip()}");'
+                        f.write(formatted_triple + "\n")
         except Exception as e:
-            print(f"Failed to parse response into triples: {str(e)}")
+            print(f"Failed to parse and save triples: {str(e)}")
             raise
 
-    def process_file(self, file_path):
+    def save_response_to_file(self, response, file_path):
         """
-        Process a single input file and generate its triples.
+        Save the raw LLM response to a file.
+        """
+        try:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(response)
+            print(f"Raw LLM response saved to {file_path}")
+        except Exception as e:
+            print(f"Failed to save LLM response to file: {str(e)}")
+            raise
+
+    def process_file(self, file_path, triples_file):
+        """
+        Process a single input file and directly save its triples to a file.
         """
         try:
             print(f"Processing file: {file_path}")
@@ -116,31 +125,21 @@ class TripleGenerator:
             with open(file_path, 'r', encoding='utf-8') as f:
                 text = f.read()
             response = self.generate_response(text)
-            triples = self.parse_response_to_triples(response)
-            self.generated_triples.extend(triples)
+            
+            # Save the raw response to a file
+            raw_response_file = self.output_dir / f"{Path(file_path).stem}_response.txt"
+            self.save_response_to_file(response, raw_response_file)
+            
+            # Parse and save triples directly to the triples file
+            self.parse_and_save_triples(response, triples_file)
             end_time = time.time()
             print(f"Successfully processed {file_path} in {end_time - start_time:.2f} seconds")
         except Exception as e:
             print(f"Failed to process file {file_path}: {str(e)}")
 
-    def save_triples_to_file(self, triples, file_path):
-        """
-        Save the generated triples to a file in the specified format.
-        """
-        try:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                for triple in triples:
-                    formatted_triple = f'("{triple[0]}", "{triple[1]}", "{triple[2]}");'
-                    f.write(formatted_triple + "\n")
-            print(f"Triples saved to {file_path}")
-        except Exception as e:
-            print(f"Failed to save triples to file: {str(e)}")
-            raise
-
     def process(self):
         """
-        Process all text files in the input directory.
-        After processing, store the triples in the 'example_triples' variable and save to a file.
+        Process all text files in the input directory and save triples directly to a file.
         """
         try:
             txt_files = list(self.input_dir.glob("*.txt"))
@@ -148,21 +147,16 @@ class TripleGenerator:
                 print("No .txt files found in the input directory.")
                 return
             
-            all_triples = []
-            for file_path in tqdm.tqdm(txt_files, desc="Processing files", unit="file"):
-                self.process_file(file_path)
-                all_triples.extend(self.generated_triples)
-
-            # Save to example_triples variable
-            global example_triples  # Use global to define the variable for later use
-            example_triples = all_triples
-
-            # Save triples to a file
-            output_file = self.output_dir / "generated_triples.txt"
-            self.save_triples_to_file(example_triples, output_file)
-
+            # Output file for triples
+            triples_file = self.output_dir / "generated_triples.txt"
             
+            # Ensure the triples file is empty before writing
+            open(triples_file, 'w').close()
 
+            for file_path in tqdm.tqdm(txt_files, desc="Processing files", unit="file"):
+                self.process_file(file_path, triples_file)
+
+            print(f"All triples saved to {triples_file}")
         except Exception as e:
             print(f"Failed to process files: {str(e)}")
             raise
@@ -172,7 +166,7 @@ if __name__ == "__main__":
     input_dir = "text"
     output_dir = "./wtv"
     model_name = "meta-llama/Llama-3.2-3B-Instruct"
-    max_new_tokens = 100
+    max_new_tokens = 300
     batch_size = 1
     temperature = 0.1  # Ensure this is > 0
     system_message = """

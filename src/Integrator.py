@@ -143,12 +143,20 @@ class Integrator:
 
     def query_wikidata_entity(self, label: str, language: str = "en") -> str:
         """
-        Sucht nach einer Wikidata-Entität basierend auf einem Label
+        Searches for a Wikidata entity based on a label, including alternative labels (also known as).
+        
+        Args:
+            label: The label to search for
+            language: The language code (default: "en")
+            
+        Returns:
+            The Wikidata entity ID if found, None otherwise
         """
         if label in self.entity_cache:
             return self.entity_cache[label]
 
-        url = f"https://www.wikidata.org/w/api.php"
+        # First, try exact search with the main API
+        url = "https://www.wikidata.org/w/api.php"
         params = {
             "action": "wbsearchentities",
             "format": "json",
@@ -159,39 +167,113 @@ class Integrator:
         
         try:
             response = requests.get(url, params=params)
-            sleep(0.1) 
+            sleep(0.1)  # Rate limiting
             data = response.json()
             
             if data["search"]:
+                # Check each result for exact matches in labels or aliases
+                for result in data["search"]:
+                    # Check main label
+                    if result.get("label", "").lower() == label.lower():
+                        entity_id = result["id"]
+                        self.entity_cache[label] = entity_id
+                        return entity_id
+                    
+                    # Check aliases if present
+                    aliases = result.get("aliases", [])
+                    for alias in aliases:
+                        if alias.lower() == label.lower():
+                            entity_id = result["id"]
+                            self.entity_cache[label] = entity_id
+                            return entity_id
+                
+                # If no exact match found, return the first result
                 entity_id = data["search"][0]["id"]
                 self.entity_cache[label] = entity_id
                 return entity_id
-            return None
+                
+            return -1
+            
         except Exception as e:
-            print(f"Fehler beim Suchen der Entität {label}: {e}")
-            return None
+            print(f"Error searching for entity {label}: {e}")
 
-    def query_wikidata_property(self, predicate: str, file_path: str = "wikidata-properties.json",language: str = "en") -> str:
+    def query_wikidata_property(self, predicate: str, method: str = "sparql", file_path: str = "wikidata-properties.json", language: str = "en") -> str:
         """
-        Überprüft, ob die Datei mit den Properties existiert. Wenn ja, lädt sie die Properties
-        und führt die Best-Match-Methode aus. Falls nicht, ruft sie 'load_wikidata_properties' auf.
+        Sucht nach Wikidata-Properties entweder über SPARQL oder die Wikidata-API.
+        
+        Args:
+            predicate: Der zu suchende Prädikat-Text
+            method: "sparql" oder "api" für die Suchmethode
+            file_path: Pfad zur Property-Cache-Datei (nur für SPARQL)
+            language: Sprachcode (default: "en")
+        
+        Returns:
+            Property-ID oder None wenn nicht gefunden
         """
-        if not os.path.exists(file_path):
-            print(f"File '{file_path}' not found. Generating properties...")
-            self.load_wikidata_properties(output_file=file_path)
+        if method.lower() == "sparql":
+            # Bestehende SPARQL-Implementierung
+            if not os.path.exists(file_path):
+                print(f"File '{file_path}' not found. Generating properties...")
+                self.load_wikidata_properties(output_file=file_path)
 
-        # Lade die Properties und führe die Best-Match-Methode aus
-        self.load_embeddings(file_path=file_path)
-        best_match = self.find_best_match(predicate)
+            self.load_embeddings(file_path=file_path)
+            best_match = self.find_best_match(predicate)
 
-        if best_match:
-            print(f"Best Match for '{predicate}':")
-            print(f"Property ID: {best_match['property_id']}")
-            print(f"Label: {best_match['label']}")
-            print(f"Similarity: {best_match['similarity']:.4f}")
-            return best_match["property_id"]
+            if best_match:
+                print(f"Best Match for '{predicate}':")
+                print(f"Property ID: {best_match['property_id']}")
+                print(f"Label: {best_match['label']}")
+                print(f"Similarity: {best_match['similarity']:.4f}")
+                return best_match["property_id"]
+            
+        elif method.lower() == "api":
+            # Neue API-Implementierung
+            if predicate in self.property_cache:
+                return self.property_cache[predicate]
+
+            url = "https://www.wikidata.org/w/api.php"
+            params = {
+                "action": "wbsearchentities",
+                "format": "json",
+                "language": language,
+                "search": predicate,
+                "type": "property"  # Suche nach Properties statt Items
+            }
+            
+            try:
+                response = requests.get(url, params=params)
+                sleep(0.1)  # Rate limiting
+                data = response.json()
+                
+                if data["search"]:
+                    # Überprüfe jedes Ergebnis auf exakte Übereinstimmungen
+                    for result in data["search"]:
+                        # Prüfe Hauptlabel
+                        if result.get("label", "").lower() == predicate.lower():
+                            property_id = result["id"]
+                            self.property_cache[predicate] = property_id
+                            print(f"Found exact match for '{predicate}': {property_id} ({result.get('label')})")
+                            return property_id
+                    
+                    # Wenn keine exakte Übereinstimmung, nimm das erste Ergebnis
+                    property_id = data["search"][0]["id"]
+                    label = data["search"][0].get("label", "")
+                    self.property_cache[predicate] = property_id
+                    print(f"Found closest match for '{predicate}': {property_id} ({label})")
+                    return property_id
+                
+                print(f"No property found for '{predicate}'")
+                return None
+                
+            except Exception as e:
+                print(f"Error searching for property '{predicate}': {e}")
+                return None
+        
         else:
-            print(f"No match found for predicate '{predicate}'.")
+            raise ValueError(f"Invalid method: {method}. Use 'sparql' or 'api'.")
+
+        print(f"No match found for predicate '{predicate}'.")
+        return None
 
     def process_triple(self, triple: Tuple[str, str, str]) -> None:
         """
@@ -204,7 +286,7 @@ class Integrator:
         subject_id = self.query_wikidata_entity(subject)
         print(f"Found subject ID: {subject_id}")
         
-        property_id = self.query_wikidata_property(predicate)
+        property_id = self.query_wikidata_property(predicate=predicate)
         print(f"Found property ID: {property_id}")
         
         object_id = self.query_wikidata_entity(obj)
@@ -352,7 +434,7 @@ class Integrator:
 
 if __name__ == "__main__":
     example_triples = [
-    ("Albert Einstein", "born in", "Ulm"),  # P19: place of birth
+    ("Artificial intelligence", "is a field of research in", "computer science"),  # P19: place of birth
     ("Albert Einstein", "died in", "Princeton"),  # P20: place of death
     ("Albert Einstein", "worked on", "Theory of Relativity"),  # P800: notable work
     ("Albert Einstein", "received", "Nobel Prize in Physics"),  # P166: award received
@@ -361,8 +443,9 @@ if __name__ == "__main__":
     
     pipeline = Integrator(input_dir="../data/triples", output_dir="../data/knowledge_graph", embedding_model="sentence-transformers/all-MiniLM-L6-v2")
     #pipeline.load_wikidata_properties()
-    pipeline.load_embeddings()
-    pipeline.process_directory()
+    pipeline.process_triples(example_triples)
+
+    #pipeline.process_directory()
     
     stats = pipeline.get_statistics()
     print("Statistiken:", json.dumps(stats, indent=2))

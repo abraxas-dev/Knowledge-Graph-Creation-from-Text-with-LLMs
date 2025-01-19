@@ -267,7 +267,8 @@ class Integrator:
 
             self.load_embeddings(file_path=file_path)
             best_match = self.find_best_match(predicate)
-
+            return best_match
+        
         elif method.lower() == "api":
             # Neue API-Implementierung
             if predicate in self.property_cache:

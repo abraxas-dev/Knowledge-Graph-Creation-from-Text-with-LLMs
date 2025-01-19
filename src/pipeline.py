@@ -47,7 +47,8 @@ class Pipeline:
             prompt_template=self.config["llm"]["prompt_template"],
             model_name=self.config["llm"]["model_name"],
             max_new_tokens=self.config["llm"]["max_new_tokens"],
-            temperature=self.config["llm"]["temperature"]
+            temperature=self.config["llm"]["temperature"],
+            max_chunks=self.config["llm"].get("max_chunks", None)
         )
 
         # Initialize integrator

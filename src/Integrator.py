@@ -389,6 +389,7 @@ class Integrator:
                 print(f"📁 Found {len(subdirs)} subdirectories to process")
                 
                 for subdir in subdirs:
+                    subdir_start_time = time.time()
                     print(f"\n📂 Processing subdirectory: {subdir.name}")
                     txt_files = list(subdir.glob("*.txt"))
                     if not txt_files:
@@ -396,7 +397,13 @@ class Integrator:
                         continue
                         
                     print(f"📄 Found {len(txt_files)} files in {subdir.name}")
-                    self._process_files(txt_files)
+                    total_files_time = self._process_files(txt_files)
+                    
+                    subdir_end_time = time.time()
+                    subdir_processing_time = subdir_end_time - subdir_start_time
+                    print(f"\n📊 Subdirectory Statistics for {subdir.name}:")
+                    print(f"   ⏱️  Total files processing time: {total_files_time:.2f} seconds")
+                    print(f"   ⏱️  Total subdirectory time (including overhead): {subdir_processing_time:.2f} seconds")
                     print(f"✅ Completed processing subdirectory: {subdir.name}")
             else:
                 txt_files = [f for f in Path(self.input_dir).glob("*.txt")]
@@ -405,7 +412,9 @@ class Integrator:
                     return
                 
                 print(f"📄 Processing {len(txt_files)} files in root directory")
-                self._process_files(txt_files)
+                total_files_time = self._process_files(txt_files)
+                print(f"\n📊 Root Directory Statistics:")
+                print(f"   ⏱️  Total files processing time: {total_files_time:.2f} seconds")
             
             end_time = time.time()
             total_time = end_time - start_time
@@ -426,11 +435,22 @@ class Integrator:
         Args:
             files: List of Path objects pointing to files to process
         """
+        total_files_time = 0
+        
         for file_path in files:
-            print(f"Processing file: {file_path.name}")
+            file_start_time = time.time()
+            print(f"\nProcessing file: {file_path.name}")
+            
             triples = self.read_triples_from_file(str(file_path))
             print(f"Found {len(triples)} triples in {file_path.name}")
             self.process_triples(triples)
+            
+            file_end_time = time.time()
+            file_processing_time = file_end_time - file_start_time
+            total_files_time += file_processing_time
+            print(f"⏱️  File processing time: {file_processing_time:.2f} seconds")
+        
+        return total_files_time
 
 if __name__ == "__main__":
     example_triples = [

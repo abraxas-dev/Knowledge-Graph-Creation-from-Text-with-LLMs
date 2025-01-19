@@ -342,7 +342,7 @@ class Integrator:
     def read_triples_from_file(self, file_path: str) -> List[Tuple[str, str, str]]:
         """
         Read triples from a text file.
-        Expected format: Each line should contain a triple in the format "<subject> <predicate> <object>"
+        Expected format: Each line should contain a triple in the format ("Subject Name", "Property Name", "Object name");
         
         Args:
             file_path: Path to the text file containing triples
@@ -358,21 +358,80 @@ class Integrator:
                     if not line or line.startswith('#'):  # Skip empty lines and comments
                         continue
                     
-                    # Remove angle brackets if present
-                    line = line.replace('<', '').replace('>', '')
+                    # Remove trailing semicolon if present
+                    if line.endswith(';'):
+                        line = line[:-1]
                     
-                    # Split the line into subject, predicate, object
-                    parts = line.split(' ', 2)
-                    if len(parts) == 3:
-                        subject, predicate, obj = parts
-                        triples.append((subject.strip(), predicate.strip(), obj.strip()))
-                    else:
-                        print(f"Warning: Skipping malformed triple in {file_path}: {line}")
+                    # Remove outer parentheses
+                    line = line.strip('()')
+                    
+                    try:
+                        # Split by comma but preserve commas within quotes
+                        parts = []
+                        current = []
+                        in_quotes = False
+                        
+                        for char in line:
+                            if char == '"':
+                                in_quotes = not in_quotes
+                            elif char == ',' and not in_quotes:
+                                parts.append(''.join(current).strip())
+                                current = []
+                                continue
+                            current.append(char)
+                        
+                        # Add the last part
+                        if current:
+                            parts.append(''.join(current).strip())
+                        
+                        # Clean up each part (remove quotes and extra whitespace)
+                        parts = [p.strip().strip('"') for p in parts]
+                        
+                        if len(parts) == 3:
+                            subject, predicate, obj = parts
+                            triples.append((subject, predicate, obj))
+                        else:
+                            print(f"Warning: Skipping malformed triple in {file_path}: {line}")
+                    
+                    except Exception as e:
+                        print(f"Warning: Error parsing line in {file_path}: {line}")
+                        print(f"Error details: {str(e)}")
+                        continue
                         
             return triples
         except Exception as e:
             print(f"Error reading file {file_path}: {str(e)}")
             return []
+
+    def _process_files(self, files) -> None:
+        """
+        Process a list of files.
+        
+        Args:
+            files: List of Path objects pointing to files to process
+        Returns:
+            float: Total processing time for all files
+        """
+        total_files_time = 0
+        
+        # Filter for only triples files and sort by chunk number
+        triples_files = [f for f in files if f.name.endswith('_triples.txt')]
+        triples_files.sort(key=lambda x: int(x.stem.split('_')[1]) if x.stem.split('_')[1].isdigit() else float('inf'))
+        
+        for file_path in triples_files:
+            file_start_time = time.time()
+            print(f"\nProcessing file: {file_path.name}")
+            
+            triples = self.read_triples_from_file(str(file_path))
+            print(f"Found {len(triples)} triples in {file_path.name}")
+            self.process_triples(triples)
+            
+            file_end_time = time.time()
+            file_processing_time = file_end_time - file_start_time
+            total_files_time += file_processing_time
+            print(f"⏱️  File processing time: {file_processing_time:.2f} seconds")
+        
+        return total_files_time
 
     def process_directory(self) -> None:
         try:
@@ -391,12 +450,12 @@ class Integrator:
                 for subdir in subdirs:
                     subdir_start_time = time.time()
                     print(f"\n📂 Processing subdirectory: {subdir.name}")
-                    txt_files = list(subdir.glob("*.txt"))
+                    txt_files = list(subdir.glob("*_triples.txt"))  # Only look for triples files
                     if not txt_files:
-                        print(f"⚠️  No .txt files found in {subdir}")
+                        print(f"⚠️  No triples files found in {subdir}")
                         continue
                         
-                    print(f"📄 Found {len(txt_files)} files in {subdir.name}")
+                    print(f"📄 Found {len(txt_files)} triples files in {subdir.name}")
                     total_files_time = self._process_files(txt_files)
                     
                     subdir_end_time = time.time()
@@ -404,14 +463,15 @@ class Integrator:
                     print(f"\n📊 Subdirectory Statistics for {subdir.name}:")
                     print(f"   ⏱️  Total files processing time: {total_files_time:.2f} seconds")
                     print(f"   ⏱️  Total subdirectory time (including overhead): {subdir_processing_time:.2f} seconds")
+                    print(f"   ⏱️  Overhead time: {(subdir_processing_time - total_files_time):.2f} seconds")
                     print(f"✅ Completed processing subdirectory: {subdir.name}")
             else:
-                txt_files = [f for f in Path(self.input_dir).glob("*.txt")]
+                txt_files = list(Path(self.input_dir).glob("*_triples.txt"))
                 if not txt_files:
-                    print("⚠️  No .txt files found in input directory")
+                    print("⚠️  No triples files found in input directory")
                     return
                 
-                print(f"📄 Processing {len(txt_files)} files in root directory")
+                print(f"📄 Processing {len(txt_files)} triples files in root directory")
                 total_files_time = self._process_files(txt_files)
                 print(f"\n📊 Root Directory Statistics:")
                 print(f"   ⏱️  Total files processing time: {total_files_time:.2f} seconds")
@@ -427,30 +487,6 @@ class Integrator:
         except Exception as e:
             print("❌ Integration failed!")
             raise
-
-    def _process_files(self, files) -> None:
-        """
-        Process a list of files.
-        
-        Args:
-            files: List of Path objects pointing to files to process
-        """
-        total_files_time = 0
-        
-        for file_path in files:
-            file_start_time = time.time()
-            print(f"\nProcessing file: {file_path.name}")
-            
-            triples = self.read_triples_from_file(str(file_path))
-            print(f"Found {len(triples)} triples in {file_path.name}")
-            self.process_triples(triples)
-            
-            file_end_time = time.time()
-            file_processing_time = file_end_time - file_start_time
-            total_files_time += file_processing_time
-            print(f"⏱️  File processing time: {file_processing_time:.2f} seconds")
-        
-        return total_files_time
 
 if __name__ == "__main__":
     example_triples = [

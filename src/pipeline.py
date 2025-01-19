@@ -55,7 +55,8 @@ class Pipeline:
         self.integrator = Integrator(
             input_dir=self.config["data_paths"]["triples_path"],
             output_dir=self.config["data_paths"]["knowledge_graph_path"],
-            embedding_model=self.config["integrator"]["embedding_model"]
+            embedding_model=self.config["integrator"]["embedding_model"],
+            matching_config=self.config["integrator"]["matching_method"]
         )
 
     def run(self):

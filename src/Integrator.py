@@ -12,9 +12,10 @@ import pandas as pd
 import os 
 from pathlib import Path
 import time
+import torch
 
 class Integrator:
-    def __init__(self, input_dir: str, output_dir: str, embedding_model: str):
+    def __init__(self, input_dir: str, output_dir: str, embedding_model: str, matching_config: Dict = None):
         """
         Initialize the Integrator with input and output directories.
         
@@ -22,6 +23,7 @@ class Integrator:
             input_dir: Directory containing input triple files (.txt)
             output_dir: Directory where the final knowledge graph will be saved
             embedding_model: Name of the sentence transformer model to use
+            matching_config: Configuration for property matching method
         """
         self.input_dir = input_dir
         self.output_dir = output_dir
@@ -33,10 +35,36 @@ class Integrator:
         
         self.entity_cache = {}
         self.property_cache = {}
+        
+        # Set up matching configuration
+        self.matching_config = matching_config or {
+            "use_aliases": True,
+            "properties_file": "wikidata-properties-with-aliases.json"
+        }
 
         self.embedding_model = SentenceTransformer(embedding_model)
         self.properties = {}
+        
+        # Load appropriate properties file based on configuration
+        self.initialize_properties()
     
+    def initialize_properties(self):
+        """Initialize properties based on matching configuration."""
+        try:
+            properties_file = self.matching_config.get("properties_file")
+            if not os.path.exists(properties_file):
+                print(f"Properties file {properties_file} not found. Generating...")
+                if self.matching_config.get("use_aliases", True):
+                    self.load_wikidata_properties_with_aliases(output_file=properties_file)
+                else:
+                    self.load_wikidata_properties(output_file=properties_file)
+            
+            self.load_embeddings(file_path=properties_file)
+            print(f"✅ Successfully initialized properties using {properties_file}")
+        except Exception as e:
+            print(f"❌ Error initializing properties: {str(e)}")
+            raise
+
     def load_wikidata_properties(self, output_file="wikidata-properties.json") -> Dict[str, Dict[str, Union[str, float, List[str]]]]:
         """
         Lädt alle Wikidata-Properties mit Labels, Beschreibungen, Aliassen und generiert Embeddings
@@ -93,19 +121,137 @@ class Integrator:
         except Exception as e:
             print(f"Error fetching properties: {e}")
 
+    def load_wikidata_properties_with_aliases(self, output_file="wikidata-properties-with-aliases.json") -> Dict[str, Dict[str, Union[str, float, List[str]]]]:
+        """
+        Load all Wikidata properties with labels, descriptions, aliases, and generate embeddings for all of them.
+        
+        Returns:
+            Dictionary containing property information including aliases and their embeddings
+        """
+        sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
+        sparql.addCustomHttpHeader('User-Agent', 'Bot/1.0')
+        
+        # Query to get properties with labels and aliases
+        query = """
+        SELECT ?property ?propertyLabel ?altLabel
+        WHERE {
+          ?property a wikibase:Property .
+          SERVICE wikibase:label { 
+            bd:serviceParam wikibase:language "en" .
+            ?property rdfs:label ?propertyLabel .
+          }
+          OPTIONAL { 
+            ?property skos:altLabel ?altLabel . 
+            FILTER(LANG(?altLabel) = "en")
+          }
+        }
+        """
+        
+        sparql.setQuery(query)
+        sparql.setReturnFormat(JSON)
+        sparql.setTimeout(60)
+        properties = {}
+
+        try:
+            print("🔄 Fetching Wikidata properties with aliases...")
+            results = sparql.query().convert()
+            
+            # Process results and group by property
+            property_data = {}
+            for result in results["results"]["bindings"]:
+                prop_id = result["property"]["value"].split("/")[-1]
+                label = result["propertyLabel"]["value"]
+                
+                if prop_id not in property_data:
+                    property_data[prop_id] = {
+                        "label": label,
+                        "aliases": set()
+                    }
+                
+                if "altLabel" in result:
+                    property_data[prop_id]["aliases"].add(result["altLabel"]["value"])
+            
+            print("✨ Computing embeddings for labels and aliases...")
+            # Generate embeddings for labels and aliases
+            for prop_id, data in property_data.items():
+                # Convert aliases set to list for JSON serialization
+                aliases = list(data["aliases"])
+                
+                # Generate embedding for main label
+                label_embedding = self.embedding_model.encode(data["label"]).tolist()
+                
+                # Generate embeddings for aliases
+                alias_embeddings = {}
+                for alias in aliases:
+                    alias_embedding = self.embedding_model.encode(alias).tolist()
+                    alias_embeddings[alias] = alias_embedding
+                
+                # Store all information
+                properties[prop_id] = {
+                    "label": data["label"],
+                    "label_embedding": label_embedding,
+                    "aliases": aliases,
+                    "alias_embeddings": alias_embeddings
+                }
+            
+            print(f"📝 Saving properties to {output_file}...")
+            with open(output_file, "w", encoding='utf-8') as file:
+                json.dump(properties, file, indent=4, ensure_ascii=False)
+            
+            print(f"✅ Successfully saved {len(properties)} properties with their aliases and embeddings")
+            print(f"📊 Statistics:")
+            total_aliases = sum(len(p["aliases"]) for p in properties.values())
+            print(f"   • Total properties: {len(properties)}")
+            print(f"   • Total aliases: {total_aliases}")
+            print(f"   • Average aliases per property: {total_aliases/len(properties):.2f}")
+            
+            return properties
+        
+        except Exception as e:
+            print(f"❌ Error fetching properties: {str(e)}")
+            raise
+
     def load_embeddings(self, file_path="wikidata-properties.json"):
         """
-        Lädt die gespeicherten Embeddings aus einer Datei und speichert sie in einem Dictionary.
+        Load stored embeddings from a file and store them in a dictionary.
+        Handles both simple properties and properties with aliases.
         """
         try:
             with open(file_path, "r") as file:
                 self.properties = json.load(file)
             
             print(f"Successfully loaded properties from {file_path}")
-            # For testing :
-            #for prop_id, prop_data in self.properties.items():
-            #    label = prop_data["label"]  # Hole das Label
-            #    print(f"ID: {prop_id}, Label: {label}")
+            
+            # Check if we need to convert from old format to new format
+            if self.matching_config.get("use_aliases", True):
+                # Check if the first property has the new format structure
+                first_prop = next(iter(self.properties.values()))
+                if "label_embedding" not in first_prop:
+                    print("Converting properties to alias format...")
+                    converted_properties = {}
+                    for prop_id, prop_data in self.properties.items():
+                        converted_properties[prop_id] = {
+                            "label": prop_data["label"],
+                            "label_embedding": prop_data["embedding"],
+                            "aliases": [],
+                            "alias_embeddings": {}
+                        }
+                    self.properties = converted_properties
+                    print("Properties converted to alias format.")
+            else:
+                # Check if we need to convert from new format to old format
+                first_prop = next(iter(self.properties.values()))
+                if "embedding" not in first_prop:
+                    print("Converting properties to simple format...")
+                    converted_properties = {}
+                    for prop_id, prop_data in self.properties.items():
+                        converted_properties[prop_id] = {
+                            "label": prop_data["label"],
+                            "embedding": prop_data["label_embedding"]
+                        }
+                    self.properties = converted_properties
+                    print("Properties converted to simple format.")
+            
             return self.properties
         except Exception as e:
             print(f"Error loading embeddings: {e}")
@@ -144,50 +290,88 @@ class Integrator:
         except Exception as e:
             print(f"⚠️  Error saving property matches: {str(e)}")
 
-    def find_best_match(self, predicate: str, file_path="wikidata-properties.json"):
+    def find_best_match(self, predicate: str):
         """
         Find and save top 10 matches for a predicate based on cosine similarity.
+        Uses either simple matching or matching with aliases based on configuration.
         """
-        
         if not self.properties:
-            print("No properties loaded. Please ensure the file exists or run 'load_wikidata_properties' first.")
+            print("No properties loaded. Please ensure properties are initialized.")
             return None
-        
-        # Calculate embedding for the search predicate
-        predicate_embedding = self.embedding_model.encode(predicate)
 
-        # Store all matches with their similarities
+        if self.matching_config.get("use_aliases", True):
+            return self._find_best_match_with_aliases(predicate)
+        else:
+            return self._find_best_match_simple(predicate)
+
+    def _find_best_match_simple(self, predicate: str):
+        """Simple matching using only main labels."""
+        predicate_embedding = self.embedding_model.encode(predicate)
         matches = []
         
-        # Compare with all stored properties
         for prop_id, prop_data in self.properties.items():
-            stored_embedding = prop_data["embedding"]
-            similarity = util.cos_sim(predicate_embedding, stored_embedding).item()
-            
+            similarity = util.cos_sim(predicate_embedding, torch.tensor(prop_data["embedding"])).item()
             matches.append({
                 "property_id": prop_id,
                 "label": prop_data["label"],
                 "similarity": similarity
             })
         
-        # Sort matches by similarity score in descending order
         matches.sort(key=lambda x: x['similarity'], reverse=True)
-        
-        # Take top 10 matches
         top_matches = matches[:10]
-        
-        # Save top matches to file
         self.save_property_matches(predicate, top_matches)
         
-        # Return the best match for the existing workflow
         if top_matches:
             best_match = top_matches[0]
-            print(f"🎯 Best Match for '{predicate}':")
+            print(f"\n🎯 Best Match for '{predicate}':")
             print(f"🔑 Property ID: {best_match['property_id']}")
             print(f"📝 Label: {best_match['label']}")
             print(f"💯 Similarity: {best_match['similarity']:.4f}")
             return best_match["property_id"]
+        return None
+
+    def _find_best_match_with_aliases(self, predicate: str):
+        """Advanced matching using both labels and aliases."""
+        predicate_embedding = self.embedding_model.encode(predicate)
+        matches = []
         
+        for prop_id, prop_data in self.properties.items():
+            label_similarity = util.cos_sim(predicate_embedding, torch.tensor(prop_data["label_embedding"])).item()
+            
+            alias_similarities = []
+            for alias in prop_data["aliases"]:
+                alias_embedding = prop_data["alias_embeddings"][alias]
+                similarity = util.cos_sim(predicate_embedding, torch.tensor(alias_embedding)).item()
+                alias_similarities.append(similarity)
+            
+            best_similarity = max([label_similarity] + alias_similarities) if alias_similarities else label_similarity
+            best_match_text = prop_data["label"]
+            
+            if alias_similarities:
+                max_alias_idx = alias_similarities.index(max(alias_similarities))
+                if alias_similarities[max_alias_idx] > label_similarity:
+                    best_match_text = prop_data["aliases"][max_alias_idx]
+            
+            matches.append({
+                "property_id": prop_id,
+                "label": prop_data["label"],
+                "best_match_text": best_match_text,
+                "similarity": best_similarity
+            })
+        
+        matches.sort(key=lambda x: x['similarity'], reverse=True)
+        top_matches = matches[:10]
+        self.save_property_matches(predicate, top_matches)
+        
+        if top_matches:
+            best_match = top_matches[0]
+            print(f"\n🎯 Best Match for '{predicate}':")
+            print(f"🔑 Property ID: {best_match['property_id']}")
+            print(f"📝 Label: {best_match['label']}")
+            if best_match['best_match_text'] != best_match['label']:
+                print(f"✨ Matched via alias: {best_match['best_match_text']}")
+            print(f"💯 Similarity: {best_match['similarity']:.4f}")
+            return best_match["property_id"]
         return None
 
     def query_wikidata_entity(self, label: str, language: str = "en") -> str:
@@ -246,7 +430,7 @@ class Integrator:
         except Exception as e:
             print(f"Error searching for entity {label}: {e}")
 
-    def query_wikidata_property(self, predicate: str, method: str = "sparql", file_path: str = "wikidata-properties.json", language: str = "en") -> str:
+    def query_wikidata_property(self, predicate: str, method: str = "sparql", file_path: str = "wikidata-properties-with-aliases.json", language: str = "en") -> str:
         """
         Sucht nach Wikidata-Properties entweder über SPARQL oder die Wikidata-API.
         

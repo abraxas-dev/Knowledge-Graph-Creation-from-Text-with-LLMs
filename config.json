@@ -21,7 +21,11 @@
       "max_chunks": 1
     },
     "integrator": {
-        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "matching_method": {
+            "use_aliases": true,
+            "properties_file": "wikidata-properties-with-aliases.json"
+        }
     }
-  }
+}
   

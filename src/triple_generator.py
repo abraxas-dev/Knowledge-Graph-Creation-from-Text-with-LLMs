@@ -107,13 +107,15 @@ class TripleGenerator:
             prompt = self.generate_prompt(text)
             inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
             
-            # Generate response
-            outputs = self.model.generate(
-                **inputs,
-                temperature=self.temperature,
-                max_new_tokens = self.max_new_tokens,
-                pad_token_id=self.tokenizer.eos_token_id
-            )
+            # Generate response with gradients disabled for inference
+            self.model.eval()
+            with torch.no_grad():
+                outputs = self.model.generate(
+                    **inputs,
+                    temperature=self.temperature,
+                    max_new_tokens = self.max_new_tokens,
+                    pad_token_id=self.tokenizer.eos_token_id
+                )
             
             # Decode response and remove prompt
             response = self.tokenizer.decode(outputs[0], skip_special_tokens=True)

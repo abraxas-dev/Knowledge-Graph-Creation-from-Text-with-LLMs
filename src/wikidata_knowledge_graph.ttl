@@ -1,8 +1,0 @@
-@prefix wd: <http://www.wikidata.org/entity/> .
-@prefix wdt: <http://www.wikidata.org/prop/direct/> .
-
-wd:Q937 wdt:P157 wd:Q138518 ;
-    wdt:P166 wd:Q38104 ;
-    wdt:P19 wd:Q3012 ;
-    wdt:P9681 wd:Q43514 .
-

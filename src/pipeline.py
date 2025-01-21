@@ -3,7 +3,7 @@ import json
 from .TripleGenerator import TripleGenerator
 from .Integrator import Integrator
 from .logger_config import setup_logger
-from .extractor import Extractor
+from .Extractor import Extractor
 
 class Pipeline:
     """

@@ -318,9 +318,12 @@ if __name__ == "__main__":
     Main entry point of the script.
     Sets up configuration and runs the KG generation process.
     """
-    input_dir = "../data/processed"  # Directory containing input text files
+    # Define all parameters directly
+    input_dir = "./data/processed"  # Directory containing input text files
     output_dir = "./output_model"  # Directory where responses will be saved
     model_name = "microsoft/Phi-3.5-mini-instruct"  # Model to use
+    
+    # System message for triple extraction
     system_message = """
     Extract RDF triples from the following text. Each triple should be of the form (subject, predicate, object).
     Example:
@@ -330,11 +333,38 @@ if __name__ == "__main__":
     2. (Paris, is in, France)
     3. (Eiffel Tower, was completed in, 1889)
     """
+    
+    # Template for formatting prompts
     prompt_template = """
     Generate Triples for the following text:
     {text}
     """
+    
+    # Optional model generation parameters
+    model_generate_parameters = {
+        "temperature": 0.1,
+        "max_new_tokens": 512,
+        "do_sample": True,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.2,
+        "no_repeat_ngram_size": 3,
+        "num_return_sequences": 1,
+        "early_stopping": True
+    }
+    
+    # Maximum number of chunks to process (optional)
+    max_chunks = 1
 
-    # Initialize and run the generator
-    generator = TripleGenerator("", input_dir, output_dir, system_message, prompt_template, model_name)
+    # Initialize and run the generator with all parameters
+    generator = TripleGenerator(
+        api_key="",  # Add your API key if needed
+        input_dir=input_dir,
+        output_dir=output_dir,
+        system_message=system_message,
+        prompt_template=prompt_template,
+        model_name=model_name,
+        max_chunks=max_chunks,
+        model_generate_parameters=model_generate_parameters
+    )
     generator.process()

@@ -12,6 +12,7 @@ except Exception as e:
 
 
 class Extractor:
+    
     def __init__(self, urls, processed_data_path, chunk_size=1500):
         """
         Initialize the extractor with URLs, output path, and chunk size.

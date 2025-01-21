@@ -9,19 +9,28 @@
         "https://en.wikipedia.org/wiki/Artificial_intelligence",
         "https://en.wikipedia.org/wiki/Internet"
       ],
-      "chunk_size": 1500
+      "chunk_size": 1000
     },
     "llm": {
-      "api_key": "your-api-key-if-needed", 
-      "model_name": "microsoft/Phi-3.5-mini-instruct", 
+      "api_key": "your-api-key",
+      "model_name": "your-model-name",
       "system_message": "Extract RDF triples from the following text. Each triple should be of the form (subject, predicate, object).\nExample:\nText: 'The Eiffel Tower is located in Paris, France, and was completed in 1889.'\nOutput:\n(Eiffel Tower, is located in, Paris)\n(Paris, is in, France)\n(Eiffel Tower, was completed in, 1889)",
-      "prompt_template": "Generate triples for the following text:\n\n{text}", 
-      "temperature": 0.1, 
-      "max_new_tokens": 450,
-      "max_chunks": 1
+      "prompt_template": "Generate triples for the following text:\n\n{text}",
+      "max_chunks": 1,
+      "model_generate_parameters": {
+        "temperature": 0.1,
+        "max_new_tokens": 512,
+        "do_sample": true,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.2,
+        "no_repeat_ngram_size": 3,
+        "num_return_sequences": 1,
+        "early_stopping": true
+      }
     },
     "integrator": {
-        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "embedding_model": "sentence-transformers/all-mpnet-base-v2",
         "matching_method": {
             "use_aliases": true,
             "properties_file": "wikidata-properties-with-aliases.json"

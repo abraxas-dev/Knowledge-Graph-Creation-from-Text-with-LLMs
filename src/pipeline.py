@@ -1,8 +1,9 @@
 import os
 import json
-from .extractor import Extractor
-from .triple_generator import TripleGenerator
+from .TripleGenerator import TripleGenerator
 from .Integrator import Integrator
+from .logger_config import setup_logger
+from .extractor import Extractor
 
 class Pipeline:
     """
@@ -19,6 +20,8 @@ class Pipeline:
         Args:
             config_path: Path to the configuration JSON file
         """
+        self.logger = setup_logger(__name__)
+        
         # Load configuration
         if not os.path.exists(config_path):
             raise FileNotFoundError(f"Config file not found: {config_path}")
@@ -31,6 +34,11 @@ class Pipeline:
         os.makedirs(self.config["data_paths"]["triples_path"], exist_ok=True)
         os.makedirs(self.config["data_paths"]["knowledge_graph_path"], exist_ok=True)
         
+        # Initialize components
+        self._initialize_components()
+
+    def _initialize_components(self):
+        """Initialize pipeline components with configuration settings."""
         # Initialize extractor
         self.extractor = Extractor(
             urls=self.config["extractor"]["urls"],
@@ -46,9 +54,8 @@ class Pipeline:
             system_message=self.config["llm"]["system_message"],
             prompt_template=self.config["llm"]["prompt_template"],
             model_name=self.config["llm"]["model_name"],
-            max_new_tokens=self.config["llm"]["max_new_tokens"],
-            temperature=self.config["llm"]["temperature"],
-            max_chunks=self.config["llm"].get("max_chunks", None)
+            max_chunks=self.config["llm"].get("max_chunks", None),
+            model_generate_parameters=self.config["llm"].get("model_generate_parameters", None)
         )
 
         # Initialize integrator
@@ -62,25 +69,25 @@ class Pipeline:
     def run(self):
         """Execute the complete pipeline."""
         try:
-            print("\n" + "="*50)
-            print("Pipeline execution started.")
-            print("="*50)
+            self.logger.info("\n" + "="*50)
+            self.logger.info("Pipeline execution started.")
+            self.logger.info("="*50)
 
             # Step 1: Extract and preprocess content
-            print("\nStep 1: Extracting and preprocessing webpage content...")
-            print("-"*50)
+            self.logger.info("\nStep 1: Extracting and preprocessing webpage content...")
+            self.logger.info("-"*50)
             self.extractor.preprocess()
-            print("Content extraction and preprocessing completed.")
+            self.logger.info("Content extraction and preprocessing completed.")
 
             # Step 2: Generate triples
-            print("\nStep 2: Generating knowledge graph triples...")
-            print("-"*50)
+            self.logger.info("\nStep 2: Generating knowledge graph triples...")
+            self.logger.info("-"*50)
             self.triple_generator.process()
-            print("Triple generation completed.")
+            self.logger.info("Triple generation completed.")
 
             # Step 3: Integrate with knowledge bases
-            print("\nStep 3: Integrating triples with knowledge bases...")
-            print("-"*50)
+            self.logger.info("\nStep 3: Integrating triples with knowledge bases...")
+            self.logger.info("-"*50)
             self.integrator.process_directory()
             
             # Save final knowledge graph
@@ -92,22 +99,20 @@ class Pipeline:
             
             # Get and print statistics
             stats = self.integrator.get_statistics()
-            print("\nKnowledge Graph Statistics:")
+            self.logger.info("\nKnowledge Graph Statistics:")
             for key, value in stats.items():
-                print(f"{key}: {value}")
-            print("Integration completed.")
+                self.logger.info(f"{key}: {value}")
+            self.logger.info("Integration completed.")
 
-            print("\n" + "="*50)
-            print("Pipeline execution completed successfully!")
-            print("="*50 + "\n")
+            self.logger.info("\n" + "="*50)
+            self.logger.info("Pipeline execution completed successfully!")
+            self.logger.info("="*50 + "\n")
 
         except Exception as e:
-            print("\n" + "="*50)
-            print(f"Pipeline execution failed: {str(e)}")
-            print("="*50 + "\n")
+            self.logger.error("\n" + "="*50)
+            self.logger.error(f"Pipeline execution failed: {str(e)}")
+            self.logger.error("="*50 + "\n")
             raise
 
 if __name__ == "__main__":
     CONFIG_PATH = "config.json"
-    pipeline = Pipeline(CONFIG_PATH)
-    pipeline.run()

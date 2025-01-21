@@ -27,16 +27,14 @@ class TripleGenerator:
             model_generate_parameters: Model generation parameters (optional)
         """
         self.logger = setup_logger(__name__)
-        
         self.api_key = api_key
-        self.input_dir = Path(input_dir)  # Convert to Path object
-        self.output_dir = Path(output_dir)  # Convert to Path object
+        self.input_dir = Path(input_dir)
+        self.output_dir = Path(output_dir)
         self.system_message = system_message
         self.prompt_template = prompt_template
         self.model_name = model_name
         self.max_chunks = max_chunks
-        
-        # Set default model generation parameters
+
         self.model_generate_parameters = {
             "temperature": 0.1,
             "max_new_tokens": 512,
@@ -94,7 +92,7 @@ class TripleGenerator:
             self.logger.error("❌ Model initialization failed!")
             raise
 
-    def generate_prompt(self, request):
+    def _generate_prompt(self, request):
         """
         Format the input text using system message and user prompt template.
         
@@ -111,7 +109,7 @@ class TripleGenerator:
             self.logger.error(f"Failed to generate a prompt: {str(e)}")
             raise
     
-    def generate_response(self, text):
+    def _generate_response(self, text):
         """
         Generate a response using the language model.
         
@@ -122,7 +120,7 @@ class TripleGenerator:
         """
         try:
             # Format prompt and tokenize
-            prompt = self.generate_prompt(text)
+            prompt = self._generate_prompt(text)
             inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
             
             # Generate response with gradients disabled for inference
@@ -142,29 +140,24 @@ class TripleGenerator:
             self.logger.error(f"Failed to generate a response: {str(e)}")
             raise
 
-    def parse_triples(self, response, output_file):
+    def _parse_and_save_triples(self, response, output_file):
         """
-        Parse the response text into formatted triples and write them to a file.
-        
-        Args:
-            response: The text response containing triples
-            output_file: Path to the output file where triples will be saved
+        Parse the response text into formatted triples and write each directly to the file.
         """
         try:
             lines = response.strip().split("\n")
             with open(output_file, 'a', encoding='utf-8') as f:
                 for line in lines:
-                    line = line.lstrip("0123456789. ")  # Remove numbering (e.g., "1. ")
+                    line = line.lstrip("0123456789. ")
                     parts = line.strip("()").split(", ")
                     if len(parts) == 3:
-                        # Clean formatting for each part of the triple and write directly to file
                         formatted_triple = f'("{parts[0].strip()}", "{parts[1].strip()}", "{parts[2].strip()}");'
                         f.write(formatted_triple + "\n")
         except Exception as e:
-            self.logger.error(f"Failed to parse triples: {str(e)}")
+            self.logger.error(f"Failed to parse and save triples: {str(e)}")
             raise
 
-    def save_response(self, filename, response, input_dir=None):
+    def _save_response(self, filename, response, input_dir=None):
         """
         Save the generated response to a file, maintaining directory structure.
         
@@ -190,16 +183,16 @@ class TripleGenerator:
             # First save the raw response
             with open(output_file, 'w', encoding='utf-8') as f:
                 f.write(response)
-            self.logger.info(f"Raw response saved to: {output_file}")
+            self.logger.info(f"✅ Raw response saved")
             
             # Then parse and save formatted triples
-            self.parse_triples(response, triples_file)
-            self.logger.info(f"Formatted triples saved to: {triples_file}")
+            self._parse_and_save_triples(response, triples_file)
+            self.logger.info(f"✅ Formatted triples saved")
         except Exception as e:
             self.logger.error(f"Failed to save response: {str(e)}")
             raise
 
-    def process_file(self, file_path):
+    def _process_file(self, file_path):
         """
         Process a single input file and generate its response.
         
@@ -209,30 +202,29 @@ class TripleGenerator:
             float: Time taken to process the file
         """
         try:
-            self.logger.info(f"\n🔄 Processing file: {file_path}")
+            self.logger.info(f"🔄 Processing file: {file_path.stem}")
             start_time = time.time()
             
             with open(file_path, 'r', encoding='utf-8') as f:
                 text = f.read()
             
             self.logger.info("🔄 Generating response...")
-            response = self.generate_response(text)
+            response = self._generate_response(text)
             
             # Pass the parent directory to maintain structure
-            self.save_response(file_path.stem, response, input_dir=file_path.parent)
+            self._save_response(file_path.stem, response, input_dir=file_path.parent)
             
             end_time = time.time()
             elapsed_time = end_time - start_time
             
             self.logger.info(f"⏱️  File processed in {elapsed_time:.2f} seconds")
-            self.logger.info(f"✅ Response saved for {file_path.stem}")
             return elapsed_time
             
         except Exception as e:
             self.logger.error(f"❌ Failed to process file {file_path}")
             raise
 
-    def process_directory(self, directory):
+    def _process_directory(self, directory):
         """
         Process all text files in a specific directory.
         
@@ -247,7 +239,7 @@ class TripleGenerator:
                 self.logger.warning(f"No .txt files found in {directory}")
                 return 0
 
-            self.logger.info(f"\n📂 Processing directory: {directory.name}")
+            self.logger.info(f"📂 Processing directory: {directory.name}")
             
             # Sort files by chunk number
             txt_files.sort(key=lambda x: int(x.stem.split('_')[1]) if x.stem.split('_')[0] == 'chunk' else float('inf'))
@@ -261,10 +253,10 @@ class TripleGenerator:
             
             total_processing_time = 0
             for file_path in txt_files:
-                file_time = self.process_file(file_path)
+                file_time = self._process_file(file_path)
                 total_processing_time += file_time
             
-            self.logger.info(f"\n📊 Directory Statistics for {directory.name}:")
+            self.logger.info(f"📊 Directory Statistics for {directory.name}:")
             self.logger.info(f"     ⏱️  Total processing time: {total_processing_time:.2f} seconds")
             self.logger.info(f"     ✅ Completed processing directory: {directory.name}")
             
@@ -286,7 +278,7 @@ class TripleGenerator:
             
             if subdirs:
                 # Process subdirectories
-                self.logger.info(f"Found {len(subdirs)} subdirectories to process")
+                self.logger.info(f"📂 Found {len(subdirs)} subdirectories to process")
                 progress_bar = tqdm.tqdm(
                     total=len(subdirs),
                     desc="Processing subdirectories",
@@ -297,12 +289,12 @@ class TripleGenerator:
                 total_processing_time = 0
                 
                 for subdir in subdirs:
-                    processing_time = self.process_directory(subdir)
+                    processing_time = self._process_directory(subdir)
                     total_processing_time += processing_time
                     progress_bar.update(1)
 
                 progress_bar.close()
-                self.logger.info("\n📊 Overall Statistics:")
+                self.logger.info("📊 Overall Statistics:")
                 self.logger.info(f"   ⏱️  Total processing time: {total_processing_time:.2f} seconds")
             else:
                 # Process files directly in input directory
@@ -312,8 +304,8 @@ class TripleGenerator:
                     return
 
                 self.logger.info(f"Processing {len(txt_files)} files in root directory")
-                processing_time = self.process_directory(self.input_dir)
-                self.logger.info("\n📊 Root Directory Statistics:")
+                processing_time = self._process_directory(self.input_dir)
+                self.logger.info("📊 Root Directory Statistics:")
                 self.logger.info(f"     ⏱️ Total processing time: {processing_time:.2f} seconds")
                 self.logger.info(f"     ✅ Completed processing root directory")
 
@@ -326,7 +318,7 @@ if __name__ == "__main__":
     Main entry point of the script.
     Sets up configuration and runs the KG generation process.
     """
-    input_dir = "../data/processed/Artificial_intelligence_-_Wikipedia"  # Directory containing input text files
+    input_dir = "../data/processed"  # Directory containing input text files
     output_dir = "./output_model"  # Directory where responses will be saved
     model_name = "microsoft/Phi-3.5-mini-instruct"  # Model to use
     system_message = """

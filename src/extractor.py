@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import nltk
 from nltk.tokenize import sent_tokenize
-from .logger_config import setup_logger
+from logger_config import setup_logger
 
 # Download required NLTK data
 try:
@@ -144,10 +144,10 @@ if __name__ == "__main__":
     # Sample test configuration
     test_urls = [
         "https://en.wikipedia.org/wiki/Artificial_intelligence",
-        "https://en.wikipedia.org/wiki/Internet"
+        
     ]
     output_path = "./test_processed_data"
-    chunk_size = 1500
+    chunk_size = 500
 
     # Create and run the extractor
     extractor = Extractor(test_urls, output_path, chunk_size)

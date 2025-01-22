@@ -1,0 +1,7 @@
+("Goals of Artificial intelligence (AI)", "includes subfields", "knowledge representation and reasoning")
+("Goals of Artificial intelligence (AI)", "includes subfields", "planning")
+("Goals of Artificial intelligence (AI)", "includes subfields", "learning")
+("Goals of Artificial intelligence (AI)", "includes subfields", "natural language processing")
+("Goals of Artificial intelligence (AI)", "includes subfields", "perception")
+("Goals of Artificial intelligence (AI)", "includes subfields", "robotics")
+("General intelligence", "is", "the ability to perform tasks")

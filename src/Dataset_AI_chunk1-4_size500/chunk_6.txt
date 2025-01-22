@@ -1,0 +1,6 @@
+("Artificial intelligence (AI)", "founded", "1956")
+("Artificial intelligence (AI)", "went through", "cycles of optimism and disappointment")
+("Artificial intelligence (AI)", "experienced loss of", "funding")
+("Funding for artificial intelligence", "increased", "after 2012")
+("Interest in artificial intelligence", "increased", "after 2012")
+("Deep learning", "outperformed", "previous AI techniques")x

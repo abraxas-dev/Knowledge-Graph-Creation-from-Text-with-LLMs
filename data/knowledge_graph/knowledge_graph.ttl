@@ -1,1 +1,45 @@
+@prefix ns1: <http://example.org/property/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+<http://example.org/entity/B%3A%20%28Internet> ns1:is_a_global_system_of "interconnected computer networks" .
+
+wd:Q11660 ns1:develops_and_studies wd:Q37003778 ;
+    ns1:is_a_field_of_research_in wd:Q21198 ;
+    ns1:takes_actions "To maximize their chances of achieving defined goals" ;
+    wdt:P10228 "Machines to perceive their environment" ;
+    wdt:P2283 "Learning and intelligence" .
+
+wd:Q17061568 ns1:painted_by_leonardo_da_vinci_in_the_16th_century "is a portrait of a woman whose identity remains a subject of debate among art historians. The painting is renowned" .
+
+wd:Q50808387 ns1:may_be_called wd:Q512313 .
+
+wd:Q7343 ns1:is_a_popular_destination_for wd:Q2300672 ;
+    ns1:is_home_to "Diverse range of marine life" ;
+    ns1:is_the_world%27s_largest wd:Q90050214 ;
+    ns1:stretches_over "2,300 kilometers" ;
+    wdt:P527 wd:Q25326,
+        wd:Q36847703,
+        "900 islands",
+        "Over 2,900 individual reefs",
+        "Thousands of species of fish" .
+
+wd:Q75 ns1:has_scope wd:Q6664567 ;
+    ns1:is_a_global_system_of "interconnected computer networks" ;
+    ns1:is_linked_by "electronic networking technologies",
+        "optical networking technologies",
+        "wireless networking technologies" ;
+    wdt:P2283 "Internet protocol suite (TCP/IP" ;
+    wdt:P2505 wd:Q11492760,
+        wd:Q22666,
+        wd:Q9158,
+        wd:Q944584,
+        "applications of the World Wide Web (WWW",
+        "extensive range of information resources",
+        "hypertext documents" ;
+    wdt:P527 wd:Q127979726,
+        wd:Q128354410,
+        wd:Q36747081,
+        "government networks",
+        "public networks" .
 

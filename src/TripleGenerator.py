@@ -223,6 +223,45 @@ class TripleGenerator:
         except Exception as e:
             self.logger.error(f"❌ Failed to process file {file_path}")
             raise
+    
+    def validate_triples(self):
+        """
+        Validate triples from all `_response.txt` files in the output directory.
+        Separate them into valid and invalid files for each response file.
+        """
+        try:
+            response_files = list(self.output_dir.rglob("*_triples.txt"))
+            if not response_files:
+                self.logger.warning("No response files found for validation.")
+                return
+
+            all_valid_file = self.output_dir / "all_valid_triples.txt"
+            all_invalid_file = self.output_dir / "all_invalid_triples.txt"
+
+            for response_file in response_files:
+                with open(response_file, 'r', encoding='utf-8') as input_file:
+                    for line in input_file:
+                        line = line.strip()
+                        if line.startswith("(") and line.endswith(");"):
+                            parts = line.strip("();").split('", "')
+                            if len(parts) == 3 and all(parts):
+                                with open(all_valid_file, 'a', encoding='utf-8') as all_valid:
+                                    all_valid.write(line + "\n")
+                            else:
+                                with open(all_invalid_file, 'a', encoding='utf-8') as all_invalid:
+                                    all_invalid.write(line + "\n")
+                        else:
+                            with open(all_invalid_file, 'a', encoding='utf-8') as all_invalid:
+                                all_invalid.write(line + "\n")
+
+                self.logger.info(f"Validation complete for {response_file.name}.")
+                self.logger.info(f"Triples from {response_file.name} appended to the consolidated files.")
+
+            self.logger.info(f"All valid triples appended to: {all_valid_file}")
+            self.logger.info(f"All invalid triples appended to: {all_invalid_file}")
+        except Exception as e:
+            self.logger.error(f"Failed to validate triples: {str(e)}")
+            raise
 
     def _process_directory(self, directory):
         """
@@ -259,6 +298,8 @@ class TripleGenerator:
             self.logger.info(f"📊 Directory Statistics for {directory.name}:")
             self.logger.info(f"     ⏱️  Total processing time: {total_processing_time:.2f} seconds")
             self.logger.info(f"     ✅ Completed processing directory: {directory.name}")
+
+            self.validate_triples
             
             return total_processing_time
 
@@ -294,6 +335,7 @@ class TripleGenerator:
                     progress_bar.update(1)
 
                 progress_bar.close()
+                
                 self.logger.info("📊 Overall Statistics:")
                 self.logger.info(f"   ⏱️  Total processing time: {total_processing_time:.2f} seconds")
             else:
@@ -308,7 +350,10 @@ class TripleGenerator:
                 self.logger.info("📊 Root Directory Statistics:")
                 self.logger.info(f"     ⏱️ Total processing time: {processing_time:.2f} seconds")
                 self.logger.info(f"     ✅ Completed processing root directory")
-
+            
+            self.logger.info("🔄 Validating generated triples...")
+            self.validate_triples()
+            self.logger.info("✅ Validation complete.")
         except Exception as e:
             self.logger.error(f"Failed to process: {str(e)}")
             raise
@@ -319,7 +364,7 @@ if __name__ == "__main__":
     Sets up configuration and runs the KG generation process.
     """
     # Define all parameters directly
-    input_dir = "./data/processed"  # Directory containing input text files
+    input_dir = "test"  # Directory containing input text files
     output_dir = "./output_model"  # Directory where responses will be saved
     model_name = "microsoft/Phi-3.5-mini-instruct"  # Model to use
     
@@ -344,13 +389,7 @@ if __name__ == "__main__":
     model_generate_parameters = {
         "temperature": 0.1,
         "max_new_tokens": 512,
-        "do_sample": True,
-        "top_k": 50,
-        "top_p": 0.95,
-        "repetition_penalty": 1.2,
-        "no_repeat_ngram_size": 3,
-        "num_return_sequences": 1,
-        "early_stopping": True
+       
     }
     
     # Maximum number of chunks to process (optional)

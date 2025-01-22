@@ -2,9 +2,13 @@ import logging
 import os
 from datetime import datetime
 
+# Global dictionary to store logger instances by log directory
+_loggers = {}
+
 def setup_logger(name: str, log_dir: str = "logs") -> logging.Logger:
     """
     Set up a logger with both file and console handlers.
+    Returns the same logger instance for the same log directory.
     
     Args:
         name: Name of the logger (usually __name__)
@@ -13,10 +17,14 @@ def setup_logger(name: str, log_dir: str = "logs") -> logging.Logger:
     Returns:
         Configured logger instance
     """
+    # If we already have a logger for this directory, return it
+    if log_dir in _loggers:
+        return _loggers[log_dir]
+    
     os.makedirs(log_dir, exist_ok=True)
     
     # Create logger
-    logger = logging.getLogger(name)
+    logger = logging.getLogger("KnowledgeGraphPipeline")  # Use same name for all components
     logger.setLevel(logging.INFO)
     
     # Avoid adding handlers multiple times
@@ -24,10 +32,10 @@ def setup_logger(name: str, log_dir: str = "logs") -> logging.Logger:
         return logger
     
     file_formatter = logging.Formatter(
-        '%(asctime)s - %(name)s - %(levelname)s - %(module)s - %(message)s'
+        '%(asctime)s - %(levelname)s - %(module)s - %(message)s'
     )
     console_formatter = logging.Formatter(
-        '%(message)s' 
+        '%(message)s'
     )
     
     # File handler
@@ -47,5 +55,8 @@ def setup_logger(name: str, log_dir: str = "logs") -> logging.Logger:
     # Add handlers to logger
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)
+    
+    # Store logger in global dictionary
+    _loggers[log_dir] = logger
     
     return logger 

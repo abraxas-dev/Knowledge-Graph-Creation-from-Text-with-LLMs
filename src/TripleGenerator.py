@@ -5,7 +5,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import time
 from typing import Dict
-from logger_config import setup_logger
+from .logger_config import setup_logger
 
 class TripleGenerator:
     """
@@ -285,7 +285,7 @@ class TripleGenerator:
             
             # Apply max_chunks limit if specified
             if self.max_chunks is not None and len(txt_files) > self.max_chunks:
-                self.logger.warning(f"⚠️  Found {len(txt_files)} files, limiting to first {self.max_chunks} chunks as per max_chunks setting")
+                self.logger.info(f"⚠️  Found {len(txt_files)} files, limiting to first {self.max_chunks} chunks as per max_chunks setting")
                 txt_files = txt_files[:self.max_chunks]
             
             self.logger.info(f"📄 Processing {len(txt_files)} files")
@@ -364,7 +364,7 @@ if __name__ == "__main__":
     Sets up configuration and runs the KG generation process.
     """
     # Define all parameters directly
-    input_dir = "test"  # Directory containing input text files
+    input_dir = "../data/processed"  # Directory containing input text files
     output_dir = "./output_model"  # Directory where responses will be saved
     model_name = "microsoft/Phi-3.5-mini-instruct"  # Model to use
     

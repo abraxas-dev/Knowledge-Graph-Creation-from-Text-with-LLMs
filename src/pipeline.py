@@ -22,7 +22,7 @@ class Pipeline:
         """
         self.logger = setup_logger(__name__)
         
-        # Load configuration
+
         if not os.path.exists(config_path):
             raise FileNotFoundError(f"Config file not found: {config_path}")
         
@@ -34,19 +34,16 @@ class Pipeline:
         os.makedirs(self.config["data_paths"]["triples_path"], exist_ok=True)
         os.makedirs(self.config["data_paths"]["knowledge_graph_path"], exist_ok=True)
         
-        # Initialize components
         self._initialize_components()
 
     def _initialize_components(self):
         """Initialize pipeline components with configuration settings."""
-        # Initialize extractor
         self.extractor = Extractor(
             urls=self.config["extractor"]["urls"],
             processed_data_path=self.config["data_paths"]["processed_data_path"],
             chunk_size=self.config["extractor"]["chunk_size"]
         )
 
-        # Initialize triple generator
         self.triple_generator = TripleGenerator(
             api_key=self.config["llm"]["api_key"],
             input_dir=self.config["data_paths"]["processed_data_path"],
@@ -58,7 +55,6 @@ class Pipeline:
             model_generate_parameters=self.config["llm"].get("model_generate_parameters", None)
         )
 
-        # Initialize integrator
         self.integrator = Integrator(
             input_dir=self.config["data_paths"]["triples_path"],
             output_dir=self.config["data_paths"]["knowledge_graph_path"],
@@ -69,49 +65,38 @@ class Pipeline:
     def run(self):
         """Execute the complete pipeline."""
         try:
-            self.logger.info("\n" + "="*50)
+            self.logger.info("="*50)
             self.logger.info("Pipeline execution started.")
             self.logger.info("="*50)
 
             # Step 1: Extract and preprocess content
-            self.logger.info("\nStep 1: Extracting and preprocessing webpage content...")
+            self.logger.info("Step 1: Extracting and preprocessing webpage content...")
             self.logger.info("-"*50)
             self.extractor.preprocess()
             self.logger.info("Content extraction and preprocessing completed.")
 
             # Step 2: Generate triples
-            self.logger.info("\nStep 2: Generating knowledge graph triples...")
+            self.logger.info("Step 2: Generating knowledge graph triples...")
             self.logger.info("-"*50)
             self.triple_generator.process()
             self.logger.info("Triple generation completed.")
 
             # Step 3: Integrate with knowledge bases
-            self.logger.info("\nStep 3: Integrating triples with knowledge bases...")
+            self.logger.info("Step 3: Integrating triples with knowledge bases...")
             self.logger.info("-"*50)
-            self.integrator.process_directory()
+            self.integrator.process()
             
             # Save final knowledge graph
             output_file = os.path.join(
                 self.config["data_paths"]["knowledge_graph_path"], 
                 "knowledge_graph.ttl"
             )
-            self.integrator.save_graph(output_file)
-            
-            # Get and print statistics
-            stats = self.integrator.get_statistics()
-            self.logger.info("\nKnowledge Graph Statistics:")
-            for key, value in stats.items():
-                self.logger.info(f"{key}: {value}")
-            self.logger.info("Integration completed.")
-
-            self.logger.info("\n" + "="*50)
-            self.logger.info("Pipeline execution completed successfully!")
-            self.logger.info("="*50 + "\n")
+            self.integrator._save_graph(output_file)
 
         except Exception as e:
-            self.logger.error("\n" + "="*50)
+            self.logger.error("="*50)
             self.logger.error(f"Pipeline execution failed: {str(e)}")
-            self.logger.error("="*50 + "\n")
+            self.logger.error("="*50)
             raise
 
 if __name__ == "__main__":

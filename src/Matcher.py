@@ -3,10 +3,14 @@ import os
 from urllib.parse import quote
 import torch
 from sentence_transformers import util
+import requests
+from time import sleep
+from .logger_config import setup_logger
 
 class Matcher:
     """
     Class for finding and saving matches between predicates and Wikidata properties.
+    Also handles entity and property matching with Wikidata.
     """
     def __init__(self, embedding_model, properties: Dict, matching_config: Dict = None):
         """
@@ -17,12 +21,142 @@ class Matcher:
             properties: Dictionary of properties with their embeddings
             matching_config: Configuration for matching method
         """
+        self.logger = setup_logger(__name__)
         self.embedding_model = embedding_model
         self.properties = properties
-        self.matching_config = matching_config or {
-            "use_aliases": True,
-            "properties_file": "wikidata-properties-with-aliases.json"
+        self.matching_config = matching_config
+        self.entity_cache = {}
+        self.property_cache = {}
+
+    def query_wikidata_entity(self, label: str, language: str = "en") -> str:
+        """
+        Searches for a Wikidata entity based on a label, including alternative labels (also known as).
+        
+        Args:
+            label: The label to search for
+            language: The language code (default: "en")
+            
+        Returns:
+            The Wikidata entity ID if found, None otherwise
+        """
+        if label in self.entity_cache:
+            return self.entity_cache[label]
+
+        url = "https://www.wikidata.org/w/api.php"
+        params = {
+            "action": "wbsearchentities",
+            "format": "json",
+            "language": language,
+            "search": label,
+            "type": "item"
         }
+        
+        try:
+            response = requests.get(url, params=params)
+            sleep(0.1)  # Rate limiting
+            data = response.json()
+            
+            if data["search"]:
+                # Check each result for exact matches in labels or aliases
+                for result in data["search"]:
+                    # Check main label
+                    if result.get("label", "").lower() == label.lower():
+                        entity_id = result["id"]
+                        self.entity_cache[label] = entity_id
+                        return entity_id
+                    
+                    # Check aliases if present
+                    aliases = result.get("aliases", [])
+                    for alias in aliases:
+                        if alias.lower() == label.lower():
+                            entity_id = result["id"]
+                            self.entity_cache[label] = entity_id
+                            return entity_id
+                
+                # If no exact match found, return the first result
+                entity_id = data["search"][0]["id"]
+                self.entity_cache[label] = entity_id
+                return entity_id
+                
+            return None
+            
+        except Exception as e:
+            self.logger.error(f"Error searching for entity {label}: {e}")
+            return None
+
+    def query_wikidata_property(self, predicate: str, language: str = "en") -> str:
+        """
+        Search for Wikidata properties using either Best_match or the Wikidata API.
+        
+        Args:
+            predicate: The predicate text to search for
+            method: "cos_similarity", "api", or "mixed" for the search method
+                   (mixed tries api first, then cos_similarity if no exact match)
+            language: Language code (default: "en")
+        
+        Returns:
+            Property ID or None if not found
+        """
+        if self.matching_config.get("property_query_method").lower() in ["api", "mixed"]:
+            if predicate in self.property_cache:
+                return self.property_cache[predicate]
+
+            url = "https://www.wikidata.org/w/api.php"
+            params = {
+                "action": "wbsearchentities",
+                "format": "json",
+                "language": language,
+                "search": predicate,
+                "type": "property"
+            }
+            
+            try:
+                response = requests.get(url, params=params)
+                sleep(0.1)  # Rate limiting
+                data = response.json()
+                
+                if data["search"]:
+                    # Check each result for exact matches
+                    for result in data["search"]:
+                        # Check main label
+                        if result.get("label", "").lower() == predicate.lower():
+                            property_id = result["id"]
+                            self.property_cache[predicate] = property_id
+                            self.logger.info(f"Found exact match for '{predicate}': {property_id} ({result.get('label')})")
+                            return property_id
+                    
+                    # If no exact match found and method is "api", take the first result
+                    if self.matching_config.get("property_query_method").lower() == "api":
+                        property_id = data["search"][0]["id"]
+                        label = data["search"][0].get("label", "")
+                        self.property_cache[predicate] = property_id
+                        self.logger.info(f"Found closest match for '{predicate}': {property_id} ({label})")
+                        return property_id
+                    
+                    # If method is "mixed" and no exact match, try cos_similarity
+                    elif self.matching_config.get("property_query_method").lower() == "mixed":
+                        self.logger.info(f"No exact API match for '{predicate}', trying cosine similarity...")
+                        return self.find_best_match(predicate)
+                
+                elif self.matching_config.get("property_query_method").lower() == "mixed":
+                    self.logger.info(f"No API results for '{predicate}', trying cosine similarity...")
+                    return self.find_best_match(predicate)
+                
+                self.logger.info(f"No property found for '{predicate}'")
+                return None
+                
+            except Exception as e:
+                self.logger.error(f"Error searching for property '{predicate}': {e}")
+                if self.matching_config.get("property_query_method").lower() == "mixed":
+                    self.logger.info(f"Trying cosine similarity as fallback...")
+                    return self.find_best_match(predicate)
+                return None
+        
+        elif self.matching_config.get("property_query_method").lower() == "cos_similarity":
+            return self.find_best_match(predicate)
+        
+        else:
+            raise ValueError(f"Invalid method: {self.matching_config.get('property_query_method')}. Use 'api', 'cos_similarity', or 'mixed'.")
 
     def find_best_match(self, predicate: str):
         """
@@ -30,7 +164,7 @@ class Matcher:
         Uses either simple matching or matching with aliases based on configuration.
         """
         if not self.properties:
-            print("No properties loaded. Please ensure properties are initialized.")
+            self.logger.warning("No properties loaded. Please ensure properties are initialized.")
             return None
 
         if self.matching_config.get("use_aliases", True):
@@ -57,10 +191,10 @@ class Matcher:
         
         if top_matches:
             best_match = top_matches[0]
-            print(f"\n🎯 Best Match for '{predicate}':")
-            print(f"🔑 Property ID: {best_match['property_id']}")
-            print(f"📝 Label: {best_match['label']}")
-            print(f"💯 Similarity: {best_match['similarity']:.4f}")
+            self.logger.info(f"\n🎯 Best Match for '{predicate}':")
+            self.logger.info(f"🔑 Property ID: {best_match['property_id']}")
+            self.logger.info(f"📝 Label: {best_match['label']}")
+            self.logger.info(f"💯 Similarity: {best_match['similarity']:.4f}")
             return best_match["property_id"]
         return None
 
@@ -99,12 +233,12 @@ class Matcher:
         
         if top_matches:
             best_match = top_matches[0]
-            print(f"\n🎯 Best Match for '{predicate}':")
-            print(f"🔑 Property ID: {best_match['property_id']}")
-            print(f"📝 Label: {best_match['label']}")
+            self.logger.info(f"\n🎯 Best Match for '{predicate}':")
+            self.logger.info(f"🔑 Property ID: {best_match['property_id']}")
+            self.logger.info(f"📝 Label: {best_match['label']}")
             if best_match['best_match_text'] != best_match['label']:
-                print(f"✨ Matched via alias: {best_match['best_match_text']}")
-            print(f"💯 Similarity: {best_match['similarity']:.4f}")
+                self.logger.info(f"✨ Matched via alias: {best_match['best_match_text']}")
+            self.logger.info(f"💯 Similarity: {best_match['similarity']:.4f}")
             return best_match["property_id"]
         return None
 
@@ -136,7 +270,7 @@ class Matcher:
                     f.write(f"   Similarity Score: {match['similarity']:.4f}\n")
                     f.write("\n")
                     
-            print(f"✓ Saved property matches to: {output_file}")
+            self.logger.info(f"✓ Saved property matches to: {output_file}")
             
         except Exception as e:
-            print(f"⚠️  Error saving property matches: {str(e)}") 
+            self.logger.error(f"⚠️  Error saving property matches: {str(e)}") 

@@ -1,0 +1,8 @@
+("LeBron James", "is", "NBA's all-time leading scorer")
+("LeBron James", "ranked", "4th in NBA career assists")
+("LeBron James", "ranked", "8th in NBA career steals")
+("LeBron James", "won", "4 NBA Most Valuable Player Awards")
+("LeBron James", "won", "4 NBA Finals MVP Awards")
+("LeBron James", "won", "NBA Rookie of the Year Award")
+("LeBron James", "won", "3 NBA All-Star Game MVP Awards")
+("LeBron James", "won", "inaugural NBA Cup MVP Award")

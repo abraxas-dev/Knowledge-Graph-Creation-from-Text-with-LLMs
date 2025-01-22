@@ -1,0 +1,6 @@
+("Artificial intelligence (AI)", "instance of", "intelligence")
+("Artificial intelligence (AI)", "field of", "computer science")
+("Artificial intelligence (AI)", "develops", "methods and software")
+("Artificial intelligence (AI)", "enables", "machines")
+("Machines", "perform", "action")
+("Machines", "may be", "AI")

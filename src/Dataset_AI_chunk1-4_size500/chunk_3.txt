@@ -1,0 +1,4 @@
+("AI applications", "not perceived as", "AI")
+("AI applications", "filter into", "general applications")
+("AI applications", "not explicitly labeled as", "artificial intelligence")
+("Subfields of AI", "centered around", "goals")

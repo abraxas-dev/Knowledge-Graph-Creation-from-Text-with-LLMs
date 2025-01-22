@@ -1,0 +1,5 @@
+("LeBron James", "tied for most seasons played", "Vince Carter")
+("LeBron James", "holds record for", "most minutes played in NBA history")
+("LeBron James", "grew up in", "Akron")
+("LeBron James", "played for", "St. Vincent–St. Mary High School")
+("LeBron James", "complimented by", "National media")

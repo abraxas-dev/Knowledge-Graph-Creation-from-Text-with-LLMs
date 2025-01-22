@@ -1,0 +1,11 @@
+("LeBron James", "full name", "LeBron Raymone James Sr.")
+("LeBron James", "birth date", "December 30, 1984")
+("LeBron James", "nationality", "American")
+("LeBron James", "occupation", "professional basketball player")
+("LeBron James", "plays for", "Los Angeles Lakers")
+("LeBron James", "plays in", "National Basketball Association (NBA)")
+("LeBron James", "nickname", "King James")
+("LeBron James", "regarded as", "one of the greatest basketball players of all time")
+("LeBron James", "compared to", "Michael Jordan")
+
+

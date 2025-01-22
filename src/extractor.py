@@ -101,13 +101,13 @@ class Extractor:
 
     def preprocess(self):
         """Main method to process all URLs."""
-        self.logger.info("\n" + "="*50)
+        self.logger.info("="*50)
         self.logger.info("🔄 Starting Content Extraction")
         self.logger.info("="*50)
 
         for url in self.urls:
             try:
-                self.logger.info(f"\n📝 Processing URL: {url}")
+                self.logger.info(f"📝 Processing URL: {url}")
 
                 # Fetch webpage content
                 html_content = self.fetch_webpage(url)
@@ -135,9 +135,9 @@ class Extractor:
                 self.logger.error(f"❌ Error processing URL {url}: {e}")
                 continue
 
-        self.logger.info("\n" + "="*50)
+        self.logger.info("="*50)
         self.logger.info("✅ Content Extraction Completed")
-        self.logger.info("="*50 + "\n")
+        self.logger.info("="*50)
 
 
 if __name__ == "__main__":

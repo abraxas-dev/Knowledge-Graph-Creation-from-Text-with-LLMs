@@ -1,0 +1,6 @@
+("LeBron James", "won", "4 NBA championships")
+("LeBron James", "appeared in", "10 NBA Finals")
+("LeBron James", "consecutive appearances", "8 NBA Finals")
+("LeBron James", "won", "inaugural NBA Cup")
+("LeBron James", "won", "3 Olympic gold medals")
+("LeBron James", "won", "Olympics MVP")

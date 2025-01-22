@@ -1,0 +1,7 @@
+("LeBron James", "selected by", "in 2003 Cleveland Cavaliers")
+("LeBron James", "was", "1st overall")
+("LeBron James", "named", "2004 NBA Rookie of the Year")
+("LeBron James", "established", "league's premier players")
+("LeBron James", "led", "Cleveland Cavaliers to their first NBA Finals appearance")
+("LeBron James", "won", "in 2009 NBA MVP Award")
+("LeBron James", "won", "in 2010 NBA MVP Award")

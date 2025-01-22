@@ -10,10 +10,11 @@ import pandas as pd
 import os 
 from pathlib import Path
 import time
-from .WikidataEmbeddingGenerator import WikidataEmbeddingGenerator
-from .Matcher import Matcher
-from .GraphManager import GraphManager
-from .logger_config import setup_logger
+from WikidataEmbeddingGenerator import WikidataEmbeddingGenerator
+from Matcher import Matcher
+from GraphManager import GraphManager
+from logger_config import setup_logger
+import yaml
 
 class Integrator:
     """
@@ -32,14 +33,20 @@ class Integrator:
         self.logger = setup_logger(__name__)
         self.input_dir = input_dir
         self.output_dir = output_dir
+        
+        # Create output directory if it doesn't exist
+        os.makedirs(self.output_dir, exist_ok=True)
+        
         self.properties = {}
         
         # Default matching configuration
         self.matching_config = {
             "use_aliases": True,
             "properties_file": "wikidata-properties-with-aliases.json",
-            "entity_query_method": "api",  # Doing nothing...
-            "property_query_method": "api"  # Options: "api" or "mixed" or "cos_similarity"
+            "entity_query_method": "api",
+            "property_query_method": "api",
+            "save_matches": False,  # Whether to save matched triples to YAML
+            "matches_output_file": "matched_triples.yaml"  # Where to save the matches
         }
         
         # Update with custom config if provided
@@ -50,6 +57,9 @@ class Integrator:
         self.embedding_model = SentenceTransformer(embedding_model)
         self.graph_manager = GraphManager()
         self._initialize_configuration()
+        
+        # Initialize matches storage if saving is enabled
+        self.matched_triples = [] if self.matching_config.get("save_matches") else None
     
     def _initialize_configuration(self):
         """Initialize configuration including properties and matcher setup."""
@@ -87,9 +97,9 @@ class Integrator:
         """
         Process a single triple and add it to the graph
         """
-        subject, predicate, object = triple
+        subject, predicate, obj = triple
         
-        self.logger.info(f"🔄 Processing triple: (\"{subject}\", \"{predicate}\", \"{object}\")")
+        self.logger.info(f"🔄 Processing triple: (\"{subject}\", \"{predicate}\", \"{obj}\")")
         
         subject_id = self.matcher.query_wikidata_entity(subject)
         if subject_id:
@@ -103,17 +113,33 @@ class Integrator:
         else:
             self.logger.warning(f"⚠️ Could not find Wikidata property for predicate: {predicate}")
         
-        object_id = self.matcher.query_wikidata_entity(object)
+        object_id = self.matcher.query_wikidata_entity(obj)
         if object_id:
             self.logger.info(f"✓ Found object ID: {object_id}")
         else:
-            self.logger.warning(f"⚠️ Could not map object to Wikidata: {object}")
+            self.logger.warning(f"⚠️ Could not map object to Wikidata: {obj}")
+        
+        # Store match information if saving is enabled
+        if self.matched_triples is not None:
+            match_info = {
+                'triple': {
+                    'subject': subject,
+                    'predicate': predicate,
+                    'object': obj
+                },
+                'expected_id': {
+                    'subject': subject_id or 'not_found',
+                    'predicate': property_id or 'not_found',
+                    'object': object_id or 'not_found'
+                }
+            }
+            self.matched_triples.append(match_info)
         
         # Add triple to graph
         self.graph_manager.add_triple(
             subject_id or subject,
             property_id or predicate,
-            object_id or object,
+            object_id or obj,
             is_literal=object_id is None
         )
 
@@ -278,6 +304,10 @@ class Integrator:
             # Print final statistics
             self._print_statistics("Final Knowledge Graph Statistics")
             
+            # Save matches if enabled
+            if self.matching_config.get("save_matches"):
+                self._save_matches()
+            
             self.logger.info(f"⏱️  Total processing time: {total_time:.2f} seconds")
             self.logger.info("="*50)
             
@@ -297,6 +327,32 @@ class Integrator:
     def _print_statistics(self, title: str = "Current Statistics") -> None:
         self.graph_manager.print_statistics(title)
 
+    def _save_matches(self) -> None:
+        """Save matched triples to YAML file if saving is enabled."""
+        if not self.matched_triples:
+            return
+        
+        try:
+            output_file = os.path.join(
+                self.output_dir, 
+                self.matching_config.get("matches_output_file")
+            )
+            
+            with open(output_file, 'w', encoding='utf-8') as f:
+                yaml.safe_dump(
+                    {'triples': self.matched_triples},
+                    f,
+                    allow_unicode=True,
+                    default_flow_style=False,
+                    sort_keys=False
+                )
+            
+            self.logger.info(f"✅ Saved matched triples to: {output_file}")
+            
+        except Exception as e:
+            self.logger.error(f"❌ Error saving matched triples: {str(e)}")
+            raise
+
 
 if __name__ == "__main__":
     example_triples = [
@@ -306,10 +362,6 @@ if __name__ == "__main__":
     ("Albert Einstein", "received", "Nobel Prize in Physics"),  # P166: award received
     ]
     
-    pipeline = Integrator(input_dir="../data/triples", output_dir="../data/knowledge_graph", embedding_model="sentence-transformers/all-MiniLM-L6-v2")
-    pipeline._process_triples(example_triples)
+    pipeline = Integrator(input_dir="./output_model", output_dir="./output_integrator", embedding_model="sentence-transformers/all-MiniLM-L6-v2")
+    pipeline.process()
     
-    stats = pipeline._get_statistics()
-    print("Statistiken:", json.dumps(stats, indent=2))
-    
-    pipeline._save_graph("../data/knowledge_graph/stats")

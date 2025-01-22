@@ -2,7 +2,7 @@ from rdflib import Graph, Namespace, URIRef, Literal
 from rdflib.namespace import RDF, RDFS, XSD
 from typing import Dict, Tuple
 from urllib.parse import quote
-from .logger_config import setup_logger
+from logger_config import setup_logger
 
 class GraphManager:
     """

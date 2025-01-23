@@ -12,6 +12,7 @@ from pathlib import Path
 import time
 from core.Integrator import Matcher, GraphManager, WikidataEmbeddingGenerator
 from utils.logger_config import setup_logger
+from utils.graph_visualizer import GraphVisualizer
 import yaml
 
 class Integrator:
@@ -305,6 +306,25 @@ class Integrator:
             # Save matches if enabled
             if self.matching_config.get("save_matches"):
                 self._save_matches()
+            
+            # Save the graph in turtle format
+            output_file = os.path.join(self.output_dir, "knowledge_graph.ttl")
+            self._save_graph(output_file, "turtle")
+            
+            # Create visualization
+            self.logger.info("🎨 Creating graph visualization...")
+            visualizer = GraphVisualizer(
+                input_file=output_file,
+                output_dir=os.path.join(self.output_dir, "visualizations")
+            )
+            visualizer.load_graph()
+            visualizer.visualize(
+                title="Knowledge Graph Visualization",
+                figsize=(20, 15),  # Larger figure size for better visibility
+                node_size=3000,    # Larger nodes
+                font_size=10,      # Larger node labels
+                edge_label_font_size=8  # Larger edge labels
+            )
             
             self.logger.info(f"⏱️  Total processing time: {total_time:.2f} seconds")
             self.logger.info("="*50)

@@ -2,10 +2,9 @@ import logging
 import os
 from datetime import datetime
 
-# Global dictionary to store logger instances by log directory
 _loggers = {}
 
-def setup_logger(name: str, log_dir: str = "logs") -> logging.Logger:
+def setup_logger(name: str, log_dir: str = "./data/logs") -> logging.Logger:
     """
     Set up a logger with both file and console handlers.
     Returns the same logger instance for the same log directory.

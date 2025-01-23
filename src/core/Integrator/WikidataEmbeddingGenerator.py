@@ -4,6 +4,7 @@ import json
 import os
 from typing import Dict, Union, List
 from time import sleep
+from utils.logger_config import setup_logger
 
 class WikidataEmbeddingGenerator:
     """
@@ -16,6 +17,7 @@ class WikidataEmbeddingGenerator:
         Args:
             embedding_model: The initialised sentence transformer model from Integrator
         """
+        self.logger = setup_logger(__name__)
         self.embedding_model = embedding_model
         self.sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
         self.sparql.addCustomHttpHeader('User-Agent', 'Bot/4.2')
@@ -53,11 +55,11 @@ class WikidataEmbeddingGenerator:
         
         properties = {}
         try:
-            print("🔄 Fetching Wikidata properties...")
+            self.logger.info("🔄 Fetching Wikidata properties...")
             self.sparql.setQuery(query)
             results = self.sparql.query().convert()
             
-            print("✨ Computing embeddings...")
+            self.logger.info("✨ Computing embeddings...")
             for result in results["results"]["bindings"]:
                 prop_id = result["property"]["value"].split("/")[-1]
                 label = result["propertyLabel"]["value"]
@@ -68,15 +70,15 @@ class WikidataEmbeddingGenerator:
                     "embedding": embedding
                 }
             
-            print(f"📝 Saving properties to {output_file}...")
+            self.logger.info(f"📝 Saving properties to {output_file}...")
             with open(output_file, "w", encoding='utf-8') as file:
                 json.dump(properties, file, indent=4, ensure_ascii=False)
             
-            print(f"✅ Successfully saved {len(properties)} properties")
+            self.logger.info(f"✅ Successfully saved {len(properties)} properties")
             return properties
             
         except Exception as e:
-            print(f"❌ Error fetching properties: {str(e)}")
+            self.logger.error(f"❌ Error fetching properties: {str(e)}")
             raise
 
     def _generate_embeddings_with_aliases(self, output_file: str) -> Dict[str, Dict[str, Union[str, float, List[str]]]]:
@@ -98,8 +100,9 @@ class WikidataEmbeddingGenerator:
         
         properties = {}
         try:
-            print("🔄 Fetching Wikidata properties with aliases...")
+            self.logger.info("🔄 Fetching Wikidata properties with aliases...")
             self.sparql.setQuery(query)
+            # Convert query result to JSON format
             results = self.sparql.query().convert()
             
             # Process results and group by property
@@ -117,7 +120,7 @@ class WikidataEmbeddingGenerator:
                 if "altLabel" in result:
                     property_data[prop_id]["aliases"].add(result["altLabel"]["value"])
             
-            print("✨ Computing embeddings for labels and aliases...")
+            self.logger.info("✨ Computing embeddings for labels and aliases...")
             # Generate embeddings for labels and aliases
             for prop_id, data in property_data.items():
                 # Convert aliases set to list for JSON serialization
@@ -140,21 +143,21 @@ class WikidataEmbeddingGenerator:
                     "alias_embeddings": alias_embeddings
                 }
             
-            print(f"📝 Saving properties to {output_file}...")
+            self.logger.info(f"📝 Saving properties to {output_file}...")
             with open(output_file, "w", encoding='utf-8') as file:
                 json.dump(properties, file, indent=4, ensure_ascii=False)
             
-            print(f"✅ Successfully saved {len(properties)} properties with their aliases and embeddings")
-            print(f"📊 Statistics:")
+            self.logger.info(f"✅ Successfully saved {len(properties)} properties with their aliases and embeddings")
+            self.logger.info(f"📊 Statistics:")
             total_aliases = sum(len(p["aliases"]) for p in properties.values())
-            print(f"   • Total properties: {len(properties)}")
-            print(f"   • Total aliases: {total_aliases}")
-            print(f"   • Average aliases per property: {total_aliases/len(properties):.2f}")
+            self.logger.info(f"   • Total properties: {len(properties)}")
+            self.logger.info(f"   • Total aliases: {total_aliases}")
+            self.logger.info(f"   • Average aliases per property: {total_aliases/len(properties):.2f}")
             
             return properties
             
         except Exception as e:
-            print(f"❌ Error fetching properties: {str(e)}")
+            self.logger.error(f"❌ Error fetching properties: {str(e)}")
             raise
 
     def load_embeddings(self, file_path: str, use_aliases: bool = True) -> Dict[str, Dict[str, Union[str, float, List[str]]]]:
@@ -172,14 +175,14 @@ class WikidataEmbeddingGenerator:
             with open(file_path, "r") as file:
                 properties = json.load(file)
             
-            print(f"Successfully loaded properties from {file_path}")
+            self.logger.info(f"✅ Successfully loaded properties from {file_path}")
             
             # Check if we need to convert from old format to new format
             if use_aliases:
                 # Check if the first property has the new format structure
                 first_prop = next(iter(properties.values()))
                 if "label_embedding" not in first_prop:
-                    print("Converting properties to alias format...")
+                    self.logger.info("🔄 Converting properties to alias format...")
                     converted_properties = {}
                     for prop_id, prop_data in properties.items():
                         converted_properties[prop_id] = {
@@ -189,12 +192,12 @@ class WikidataEmbeddingGenerator:
                             "alias_embeddings": {}
                         }
                     properties = converted_properties
-                    print("Properties converted to alias format.")
+                    self.logger.info("✅ Properties converted to alias format.")
             else:
                 # Check if we need to convert from new format to old format
                 first_prop = next(iter(properties.values()))
                 if "embedding" not in first_prop:
-                    print("Converting properties to simple format...")
+                    self.logger.info("🔄 Converting properties to simple format...")
                     converted_properties = {}
                     for prop_id, prop_data in properties.items():
                         converted_properties[prop_id] = {
@@ -202,11 +205,11 @@ class WikidataEmbeddingGenerator:
                             "embedding": prop_data["label_embedding"]
                         }
                     properties = converted_properties
-                    print("Properties converted to simple format.")
+                    self.logger.info("✅ Properties converted to simple format.")
             
             return properties
         except Exception as e:
-            print(f"Error loading embeddings: {e}")
+            self.logger.error(f"❌ Error loading embeddings: {str(e)}")
             return {}
 
 if __name__ == "__main__":

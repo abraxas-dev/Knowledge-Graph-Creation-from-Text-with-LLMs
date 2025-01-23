@@ -5,7 +5,7 @@ import torch
 from sentence_transformers import util
 import requests
 from time import sleep
-from logger_config import setup_logger
+from utils.logger_config import setup_logger
 
 class Matcher:
     """

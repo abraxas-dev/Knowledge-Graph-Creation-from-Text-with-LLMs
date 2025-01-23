@@ -10,10 +10,8 @@ import pandas as pd
 import os 
 from pathlib import Path
 import time
-from WikidataEmbeddingGenerator import WikidataEmbeddingGenerator
-from Matcher import Matcher
-from GraphManager import GraphManager
-from logger_config import setup_logger
+from core.Integrator import Matcher, GraphManager, WikidataEmbeddingGenerator
+from utils.logger_config import setup_logger
 import yaml
 
 class Integrator:
@@ -42,7 +40,7 @@ class Integrator:
         # Default matching configuration
         self.matching_config = {
             "use_aliases": True,
-            "properties_file": "wikidata-properties-with-aliases.json",
+            "properties_file": "./data/Properties/wikidata-properties-with-aliases.json",
             "entity_query_method": "api",
             "property_query_method": "api",
             "save_matches": False,  # Whether to save matched triples to YAML

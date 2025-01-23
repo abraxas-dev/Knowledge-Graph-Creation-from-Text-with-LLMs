@@ -1,0 +1,38 @@
+data_paths:
+  processed_data_path: "./data/run/processed"
+  triples_path: "./data/run/triples"
+  knowledge_graph_path: "./data/run/knowledge_graph"
+
+extractor:
+  urls:
+    - "https://en.wikipedia.org/wiki/Artificial_intelligence"
+    - "https://en.wikipedia.org/wiki/Internet"
+  chunk_size: 450
+
+llm:
+  api_key: "your-api-key"
+  model_name: "microsoft/Phi-3.5-mini-instruct"
+  system_message: |
+    Extract RDF triples from the following text. Each triple should be of the form (subject, predicate, object).
+    Example:
+    Text: 'The Eiffel Tower is located in Paris, France, and was completed in 1889.'
+    Output:
+    (Eiffel Tower, is located in, Paris)
+    (Paris, is in, France)
+    (Eiffel Tower, was completed in, 1889)
+  prompt_template: |
+    Generate triples for the following text:
+
+    {text}
+  max_chunks: 1
+  model_generate_parameters:
+    temperature: 0.1
+    max_new_tokens: 512
+
+integrator:
+  embedding_model: "sentence-transformers/all-mpnet-base-v2"
+  matching_method:
+    use_aliases: true
+    properties_file: "./data/Properties/wikidata-properties-with-aliases.json"
+    entity_query_method: "api"
+    property_query_method: "api"

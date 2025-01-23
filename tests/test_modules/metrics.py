@@ -26,32 +26,49 @@ class TripleEvaluator:
         """Normalize text by converting to lowercase and removing special characters."""
         return re.sub(r"[^\w\s]", "", text.lower().strip())
 
-    @staticmethod
-    def normalize_triple(triple):
-        """Normalize each element of the triple."""
-        return {
-            'subject': TripleEvaluator.normalize_text(triple['subject']),
-            'predicate': TripleEvaluator.normalize_text(triple['predicate']),
-            'object': TripleEvaluator.normalize_text(triple['object']),
-        }
-
     def evaluate_triples(self):
         """
-        Compare textual triples and calculate Precision, Recall, and F1-Score.
+        Compare triples based on IDs (subject_id, predicate_id, object_id) and calculate Precision, Recall, and F1-Score.
         """
-        # Normalize textual triples
-        generated_triples = [self.normalize_triple(item['triple']) for item in self.generated_data]
-        ground_truth_triples = [self.normalize_triple(item['triple']) for item in self.ground_truth_data]
+        # Extract IDs from generated and ground truth triples
+        generated_ids = [
+            (item['expected_id']['subject'], item['expected_id']['predicate'], item['expected_id']['object'])
+            for item in self.generated_data
+        ]
+        ground_truth_ids = [
+            (item['expected_id']['subject'], item['expected_id']['predicate'], item['expected_id']['object'])
+            for item in self.ground_truth_data
+        ]
 
-        # Generate true and predicted values for textual comparison
-        y_true = [1 if gt in generated_triples else 0 for gt in ground_truth_triples]
-        y_pred = [1 if gen in ground_truth_triples else 0 for gen in generated_triples]
+        # Initialize counters for true positives, false positives, and false negatives
+        true_positives = 0
+        false_positives = 0
+        false_negatives = 0
+
+        # Calculate True Positives and False Negatives
+        for gt_id in ground_truth_ids:
+            if gt_id in generated_ids:
+                true_positives += 1
+            else:
+                false_negatives += 1
+
+        # Calculate False Positives
+        for gen_id in generated_ids:
+            if gen_id not in ground_truth_ids:
+                false_positives += 1
 
         # Calculate metrics
+        precision = true_positives / (true_positives + false_positives) if (true_positives + false_positives) > 0 else 0
+        recall = true_positives / (true_positives + false_negatives) if (true_positives + false_negatives) > 0 else 0
+        f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
+
         return {
-            "Precision": precision_score(y_true, y_pred, zero_division=0),
-            "Recall": recall_score(y_true, y_pred, zero_division=0),
-            "F1": f1_score(y_true, y_pred, zero_division=0),
+            "Precision": precision,
+            "Recall": recall,
+            "F1": f1,
+            "True Positives": true_positives,
+            "False Positives": false_positives,
+            "False Negatives": false_negatives,
         }
 
     def evaluate_ids(self, component):
@@ -62,20 +79,40 @@ class TripleEvaluator:
         generated_ids = [item['expected_id'][component] for item in self.generated_data]
         ground_truth_ids = [item['expected_id'][component] for item in self.ground_truth_data]
 
-        # Generate true and predicted values for ID comparison
-        y_true = [1 if gt != "not_found" else 0 for gt in ground_truth_ids]
-        y_pred = [1 if gen == gt and gt != "not_found" else 0 for gen, gt in zip(generated_ids, ground_truth_ids)]
+        # Initialize counters for true positives, false positives, and false negatives
+        true_positives = 0
+        false_positives = 0
+        false_negatives = 0
+
+        # Calculate True Positives and False Negatives
+        for gt_id in ground_truth_ids:
+            if gt_id in generated_ids:
+                true_positives += 1
+            else:
+                false_negatives += 1
+
+        # Calculate False Positives
+        for gen_id in generated_ids:
+            if gen_id not in ground_truth_ids:
+                false_positives += 1
 
         # Calculate metrics
+        precision = true_positives / (true_positives + false_positives) if (true_positives + false_positives) > 0 else 0
+        recall = true_positives / (true_positives + false_negatives) if (true_positives + false_negatives) > 0 else 0
+        f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
+
         return {
-            "Precision": precision_score(y_true, y_pred, zero_division=0),
-            "Recall": recall_score(y_true, y_pred, zero_division=0),
-            "F1": f1_score(y_true, y_pred, zero_division=0),
+            "Precision": precision,
+            "Recall": recall,
+            "F1": f1,
+            "True Positives": true_positives,
+            "False Positives": false_positives,
+            "False Negatives": false_negatives,
         }
 
     def evaluate(self):
         """Evaluate metrics for Triples, Entities, Properties, and Objects."""
-        # Evaluate textual triples
+        # Evaluate triples based on IDs
         self.results['Triples'] = self.evaluate_triples()
 
         # Evaluate IDs for entities (subjects), properties (predicates), and objects

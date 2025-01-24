@@ -1,0 +1,409 @@
+triples:
+- triple:
+    subject: LeBron James
+    predicate: full name
+    object: LeBron Raymone James Sr.
+  expected_id:
+    subject: Q36159
+    predicate: P735
+    object: Q36159
+- triple:
+    subject: LeBron James
+    predicate: birth date
+    object: December 30, 1984
+  expected_id:
+    subject: Q36159
+    predicate: P569
+    object: Q69296294
+- triple:
+    subject: LeBron James
+    predicate: nationality
+    object: American
+  expected_id:
+    subject: Q36159
+    predicate: P27
+    object: Q846570
+- triple:
+    subject: LeBron James
+    predicate: occupation
+    object: professional basketball player
+  expected_id:
+    subject: Q36159
+    predicate: P106
+    object: Q3665646
+- triple:
+    subject: LeBron James
+    predicate: plays for
+    object: Los Angeles Lakers
+  expected_id:
+    subject: Q36159
+    predicate: P54
+    object: Q121783
+- triple:
+    subject: LeBron James
+    predicate: plays in
+    object: National Basketball Association (NBA)
+  expected_id:
+    subject: Q36159
+    predicate: P3450
+    object: Q155223
+- triple:
+    subject: LeBron James
+    predicate: nickname
+    object: King James
+  expected_id:
+    subject: Q36159
+    predicate: P1449
+    object: Q36159
+- triple:
+    subject: LeBron James
+    predicate: regarded as
+    object: one of the greatest basketball players of all time
+  expected_id:
+    subject: Q36159
+    predicate: P1411
+    object: Q114534382
+- triple:
+    subject: LeBron James
+    predicate: compared to
+    object: Michael Jordan
+  expected_id:
+    subject: Q36159
+    predicate: P2210
+    object: Q41421
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: 4 NBA championships
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q18156668
+- triple:
+    subject: LeBron James
+    predicate: appeared in
+    object: 10 NBA Finals
+  expected_id:
+    subject: Q36159
+    predicate: P1344
+    object: Q842375
+- triple:
+    subject: LeBron James
+    predicate: consecutive appearances
+    object: 8 NBA Finals
+  expected_id:
+    subject: Q36159
+    predicate: P1350
+    object: P1352
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: inaugural NBA Cup
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q120491192
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: 3 Olympic gold medals
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q15243387
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: Olympics MVP
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q652965
+- triple:
+    subject: LeBron James
+    predicate: is
+    object: NBA's all-time leading scorer
+  expected_id:
+    subject: Q36159
+    predicate: P31
+    object: Q29440754
+- triple:
+    subject: LeBron James
+    predicate: ranked
+    object: 4th in NBA career assists
+  expected_id:
+    subject: Q36159
+    predicate: P1352
+    object: Q29440777
+- triple:
+    subject: LeBron James
+    predicate: ranked
+    object: 8th in NBA career steals
+  expected_id:
+    subject: Q36159
+    predicate: P1352
+    object: Q29440780
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: 4 NBA Most Valuable Player Awards
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q222047
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: 4 NBA Finals MVP Awards
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q739499
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: NBA Rookie of the Year Award
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q644357
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: 3 NBA All-Star Game MVP Awards
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q31391
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: inaugural NBA Cup MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q125593297
+- triple:
+    subject: LeBron James
+    predicate: named
+    object: 20 times NBA All-Star
+  expected_id:
+    subject: Q36159
+    predicate: P1344
+    object: Q137341
+- triple:
+    subject: LeBron James
+    predicate: selected to
+    object: 20 times All-NBA Team
+  expected_id:
+    subject: Q36159
+    predicate: P1352
+    object: Q674359
+- triple:
+    subject: LeBron James
+    predicate: selected to
+    object: 6 times All-Defensive Team
+  expected_id:
+    subject: Q36159
+    predicate: P1352
+    object: Q1465181
+- triple:
+    subject: LeBron James
+    predicate: runner-up
+    object: NBA Defensive Player of the Year Award
+  expected_id:
+    subject: Q36159
+    predicate: P710
+    object: Q845884
+- triple:
+    subject: LeBron James
+    predicate: tied for most seasons played
+    object: Vince Carter
+  expected_id:
+    subject: Q36159
+    predicate: P1352
+    object: Q241261
+- triple:
+    subject: LeBron James
+    predicate: holds record for
+    object: most minutes played in NBA history
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q16161702
+- triple:
+    subject: LeBron James
+    predicate: grew up in
+    object: Akron
+  expected_id:
+    subject: Q36159
+    predicate: P551
+    object: Q163132
+- triple:
+    subject: LeBron James
+    predicate: played for
+    object: St. Vincent–St. Mary High School
+  expected_id:
+    subject: Q36159
+    predicate: P54
+    object: Q7592124
+- triple:
+    subject: LeBron James
+    predicate: complimented by
+    object: National media
+  expected_id:
+    subject: Q36159
+    predicate: P1411
+    object: Q3036350
+- triple:
+    subject: LeBron James
+    predicate: selected by
+    object: in 2003 Cleveland Cavaliers
+  expected_id:
+    subject: Q36159
+    predicate: P641
+    object: Q162990
+- triple:
+    subject: LeBron James
+    predicate: was
+    object: 1st overall
+  expected_id:
+    subject: Q36159
+    predicate: P31
+    object: Q43633947
+- triple:
+    subject: LeBron James
+    predicate: named
+    object: 2004 NBA Rookie of the Year
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q7366223
+- triple:
+    subject: LeBron James
+    predicate: established
+    object: league's premier players
+  expected_id:
+    subject: Q36159
+    predicate: P1352
+    object: Q61639238
+- triple:
+    subject: LeBron James
+    predicate: led
+    object: Cleveland Cavaliers to their first NBA Finals appearance
+  expected_id:
+    subject: Q36159
+    predicate: P1431
+    object: Q2552745
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: in 2009 NBA MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q222047
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: in 2010 NBA MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q222047
+- triple:
+    subject: LeBron James
+    predicate: left
+    object: Cleveland Cavaliers
+  expected_id:
+    subject: Q36159
+    predicate: P582
+    object: Q162990
+- triple:
+    subject: LeBron James
+    predicate: joined
+    object: Miami Heat
+  expected_id:
+    subject: Q36159
+    predicate: P54
+    object: Q169138
+- triple:
+    subject: LeBron James
+    predicate: announced decision
+    object: National television
+  expected_id:
+    subject: Q36159
+    predicate: P9731
+    object: Q13974
+- triple:
+    subject: Announcement
+    predicate: regarded as
+    object: one of the most controversial moves
+  expected_id:
+    subject: Q4066806
+    predicate: P1411
+    object: Q2918584
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: NBA Championship in 2012
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q2628013
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: NBA Championship in 2013
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q13405328
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: in 2012 NBA MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q222047
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: in 2012 NBA Finals MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q739499
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: in 2013 NBA MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q222047
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: in 2013 NBA Finals MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P166
+    object: Q739499
+- triple:
+    subject: LeBron James
+    predicate: opted out of
+    object: in 2014 Miami Heat contract
+  expected_id:
+    subject: Q36159
+    predicate: P1344
+    object: Q169138
+- triple:
+    subject: LeBron James
+    predicate: returned to
+    object: in 2014 Cleveland Cavaliers
+  expected_id:
+    subject: Q36159
+    predicate: P463
+    object: Q169138

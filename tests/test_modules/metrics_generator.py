@@ -1,41 +1,79 @@
 import re
+from ast import literal_eval
 from sklearn.metrics import precision_score, recall_score, f1_score
 from rouge_score import rouge_scorer
+from bert_score import score as bert_score
+
 
 class TextTripleEvaluator:
-    def __init__(self, gen_file, gt_file):
+    def __init__(self, valid_file, invalid_file, gt_file):
         """
-        Initialize the TextTripleEvaluator with generated triples and ground truth triples.
-        :param gen_file: Path to the generated triples text file.
+        Initialize the TextTripleEvaluator with valid triples and ground truth triples.
+        Count lines from the invalid triples file.
+        :param valid_file: Path to the valid triples text file.
+        :param invalid_file: Path to the invalid triples text file.
         :param gt_file: Path to the ground truth triples text file.
         """
-        self.generated_data = self.load_triples_from_text(gen_file)
+        self.valid_data = self.load_triples_from_text(valid_file)
+        self.invalid_count = self.count_lines(invalid_file)
         self.ground_truth_data = self.load_triples_from_text(gt_file)
         self.results = {}
 
     @staticmethod
     def load_triples_from_text(filename):
-        """Load triples from a text file."""
-        with open(filename, "r") as file:
-            triples = [eval(line.strip()) for line in file]
-        return triples
+        """Load triples from a text file safely using literal_eval."""
+        try:
+            with open(filename, "r") as file:
+                triples = [literal_eval(line.strip()) for line in file if line.strip()]
+            return triples
+        except (FileNotFoundError, SyntaxError, ValueError) as e:
+            raise ValueError(f"Error reading {filename}: {e}")
+
+    @staticmethod
+    def count_lines(filename):
+        """Count the number of lines in a file."""
+        try:
+            with open(filename, "r") as file:
+                return sum(1 for _ in file if _.strip())
+        except FileNotFoundError as e:
+            raise ValueError(f"Error reading {filename}: {e}")
 
     @staticmethod
     def normalize_text(text):
         """Normalize text by converting to lowercase and removing special characters."""
         return re.sub(r"[^\w\s]", "", text.lower().strip())
 
+    def calculate_valid_percentage(self):
+        """
+        Calculate the percentage of valid triples compared to invalid triples.
+        """
+        valid_count = len(self.valid_data)
+        invalid_count = self.invalid_count
+
+        if invalid_count == 0:
+            return 100.0 if valid_count > 0 else 0.0  # Handle edge case when no invalid triples exist.
+
+        percentage = (valid_count / (valid_count + invalid_count)) * 100
+        return {
+            "Valid Count": valid_count,
+            "Invalid Count": invalid_count,
+            "Valid Percentage": percentage,
+        }
+
     def strict_match(self):
         """
-        Perform strict matching of triples and calculate metrics.
+        Perform strict matching of triples and calculate metrics using valid triples.
         """
-        true_positives = len(set(self.generated_data) & set(self.ground_truth_data))
-        false_positives = len(set(self.generated_data) - set(self.ground_truth_data))
-        false_negatives = len(set(self.ground_truth_data) - set(self.generated_data))
+        generated_set = set(map(tuple, self.valid_data))
+        ground_truth_set = set(map(tuple, self.ground_truth_data))
 
-        precision = true_positives / (true_positives + false_positives) if (true_positives + false_positives) > 0 else 0
-        recall = true_positives / (true_positives + false_negatives) if (true_positives + false_negatives) > 0 else 0
-        f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
+        true_positives = len(generated_set & ground_truth_set)
+        false_positives = len(generated_set - ground_truth_set)
+        false_negatives = len(ground_truth_set - generated_set)
+
+        precision = true_positives / (true_positives + false_positives) if true_positives + false_positives > 0 else 0
+        recall = true_positives / (true_positives + false_negatives) if true_positives + false_negatives > 0 else 0
+        f1 = 2 * precision * recall / (precision + recall) if precision + recall > 0 else 0
 
         return {
             "Precision": precision,
@@ -48,41 +86,25 @@ class TextTripleEvaluator:
 
     def relaxed_match(self):
         """
-        Perform relaxed matching by checking if the ground truth triple is partially included in the generated triple.
+        Perform relaxed matching by checking if the ground truth triple is partially included in the valid triples.
         """
         generated_normalized = [
-            (self.normalize_text(s), self.normalize_text(p), self.normalize_text(o)) for s, p, o in self.generated_data
+            (self.normalize_text(s), self.normalize_text(p), self.normalize_text(o)) for s, p, o in self.valid_data
         ]
         ground_truth_normalized = [
             (self.normalize_text(s), self.normalize_text(p), self.normalize_text(o)) for s, p, o in self.ground_truth_data
         ]
 
-        true_positives = 0
-        false_positives = 0
-        false_negatives = 0
+        true_positives = sum(
+            any(all(gt_comp in gen for gt_comp in gt if gt_comp) for gen in generated_normalized)
+            for gt in ground_truth_normalized
+        )
+        false_negatives = len(ground_truth_normalized) - true_positives
+        false_positives = len(generated_normalized) - true_positives
 
-        for gt in ground_truth_normalized:
-            match_found = False
-            for gen in generated_normalized:
-                if all(gt_comp in gen for gt_comp in gt if gt_comp):  # Check if all non-empty ground truth components are in generated triple
-                    true_positives += 1
-                    match_found = True
-                    break
-            if not match_found:
-                false_negatives += 1
-
-        for gen in generated_normalized:
-            match_found = False
-            for gt in ground_truth_normalized:
-                if all(gt_comp in gen for gt_comp in gt if gt_comp):
-                    match_found = True
-                    break
-            if not match_found:
-                false_positives += 1
-
-        precision = true_positives / (true_positives + false_positives) if (true_positives + false_positives) > 0 else 0
-        recall = true_positives / (true_positives + false_negatives) if (true_positives + false_negatives) > 0 else 0
-        f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
+        precision = true_positives / (true_positives + false_positives) if true_positives + false_positives > 0 else 0
+        recall = true_positives / (true_positives + false_negatives) if true_positives + false_negatives > 0 else 0
+        f1 = 2 * precision * recall / (precision + recall) if precision + recall > 0 else 0
 
         return {
             "Precision": precision,
@@ -95,17 +117,15 @@ class TextTripleEvaluator:
 
     def rouge_match(self):
         """
-        Perform ROUGE-based evaluation for triples using ROUGE-1, ROUGE-2, and ROUGE-L.
+        Perform ROUGE-based evaluation for triples using valid triples.
         """
         scorer = rouge_scorer.RougeScorer(["rouge1", "rouge2", "rougeL"], use_stemmer=True)
         total_rouge1 = 0
         total_rouge2 = 0
         total_rougeL = 0
 
-        for gen in self.generated_data:
-            best_rouge1 = 0
-            best_rouge2 = 0
-            best_rougeL = 0
+        for gen in self.valid_data:
+            best_rouge1 = best_rouge2 = best_rougeL = 0
             for gt in self.ground_truth_data:
                 scores = scorer.score(" ".join(gen), " ".join(gt))
                 best_rouge1 = max(best_rouge1, scores["rouge1"].fmeasure)
@@ -116,33 +136,52 @@ class TextTripleEvaluator:
             total_rougeL += best_rougeL
 
         return {
-            "Average ROUGE-1": total_rouge1 / len(self.generated_data) if len(self.generated_data) > 0 else 0,
-            "Average ROUGE-2": total_rouge2 / len(self.generated_data) if len(self.generated_data) > 0 else 0,
-            "Average ROUGE-L": total_rougeL / len(self.generated_data) if len(self.generated_data) > 0 else 0,
+            "Average ROUGE-1": total_rouge1 / len(self.valid_data) if self.valid_data else 0,
+            "Average ROUGE-2": total_rouge2 / len(self.valid_data) if self.valid_data else 0,
+            "Average ROUGE-L": total_rougeL / len(self.valid_data) if self.valid_data else 0,
+        }
+
+    def bert_score_match(self):
+        """
+        Perform BERTScore evaluation for valid triples.
+        """
+        generated_texts = [" ".join(triple) for triple in self.valid_data]
+        ground_truth_texts = [" ".join(triple) for triple in self.ground_truth_data]
+
+        precision, recall, f1 = bert_score(
+            generated_texts, ground_truth_texts, lang="en", verbose=False
+        )
+
+        return {
+            "Average BERTScore Precision": precision.mean().item(),
+            "Average BERTScore Recall": recall.mean().item(),
+            "Average BERTScore F1": f1.mean().item(),
         }
 
     def evaluate(self):
         """
-        Evaluate triples using strict, relaxed, and ROUGE matching.
+        Evaluate triples using strict, relaxed, ROUGE, and BERTScore matching.
         """
-        self.results['Strict Match'] = self.strict_match()
-        self.results['Relaxed Match'] = self.relaxed_match()
-        self.results['ROUGE Match'] = self.rouge_match()
+        self.results["Valid Percentage"] = self.calculate_valid_percentage()
+        self.results["Strict Match"] = self.strict_match()
+        self.results["Relaxed Match"] = self.relaxed_match()
+        self.results["ROUGE Match"] = self.rouge_match()
+        self.results["BERTScore Match"] = self.bert_score_match()
         return self.results
 
-# Main Execution Example
+
+# Main Execution
 if __name__ == "__main__":
-    # Input text files
-    gen_file = "generated_triples.txt"
+    # Hardcoded file paths
+    valid_file = "valid_triples.txt"
+    invalid_file = "invalid_triples.txt"
     gt_file = "groundtruth_triples.txt"
 
-    # Initialize evaluator and evaluate
-    evaluator = TextTripleEvaluator(gen_file, gt_file)
+    evaluator = TextTripleEvaluator(valid_file, invalid_file, gt_file)
     results = evaluator.evaluate()
 
-    # Print results to console
     print("Evaluation Results:")
     for category, metrics in results.items():
         print(f"{category}:")
         for metric, value in metrics.items():
-            print(f"  {metric}: {value:.4f}")
+            print(f"  {metric}: {value:.4f}" if isinstance(value, float) else f"  {metric}: {value}")

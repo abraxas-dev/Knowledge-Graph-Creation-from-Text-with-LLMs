@@ -1,0 +1,193 @@
+triples:
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: is a
+    object: intelligence
+  expected_id:
+    subject: Q11660
+    predicate: P31
+    object: Q11028
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: field of
+    object: computer science
+  expected_id:
+    subject: Q11660
+    predicate: P2579
+    object: Q21198
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: develops
+    object: methods and software
+  expected_id:
+    subject: Q11660
+    predicate: P178
+    object: Q7397
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: enables
+    object: machines
+  expected_id:
+    subject: Q11660
+    predicate: P828
+    object: Q11016
+- triple:
+    subject: Machines
+    predicate: perform
+    object: action
+  expected_id:
+    subject: Q11016
+    predicate: P366
+    object: Q1914636
+- triple:
+    subject: Machines
+    predicate: may be
+    object: AI
+  expected_id:
+    subject: Q11016
+    predicate: P4390
+    object: Q11660
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: web search engines
+  expected_id:
+    subject: Q11660
+    predicate: P527
+    object: Q4182287
+- triple:
+    subject: Google Search
+    predicate: is a
+    object: web search engines
+  expected_id:
+    subject: Q9366
+    predicate: P31
+    object: Q4182287
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: recommendation systems
+  expected_id:
+    subject: Q11660
+    predicate: P527
+    object: Q554950
+- triple:
+    subject: YouTube
+    predicate: is a
+    object: recommendation systems
+  expected_id:
+    subject: Q866
+    predicate: P31
+    object: Q554950
+- triple:
+    subject: Amazon
+    predicate: is a
+    object: recommendation systems
+  expected_id:
+    subject: Q3884
+    predicate: P31
+    object: Q554950
+- triple:
+    subject: Netflix
+    predicate: is a
+    object: recommendation systems
+  expected_id:
+    subject: Q907311
+    predicate: P31
+    object: Q554950
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: virtual assistants
+  expected_id:
+    subject: Q11660
+    predicate: P527
+    object: Q3467906
+- triple:
+    subject: Google Assistant
+    predicate: is a
+    object: virtual assistants
+  expected_id:
+    subject: Q25025241
+    predicate: P31
+    object: Q3467906
+- triple:
+    subject: Siri
+    predicate: is a
+    object: virtual assistants
+  expected_id:
+    subject: Q582159
+    predicate: P31
+    object: Q3467906
+- triple:
+    subject: Alexa
+    predicate: is a
+    object: virtual assistants
+  expected_id:
+    subject: Q28022144
+    predicate: P31
+    object: Q3467906
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: autonomous vehicles
+  expected_id:
+    subject: Q11660
+    predicate: P527
+    object: Q116285085
+- triple:
+    subject: Waymo
+    predicate: is a
+    object: autonomous vehicle
+  expected_id:
+    subject: Q48993797
+    predicate: P31
+    object: Q105484112
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: generative and creative tools
+  expected_id:
+    subject: Q11660
+    predicate: P527
+    object: Q19768
+- triple:
+    subject: ChatGPT
+    predicate: is a
+    object: generative tool
+  expected_id:
+    subject: Q115564437
+    predicate: P31
+    object: Q19768
+- triple:
+    subject: AI art
+    predicate: is a
+    object: generative tool
+  expected_id:
+    subject: Q65066631
+    predicate: P31
+    object: Q19768
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: strategy games
+  expected_id:
+    subject: Q11660
+    predicate: P527
+    object: Q9900849
+- triple:
+    subject: Chess
+    predicate: is a
+    object: strategy game
+  expected_id:
+    subject: Q718
+    predicate: P31
+    object: Q9900849
+- triple:
+    subject: Go
+    predicate: is a
+    object: strategy game
+  expected_id:
+    subject: Q11413
+    predicate: P31
+    object: Q9900849

@@ -1,17 +1,31 @@
+# Data paths configuration
 data_paths:
+  # Directory for storing preprocessed text chunks
   processed_data_path: "./data/run/processed"
+  # Directory for storing generated RDF triples
   triples_path: "./data/run/triples"
+  # Directory for storing the final knowledge graph
   knowledge_graph_path: "./data/run/knowledge_graph"
 
+# Text extraction configuration
 extractor:
+  # List of URLs to extract content from - can be any Wikipedia URLs
   urls:
     - "https://en.wikipedia.org/wiki/Artificial_intelligence"
     - "https://en.wikipedia.org/wiki/Internet"
+  # Size of text chunks in characters - adjust based on your needs
+  # Smaller chunks (300-500) for more precise extraction
+  # Larger chunks (1000-1500) for more context
   chunk_size: 450
 
+# Language Model configuration for triple generation
 llm:
+  # Doesn't work for now
   api_key: "your-api-key"
+  # Model to use for triple generation
+  # Options: "microsoft/Phi-3.5-mini-instruct", "gpt-3.5-turbo", etc.
   model_name: "microsoft/Phi-3.5-mini-instruct"
+  # System message that guides the model's triple extraction behavior
   system_message: |
     Extract RDF triples from the following text. Each triple should be of the form (subject, predicate, object).
     Example:
@@ -20,19 +34,56 @@ llm:
     (Eiffel Tower, is located in, Paris)
     (Paris, is in, France)
     (Eiffel Tower, was completed in, 1889)
+  # Template for formatting the input text
+  # {text} is replaced with the actual content
   prompt_template: |
     Generate triples for the following text:
 
     {text}
+  # Maximum number of chunks to process per run
+  # Set to None to process all chunks
   max_chunks: 1
+  # Model generation parameters for controlling output
   model_generate_parameters:
+    # Controls randomness: 0.0 for deterministic, higher for more creative
     temperature: 0.1
+    # Maximum number of tokens in the response
     max_new_tokens: 512
+    # Number between 0 and 1 that penalizes new tokens based on whether they appear in the text so far
+    # Increases the model's likelihood to talk about new topics
+    # repetition_penalty: 1.1
+    # The cumulative probability threshold for token sampling
+    # Higher values (e.g., 0.9) make the output more focused and conservative
+    # Lower values (e.g., 0.1) make the output more diverse
+    # top_p: 0.9
+    # Controls how many highest probability tokens to consider for generation
+    # Lower values make the output more focused
+    # top_k: 50
+    # Whether to use beam search for text generation
+    # Beam search can provide more coherent outputs but is slower
+    # do_sample: true
+    # Controls the length penalty. Values < 1.0 encourage shorter sequences
+    # while values > 1.0 encourage longer sequences
+    # length_penalty: 1.0
+    # Early stopping flag for beam search
+    # early_stopping: true
 
+# Knowledge Graph Integration configuration
 integrator:
+  # Model for computing semantic similarity between predicates
+  # Options: "sentence-transformers/all-mpnet-base-v2", etc.
   embedding_model: "sentence-transformers/all-mpnet-base-v2"
+  # Configuration for matching predicates to Wikidata properties
   matching_method:
+    # Whether to use property aliases for matching
     use_aliases: true
+    # File to load/ store Wikidata properties and their embeddings
     properties_file: "./data/Properties/wikidata-properties-with-aliases.json"
+    # Only work for now with api
     entity_query_method: "api"
+    # Method for matching properties: "api", "cos_similarity", or "mixed"
     property_query_method: "api"
+    # Whether to save matched triples to YAML
+    # save_matches: true
+    # Where to save the matches
+    # matches_output_file: "matched_triples.yaml"

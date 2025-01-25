@@ -1,6 +1,0 @@
-("Cutting edge AI", "has filtered into", "General applications");
-("General applications", "is not perceived as", "AI");
-("Various subfields", "are centered around", "particular goals");
-("Various subfields", "use", "particular tools");
-("General applications", "becomes", "useful enough");
-("Useful enough", "is not labeled as", "AI anymore");

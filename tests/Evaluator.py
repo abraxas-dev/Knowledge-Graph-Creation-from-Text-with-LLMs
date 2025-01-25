@@ -239,7 +239,7 @@ def main():
     configs_dir = os.path.join(project_root, f"tests/config/{args.mode.capitalize()}")
     input_dir = os.path.join(project_root, f"tests/data/Datasets_{args.mode.capitalize()}/Dataset_AI/Raw")
     groundtruth_dir = os.path.join(project_root, f"tests/data/Datasets_{args.mode.capitalize()}/Dataset_AI/ground_truth")
-    output_dir = os.path.join(project_root, f"tests/results/{args.mode.capitalize()}/whole")
+    output_dir = os.path.join(project_root, f"tests/results/{args.mode.capitalize()}/Dataset_AI")
     
     evaluator = Evaluator(
         configs_dir=configs_dir,

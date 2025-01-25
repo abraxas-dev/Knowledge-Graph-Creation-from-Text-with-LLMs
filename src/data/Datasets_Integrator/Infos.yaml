@@ -1,0 +1,7 @@
+Datasets:
+  - name: "Dataset_AI"
+    size: 500
+    chunks: 1-6
+  - name: "Dataset_LebronJames"
+    size: 500
+    chunks: 1-7

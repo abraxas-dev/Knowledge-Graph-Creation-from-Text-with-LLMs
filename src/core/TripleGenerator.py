@@ -5,7 +5,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import time
 from typing import Dict
-from utils.logger_config import setup_logger
+from src.utils.logger_config import setup_logger
 
 class TripleGenerator:
     """

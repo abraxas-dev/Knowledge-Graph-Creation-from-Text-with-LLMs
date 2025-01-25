@@ -10,9 +10,11 @@ import pandas as pd
 import os 
 from pathlib import Path
 import time
-from core.Integrator import Matcher, GraphManager, WikidataEmbeddingGenerator
-from utils.logger_config import setup_logger
-from utils.graph_visualizer import GraphVisualizer
+from src.core.Integrator.Matcher import Matcher
+from src.core.Integrator.GraphManager import GraphManager
+from src.core.Integrator.WikidataEmbeddingGenerator import WikidataEmbeddingGenerator
+from src.utils.logger_config import setup_logger
+from src.utils.graph_visualizer import GraphVisualizer
 import yaml
 
 class Integrator:
@@ -53,7 +55,7 @@ class Integrator:
             self.matching_config.update(matching_config)
 
         # Initialize embedding model and graph manager
-        self.embedding_model = SentenceTransformer(embedding_model)
+        self.embedding_model = SentenceTransformer(embedding_model, trust_remote_code=True)
         self.graph_manager = GraphManager()
         self._initialize_configuration()
         
@@ -80,6 +82,7 @@ class Integrator:
                     use_aliases=use_aliases
                 )
 
+            # Pass all matching configuration to Matcher, including property_matches_dir
             self.matcher = Matcher(
                 embedding_model=self.embedding_model,
                 properties=self.properties,

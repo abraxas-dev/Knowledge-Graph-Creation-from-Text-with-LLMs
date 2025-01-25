@@ -5,12 +5,19 @@ Handles different run modes and configuration management.
 
 import os
 import sys
+from pathlib import Path
+
+# Add the project root directory to Python path
+project_root = str(Path(__file__).parent.parent)
+sys.path.insert(0, project_root)
+
 import argparse
 import yaml
-from pathlib import Path
 from typing import Dict
-from core import Extractor, TripleGenerator, Integrator
-from utils.logger_config import setup_logger   
+from src.core.Extractor import Extractor
+from src.core.TripleGenerator import TripleGenerator
+from src.core.Integrator.Integrator import Integrator
+from src.utils.logger_config import setup_logger   
 
 logger = setup_logger(__name__)
 

@@ -4,7 +4,7 @@ from rdflib import Graph, URIRef
 from typing import Dict, Set, Tuple
 import re
 from pathlib import Path
-from utils.logger_config import setup_logger
+from src.utils.logger_config import setup_logger
 
 class GraphVisualizer:
     """Class for visualizing RDF knowledge graphs."""

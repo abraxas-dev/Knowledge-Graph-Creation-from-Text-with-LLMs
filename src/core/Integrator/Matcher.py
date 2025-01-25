@@ -5,7 +5,7 @@ import torch
 from sentence_transformers import util
 import requests
 from time import sleep
-from utils.logger_config import setup_logger
+from src.utils.logger_config import setup_logger
 
 class Matcher:
     """
@@ -19,14 +19,22 @@ class Matcher:
         Args:
             embedding_model: The initialized sentence transformer model
             properties: Dictionary of properties with their embeddings
-            matching_config: Configuration for matching method
+            matching_config: Configuration for matching method including:
+                - use_aliases: Whether to use property aliases
+                - property_matches_dir: Directory to save property matches
+                - entity_query_method: Method for querying entities
+                - property_query_method: Method for matching properties
         """
         self.logger = setup_logger(__name__)
         self.embedding_model = embedding_model
         self.properties = properties
-        self.matching_config = matching_config
+        self.matching_config = matching_config or {}
         self.entity_cache = {}
         self.property_cache = {}
+        
+        # Get property matches directory from config
+        self.property_matches_dir = self.matching_config.get('property_matches_dir', 'property_matches')
+        os.makedirs(self.property_matches_dir, exist_ok=True)
 
     def query_wikidata_entity(self, label: str, language: str = "en") -> str:
         """
@@ -242,17 +250,18 @@ class Matcher:
             return best_match["property_id"]
         return None
 
-    def save_property_matches(self, predicate: str, matches: List[Dict], output_dir: str = "property_matches"):
+    def save_property_matches(self, predicate: str, matches: List[Dict], output_dir: str = None):
         """
         Save top property matches to a file.
         
         Args:
             predicate: The predicate that was searched for
             matches: List of dictionaries containing match information
-            output_dir: Directory to save the matches file
+            output_dir: Directory to save the matches file (uses property_matches_dir from config if not specified)
         """
         try:
-            # Create output directory if it doesn't exist
+            # Use the directory from config if none specified
+            output_dir = output_dir or self.property_matches_dir
             os.makedirs(output_dir, exist_ok=True)
             
             # Create a filename from the predicate

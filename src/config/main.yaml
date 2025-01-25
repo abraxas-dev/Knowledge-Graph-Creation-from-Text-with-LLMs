@@ -12,11 +12,11 @@ extractor:
   # List of URLs to extract content from - can be any Wikipedia URLs
   urls:
     - "https://en.wikipedia.org/wiki/Artificial_intelligence"
-    - "https://en.wikipedia.org/wiki/Internet"
+    - "https://en.wikipedia.org/wiki/LeBron_James"
   # Size of text chunks in characters - adjust based on your needs
   # Smaller chunks (300-500) for more precise extraction
   # Larger chunks (1000-1500) for more context
-  chunk_size: 450
+  chunk_size: 400
 
 # Language Model configuration for triple generation
 llm:

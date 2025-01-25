@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import nltk
 from nltk.tokenize import sent_tokenize
-from utils.logger_config import setup_logger
+from src.utils.logger_config import setup_logger
 
 # Download required NLTK data
 try:

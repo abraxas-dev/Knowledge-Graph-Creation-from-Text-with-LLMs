@@ -1,0 +1,53 @@
+Top matches for predicate: "won"
+==================================================
+
+1. Match Details:
+   Property ID: P1346
+   Label: winner
+   Similarity Score: 0.8977
+
+2. Match Details:
+   Property ID: P2501
+   Label: results
+   Similarity Score: 0.8473
+
+3. Match Details:
+   Property ID: P9681
+   Label: voted on by
+   Similarity Score: 0.8451
+
+4. Match Details:
+   Property ID: P1111
+   Label: votes received
+   Similarity Score: 0.8387
+
+5. Match Details:
+   Property ID: P11922
+   Label: verdict
+   Similarity Score: 0.8360
+
+6. Match Details:
+   Property ID: P166
+   Label: award received
+   Similarity Score: 0.8297
+
+7. Match Details:
+   Property ID: P642
+   Label: of
+   Similarity Score: 0.8252
+
+8. Match Details:
+   Property ID: P2453
+   Label: nominee
+   Similarity Score: 0.8145
+
+9. Match Details:
+   Property ID: P10551
+   Label: supports qualifier
+   Similarity Score: 0.8121
+
+10. Match Details:
+   Property ID: P790
+   Label: approved by
+   Similarity Score: 0.8090
+

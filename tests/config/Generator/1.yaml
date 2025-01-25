@@ -1,0 +1,67 @@
+# Model configuration
+model_name: "microsoft/Phi-3.5-mini-instruct"  # Name of the language model to use
+api_key: ""  # API key if needed (e.g., for OpenAI models)
+# System message that guides the model's triple extraction behavior
+system_message: |
+  Extract RDF triples from the following text. Each triple should be of the form (subject, predicate, object).
+  Example:
+  Text: 'The Eiffel Tower is located in Paris, France, and was completed in 1889.'
+  Output:
+  (Eiffel Tower, is located in, Paris)
+  (Paris, is in, France)
+  (Eiffel Tower, was completed in, 1889)
+
+# Template for formatting the input text
+prompt_template: |
+  Generate triples for the following text:
+  {text}
+
+# Processing configuration
+max_chunks: null  # Maximum number of chunks to process (null for all chunks)
+
+# Model generation parameters
+model_generate_parameters:
+  # Controls randomness: 0.0 for deterministic, higher for more creative
+  temperature: 0.1
+  
+  # Maximum number of tokens in the response
+  max_new_tokens: 512
+  
+  # Number between 0 and 1 that penalizes new tokens based on whether they appear in the text so far
+  # repetition_penalty: 1.1
+  
+  # The cumulative probability threshold for token sampling
+  # top_p: 0.9
+  
+  # Controls how many highest probability tokens to consider for generation
+  # top_k: 50
+  
+  # Whether to use beam search for text generation
+  # do_sample: true
+  
+  # Controls the length penalty. Values < 1.0 encourage shorter sequences
+  # length_penalty: 1.0
+  
+  # Early stopping flag for beam search
+  # early_stopping: true
+  
+  # Number of beams for beam search
+  # num_beams: 5
+  
+  # Whether to use nucleus sampling
+  # use_nucleus_sampling: true
+  
+  # Whether to remove repeated n-grams
+  # no_repeat_ngram_size: 3
+  
+  # Minimum length of the generated text
+  # min_length: 10
+  
+  # Whether to force certain tokens at the beginning of the sequence
+  # forced_bos_token_id: null
+  
+  # Whether to force certain tokens at the end of the sequence
+  # forced_eos_token_id: null
+  
+  # Remove tokens that don't meet a certain threshold
+  # remove_invalid_values: true

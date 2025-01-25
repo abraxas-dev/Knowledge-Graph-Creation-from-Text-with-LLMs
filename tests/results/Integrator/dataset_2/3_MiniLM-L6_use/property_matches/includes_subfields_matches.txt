@@ -1,0 +1,53 @@
+Top matches for predicate: "includes subfields"
+==================================================
+
+1. Match Details:
+   Property ID: P101
+   Label: field of work
+   Similarity Score: 0.6166
+
+2. Match Details:
+   Property ID: P179
+   Label: part of the series
+   Similarity Score: 0.5153
+
+3. Match Details:
+   Property ID: P1269
+   Label: facet of
+   Similarity Score: 0.5137
+
+4. Match Details:
+   Property ID: P527
+   Label: has part(s)
+   Similarity Score: 0.5125
+
+5. Match Details:
+   Property ID: P180
+   Label: depicts
+   Similarity Score: 0.5125
+
+6. Match Details:
+   Property ID: P279
+   Label: subclass of
+   Similarity Score: 0.4978
+
+7. Match Details:
+   Property ID: P361
+   Label: part of
+   Similarity Score: 0.4927
+
+8. Match Details:
+   Property ID: P1382
+   Label: partially coincident with
+   Similarity Score: 0.4863
+
+9. Match Details:
+   Property ID: P2670
+   Label: has part(s) of the class
+   Similarity Score: 0.4774
+
+10. Match Details:
+   Property ID: P1647
+   Label: subproperty of
+   Similarity Score: 0.4762
+

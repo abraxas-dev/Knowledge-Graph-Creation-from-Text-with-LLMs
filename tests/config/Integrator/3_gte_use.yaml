@@ -1,0 +1,6 @@
+embedding_model: "Alibaba-NLP/gte-large-en-v1.5"
+use_aliases: true
+properties_file: "src/data/Properties/wikidata-properties-with-aliases-gte.json"
+save_matches: true
+entity_query_method: "api"
+property_query_method: "mixed"

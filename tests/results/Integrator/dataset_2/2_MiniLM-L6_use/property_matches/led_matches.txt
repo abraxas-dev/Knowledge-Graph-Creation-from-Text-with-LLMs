@@ -1,0 +1,53 @@
+Top matches for predicate: "led"
+==================================================
+
+1. Match Details:
+   Property ID: P286
+   Label: head coach
+   Similarity Score: 0.7443
+
+2. Match Details:
+   Property ID: P1542
+   Label: has effect
+   Similarity Score: 0.7379
+
+3. Match Details:
+   Property ID: P8228
+   Label: lighting
+   Similarity Score: 0.7028
+
+4. Match Details:
+   Property ID: P2389
+   Label: organization directed by the office or position
+   Similarity Score: 0.5920
+
+5. Match Details:
+   Property ID: P462
+   Label: color
+   Similarity Score: 0.5748
+
+6. Match Details:
+   Property ID: P729
+   Label: service entry
+   Similarity Score: 0.5377
+
+7. Match Details:
+   Property ID: P8031
+   Label: perpetrator
+   Similarity Score: 0.5255
+
+8. Match Details:
+   Property ID: P2441
+   Label: literal translation
+   Similarity Score: 0.5189
+
+9. Match Details:
+   Property ID: P545
+   Label: torch lit by
+   Similarity Score: 0.5106
+
+10. Match Details:
+   Property ID: P8329
+   Label: principal investigator
+   Similarity Score: 0.4931
+

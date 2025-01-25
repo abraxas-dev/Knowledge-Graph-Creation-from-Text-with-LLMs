@@ -1,0 +1,61 @@
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+<http://example.org/entity/Goals%20of%20Artificial%20intelligence%20%28AI%29> wdt:P1647 wd:Q133500,
+        wd:Q170978,
+        wd:Q2070151,
+        wd:Q30642,
+        wd:Q309100,
+        wd:Q3478658 .
+
+wd:Q1753797 wdt:P642 "the ability to perform tasks" .
+
+wd:Q567303 wdt:P1777 "one of the most controversial moves" .
+
+wd:Q36159 wdt:P1000 "most minutes played in NBA history" ;
+    wdt:P106 wd:Q3665646 ;
+    wdt:P112 "league's premier players" ;
+    wdt:P1129 "8 NBA Finals" ;
+    wdt:P1344 "National Basketball Association (NBA)" ;
+    wdt:P1352 "4th in NBA career assists",
+        "8th in NBA career steals" ;
+    wdt:P1358 wd:Q121783,
+        wd:Q7592124 ;
+    wdt:P1449 wd:Q36159 ;
+    wdt:P1622 wd:Q162990 ;
+    wdt:P1777 "one of the greatest basketball players of all time" ;
+    wdt:P1889 wd:Q41421 ;
+    wdt:P2522 wd:Q644357,
+        "3 NBA All-Star Game MVP Awards",
+        "3 Olympic gold medals",
+        "4 NBA Finals MVP Awards",
+        "4 NBA Most Valuable Player Awards",
+        "4 NBA championships",
+        "NBA Championship in 2012",
+        "NBA Championship in 2013",
+        "Olympics MVP",
+        "in 2009 NBA MVP Award",
+        "in 2010 NBA MVP Award",
+        "in 2012 NBA Finals MVP Award",
+        "in 2012 NBA MVP Award",
+        "in 2013 NBA Finals MVP Award",
+        "in 2013 NBA MVP Award",
+        "inaugural NBA Cup",
+        "inaugural NBA Cup MVP Award" ;
+    wdt:P2561 wd:Q36159 ;
+    wdt:P2715 wd:Q163132 ;
+    wdt:P3450 wd:Q241261 ;
+    wdt:P3938 "2004 NBA Rookie of the Year" ;
+    wdt:P4353 wd:Q541497 ;
+    wdt:P495 wd:Q7976 ;
+    wdt:P569 wd:Q69296294 ;
+    wdt:P5824 "Cleveland Cavaliers in 2014" ;
+    wdt:P642 "1st overall",
+        "NBA's all-time leading scorer" ;
+    wdt:P7122 wd:Q169138,
+        "Miami Heat contract in 2014" ;
+    wdt:P8004 "in 2003 Cleveland Cavaliers" ;
+    wdt:P8228 "Cleveland Cavaliers to their first NBA Finals appearance" ;
+    wdt:P9660 "10 NBA Finals" ;
+    wdt:P9731 wd:Q597933 .
+

@@ -1,0 +1,11 @@
+
+Output:
+(Cutting edge AI, has filtered into, General applications)
+(General applications, is not perceived as, AI)
+(Various subfields, are centered around, particular goals)
+(Various subfields, use, particular tools)
+(General applications, becomes, useful enough)
+(Useful enough, is not labeled as, AI anymore)
+
+Note: The above triples are generated based on the context and the relationships implied in the text. The predicates are inferred from the context and may not cover all possible interpretations.
+

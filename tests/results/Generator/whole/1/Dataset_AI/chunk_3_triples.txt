@@ -1,0 +1,12 @@
+("Advanced web search engines", "include", "Google Search");
+("Recommendation systems", "used by", "YouTube");
+("Recommendation systems", "used by", "Amazon");
+("Recommendation systems", "used by", "Netflix");
+("Virtual assistants", "include", "Google Assistant");
+("Virtual assistants", "include", "Siri");
+("Virtual assistants", "include", "Alexa");
+("Autonomous vehicles", "include", "Waymo");
+("Generative and creative tools", "include", "ChatGPT");
+("Generative and creative tools", "include", "AI art");
+("Strategy games", "include", "chess");
+("Strategy games", "include", "Go");

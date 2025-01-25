@@ -1,0 +1,62 @@
+@prefix ns1: <http://example.org/property/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+<http://example.org/entity/Goals%20of%20Artificial%20intelligence%20%28AI%29> ns1:includes_subfields wd:Q133500,
+        wd:Q170978,
+        wd:Q2070151,
+        wd:Q30642,
+        wd:Q309100,
+        wd:Q3478658 .
+
+wd:Q1753797 wdt:P213 "the ability to perform tasks" .
+
+wd:Q567303 ns1:regarded_as "one of the most controversial moves" .
+
+wd:Q36159 ns1:announced_decision wd:Q597933 ;
+    ns1:complimented_by wd:Q541497 ;
+    ns1:consecutive_appearances "8 NBA Finals" ;
+    ns1:grew_up_in wd:Q163132 ;
+    ns1:holds_record_for "most minutes played in NBA history" ;
+    ns1:opted_out_of "Miami Heat contract in 2014" ;
+    ns1:ranked "4th in NBA career assists",
+        "8th in NBA career steals" ;
+    ns1:regarded_as "one of the greatest basketball players of all time" ;
+    ns1:returned_to "Cleveland Cavaliers in 2014" ;
+    ns1:selected_by "in 2003 Cleveland Cavaliers" ;
+    ns1:tied_for_most_seasons_played wd:Q241261 ;
+    wdt:P106 wd:Q3665646 ;
+    wdt:P1303 "National Basketball Association (NBA)" ;
+    wdt:P1355 wd:Q644357,
+        "3 NBA All-Star Game MVP Awards",
+        "3 Olympic gold medals",
+        "4 NBA Finals MVP Awards",
+        "4 NBA Most Valuable Player Awards",
+        "4 NBA championships",
+        "NBA Championship in 2012",
+        "NBA Championship in 2013",
+        "Olympics MVP",
+        "in 2009 NBA MVP Award",
+        "in 2010 NBA MVP Award",
+        "in 2012 NBA Finals MVP Award",
+        "in 2012 NBA MVP Award",
+        "in 2013 NBA Finals MVP Award",
+        "in 2013 NBA MVP Award",
+        "inaugural NBA Cup",
+        "inaugural NBA Cup MVP Award" ;
+    wdt:P1441 "10 NBA Finals" ;
+    wdt:P1449 wd:Q36159 ;
+    wdt:P1477 wd:Q36159 ;
+    wdt:P213 "NBA's all-time leading scorer" ;
+    wdt:P2210 wd:Q41421 ;
+    wdt:P27 wd:Q7976 ;
+    wdt:P286 "Cleveland Cavaliers to their first NBA Finals appearance" ;
+    wdt:P407 "2004 NBA Rookie of the Year" ;
+    wdt:P54 wd:Q121783,
+        wd:Q7592124 ;
+    wdt:P569 wd:Q69296294 ;
+    wdt:P571 "league's premier players" ;
+    wdt:P577 "1st overall" ;
+    wdt:P580 wd:Q169138 ;
+    wdt:P582 wd:Q162990 .
+

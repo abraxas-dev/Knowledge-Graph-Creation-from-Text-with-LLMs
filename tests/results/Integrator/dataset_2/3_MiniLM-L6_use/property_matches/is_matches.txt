@@ -1,0 +1,53 @@
+Top matches for predicate: "is"
+==================================================
+
+1. Match Details:
+   Property ID: P1889
+   Label: different from
+   Similarity Score: 0.7861
+
+2. Match Details:
+   Property ID: P31
+   Label: instance of
+   Similarity Score: 0.6233
+
+3. Match Details:
+   Property ID: P276
+   Label: location
+   Similarity Score: 0.5771
+
+4. Match Details:
+   Property ID: P706
+   Label: located in/on physical feature
+   Similarity Score: 0.5771
+
+5. Match Details:
+   Property ID: P921
+   Label: main subject
+   Similarity Score: 0.5612
+
+6. Match Details:
+   Property ID: P460
+   Label: said to be the same as
+   Similarity Score: 0.5569
+
+7. Match Details:
+   Property ID: P425
+   Label: field of this occupation
+   Similarity Score: 0.5561
+
+8. Match Details:
+   Property ID: P669
+   Label: located on street
+   Similarity Score: 0.5007
+
+9. Match Details:
+   Property ID: P81
+   Label: connecting line
+   Similarity Score: 0.5007
+
+10. Match Details:
+   Property ID: P155
+   Label: follows
+   Similarity Score: 0.4976
+

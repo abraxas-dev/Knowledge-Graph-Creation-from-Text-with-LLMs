@@ -1,0 +1,53 @@
+Top matches for predicate: "appeared in"
+==================================================
+
+1. Match Details:
+   Property ID: P1441
+   Label: present in work
+   Similarity Score: 1.0000
+
+2. Match Details:
+   Property ID: P1299
+   Label: depicted by
+   Similarity Score: 0.9011
+
+3. Match Details:
+   Property ID: P4584
+   Label: first appearance
+   Similarity Score: 0.8000
+
+4. Match Details:
+   Property ID: P10695
+   Label: introduced in
+   Similarity Score: 0.7874
+
+5. Match Details:
+   Property ID: P407
+   Label: language of work or name
+   Similarity Score: 0.7352
+
+6. Match Details:
+   Property ID: P276
+   Label: location
+   Similarity Score: 0.7154
+
+7. Match Details:
+   Property ID: P361
+   Label: part of
+   Similarity Score: 0.7154
+
+8. Match Details:
+   Property ID: P642
+   Label: of
+   Similarity Score: 0.7154
+
+9. Match Details:
+   Property ID: P131
+   Label: located in the administrative territorial entity
+   Similarity Score: 0.7154
+
+10. Match Details:
+   Property ID: P1343
+   Label: described by source
+   Similarity Score: 0.7066
+

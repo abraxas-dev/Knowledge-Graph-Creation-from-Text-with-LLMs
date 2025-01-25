@@ -1,0 +1,53 @@
+Top matches for predicate: "joined"
+==================================================
+
+1. Match Details:
+   Property ID: P7137
+   Label: acknowledged
+   Similarity Score: 0.8413
+
+2. Match Details:
+   Property ID: P1416
+   Label: affiliation
+   Similarity Score: 0.8290
+
+3. Match Details:
+   Property ID: P790
+   Label: approved by
+   Similarity Score: 0.8268
+
+4. Match Details:
+   Property ID: P463
+   Label: member of
+   Similarity Score: 0.8218
+
+5. Match Details:
+   Property ID: P7122
+   Label: opinion joined by
+   Similarity Score: 0.8186
+
+6. Match Details:
+   Property ID: P5009
+   Label: complies with
+   Similarity Score: 0.8145
+
+7. Match Details:
+   Property ID: P9681
+   Label: voted on by
+   Similarity Score: 0.8035
+
+8. Match Details:
+   Property ID: P4330
+   Label: contains
+   Similarity Score: 0.7981
+
+9. Match Details:
+   Property ID: P3226
+   Label: HAS member ID
+   Similarity Score: 0.7929
+
+10. Match Details:
+   Property ID: P1344
+   Label: participant in
+   Similarity Score: 0.7881
+

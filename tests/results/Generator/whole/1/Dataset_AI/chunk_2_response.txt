@@ -1,0 +1,9 @@
+
+Output:
+(Such machines, may be called, AIs)
+
+Note: The output triples are extracted directly from the given text. The subject is the entity or concept mentioned first, the predicate is the action or relationship described, and the object is the entity or concept that the action or relationship is directed towards. In this case, the subject is "Such machines", the predicate is "may be called", and the object is "AIs".
+
+(Such machines, may be called, AIs)
+
+This triple represents the relationship between "Such machines" and "AIs" as described in the text. The predicate "may be called" indicates that "Such machines" can be referred to as "AIs".

@@ -1,0 +1,53 @@
+Top matches for predicate: "appeared in"
+==================================================
+
+1. Match Details:
+   Property ID: P4584
+   Label: first appearance
+   Similarity Score: 0.8101
+
+2. Match Details:
+   Property ID: P5072
+   Label: presented in
+   Similarity Score: 0.8051
+
+3. Match Details:
+   Property ID: P1299
+   Label: depicted by
+   Similarity Score: 0.7722
+
+4. Match Details:
+   Property ID: P6872
+   Label: has written for
+   Similarity Score: 0.7645
+
+5. Match Details:
+   Property ID: P10606
+   Label: notable role
+   Similarity Score: 0.7598
+
+6. Match Details:
+   Property ID: P1283
+   Label: filmography
+   Similarity Score: 0.7554
+
+7. Match Details:
+   Property ID: P144
+   Label: based on
+   Similarity Score: 0.7511
+
+8. Match Details:
+   Property ID: P1433
+   Label: published in
+   Similarity Score: 0.7456
+
+9. Match Details:
+   Property ID: P13187
+   Label: role named in credits as
+   Similarity Score: 0.7452
+
+10. Match Details:
+   Property ID: P12346
+   Label: based on media
+   Similarity Score: 0.7322
+

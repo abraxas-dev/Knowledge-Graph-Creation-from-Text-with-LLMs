@@ -1,0 +1,53 @@
+Top matches for predicate: "holds record for"
+==================================================
+
+1. Match Details:
+   Property ID: P1000
+   Label: record held
+   Similarity Score: 0.9355
+
+2. Match Details:
+   Property ID: P4876
+   Label: number of records
+   Similarity Score: 0.8351
+
+3. Match Details:
+   Property ID: P11851
+   Label: record of
+   Similarity Score: 0.8351
+
+4. Match Details:
+   Property ID: P2415
+   Label: personal best
+   Similarity Score: 0.8072
+
+5. Match Details:
+   Property ID: P3279
+   Label: statistical leader
+   Similarity Score: 0.7793
+
+6. Match Details:
+   Property ID: P8546
+   Label: recording location
+   Similarity Score: 0.7639
+
+7. Match Details:
+   Property ID: P1249
+   Label: time of earliest written record
+   Similarity Score: 0.7560
+
+8. Match Details:
+   Property ID: P3740
+   Label: number of works
+   Similarity Score: 0.7525
+
+9. Match Details:
+   Property ID: P1436
+   Label: collection or exhibition size
+   Similarity Score: 0.7525
+
+10. Match Details:
+   Property ID: P358
+   Label: discography
+   Similarity Score: 0.7432
+

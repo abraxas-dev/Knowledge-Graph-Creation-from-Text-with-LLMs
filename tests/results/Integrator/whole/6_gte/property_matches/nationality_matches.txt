@@ -1,0 +1,53 @@
+Top matches for predicate: "nationality"
+==================================================
+
+1. Match Details:
+   Property ID: P172
+   Label: ethnic group
+   Similarity Score: 0.8528
+
+2. Match Details:
+   Property ID: P495
+   Label: country of origin
+   Similarity Score: 0.8514
+
+3. Match Details:
+   Property ID: P19
+   Label: place of birth
+   Similarity Score: 0.8453
+
+4. Match Details:
+   Property ID: P103
+   Label: native language
+   Similarity Score: 0.8273
+
+5. Match Details:
+   Property ID: P2561
+   Label: name
+   Similarity Score: 0.8194
+
+6. Match Details:
+   Property ID: P735
+   Label: given name
+   Similarity Score: 0.8057
+
+7. Match Details:
+   Property ID: P27
+   Label: country of citizenship
+   Similarity Score: 0.7966
+
+8. Match Details:
+   Property ID: P10476
+   Label: identifies
+   Similarity Score: 0.7932
+
+9. Match Details:
+   Property ID: P1464
+   Label: category for people born here
+   Similarity Score: 0.7836
+
+10. Match Details:
+   Property ID: P734
+   Label: family name
+   Similarity Score: 0.7828
+

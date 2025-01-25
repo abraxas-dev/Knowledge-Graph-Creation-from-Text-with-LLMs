@@ -1,0 +1,53 @@
+Top matches for predicate: "returned to"
+==================================================
+
+1. Match Details:
+   Property ID: P706
+   Label: located in/on physical feature
+   Similarity Score: 0.7456
+
+2. Match Details:
+   Property ID: P585
+   Label: point in time
+   Similarity Score: 0.7456
+
+3. Match Details:
+   Property ID: P7137
+   Label: acknowledged
+   Similarity Score: 0.7342
+
+4. Match Details:
+   Property ID: P3132
+   Label: last line
+   Similarity Score: 0.7316
+
+5. Match Details:
+   Property ID: P1535
+   Label: used by
+   Similarity Score: 0.7304
+
+6. Match Details:
+   Property ID: P137
+   Label: operator
+   Similarity Score: 0.7304
+
+7. Match Details:
+   Property ID: P1344
+   Label: participant in
+   Similarity Score: 0.7302
+
+8. Match Details:
+   Property ID: P69
+   Label: educated at
+   Similarity Score: 0.7302
+
+9. Match Details:
+   Property ID: P11801
+   Label: visited by
+   Similarity Score: 0.7291
+
+10. Match Details:
+   Property ID: P2789
+   Label: connects with
+   Similarity Score: 0.7290
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "returned to"
+==================================================
+
+1. Match Details:
+   Property ID: P5824
+   Label: retracted by
+   Similarity Score: 0.5507
+
+2. Match Details:
+   Property ID: P2675
+   Label: reply to
+   Similarity Score: 0.5206
+
+3. Match Details:
+   Property ID: P4448
+   Label: cash back
+   Similarity Score: 0.4912
+
+4. Match Details:
+   Property ID: P3093
+   Label: recovered by
+   Similarity Score: 0.4625
+
+5. Match Details:
+   Property ID: P813
+   Label: retrieved
+   Similarity Score: 0.4463
+
+6. Match Details:
+   Property ID: P3082
+   Label: destroyed
+   Similarity Score: 0.4370
+
+7. Match Details:
+   Property ID: P825
+   Label: dedicated to
+   Similarity Score: 0.4324
+
+8. Match Details:
+   Property ID: P9030
+   Label: solution to
+   Similarity Score: 0.4283
+
+9. Match Details:
+   Property ID: P7888
+   Label: merged into
+   Similarity Score: 0.4234
+
+10. Match Details:
+   Property ID: P7904
+   Label: gave up territory to
+   Similarity Score: 0.4230
+

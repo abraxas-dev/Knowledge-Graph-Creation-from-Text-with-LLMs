@@ -1,0 +1,53 @@
+Top matches for predicate: "adapted and integrated"
+==================================================
+
+1. Match Details:
+   Property ID: P5059
+   Label: modified version of
+   Similarity Score: 0.7323
+
+2. Match Details:
+   Property ID: P5202
+   Label: adapted by
+   Similarity Score: 0.7282
+
+3. Match Details:
+   Property ID: P1531
+   Label: hybrid of
+   Similarity Score: 0.7212
+
+4. Match Details:
+   Property ID: P8956
+   Label: compatible with
+   Similarity Score: 0.7151
+
+5. Match Details:
+   Property ID: P7888
+   Label: merged into
+   Similarity Score: 0.7142
+
+6. Match Details:
+   Property ID: P5009
+   Label: complies with
+   Similarity Score: 0.7139
+
+7. Match Details:
+   Property ID: P366
+   Label: has use
+   Similarity Score: 0.7098
+
+8. Match Details:
+   Property ID: P11265
+   Label: alt text
+   Similarity Score: 0.6975
+
+9. Match Details:
+   Property ID: P1403
+   Label: original combination
+   Similarity Score: 0.6969
+
+10. Match Details:
+   Property ID: P3094
+   Label: develops from
+   Similarity Score: 0.6942
+

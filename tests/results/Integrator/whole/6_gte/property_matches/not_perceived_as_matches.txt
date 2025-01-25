@@ -1,0 +1,53 @@
+Top matches for predicate: "not perceived as"
+==================================================
+
+1. Match Details:
+   Property ID: P6477
+   Label: does not have characteristic
+   Similarity Score: 0.7825
+
+2. Match Details:
+   Property ID: P1011
+   Label: excluding
+   Similarity Score: 0.7737
+
+3. Match Details:
+   Property ID: P4330
+   Label: contains
+   Similarity Score: 0.7655
+
+4. Match Details:
+   Property ID: P11265
+   Label: alt text
+   Similarity Score: 0.7557
+
+5. Match Details:
+   Property ID: P5102
+   Label: nature of statement
+   Similarity Score: 0.7542
+
+6. Match Details:
+   Property ID: P9353
+   Label: does not have cause
+   Similarity Score: 0.7418
+
+7. Match Details:
+   Property ID: P642
+   Label: of
+   Similarity Score: 0.7411
+
+8. Match Details:
+   Property ID: P9971
+   Label: has semantic argument
+   Similarity Score: 0.7410
+
+9. Match Details:
+   Property ID: P144
+   Label: based on
+   Similarity Score: 0.7406
+
+10. Match Details:
+   Property ID: P103
+   Label: native language
+   Similarity Score: 0.7397
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "returned to"
+==================================================
+
+1. Match Details:
+   Property ID: P2675
+   Label: reply to
+   Similarity Score: 0.6232
+
+2. Match Details:
+   Property ID: P12912
+   Label: object of occurrence
+   Similarity Score: 0.5835
+
+3. Match Details:
+   Property ID: P5824
+   Label: retracted by
+   Similarity Score: 0.5507
+
+4. Match Details:
+   Property ID: P582
+   Label: end time
+   Similarity Score: 0.5443
+
+5. Match Details:
+   Property ID: P609
+   Label: terminus location
+   Similarity Score: 0.5443
+
+6. Match Details:
+   Property ID: P1444
+   Label: destination point
+   Similarity Score: 0.5443
+
+7. Match Details:
+   Property ID: P1571
+   Label: codomain
+   Similarity Score: 0.5443
+
+8. Match Details:
+   Property ID: P12694
+   Label: destination of transfer
+   Similarity Score: 0.5443
+
+9. Match Details:
+   Property ID: P746
+   Label: date of disappearance
+   Similarity Score: 0.5400
+
+10. Match Details:
+   Property ID: P155
+   Label: follows
+   Similarity Score: 0.5284
+

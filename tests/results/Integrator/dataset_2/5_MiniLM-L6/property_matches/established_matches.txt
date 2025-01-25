@@ -1,0 +1,53 @@
+Top matches for predicate: "established"
+==================================================
+
+1. Match Details:
+   Property ID: P112
+   Label: founded by
+   Similarity Score: 0.6558
+
+2. Match Details:
+   Property ID: P1416
+   Label: affiliation
+   Similarity Score: 0.5238
+
+3. Match Details:
+   Property ID: P7137
+   Label: acknowledged
+   Similarity Score: 0.5172
+
+4. Match Details:
+   Property ID: P9448
+   Label: introduced on
+   Similarity Score: 0.5132
+
+5. Match Details:
+   Property ID: P790
+   Label: approved by
+   Similarity Score: 0.5116
+
+6. Match Details:
+   Property ID: P10695
+   Label: introduced in
+   Similarity Score: 0.5023
+
+7. Match Details:
+   Property ID: P9883
+   Label: created for
+   Similarity Score: 0.4859
+
+8. Match Details:
+   Property ID: P2652
+   Label: partnership with
+   Similarity Score: 0.4810
+
+9. Match Details:
+   Property ID: P5572
+   Label: expressed in
+   Similarity Score: 0.4766
+
+10. Match Details:
+   Property ID: P10408
+   Label: created during
+   Similarity Score: 0.4655
+

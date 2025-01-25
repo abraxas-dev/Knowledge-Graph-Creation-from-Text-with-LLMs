@@ -1,0 +1,817 @@
+triples:
+- triple:
+    subject: LeBron James
+    predicate: full name
+    object: LeBron Raymone James Sr.
+  expected_id:
+    subject: Q36159
+    predicate: P1477
+    object: Q36159
+- triple:
+    subject: LeBron James
+    predicate: birth date
+    object: December 30, 1984
+  expected_id:
+    subject: Q36159
+    predicate: P569
+    object: Q69296294
+- triple:
+    subject: LeBron James
+    predicate: nationality
+    object: American
+  expected_id:
+    subject: Q36159
+    predicate: P172
+    object: Q7976
+- triple:
+    subject: LeBron James
+    predicate: occupation
+    object: professional basketball player
+  expected_id:
+    subject: Q36159
+    predicate: P106
+    object: Q3665646
+- triple:
+    subject: LeBron James
+    predicate: plays for
+    object: Los Angeles Lakers
+  expected_id:
+    subject: Q36159
+    predicate: P5202
+    object: Q121783
+- triple:
+    subject: LeBron James
+    predicate: plays in
+    object: National Basketball Association (NBA)
+  expected_id:
+    subject: Q36159
+    predicate: P9140
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: nickname
+    object: King James
+  expected_id:
+    subject: Q36159
+    predicate: P1449
+    object: Q36159
+- triple:
+    subject: LeBron James
+    predicate: regarded as
+    object: one of the greatest basketball players of all time
+  expected_id:
+    subject: Q36159
+    predicate: P7855
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: compared to
+    object: Michael Jordan
+  expected_id:
+    subject: Q36159
+    predicate: P642
+    object: Q41421
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: 4 NBA championships
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: appeared in
+    object: 10 NBA Finals
+  expected_id:
+    subject: Q36159
+    predicate: P4584
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: consecutive appearances
+    object: 8 NBA Finals
+  expected_id:
+    subject: Q36159
+    predicate: P1000
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: inaugural NBA Cup
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: 3 Olympic gold medals
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: Olympics MVP
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: is
+    object: NBA's all-time leading scorer
+  expected_id:
+    subject: Q36159
+    predicate: P642
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: ranked
+    object: 4th in NBA career assists
+  expected_id:
+    subject: Q36159
+    predicate: P1352
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: ranked
+    object: 8th in NBA career steals
+  expected_id:
+    subject: Q36159
+    predicate: P1352
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: 4 NBA Most Valuable Player Awards
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: 4 NBA Finals MVP Awards
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: NBA Rookie of the Year Award
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: Q644357
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: 3 NBA All-Star Game MVP Awards
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: inaugural NBA Cup MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: knowledge representation and reasoning
+  expected_id:
+    subject: not_found
+    predicate: P9488
+    object: Q3478658
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: planning
+  expected_id:
+    subject: not_found
+    predicate: P9488
+    object: Q309100
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: learning
+  expected_id:
+    subject: not_found
+    predicate: P9488
+    object: Q133500
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: natural language processing
+  expected_id:
+    subject: not_found
+    predicate: P9488
+    object: Q30642
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: perception
+  expected_id:
+    subject: not_found
+    predicate: P9488
+    object: Q2070151
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: robotics
+  expected_id:
+    subject: not_found
+    predicate: P9488
+    object: Q170978
+- triple:
+    subject: General intelligence
+    predicate: is
+    object: the ability to perform tasks
+  expected_id:
+    subject: Q1753797
+    predicate: P642
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: tied for most seasons played
+    object: Vince Carter
+  expected_id:
+    subject: Q36159
+    predicate: P1000
+    object: Q241261
+- triple:
+    subject: LeBron James
+    predicate: holds record for
+    object: most minutes played in NBA history
+  expected_id:
+    subject: Q36159
+    predicate: P1000
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: grew up in
+    object: Akron
+  expected_id:
+    subject: Q36159
+    predicate: P2789
+    object: Q163132
+- triple:
+    subject: LeBron James
+    predicate: played for
+    object: St. Vincent–St. Mary High School
+  expected_id:
+    subject: Q36159
+    predicate: P9140
+    object: Q7592124
+- triple:
+    subject: LeBron James
+    predicate: complimented by
+    object: National media
+  expected_id:
+    subject: Q36159
+    predicate: P8001
+    object: Q541497
+- triple:
+    subject: LeBron James
+    predicate: selected by
+    object: in 2003 Cleveland Cavaliers
+  expected_id:
+    subject: Q36159
+    predicate: P4032
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: was
+    object: 1st overall
+  expected_id:
+    subject: Q36159
+    predicate: P7855
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: named
+    object: 2004 NBA Rookie of the Year
+  expected_id:
+    subject: Q36159
+    predicate: P2561
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: established
+    object: league's premier players
+  expected_id:
+    subject: Q36159
+    predicate: P5514
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: led
+    object: Cleveland Cavaliers to their first NBA Finals appearance
+  expected_id:
+    subject: Q36159
+    predicate: P8228
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: in 2009 NBA MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: in 2010 NBA MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: left
+    object: Cleveland Cavaliers
+  expected_id:
+    subject: Q36159
+    predicate: P1142
+    object: Q162990
+- triple:
+    subject: LeBron James
+    predicate: joined
+    object: Miami Heat
+  expected_id:
+    subject: Q36159
+    predicate: P7137
+    object: Q169138
+- triple:
+    subject: LeBron James
+    predicate: announced decision
+    object: National television
+  expected_id:
+    subject: Q36159
+    predicate: P9731
+    object: Q597933
+- triple:
+    subject: Announcement
+    predicate: regarded as
+    object: one of the most controversial moves
+  expected_id:
+    subject: Q567303
+    predicate: P7855
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: NBA Championship in 2012
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: NBA Championship in 2013
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: in 2012 NBA MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: in 2012 NBA Finals MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: in 2013 NBA MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: won
+    object: in 2013 NBA Finals MVP Award
+  expected_id:
+    subject: Q36159
+    predicate: P1346
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: opted out of
+    object: Miami Heat contract in 2014
+  expected_id:
+    subject: Q36159
+    predicate: P1011
+    object: not_found
+- triple:
+    subject: LeBron James
+    predicate: returned to
+    object: Cleveland Cavaliers in 2014
+  expected_id:
+    subject: Q36159
+    predicate: P7137
+    object: not_found
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: web search engines
+  expected_id:
+    subject: Q11660
+    predicate: P1012
+    object: Q56880266
+- triple:
+    subject: Google Search
+    predicate: instance of
+    object: web search engines
+  expected_id:
+    subject: Q9366
+    predicate: P31
+    object: Q56880266
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: recommendation systems
+  expected_id:
+    subject: Q11660
+    predicate: P1012
+    object: Q109330091
+- triple:
+    subject: YouTube
+    predicate: instance of
+    object: recommendation systems
+  expected_id:
+    subject: Q866
+    predicate: P31
+    object: Q109330091
+- triple:
+    subject: Amazon
+    predicate: instance of
+    object: recommendation systems
+  expected_id:
+    subject: Q3884
+    predicate: P31
+    object: Q109330091
+- triple:
+    subject: Netflix
+    predicate: instance of
+    object: recommendation systems
+  expected_id:
+    subject: Q907311
+    predicate: P31
+    object: Q109330091
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: virtual assistants
+  expected_id:
+    subject: Q11660
+    predicate: P1012
+    object: Q121329598
+- triple:
+    subject: Google Assistant
+    predicate: instance of
+    object: virtual assistants
+  expected_id:
+    subject: Q25025241
+    predicate: P31
+    object: Q121329598
+- triple:
+    subject: Siri
+    predicate: instance of
+    object: virtual assistants
+  expected_id:
+    subject: Q1772342
+    predicate: P31
+    object: Q121329598
+- triple:
+    subject: Alexa
+    predicate: instance of
+    object: virtual assistants
+  expected_id:
+    subject: Q1752733
+    predicate: P31
+    object: Q121329598
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: autonomous vehicles
+  expected_id:
+    subject: Q11660
+    predicate: P1012
+    object: Q88642937
+- triple:
+    subject: Waymo
+    predicate: instance of
+    object: autonomous vehicle
+  expected_id:
+    subject: Q15330
+    predicate: P31
+    object: Q116285085
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: generative and creative tools
+  expected_id:
+    subject: Q11660
+    predicate: P1012
+    object: not_found
+- triple:
+    subject: ChatGPT
+    predicate: instance of
+    object: generative tool
+  expected_id:
+    subject: Q115564437
+    predicate: P31
+    object: not_found
+- triple:
+    subject: AI art
+    predicate: instance of
+    object: generative tool
+  expected_id:
+    subject: Q65066631
+    predicate: P31
+    object: not_found
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: strategy games
+  expected_id:
+    subject: Q11660
+    predicate: P1012
+    object: Q87194671
+- triple:
+    subject: Chess
+    predicate: instance of
+    object: strategy game
+  expected_id:
+    subject: Q718
+    predicate: P31
+    object: Q1150710
+- triple:
+    subject: Go
+    predicate: instance of
+    object: strategy game
+  expected_id:
+    subject: Q37227
+    predicate: P31
+    object: Q1150710
+- triple:
+    subject: AI applications
+    predicate: not perceived as
+    object: AI
+  expected_id:
+    subject: Q96325649
+    predicate: P6477
+    object: Q25228
+- triple:
+    subject: AI applications
+    predicate: filter into
+    object: general applications
+  expected_id:
+    subject: Q96325649
+    predicate: P9970
+    object: Q52578816
+- triple:
+    subject: AI applications
+    predicate: not explicitly labeled as
+    object: artificial intelligence
+  expected_id:
+    subject: Q96325649
+    predicate: P4330
+    object: Q11660
+- triple:
+    subject: Subfields of AI
+    predicate: centered around
+    object: goals
+  expected_id:
+    subject: not_found
+    predicate: P144
+    object: Q4503831
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: knowledge representation and reasoning
+  expected_id:
+    subject: not_found
+    predicate: P9488
+    object: Q3478658
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: planning
+  expected_id:
+    subject: not_found
+    predicate: P9488
+    object: Q309100
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: learning
+  expected_id:
+    subject: not_found
+    predicate: P9488
+    object: Q133500
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: natural language processing
+  expected_id:
+    subject: not_found
+    predicate: P9488
+    object: Q30642
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: perception
+  expected_id:
+    subject: not_found
+    predicate: P9488
+    object: Q2070151
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: robotics
+  expected_id:
+    subject: not_found
+    predicate: P9488
+    object: Q170978
+- triple:
+    subject: General intelligence
+    predicate: is
+    object: the ability to perform tasks
+  expected_id:
+    subject: Q1753797
+    predicate: P642
+    object: not_found
+- triple:
+    subject: AI researchers
+    predicate: adapted and integrated
+    object: techniques
+  expected_id:
+    subject: Q59087900
+    predicate: P5059
+    object: Q23907496
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: search optimization
+  expected_id:
+    subject: Q11660
+    predicate: P3095
+    object: Q7441680
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: mathematical optimization
+  expected_id:
+    subject: Q11660
+    predicate: P3095
+    object: Q141495
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: formal logic
+  expected_id:
+    subject: Q11660
+    predicate: P3095
+    object: Q1003009
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: artificial neural networks
+  expected_id:
+    subject: Q11660
+    predicate: P3095
+    object: Q192776
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: statistics
+  expected_id:
+    subject: Q11660
+    predicate: P3095
+    object: Q12483
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: operations research
+  expected_id:
+    subject: Q11660
+    predicate: P3095
+    object: Q194292
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: economics
+  expected_id:
+    subject: Q11660
+    predicate: P3095
+    object: Q8134
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: draws upon
+    object: psychology
+  expected_id:
+    subject: Q11660
+    predicate: P10837
+    object: Q9418
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: draws upon
+    object: linguistics
+  expected_id:
+    subject: Q11660
+    predicate: P10837
+    object: Q8162
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: draws upon
+    object: philosophy
+  expected_id:
+    subject: Q11660
+    predicate: P10837
+    object: Q5891
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: draws upon
+    object: neuroscience
+  expected_id:
+    subject: Q11660
+    predicate: P10837
+    object: Q15708571
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: draws upon
+    object: other fields
+  expected_id:
+    subject: Q11660
+    predicate: P10837
+    object: not_found
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: founded
+    object: '1956'
+  expected_id:
+    subject: Q11660
+    predicate: P112
+    object: Q5221
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: went through
+    object: cycles of optimism and disappointment
+  expected_id:
+    subject: Q11660
+    predicate: P790
+    object: not_found
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: experienced loss of
+    object: funding
+  expected_id:
+    subject: Q11660
+    predicate: P1356
+    object: Q6055890
+- triple:
+    subject: 'Funding '
+    predicate: increased
+    object: after 2012
+  expected_id:
+    subject: Q372353
+    predicate: P4330
+    object: not_found
+- triple:
+    subject: Interest
+    predicate: increased
+    object: after 2012
+  expected_id:
+    subject: Q241625
+    predicate: P4330
+    object: not_found
+- triple:
+    subject: Deep learning
+    predicate: outperformed
+    object: previous AI techniques
+  expected_id:
+    subject: Q197536
+    predicate: P1346
+    object: not_found

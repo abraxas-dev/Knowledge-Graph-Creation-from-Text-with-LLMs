@@ -1,0 +1,53 @@
+Top matches for predicate: "was"
+==================================================
+
+1. Match Details:
+   Property ID: P155
+   Label: follows
+   Similarity Score: 0.6695
+
+2. Match Details:
+   Property ID: P1889
+   Label: different from
+   Similarity Score: 0.5777
+
+3. Match Details:
+   Property ID: P460
+   Label: said to be the same as
+   Similarity Score: 0.5180
+
+4. Match Details:
+   Property ID: P361
+   Label: part of
+   Similarity Score: 0.4934
+
+5. Match Details:
+   Property ID: P518
+   Label: applies to part
+   Similarity Score: 0.4934
+
+6. Match Details:
+   Property ID: P921
+   Label: main subject
+   Similarity Score: 0.4934
+
+7. Match Details:
+   Property ID: P642
+   Label: of
+   Similarity Score: 0.4934
+
+8. Match Details:
+   Property ID: P2210
+   Label: relative to
+   Similarity Score: 0.4934
+
+9. Match Details:
+   Property ID: P1013
+   Label: criterion used
+   Similarity Score: 0.4934
+
+10. Match Details:
+   Property ID: P1535
+   Label: used by
+   Similarity Score: 0.4934
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "not explicitly labeled as"
+==================================================
+
+1. Match Details:
+   Property ID: P4330
+   Label: contains
+   Similarity Score: 0.8250
+
+2. Match Details:
+   Property ID: P2360
+   Label: intended public
+   Similarity Score: 0.8235
+
+3. Match Details:
+   Property ID: P1011
+   Label: excluding
+   Similarity Score: 0.8187
+
+4. Match Details:
+   Property ID: P144
+   Label: based on
+   Similarity Score: 0.8145
+
+5. Match Details:
+   Property ID: P1476
+   Label: title
+   Similarity Score: 0.8062
+
+6. Match Details:
+   Property ID: P642
+   Label: of
+   Similarity Score: 0.8028
+
+7. Match Details:
+   Property ID: P11140
+   Label: embargoed until
+   Similarity Score: 0.8000
+
+8. Match Details:
+   Property ID: P4967
+   Label: prerequisite
+   Similarity Score: 0.7968
+
+9. Match Details:
+   Property ID: P5009
+   Label: complies with
+   Similarity Score: 0.7959
+
+10. Match Details:
+   Property ID: P6719
+   Label: specified by sense
+   Similarity Score: 0.7930
+

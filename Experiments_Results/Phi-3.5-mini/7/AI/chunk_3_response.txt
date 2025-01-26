@@ -1,0 +1,5 @@
+vehicles, example, Waymo)
+5. (Generative and creative tools, examples, ChatGPT, AI art)
+6. (Superhuman play and analysis in strategy games, examples, chess, Go)
+
+Note: The above triples are extracted directly from the provided text, with each triple consisting of a subject, predicate, and object. The subjects are the entities or concepts being discussed, the predicates describe the relationship or action between the subject and object, and the objects are the specific examples or details mentioned in the text.

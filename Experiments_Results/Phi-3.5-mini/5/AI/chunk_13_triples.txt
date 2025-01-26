@@ -1,0 +1,7 @@
+("Knowledge representation", "allow", "AI programs to answer questions intelligently");
+("Knowledge representation", "allow", "AI programs to make deductions about real-world facts");
+("Formal knowledge representations", "used in", "content-based indexing and retrieval");
+("Formal knowledge representations", "used in", "scene interpretation");
+("Formal knowledge representations", "used in", "clinical decision support");
+("Formal knowledge representations", "used in", "knowledge discovery");
+("Knowledge discovery", "mine", "interesting and actionable inferences from large databases");

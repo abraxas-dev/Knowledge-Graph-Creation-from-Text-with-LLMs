@@ -1,0 +1,12 @@
+
+Output:
+1. (James, left, in 2010)
+2. (James, joined, Miami Heat)
+3. (The Decision, was announced, nationally televised special)
+4. (James, won, NBA championships in 2012)
+5. (James, earned, MVP award in 2012)
+6. (James, won, NBA championships in 2013)
+7. (James, earned, MVP award in 2013)
+8. (Finals MVP, earned by, James in 2012)
+9. (Finals MVP, earned by, James in 2013)
+

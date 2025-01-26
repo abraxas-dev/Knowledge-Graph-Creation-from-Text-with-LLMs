@@ -1,0 +1,14 @@
+("AI applications", "have filtered into", "general applications");
+("General applications", "are not perceived as", "AI");
+("Subfields of AI research", "are centered around", "particular goals");
+("Subfields of AI research", "use", "particular tools");
+("Use of particular tools", "is not labeled", "AI");
+("Things", "become useful enough and common enough", "not labeled AI");
+("AI applications", "have filtered into", "general applications");
+("General applications", "are not perceived as", "AI");
+("Subfields of AI research", "are centered around", "particular goals");
+("Subfields of AI research", "use", "particular tools");
+("Use of particular tools", "is not labeled", "AI");
+("Things", "become useful enough and common enough", "not labeled AI");
+("AI applications", "have filtered into", "general applications) - This triple indicates that AI applications are becoming integrated into general applications.");
+("Subfields of AI research", "are centered around", "particular goals) - This triple shows that different areas of AI research focus on specific objectives.");

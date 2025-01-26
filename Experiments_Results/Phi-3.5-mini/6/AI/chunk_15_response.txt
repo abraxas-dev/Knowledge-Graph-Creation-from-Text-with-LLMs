@@ -1,0 +1,17 @@
+
+
+Triples:
+(Knowledge bases, need to represent, objects)
+(Knowledge bases, need to represent, properties)
+(Knowledge bases, need to represent, categories)
+(Knowledge bases, need to represent, relations between objects)
+(Knowledge bases, represent, situations)
+(Knowledge bases, represent, events)
+(Knowledge bases, represent, states)
+(Knowledge bases, represent, time)
+(Knowledge bases, represent, causes and effects)
+(Knowledge bases, represent, knowledge about knowledge)
+(Knowledge bases, represent, default reasoning)
+(default reasoning, remain true, even when other facts are changing)
+
+

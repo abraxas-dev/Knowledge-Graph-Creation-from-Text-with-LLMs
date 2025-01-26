@@ -1,0 +1,4 @@
+("James", "averaged", "6.2 rebounds per game) - This triple shows that James also averaged 6.2 rebounds per game.");
+("St. Vincent–St. Mary varsity basketball team", "went", "27–0) - This triple reflects the team's record of 27 wins and 0 losses.");
+("St. Vincent–St. Mary varsity basketball team", "won", "Division III state title) - This triple indicates that the team won the Division III state title.");
+("St. Vincent–St. Mary varsity basketball team", "was", "undefeated) - This triple emphasizes that the team did not lose any games during the season.");

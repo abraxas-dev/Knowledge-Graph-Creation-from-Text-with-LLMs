@@ -1,0 +1,16 @@
+("general problem of simulating intelligence", "has been broken into", "subproblems");
+("subproblems", "consist of", "particular traits or capabilities");
+("particular traits or capabilities", "have received", "most attention");
+("traits or capabilities", "cover", "scope of AI research");
+("scope of AI research", "has", "traits or capabilities");
+("general problem of simulating intelligence", "has been broken into", "subproblems");
+("subproblems", "consist of", "particular traits or capabilities");
+("particular traits or capabilities", "have received", "most attention");
+("traits or capabilities", "cover", "scope of AI research");
+("scope of AI research", "has", "traits or capabilities");
+("AI research", "is", "field of study");
+("particular traits or capabilities", "are", "aspects of AI research");
+("aspects of AI research", "are studied in", "AI field");
+("AI field", "is related to", "intelligence simulation");
+("general problem of simulating intelligence", "has been broken into", "subproblems");
+("subproblems", "consist of", "particular traits or capabilities");

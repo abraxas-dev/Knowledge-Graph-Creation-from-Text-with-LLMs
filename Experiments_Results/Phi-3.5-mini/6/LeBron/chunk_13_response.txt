@@ -1,0 +1,9 @@
+
+Triples:
+(He, accumulate, $1 billion in earnings)
+(He, featured in, books)
+(He, featured in, documentaries)
+(He, won, three Sports Emmy Awards)
+(He, among, Time's 100 most influential people)
+(He, selections, 2005, 2013, 2017, 2019)
+

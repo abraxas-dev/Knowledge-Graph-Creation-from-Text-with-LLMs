@@ -1,0 +1,4 @@
+("He", "won", "the inaugural NBA Cup in 2023");
+("He", "won", "three Olympic gold medals");
+("He", "was", "a member of the U.S. national team");
+("He", "was", "the Olympics MVP in the 2024 Summer Olympics");

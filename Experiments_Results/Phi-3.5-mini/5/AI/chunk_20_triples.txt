@@ -1,0 +1,4 @@
+("agent", "is uncertain about", "situation");
+("agent", "does not know", "outcome of actions");
+("agent", "chooses action", "probabilistic guess");
+("agent", "reassesses", "situation after action");

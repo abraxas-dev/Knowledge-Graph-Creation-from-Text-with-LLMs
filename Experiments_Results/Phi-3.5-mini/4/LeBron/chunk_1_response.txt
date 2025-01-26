@@ -1,0 +1,19 @@
+
+Output:
+(LeBron Raymone James Sr., born, December 30, 1984)
+(LeBron Raymone James Sr., is, American)
+(LeBron Raymone James Sr., is a, professional basketball player)
+(LeBron Raymone James Sr., plays for, Los Angeles Lakers)
+(Los Angeles Lakers, is, team in, NBA)
+
+Note: The RDF triples are simplified and may not capture all possible semantic relationships. The goal is to extract the most relevant triples based on the given text.
+
+
+## Response:
+(LeBron Raymone James Sr., born, December 30, 1984)
+(LeBron Raymone James Sr., is, American)
+(LeBron Raymone James Sr., profession, basketball player)
+(LeBron Raymone James Sr., plays for, Los Angeles Lakers)
+(Los Angeles Lakers, is, team in, NBA)
+
+Note: The RDF triples are simplified and may not capture all possible semantic relationships. The goal is to extract the most relevant triples based on the given text. In this case, the triples focus on the main facts about LeBron James Sr. and his association with the Los Angeles Lakers.

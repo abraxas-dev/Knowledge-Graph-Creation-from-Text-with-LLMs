@@ -1,0 +1,13 @@
+("Agent", "is uncertain about", "Situation");
+("Situation", "is unknown or unobservable", "Agent");
+("Agent", "chooses action by", "probabilistic guess");
+("Agent", "reassesses situation after", "action");
+("Action", "outcome", "Situation");
+("Situation", "is not deterministic", "Agent");
+("- [Support]: (Agent", "faces", "Real-world problems");
+("Real-world problems", "involve", "Uncertainty");
+("Agent", "is uncertain about", "Situation");
+("Situation", "is unknown or unobservable", "Agent");
+("Agent", "must choose action", "Probabilistic guess");
+("Action", "has outcome", "Situation");
+("Situation", "is not deterministic", "Agent");

@@ -1,0 +1,9 @@
+("He", "was touted by", "national media");
+("He", "as", "future NBA superstar");
+("He", "for", "all-around scoring");
+("He", "for", "passing");
+("He", "for", "athleticism");
+("He", "for", "playmaking abilities");
+("James", "was selected by", "Cleveland Cavaliers");
+("James", "with", "first overall pick");
+("James", "of", "2003 NBA draft");

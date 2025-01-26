@@ -1,0 +1,7 @@
+("Many algorithms", "are insufficient for", "solving large reasoning problems");
+("Many algorithms", "experience", "combinatorial explosion");
+("Combinatorial explosion", "becomes", "exponentially slower as problems grow");
+("Humans", "rarely use", "step-by-step deduction");
+("Step-by-step deduction", "could model", "early AI research");
+("Humans", "solve", "most of their problems using");
+("Accurate and efficient reasoning", "is", "an unsolved problem");

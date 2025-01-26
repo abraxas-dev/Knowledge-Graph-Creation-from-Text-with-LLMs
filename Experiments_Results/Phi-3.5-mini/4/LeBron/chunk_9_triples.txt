@@ -1,0 +1,7 @@
+("James", "left in", "2010");
+("James", "joined", "Miami Heat");
+("The Decision", "was announced in", "nationally televised special");
+("James", "won", "NBA championships in 2012");
+("James", "earned", "MVP award in 2012");
+("James", "won", "NBA championships in 2013");
+("James", "earned", "Finals MVP award in 2013");

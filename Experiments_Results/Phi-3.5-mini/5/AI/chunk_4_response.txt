@@ -1,0 +1,7 @@
+
+Output:
+1. (A lot of cutting edge AI, has filtered into, general applications)
+2. (General applications, without being called, AI)
+3. (Various subfields of AI research, are centered around, particular goals)
+4. (Various subfields of AI research, use, particular tools)
+

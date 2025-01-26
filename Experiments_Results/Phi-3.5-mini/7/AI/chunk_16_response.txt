@@ -1,0 +1,7 @@
+The vastness of commonsense knowledge:
+   - [(Challenge, is, breadth of commonsense knowledge)]
+
+2. The non-verbalizable nature of most commonsense knowledge:
+   - [(Challenge, is, sub-symbolic form of most commonsense knowledge)]
+
+These structured triples succinctly capture the essence of the issues described in the text.

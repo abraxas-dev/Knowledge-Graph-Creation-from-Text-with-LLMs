@@ -1,0 +1,12 @@
+
+Output:
+1. (He, was touted by, national media)
+2. (He, as, future NBA superstar)
+3. (He, for, all-around scoring)
+4. (He, for, passing)
+5. (He, for, athleticism)
+6. (He, for, playmaking abilities)
+7. (James, was selected by, Cleveland Cavaliers)
+8. (James, with, first overall pick)
+9. (James, of, 2003 NBA draft)
+

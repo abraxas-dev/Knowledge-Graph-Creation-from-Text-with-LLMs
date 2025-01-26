@@ -1,0 +1,16 @@
+niversity of Akron's Rhodes Arena), (University of Akron's Rhodes Arena, satisfied, ticket demand from alumni), (University of Akron's Rhodes Arena, satisfied, fan demand), (University of Akron's Rhodes Arena, satisfied, college scout demand), (University of Akron's Rhodes Arena, satisfied, NBA scout demand)]
+
+
+In this solution, I have extracted the statistical performance of James and the context of the game location and its significance. The triples are structured to reflect the key pieces of information provided in the text. The first set of triples focuses on James's performance statistics, which are directly mentioned. The second set of triples relates to the location of the game and the reasons why the venue was chosen, which are implied by the context of satisfying demand from various groups.
+
+
+The triples are constructed as follows:
+
+
+1. (James, averaged, 25.3 points per game) - This triple captures James's average points per game, a key performance metric.
+
+2. (James, averaged, 7.4 rebounds per game) - This triple reflects James's average rebounds per game, another important basketball statistic.
+
+3. (James, averaged, 5.5 assists per game) - This triple indicates James's average assists per game, showing his contribution to team play.
+
+4. (James, averaged, 3

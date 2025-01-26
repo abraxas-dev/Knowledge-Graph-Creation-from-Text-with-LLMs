@@ -1,0 +1,15 @@
+("There", "is", "difficulty of knowledge acquisition");
+("knowledge acquisition", "problem", "obtaining knowledge for AI applications");
+("agent", "is", "anything that perceives and takes actions in the world");
+("rational agent", "has", "goals or preferences");
+("rational agent", "takes", "actions");
+("agent", "has", "specific goal in automated planning");
+("The concept of a "rational agent" in artificial intelligence refers to an entity that perceives its environment and takes actions to achieve its goals. A rational agent is characterized by its ability to make decisions based on preferences and the information available to it. In the context of automated planning", "a rational agent is tasked with achieving a specific goal through a series of actions. The process of decision-making in a rational agent involves evaluating the potential outcomes of different actions and selecting the one that maximizes the agent's preferences. This decision-making process is influenced by the agent's knowledge of its environment", "which it acquires through perception. The acquisition of knowledge is a critical aspect of a rational agent's ability to function effectively in its environment.");
+("rational agent", "refers to", "entity that perceives its environment");
+("rational agent", "takes actions", "to achieve its goals");
+("rational agent", "is characterized by", "ability to make decisions");
+("rational agent", "makes decisions", "based on preferences and information");
+("rational agent", "is tasked with", "achieving a specific goal");
+("rational agent", "achieves goal through", "series of actions");
+("decision-making process", "involves evaluating", "potential outcomes of different actions");
+("decision-making process", "selects", "action that maximizes preferences");

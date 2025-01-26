@@ -1,0 +1,12 @@
+("AI researchers", "have adapted", "a wide range of techniques");
+("AI researchers", "integrated", "search and mathematical optimization");
+("AI researchers", "integrated", "formal logic");
+("AI researchers", "integrated", "artificial neural networks");
+("AI researchers", "integrated", "methods based on statistics");
+("AI researchers", "integrated", "operations research");
+("AI researchers", "integrated", "economics");
+("AI", "draws upon", "psychology");
+("AI", "draws upon", "linguistics");
+("AI", "draws upon", "philosophy");
+("AI", "draws upon", "neuroscience");
+("AI", "draws upon", "other fields");

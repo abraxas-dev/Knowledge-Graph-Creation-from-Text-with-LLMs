@@ -1,0 +1,9 @@
+
+
+Triples:
+(A lot of cutting edge AI, has filtered into, general applications)
+(General applications, are not perceived as, AI)
+(Various subfields of AI research, are centered around, particular goals)
+(Various subfields of AI research, use, particular tools)
+
+

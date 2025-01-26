@@ -1,0 +1,10 @@
+
+Output:
+1.(Artificial intelligence, was founded as, an academic discipline)
+2.(Artificial intelligence, went through, cycles of optimism)
+3.(Artificial intelligence, experienced, periods of disappointment)
+4.(Artificial intelligence, experienced, loss of funding)
+5.(AI winters, are known as, periods of disappointment and loss of funding)
+6.(Funding and interest, increased after, 2012)
+7.(Deep learning, outperformed, previous AI techniques)
+

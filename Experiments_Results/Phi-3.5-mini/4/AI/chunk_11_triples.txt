@@ -1,0 +1,5 @@
+("Early researchers", "developed", "algorithms");
+("Algorithms", "imitated", "step-by-step reasoning");
+("Step-by-step reasoning", "used by", "humans");
+("Humans", "solve", "puzzles");
+("Humans", "make", "logical deductions");

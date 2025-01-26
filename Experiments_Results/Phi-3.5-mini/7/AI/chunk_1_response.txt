@@ -1,0 +1,5 @@
+that enable, machines to perceive their environment), 
+(and use, learning and intelligence), 
+(to take actions, that maximize their chances of achieving defined goals)]
+
+This breakdown of the text into triples captures the key components and relationships that define artificial intelligence as described. Each triple is a simple subject-predicate-object structure that conveys a fundamental aspect of AI. The first triple identifies AI as a form of intelligence displayed by machines. The second triple specifies that this intelligence is particularly exhibited by computer systems. The third triple situates AI within the field of computer science, indicating its academic and research context. The fourth triple describes the development and study of methods and software as part of AI research. The fifth and sixth triples explain the functional aspects of AI, where machines perceive their environment and use learning and intelligence to act towards achieving goals. These triples collectively summarize the main points of the provided text in a structured and concise manner.

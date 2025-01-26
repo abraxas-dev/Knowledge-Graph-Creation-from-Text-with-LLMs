@@ -1,0 +1,6 @@
+("Agent", "faces", "uncertainty");
+("Agent", "makes", "probabilistic guess");
+("Agent", "reassesses", "situation");
+("Agent", "chooses", "action based on probability");
+("Agent", "observes", "outcome");
+("Agent", "updates", "beliefs or strategy based on outcome");

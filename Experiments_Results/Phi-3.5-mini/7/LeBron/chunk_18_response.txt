@@ -1,0 +1,15 @@
+ Four),
+(The group, promised, to attend high school together),
+(The group, chose, St. Vincent–St. Mary High School),
+(St. Vincent–St. Mary High School, stirred, local controversy),
+(St. Vincent–St. Mary High School, is, private Catholic school),
+(St. Vincent–St. Mary High School, has, predominantly white students)]
+
+This breakdown captures the key elements of the narrative as triples, focusing on the relationships and actions described. The triples are structured to reflect the connections between the individuals, their collective decisions, and the context of their actions.
+
+1. The team's success is linked to James, Sian Cotton, Dru Joyce III, and Willie McGee, indicating their collective achievement.
+2. James is identified as the leader of the team, which implies a central role in their activities.
+3. The group's self-identification as the "Fab Four" highlights their camaraderie and shared identity.
+4. The promise to attend high school together signifies a commitment to their friendship and future plans.
+5. The choice of St. Vincent–St. Mary High School is presented as a significant decision that led to local controversy, suggesting a clash with community expectations or norms.
+6. The description of St. Vincent–St. Mary High School as a private Catholic school with predominantly white students provides context for the controversy, indicating potential issues of diversity and inclusivity

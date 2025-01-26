@@ -1,0 +1,11 @@
+
+Output:
+1. (James, opted out of, contract)
+2. (James, returned to, Cavaliers)
+3. (James, led, Cavaliers)
+4. (Cavaliers, faced, Golden State Warriors)
+5. (Cavaliers, won, Finals)
+6. (James, came back from, 3–1 deficit)
+7. (James, ended, Cleveland sports curse)
+8. (James, won, third Finals MVP)
+

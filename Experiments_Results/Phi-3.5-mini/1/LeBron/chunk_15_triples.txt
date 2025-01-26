@@ -1,0 +1,9 @@
+("Gloria Marie James", "was mother of", "James");
+("Gloria Marie James", "was 16 at the time of", "James' birth");
+("Anthony McClelland", "has an extensive criminal record", "True");
+("Anthony McClelland", "was not involved in", "James' life");
+("Remember that the output should strictly follow the format (subject", "predicate", "object).");
+("Gloria Marie James", "was mother of", "James");
+("Gloria Marie James", "was 16 at the time of", "James' birth");
+("Anthony McClelland", "has an extensive criminal record", "True");
+("Anthony McClelland", "was not involved in", "James' life");

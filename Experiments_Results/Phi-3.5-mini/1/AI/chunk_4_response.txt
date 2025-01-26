@@ -1,0 +1,29 @@
+
+Output:
+(AI applications, have filtered into, general applications)
+(General applications, are not perceived as, AI)
+(Subfields of AI research, are centered around, particular goals)
+(Subfields of AI research, use, particular tools)
+(Use of particular tools, is not labeled, AI)
+(Things, become useful enough and common enough, not labeled AI)
+
+Note: The above triples are inferred from the text and may not cover all possible interpretations. The goal is to extract meaningful relationships that can be represented as subject-predicate-object triples.
+
+
+Output:
+(AI applications, have filtered into, general applications)
+(General applications, are not perceived as, AI)
+(Subfields of AI research, are centered around, particular goals)
+(Subfields of AI research, use, particular tools)
+(Use of particular tools, is not labeled, AI)
+(Things, become useful enough and common enough, not labeled AI)
+
+Here's a breakdown of the triples:
+
+1. (AI applications, have filtered into, general applications) - This triple indicates that AI applications are becoming integrated into general applications.
+
+2. (General applications, are not perceived as, AI) - This triple suggests that once applications become general, they are not necessarily seen as AI.
+
+3. (Subfields of AI research, are centered around, particular goals) - This triple shows that different areas of AI research focus on specific objectives.
+
+4.

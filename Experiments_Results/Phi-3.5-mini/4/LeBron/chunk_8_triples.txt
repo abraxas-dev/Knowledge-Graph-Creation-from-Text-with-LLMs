@@ -1,0 +1,12 @@
+("Player", "named as", "2004 NBA Rookie of the Year");
+("Player", "established himself as", "one of the league's premier players");
+("Player", "led", "Cavaliers to their first NBA Finals appearance in 2007");
+("Player", "won", "NBA MVP award in 2009");
+("Player", "won", "NBA MVP award in 2010");
+("Player", "named as", "2004 NBA Rookie of the Year");
+("Player", "became", "star player");
+("Player", "led", "his team to NBA Finals in 2007");
+("Player", "awarded", "NBA MVP in 2009");
+("Player", "awarded", "NBA MVP in 2010");
+("Player", "named as", "2004 NBA Rookie of the Year");
+("Player", "became", "star player");

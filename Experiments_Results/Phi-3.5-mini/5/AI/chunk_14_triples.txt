@@ -1,0 +1,7 @@
+("A knowledge base", "is represented as", "a form");
+("A form", "can be used by", "a program");
+("An ontology", "is the set of", "objects");
+("An ontology", "is the set of", "relations");
+("An ontology", "is the set of", "concepts");
+("An ontology", "is the set of", "properties");
+("A domain of knowledge", "uses", "an ontology");

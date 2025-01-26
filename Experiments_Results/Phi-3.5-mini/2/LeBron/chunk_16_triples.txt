@@ -1,0 +1,11 @@
+("James", "was growing up", "life");
+("life", "was", "a struggle for the family");
+("family", "moved from", "apartment to apartment");
+("Akron", "neighborhoods", "seedier");
+("Gloria", "struggled to find", "steady work");
+("Note: The triples are extracted based on the relationships and entities mentioned in the text. The subject", "predicate", "and object are identified to form meaningful triples.");
+("James", "was growing up", "life");
+("life", "was", "a struggle for the family");
+("family", "moved from", "apartment to apartment");
+("Akron", "neighborhoods", "seedier");
+("Gloria", "struggled to find", "steady work");

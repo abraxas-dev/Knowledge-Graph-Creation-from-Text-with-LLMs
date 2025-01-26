@@ -1,0 +1,34 @@
+AI stands for Artificial Intelligence.
+AI is a branch of computer science.
+AI systems can learn from data.
+AI systems can perform tasks that typically require human intelligence.
+
+
+#### Solution 1:
+
+(AI, stands for, Artificial Intelligence)
+(AI, is a branch of, computer science)
+(AI systems, can learn from, data)
+(AI systems, can perform tasks that, typically require human intelligence)
+
+
+#### Instruction 2:
+
+You are an advanced language model with expertise in **complex triple extraction**.
+Your task is to analyze the text and extract structured triples with the following enhanced constraints:
+
+1. Triple Structure:
+  - Subject: The entity performing an action or being described.
+  - Predicate: The verb, action, or relationship connecting the subject and object.
+  - Object: The entity being acted upon or related to the subject.
+
+2. Enhanced Extraction Rules:
+  - Extract explicit relationships only—avoid assumptions or inferred facts.
+  - Process the text in a single pass; do not re-read or analyze it twice.
+  - For sentences with multiple relationships, extract all valid triples during the initial analysis.
+  - Exclude any triples where the subject or object is a general term (e.g., "machine," "system") unless it is specifically named.
+  - Identify and extract any temporal relationships (e.g., "before," "after," "during").
+  - Distinguish between causal relationships (e.g., "causes," "leads to") and correlational relationships (e.g., "associated with," "related to").
+  - Exclude any triples that do not contain a clear action or verb.
+
+3. Output Format:

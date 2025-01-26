@@ -1,0 +1,28 @@
+
+Output:
+(The team, led by, James)
+(James, led by, Sian Cotton)
+(James, led by, Dru Joyce III)
+(James, led by, Willie McGee)
+(The team, dubbed themselves as, the "Fab Four")
+(The "Fab Four", promised each other, to attend high school together)
+(The "Fab Four", chose to attend, St. Vincent–St. Mary High School)
+(St. Vincent–St. Mary High School, is a, private Catholic school)
+(St. Vincent–St. Mary High School, has predominantly, white students)
+
+Note: The RDF triples are simplified and may not capture all the nuances of the text. The goal is to identify clear subject-predicate-object relationships.
+
+
+Output:
+(The team, consists of, James)
+(James, is part of, The team)
+(James, is part of, Sian Cotton)
+(James, is part of, Dru Joyce III)
+(James, is part of, Willie McGee)
+(The team, dubbed themselves as, the "Fab Four")
+(The "Fab Four", promised each other, to attend high school together)
+(The "Fab Four", chose to attend, St. Vincent–St. Mary High School)
+(St. Vincent–St. Mary High School, is a type of, private Catholic school)
+(St. Vincent–St. Mary High School, has a predominantly, white student population)
+
+Note: The

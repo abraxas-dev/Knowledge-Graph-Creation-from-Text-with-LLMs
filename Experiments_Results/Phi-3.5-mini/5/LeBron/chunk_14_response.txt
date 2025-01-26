@@ -1,0 +1,13 @@
+
+Output:
+1. (James, has won, 20 ESPY Awards)
+2. (James, hosted, Saturday Night Live)
+3. (James, starred in, Space Jam: A New Legacy (2021))
+4. (James, has been a part-owner of, Liverpool F.C.)
+5. (James, leads, LeBron James Family Foundation)
+6. (LeBron James Family Foundation, has opened, elementary school)
+7. (LeBron James Family Foundation, has opened, housing complex)
+8. (LeBron James Family Foundation, has opened, retail plaza)
+9. (LeBron James Family Foundation, has opened, medical center)
+10. (LeBron James Family Foundation, in, Akron, Ohio)
+

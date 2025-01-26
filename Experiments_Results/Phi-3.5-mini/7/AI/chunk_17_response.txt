@@ -1,0 +1,5 @@
+ific goal)]
+
+This structured list captures the key concepts related to agents in the context of knowledge acquisition and automated planning. The first triple identifies the general concept of an "agent" and its function. The second and third triples describe the characteristics of a "rational agent," emphasizing its goal-oriented behavior. The final triple connects the concept of "automated planning" with the notion that an agent involved in such planning has a specific goal to achieve.
+
+This representation is designed to be clear and concise, focusing on the relationships between the concepts without additional context or explanation. It is structured to facilitate understanding of the fundamental ideas in the domain of artificial intelligence and automated planning.

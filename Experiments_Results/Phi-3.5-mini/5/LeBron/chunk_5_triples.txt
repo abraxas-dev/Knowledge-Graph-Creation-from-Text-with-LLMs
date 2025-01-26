@@ -1,0 +1,6 @@
+("He", "has been named", "NBA All-Star a record 21 times");
+("He", "selected to", "All-NBA Team a record 20 times");
+("He", "with record", "13 First Team selections");
+("He", "selected to", "All-Defensive Team six times");
+("He", "with record", "5 First Team selections");
+("He", "was a runner-up for", "NBA Defensive Player of the Year Award twice");

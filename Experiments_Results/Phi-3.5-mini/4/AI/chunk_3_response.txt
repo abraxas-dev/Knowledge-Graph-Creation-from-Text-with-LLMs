@@ -1,0 +1,17 @@
+
+Output:
+(Advanced web search engines, include, Google Search)
+(Advanced web search engines, are used by, YouTube)
+(Advanced web search engines, are used by, Amazon)
+(Advanced web search engines, are used by, Netflix)
+(Recommendation systems, include, ChatGPT)
+(Recommendation systems, include, AI art)
+(Autonomous vehicles, include, Waymo)
+(Virtual assistants, include, Google Assistant)
+(Virtual assistants, include, Siri)
+(Virtual assistants, include, Alexa)
+(Strategy games, include, chess)
+(Strategy games, include, Go)
+
+Note: The above triples are generated based on the context provided in the text. The subject, predicate, and object are inferred from the relationships between the entities mentioned.
+

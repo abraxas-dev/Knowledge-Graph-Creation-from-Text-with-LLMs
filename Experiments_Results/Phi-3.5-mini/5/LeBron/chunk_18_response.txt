@@ -1,0 +1,13 @@
+
+Output:
+1. (The team, enjoyed, success)
+2. (The team, led by, James)
+3. (James, led by, Sian Cotton)
+4. (James, led by, Dru Joyce III)
+5. (James, led by, Willie McGee)
+6. (The group, dubbed themselves, the "Fab Four")
+7. (The "Fab Four", promised each other, to attend high school together)
+8. (The group, chose, St. Vincent–St. Mary High School)
+9. (St. Vincent–St. Mary High School, stirred, local controversy)
+10. (St. Vincent–St. Mary High School, has, predominantly white students)
+

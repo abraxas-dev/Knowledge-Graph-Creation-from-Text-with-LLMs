@@ -1,0 +1,11 @@
+
+
+Triples:
+(Decision-making agent, assigns, number)
+(Decision-making agent, prefers, situations)
+(Decision-making agent, avoids, situations)
+(Decision-making agent, measures, utility)
+(Utility, measures, preference)
+(Situations, have, utility)
+
+

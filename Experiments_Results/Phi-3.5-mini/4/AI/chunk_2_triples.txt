@@ -1,0 +1,4 @@
+("Such machines", "may be called", "AIs");
+("Such machines", "may be called", "AIs");
+("In this case", "the text is quite straightforward", "and the triple can be directly extracted from the sentence structure. The subject is "Such machines," the predicate is "may be called," and the object is "AIs."");
+("Such machines", "may be called", "AIs");

@@ -1,0 +1,7 @@
+("James", "opted out of contract", "Heat");
+("James", "returned to", "Cavaliers");
+("Cavaliers", "led to victory over", "Golden State Warriors");
+("Cavaliers", "overcame 3–1 deficit", "Finals");
+("Cavaliers", "ended Cleveland sports curse", "Finals");
+("James", "won", "Finals MVP");
+("Cavaliers", "won", "championship");

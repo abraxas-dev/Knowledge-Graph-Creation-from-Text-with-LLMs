@@ -1,0 +1,8 @@
+rocessing),
+(AI research, includes, perception),
+(AI research, includes, support for robotics),
+(AI research, long-term goal, general intelligence),
+(Microsoft, acquired, LinkedIn),
+(Microsoft, acquisition year, 2016)]
+
+This structured list breaks down the complex sentence into individual triples that capture the key elements and relationships described. Each triple follows the format (Subject, Predicate, Object) or (Subject, Predicate, Attribute) as appropriate. The list is designed to be clear and concise, reflecting the essential information without additional commentary or context.

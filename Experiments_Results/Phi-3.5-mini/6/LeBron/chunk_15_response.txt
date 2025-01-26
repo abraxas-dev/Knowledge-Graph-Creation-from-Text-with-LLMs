@@ -1,0 +1,11 @@
+
+
+Triples:
+(James, was born on, December 30, 1984)
+(James, was born in, Akron, Ohio)
+(Gloria Marie James, was, mother of James)
+(Anthony McClelland, was, father of James)
+(Anthony McClelland, has, extensive criminal record)
+(Anthony McClelland, was not involved in, James' life)
+
+

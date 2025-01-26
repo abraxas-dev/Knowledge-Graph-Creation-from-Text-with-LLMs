@@ -1,0 +1,11 @@
+]
+
+This breakdown captures the key elements of the provided text:
+
+1. The growth of the AI field accelerated after the year 2017.
+2. The transformer architecture was introduced, which is a significant development in AI.
+3. There was a substantial increase in investment in AI during the early 2020s.
+4. The AI field experienced rapid ongoing progress during this period.
+5. The timeframe of this progress is referred to as the AI boom.
+
+Each triplet is structured to clearly identify the subject, predicate, and object, reflecting the relationships and events described in the text.

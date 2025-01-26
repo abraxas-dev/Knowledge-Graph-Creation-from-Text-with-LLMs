@@ -1,0 +1,14 @@
+
+Output:
+(Knowledge representation, allows, AI programs to answer questions intelligently)
+(Knowledge representation, allows, AI programs to make deductions about real-world facts)
+(Formal knowledge representations, used in, content-based indexing and retrieval)
+(Formal knowledge representations, used in, scene interpretation)
+(Formal knowledge representations, used in, clinical decision support)
+(Formal knowledge representations, used in, knowledge discovery)
+(Knowledge discovery, involves, mining "interesting" and actionable inferences from large databases)
+(Knowledge engineering, allows, AI programs to answer questions intelligently)
+(Knowledge engineering, allows, AI programs to make deductions about real-world facts)
+
+Note: The above triples are extracted based on the relationships and entities mentioned in the text. The predicates are inferred from the context and the structure of the sentences.
+

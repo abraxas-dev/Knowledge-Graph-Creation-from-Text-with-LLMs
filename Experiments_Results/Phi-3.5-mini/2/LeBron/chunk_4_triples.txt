@@ -1,0 +1,3 @@
+("James", "is the NBA's all-time leading scorer", "NBA");
+("James", "ranks fourth in NBA career assists", "NBA");
+("James", "ranks seventh in NBA career steals", "NBA");

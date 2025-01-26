@@ -1,0 +1,13 @@
+
+Output:
+(Difficulty, is, Knowledge acquisition)
+(Knowledge acquisition, for, AI applications)
+(Agent, is, Anything that perceives and takes actions in the world)
+(Rational agent, has, Goals or preferences)
+(Rational agent, takes actions to make happen, Goals or preferences)
+(Agent, has, Specific goal)
+(Automated planning, involves, Agent)
+(Agent, has, Specific goal)
+
+Note: The triples are generated based on the relationships and entities mentioned in the text. The predicates are inferred from the context and the structure of the sentences.
+

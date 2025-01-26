@@ -1,0 +1,9 @@
+
+Output:
+1. (decision-making agent, has, preferences)
+2. (decision-making agent, assigns, number to each situation)
+3. (number, measures, how much the agent prefers it)
+4. (situations, are, assigned numbers)
+5. (situations, are, preferred by the agent)
+6. (situations, are, avoided by the agent)
+

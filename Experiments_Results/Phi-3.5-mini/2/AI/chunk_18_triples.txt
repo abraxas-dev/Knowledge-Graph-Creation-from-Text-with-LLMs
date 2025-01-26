@@ -1,0 +1,10 @@
+("decision-making agent", "assigns a number to", "each situation");
+("each situation", "is measured by", "utility");
+("decision-making agent", "prefers to be in", "certain situations");
+("decision-making agent", "tries to avoid", "certain situations");
+("automated decision-making", "involves", "decision-making agent");
+("decision-making agent", "has preferences", "certain situations");
+("decision-making agent", "assigns a number to", "each situation");
+("each situation", "is measured by", "utility");
+("decision-making agent", "prefers to be in", "certain situations");
+("decision-making agent", "tries to avoid", "certain situations");

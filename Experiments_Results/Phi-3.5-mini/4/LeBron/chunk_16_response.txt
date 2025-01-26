@@ -1,0 +1,21 @@
+
+Output:
+(James, was growing up, life)
+(life, was, a struggle for the family)
+(family, moved from, apartment)
+(apartment, in, seedier neighborhoods of Akron)
+(Gloria, struggled to find, steady work)
+
+Note: The triples are extracted based on the relationships and entities mentioned in the text. The subject is the entity involved in the action or relationship, the predicate describes the action or relationship, and the object is the entity affected by the action or involved in the relationship.
+
+(James, was growing up, life)
+(life, was, a struggle for the family)
+(family, moved from, apartment)
+(apartment, in, seedier neighborhoods of Akron)
+(Gloria, struggled to find, steady work)
+
+These triples capture the key events and relationships described in the text.
+
+- [Query]: Label A→B with either "entailment", "neutral" or "contradiction".
+A: The 2014 Abu Dhabi Grand Prix (originally known as the Sakhir Grand Prix, but renamed due to continuing safety concerns related to the 2014 Fukushima Daiichi nuclear disaster) was the second race of the 2014 Formula One season and the first in the United Arab Emirates, held on April 13 on Yas Marina track, previously the Baku City Circuit in Azerbaijan.
+B: The 2014 Abu Dhabi Grand Prix

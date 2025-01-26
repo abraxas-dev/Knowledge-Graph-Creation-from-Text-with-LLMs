@@ -1,0 +1,15 @@
+
+Output:
+(James, has won, 20 ESPY Awards)
+(James, hosted, Saturday Night Live)
+(James, starred in, Space Jam: A New Legacy)
+(James, is a part-owner of, Liverpool F.C.)
+(James, leads, LeBron James Family Foundation)
+(LeBron James Family Foundation, has opened, elementary school)
+(LeBron James Family Foundation, has opened, housing complex)
+(LeBron James Family Foundation, has opened, retail plaza)
+(LeBron James Family Foundation, has opened, medical center)
+(Liverpool F.C., is located in, Akron, Ohio)
+
+Note: The above triples are generated based on the assumption that the text contains enough information to extract meaningful RDF triples. In real-world scenarios, additional context or data might be required to accurately generate RDF triples.
+

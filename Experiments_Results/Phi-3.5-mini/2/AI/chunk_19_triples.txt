@@ -1,0 +1,6 @@
+("Agent", "can calculate", "Expected Utility");
+("Action", "has effect", "Outcome");
+("Outcome", "has probability", "Probability");
+("Agent", "chooses", "Action with maximum Expected Utility");
+("Action", "has Expected Utility", "Calculated Expected Utility");
+("Calculated Expected Utility", "is maximum", "Action with maximum Expected Utility");

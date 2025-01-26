@@ -1,0 +1,13 @@
+
+Output:
+1. (AI research, include, reasoning)
+2. (AI research, include, knowledge representation)
+3. (AI research, include, planning)
+4. (AI research, include, learning)
+5. (AI research, include, natural language processing)
+6. (AI research, include, perception)
+7. (AI research, include, support for robotics)
+8. (General intelligence, among, field's long-term goals)
+9. (General intelligence, ability, complete any task performed by a human)
+10. (General intelligence, on, at least equal level)
+

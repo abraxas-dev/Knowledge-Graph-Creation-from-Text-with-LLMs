@@ -1,0 +1,24 @@
+
+Output:
+(James, is a, freshman)
+(James, is 6-foot-2-inch tall, 1.88 m)
+(James, averaged, 18 points per game)
+(James, averaged, 6.2 rebounds per game)
+(St. Vincent–St. Mary varsity basketball team, went, 27–0)
+(St. Vincent–St. Mary varsity basketball team, won, Division III state title)
+(St. Vincent–St. Mary varsity basketball team, is the only boys high school team in, Ohio)
+(St. Vincent–St. Mary varsity basketball team, finished the season, undefeated)
+
+Note: The RDF triples are extracted from the text by identifying the subject, predicate, and object in each sentence. The subject is the entity being described or acted upon, the predicate is the action or relationship, and the object is the entity that is receiving the action or is related to the subject. In the output, each triple is represented as a tuple in the format (subject, predicate, object).
+
+For example:
+- (James, is a, freshman) - James is the subject, "is a" is the predicate indicating a state of being, and "freshman" is the object.
+- (James, is 6-foot-2-inch tall, 1.88 m) - James is the subject, "is 6-foot-2-inch tall" is the predicate describing his height, and "1.88 m" is the object representing the measurement.
+- (James, averaged, 18 points per game) - James is the subject, "averaged" is the predicate indicating a statistical average, and "18 points per game" is the object representing the average points.
+- (James, averaged, 6.2 rebounds per game) - James is the subject, "averaged" is the predicate indicating a statistical average, and "6.2 rebounds per game" is the object representing the average rebounds.
+- (St. Vincent–St. Mary varsity basketball team, went, 27–0) - The team is the subject, "went" is the predicate indicating a sequence of events, and "27–0" is the object representing the record.
+- (St. Vincent–St. Mary varsity basketball team, won, Division III state title) - The team is the subject, "won" is the predicate indicating a victory, and "Division III state title" is the object representing the title won.
+- (St. Vincent–St. Mary varsity basketball team, is the only boys high school team in, Ohio) - The team is the subject, "is the only boys high school team in" is the predicate indicating exclusivity, and "Ohio" is the object representing the location.
+- (St. Vincent–St. Mary varsity basketball team, finished the season, undefeated) - The team is the subject, "finished the season" is the predicate indicating the completion of a season, and "undefeated" is the object representing the undefeated status.
+
+Each triple captures a specific piece of information from the text, and together they provide a structured representation of the data in RDF format.

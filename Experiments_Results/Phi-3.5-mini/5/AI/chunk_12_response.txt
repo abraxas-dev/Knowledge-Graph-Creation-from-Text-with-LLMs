@@ -1,0 +1,8 @@
+
+Output:
+1.(Many algorithms, experience, combinatorial explosion)
+2.(Combinatorial explosion, make, algorithms exponentially slower)
+3.(Algorithms, grow, problems)
+4.(Humans, solve, problems using fast, intuitive judgments)
+5.(Accurate and efficient reasoning, is, an unsolved problem)
+

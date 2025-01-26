@@ -1,0 +1,12 @@
+("Automated Decision-Making Agent", "assigns number", "Utility A");
+("Utility A", "measures", "Preference Level for Situation A");
+("Automated Decision-Making Agent", "has preferences", "Situation B");
+("Automated Decision-Making Agent", "assigns number", "Utility B");
+("Utility B", "measures", "Preference Level for Situation B");
+("Automated Decision-Making Agent", "prefers", "Situation C");
+("Automated Decision-Making Agent", "assigns number", "Utility C");
+("Utility C", "measures", "High Preference Level for Situation C");
+("Automated Decision-Making Agent", "avoids", "Situation D");
+("Automated Decision-Making Agent", "assigns number", "Utility D");
+("Utility D", "measures", "Low Preference Level for Situation D");
+("This structured list represents the agent's preferences and the utility assigned to each situation", "indicating the level of preference or aversion the agent has towards each scenario. The utility numbers are a quantitative measure of the agent's subjective preferences", "where higher numbers typically indicate a stronger preference for a given situation.");

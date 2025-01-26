@@ -1,0 +1,7 @@
+
+Output:
+1.(Problems, are, the breadth of commonsense knowledge)
+2.(Problems, are, the sub-symbolic form of most commonsense knowledge)
+3.(Commonsense knowledge, is, enormous)
+4.(Commonsense knowledge, is not represented as, facts or statements)
+

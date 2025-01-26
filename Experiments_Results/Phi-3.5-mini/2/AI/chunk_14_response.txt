@@ -1,0 +1,9 @@
+
+Output:
+(knowledge base, is represented in, form usable by a program)
+(ontology, is the set of, objects)
+(ontology, is the set of, relations)
+(ontology, is the set of, concepts)
+(ontology, is the set of, properties)
+(knowledge base, used by, ontology)
+

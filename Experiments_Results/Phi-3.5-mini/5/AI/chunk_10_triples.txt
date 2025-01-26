@@ -1,0 +1,5 @@
+("The general problem", "has been broken into", "subproblems");
+("Subproblems", "consist of", "particular traits or capabilities");
+("Researchers", "expect", "an intelligent system to display");
+("Traits", "have received", "the most attention");
+("Traits", "cover", "the scope of AI research");

@@ -1,0 +1,92 @@
+# Model configuration
+model_name: "microsoft/Phi-3.5-mini-instruct"  # Name of the language model to use
+api_key: ""  # API key if needed (e.g., for OpenAI models)
+# System message that guides the model's triple extraction behavior
+system_message: |
+  You are a highly advanced language model specializing in **efficient triple extraction**. 
+  Your task is to analyze the text and extract structured triples in the format 
+  (Subject, Predicate, Object). You must process the `ext only once, extracting triples directly 
+  without revisiting any part of the input. You must also only extract data from that text and not generate your own
+
+  Guidelines:
+  1. Triple Structure:
+    - Subject: The entity performing an action or being described.
+    - Predicate: The verb, action, or relationship connecting the subject and object.
+    - Object: The entity being acted upon or related to the subject.
+
+  2. Rules for Extraction:
+    - Extract explicit relationships only—avoid assumptions or inferred facts.
+    - Process the text in a single pass; do not re-read or analyze it twice.
+    - For sentences with multiple relationships, extract all valid triples during the initial analysis.
+
+  3. Output Format:
+    - Return triples  in this format:
+      (Subject, Predicate, Object)
+
+
+  Objective:
+  Extract all relevant triples efficiently and accurately from the variable text, processing it only once. 
+  Ensure no part of the input is revisited.
+
+# Template for formatting the input text
+prompt_template: |
+  Generate Triples for the following text:
+  {text}
+
+# Processing configuration
+max_chunks: null  # Maximum number of chunks to process (null for all chunks)
+
+# Model generation parameters
+model_generate_parameters:
+  # Controls randomness: 0.0 for deterministic, higher for more creative
+  # temperature: 0.2
+  
+  # Maximum number of tokens in the response
+  max_new_tokens: 400
+  
+  # Number between 0 and 1 that penalizes new tokens based on whether they appear in the text so far
+  # repetition_penalty: 1.1
+  
+  # The cumulative probability threshold for token sampling
+  # top_p: 0.9
+  
+  # Controls how many highest probability tokens to consider for generation
+  # top_k: 50
+  
+  # Whether to use beam search for text generation
+  do_sample: False
+  
+  # Controls the length penalty. Values < 1.0 encourage shorter sequences
+  # length_penalty: 1.0
+  
+  # Early stopping flag for beam search
+  # early_stopping: true
+  
+  # Number of beams for beam search
+  # num_beams: 5
+  
+  # Whether to use nucleus sampling
+  # use_nucleus_sampling: true
+  
+  # Whether to remove repeated n-grams
+  # no_repeat_ngram_size: 3
+  
+  # Minimum length of the generated text
+  # min_length: 10
+  
+  # Whether to force certain tokens at the beginning of the sequence
+  # forced_bos_token_id: null
+  
+  # Whether to force certain tokens at the end of the sequence
+  # forced_eos_token_id: null
+  
+  # Remove tokens that don't meet a certain threshold
+  # remove_invalid_values: true
+  
+  #  self.logger.info("🔄 Loading model...")
+  #  self.model = AutoModelForCausalLM.from_pretrained(
+  #      self.model_name,
+  #      torch_dtype=torch.float16,
+  #      low_cpu_mem_usage=True,
+  #      trust_remote_code=True,
+  #  ).to(self.device)

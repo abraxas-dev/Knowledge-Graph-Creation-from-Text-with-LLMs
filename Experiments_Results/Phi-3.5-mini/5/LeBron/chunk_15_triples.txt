@@ -1,0 +1,4 @@
+("Gloria Marie James", "was", "mother of James");
+("Gloria Marie James", "was", "16 years old at the time of James' birth");
+("Anthony McClelland", "has", "extensive criminal record");
+("Anthony McClelland", "was not involved in", "James' life");

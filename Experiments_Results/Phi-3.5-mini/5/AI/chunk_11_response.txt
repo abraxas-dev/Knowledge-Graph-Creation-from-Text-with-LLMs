@@ -1,0 +1,12 @@
+
+Output:
+1.(Early researchers, developed, algorithms)
+2.(algorithms, imitated, step-by-step reasoning)
+3.(step-by-step reasoning, used by, humans)
+4.(humans, solve, puzzles)
+5.(humans, make, logical deductions)
+6.(methods, developed, for dealing with uncertain or incomplete information)
+7.(uncertain or incomplete information, employing, concepts from probability)
+8.(uncertain or incomplete information, employing, concepts from economics)
+9.(methods, developed, late 1980s and 1990s)
+

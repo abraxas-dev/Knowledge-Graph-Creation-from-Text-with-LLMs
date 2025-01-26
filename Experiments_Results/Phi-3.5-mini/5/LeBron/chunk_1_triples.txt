@@ -1,0 +1,5 @@
+("LeBron Raymone James Sr.", "is", "American");
+("LeBron Raymone James Sr.", "is", "professional basketball player");
+("LeBron Raymone James Sr.", "plays for", "Los Angeles Lakers");
+("Los Angeles Lakers", "are", "NBA team");
+("Los Angeles Lakers", "play in", "National Basketball Association");

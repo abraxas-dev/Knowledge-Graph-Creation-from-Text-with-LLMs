@@ -1,0 +1,10 @@
+("The team", "enjoyed success on", "local and national level");
+("The team", "led by", "James");
+("James", "led by", "Sian Cotton");
+("James", "led by", "Dru Joyce III");
+("James", "led by", "Willie McGee");
+("The group", "dubbed themselves as", "Fab Four");
+("The group", "promised each other", "attend high school together");
+("The group", "chose to attend", "St. Vincent–St. Mary High School");
+("St. Vincent–St. Mary High School", "is a", "private Catholic school");
+("St. Vincent–St. Mary High School", "has predominantly", "white students");

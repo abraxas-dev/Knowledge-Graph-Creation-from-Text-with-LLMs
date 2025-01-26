@@ -1,0 +1,9 @@
+("Gloria", "allowed", "James to move in with");
+("James", "moved in with", "Frank Walker");
+("Frank Walker", "is a", "youth football coach");
+("Frank Walker", "introduced", "James to basketball");
+("James", "began playing", "organized basketball");
+("James", "played", "AAU basketball");
+("James", "for", "Northeast Ohio Shooting Stars");
+("James", "began playing", "organized basketball in");
+("fifth grade", "is grade", "James");

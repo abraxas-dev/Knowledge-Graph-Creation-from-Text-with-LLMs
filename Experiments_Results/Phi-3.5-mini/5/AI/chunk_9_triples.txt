@@ -1,0 +1,6 @@
+("emergence of advanced generative AI", "in", "midst of the AI boom");
+("advanced generative AI", "create and modify", "content");
+("advanced generative AI", "exposed", "several unintended consequences and harms");
+("advanced generative AI", "raised", "concerns about the risks of AI");
+("advanced generative AI", "prompting", "discussions about regulatory policies");
+("discussions about regulatory policies", "to ensure", "safety and benefits of the technology");

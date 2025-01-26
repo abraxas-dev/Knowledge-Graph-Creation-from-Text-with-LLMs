@@ -1,0 +1,13 @@
+
+Output:
+(James, is the NBA's all-time leading scorer, NBA)
+(James, ranks fourth in NBA career assists, NBA)
+(James, ranks seventh in NBA career steals, NBA)
+(James, has won, NBA Most Valuable Player Award, 4 times)
+(James, has won, NBA Finals MVP Award, 4 times)
+(James, has won, NBA Rookie of the Year Award, 1 time)
+(James, has won, NBA All-Star Game MVP Award, 3 times)
+(James, has won, NBA Cup MVP Award, 1 time)
+
+Note: The above triples are generated based on the assumption that the text provides explicit information about the subjects and their corresponding predicates and objects. In cases where the information is not explicitly stated, it may not be possible to generate accurate triples.
+

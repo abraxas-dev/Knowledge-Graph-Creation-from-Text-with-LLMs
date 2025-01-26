@@ -1,0 +1,8 @@
+("James", "is", "NBA's all-time leading scorer");
+("James", "ranks", "fourth in NBA career assists");
+("James", "ranks", "seventh in NBA career steals");
+("James", "has", "four NBA Most Valuable Player Awards");
+("James", "has", "four NBA Finals MVP Awards");
+("James", "received", "NBA Rookie of the Year Award");
+("James", "has", "three NBA All-Star Game MVP Awards");
+("James", "received", "inaugural NBA Cup MVP award");

@@ -1,0 +1,8 @@
+
+Output:
+1.(The general problem, has been broken into, subproblems)
+2.(Subproblems, consist of, particular traits or capabilities)
+3.(Researchers, expect, an intelligent system to display)
+4.(Traits, have received, the most attention)
+5.(Traits, cover, the scope of AI research)
+

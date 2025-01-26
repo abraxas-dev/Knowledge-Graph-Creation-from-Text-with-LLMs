@@ -1,0 +1,11 @@
+("Cutting edge AI", "has filtered into", "General applications");
+("General applications", "is not perceived as", "AI");
+("Various subfields", "are centered around", "particular goals");
+("Various subfields", "use", "particular tools");
+("General applications", "becomes", "useful enough");
+("Useful enough", "is not labeled", "AI anymore");
+("Machine learning", "involves", "Neural networks");
+("Neural networks", "are a fundamental concept in", "Machine learning");
+("Neural networks", "are inspired by", "Human brain");
+("Neural networks", "consist of", "Layers of interconnected nodes");
+("Each node", "represents", "Neuron");

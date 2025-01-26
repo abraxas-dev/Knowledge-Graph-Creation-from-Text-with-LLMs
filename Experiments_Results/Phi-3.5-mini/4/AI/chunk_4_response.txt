@@ -1,0 +1,22 @@
+
+Output:
+(Cutting edge AI, has filtered into, General applications)
+(General applications, is not perceived as, AI)
+(Various subfields, are centered around, particular goals)
+(Various subfields, use, particular tools)
+(General applications, becomes, useful enough)
+(Useful enough, is not labeled, AI anymore)
+
+Note: The above triples are inferred from the context of the text and may not represent all possible semantic relations.
+
+
+Text:
+"In the field of machine learning, neural networks are a fundamental concept. These networks, inspired by the human brain, consist of layers of interconnected nodes. Each node represents a neuron, and the connections between nodes are weighted by the strength of the signal they carry. The process of training a neural network involves adjusting these weights based on the input data and the desired output. This is done through a method called backpropagation, where the error between the predicted and actual output is calculated and propagated back through the network to update the weights. The effectiveness of a neural network is often measured by its ability to generalize from the training data to new, unseen data. This is known as the network's generalization capability."
+
+Output:
+(Machine learning, involves, Neural networks)
+(Neural networks, are a fundamental concept in, Machine learning)
+(Neural networks, are inspired by, Human brain)
+(Neural networks, consist of, Layers of interconnected nodes)
+(Each node, represents, Neuron)
+(Connections between nodes, are weighted

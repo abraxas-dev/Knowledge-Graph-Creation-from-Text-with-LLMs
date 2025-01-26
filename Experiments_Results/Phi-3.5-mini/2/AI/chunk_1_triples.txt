@@ -1,0 +1,8 @@
+("Artificial intelligence", "is", "in its broadest sense");
+("Artificial intelligence", "is exhibited by", "machines");
+("Machines", "particularly", "computer systems");
+("Artificial intelligence", "is a field of research in", "computer science");
+("Computer science", "develops and studies", "methods and software");
+("Methods and software", "enable", "machines to perceive their environment");
+("Machines", "use", "learning and intelligence");
+("Learning and intelligence", "take actions that maximize", "chances of achieving defined goals");

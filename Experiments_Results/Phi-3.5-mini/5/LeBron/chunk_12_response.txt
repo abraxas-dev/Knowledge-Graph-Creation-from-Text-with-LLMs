@@ -1,0 +1,11 @@
+
+Output:
+1.(James, surpassed, Kareem Abdul-Jabbar)
+2.(James, became, leading scorer in league history)
+3.(James, became, part of first father-son teammate duo in NBA history)
+4.(James, played alongside, Bronny)
+5.(James, earned, wealth and fame from endorsement contracts)
+6.(James, with, Lakers)
+7.(Bronny, played alongside, James)
+8.(James, with, Lakers)
+

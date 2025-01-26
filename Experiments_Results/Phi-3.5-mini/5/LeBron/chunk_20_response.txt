@@ -1,0 +1,15 @@
+
+Output:
+1. (James, averaged, 25.3 points)
+2. (James, averaged, 7.4 rebounds)
+3. (James, averaged, 5.5 assists)
+4. (James, averaged, 3.7 steals)
+5. (St. Vincent–St. Mary, played, at the University of Akron's Rhodes Arena)
+6. (St. Vincent–St. Mary, for, home games)
+7. (St. Vincent–St. Mary, to satisfy, ticket demand)
+8. (Ticket demand, from, alumni)
+9. (Ticket demand, from, fans)
+10. (Ticket demand, from, college scouts)
+11. (Ticket demand, from, NBA scouts)
+12. (NBA scouts, wanted to see, James play)
+

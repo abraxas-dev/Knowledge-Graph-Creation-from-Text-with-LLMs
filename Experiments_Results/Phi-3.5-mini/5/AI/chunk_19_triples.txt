@@ -1,0 +1,4 @@
+("it", "can calculate", "expected utility");
+("expected utility", "is", "the utility of all possible outcomes of the action");
+("utility of all possible outcomes of the action", "is weighted by", "probability that the outcome will occur");
+("it", "chooses", "action with maximum expected utility");

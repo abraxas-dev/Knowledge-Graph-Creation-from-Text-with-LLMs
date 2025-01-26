@@ -1,0 +1,81 @@
+
+Output:
+(AI applications, have filtered into, general applications)
+(General applications, are not perceived as, AI)
+(Subfields of AI research, are centered around, particular goals)
+(Subfields of AI research, use, particular tools)
+(Use of particular tools, is not labeled, AI)
+(Things, become useful enough and common enough, not labeled AI)
+
+Note: The above triples are inferred from the text and may not cover all possible interpretations. The goal is to extract meaningful relationships that can be represented as subject-predicate-object triples.
+
+
+Output:
+(AI applications, have filtered into, general applications)
+(General applications, are not perceived as, AI)
+(Subfields of AI research, are centered around, particular goals)
+(Subfields of AI research, use, particular tools)
+(Use of particular tools, is not labeled, AI)
+(Things, become useful enough and common enough, not labeled AI)
+
+Here's a breakdown of the triples:
+
+1. (AI applications, have filtered into, general applications) - This triple indicates that AI applications are becoming integrated into general applications.
+
+2. (General applications, are not perceived as, AI) - This triple suggests that once applications become general, they are not necessarily seen as AI.
+
+3. (Subfields of AI research, are centered around, particular goals) - This triple shows that different areas of AI research focus on specific objectives.
+
+4. (Subfields of AI research, use, particular tools) - This triple indicates that each subfield of AI research employs specific tools to achieve its goals.
+
+5. (Use of particular tools, is not labeled, AI) - This triple implies that the use of specific tools in general applications is not necessarily identified as AI.
+
+6. (Things, become useful enough and common enough, not labeled AI) - This final triple suggests that when something becomes widely used and essential, it may not be classified as AI.
+
+These triples capture the relationships between different concepts mentioned in the text.
+
+
+Output:
+(AI applications, have filtered into, general applications)
+(General applications, are not perceived as, AI)
+(Subfields of AI research, are centered around, particular goals)
+(Subfields of AI research, use, particular tools)
+(Use of particular tools, is not labeled, AI)
+(Things, become useful enough and common enough, not labeled AI)
+(General applications, integration into, AI landscape)
+(Perception of AI, changes with commonality, AI label)
+
+Here's a more detailed breakdown of the triples:
+
+1. (AI applications, have filtered into, general applications) - This indicates that AI technologies are being incorporated into broader, non-specialized applications.
+
+2. (General applications, are not perceived as, AI) - This suggests that when AI technologies are widely used in everyday applications, they may not be recognized as AI by the general public or even by some professionals.
+
+3. (Subfields of AI research, are centered around, particular goals) - This highlights that AI research is focused on achieving specific objectives, which may vary across different subfields.
+
+4. (Subfields of AI research, use, particular tools) - This implies that each subfield of AI research relies on specific tools or methodologies to accomplish its goals.
+
+5. (Use of particular tools, is not labeled, AI) - This suggests that the use of certain tools in general applications may not be identified as AI, possibly due to their widespread adoption and integration into non-AI contexts.
+
+6. (Things, become useful enough and common enough, not labeled AI) - This indicates that as certain technologies or applications become more useful and prevalent, they may lose their association with AI.
+
+7. (General applications, integration into, AI landscape) - This triple emphasizes the blending of AI technologies into the broader technological landscape.
+
+8. (Perception of AI, changes with commonality, AI label) - This highlights the dynamic nature of how AI is perceived, suggesting that as AI becomes more common, its label or recognition may change.
+
+These triples provide a more nuanced understanding of the relationships between AI applications, perception, and integration into the broader technological landscape.
+
+
+Output:
+(AI applications, have filtered into, general applications)
+(General applications, are not perceived as, AI)
+(Subfields of AI research, are centered around, particular goals)
+(Subfields of AI research, use, particular tools)
+(Use of particular tools, is not labeled, AI)
+(Things, become useful enough and common enough, not labeled AI)
+(General applications, integration into, AI landscape)
+(Perception of AI, changes with commonality, AI label)
+(Cutting edge AI, becomes part of, general applications)
+(General applications, lack AI label, due to commonality)
+(Subfields of AI research, contribute to, general applications)
+(Use of tools in general

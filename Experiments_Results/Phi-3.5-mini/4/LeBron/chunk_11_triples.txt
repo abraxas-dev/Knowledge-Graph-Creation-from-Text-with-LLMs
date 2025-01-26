@@ -1,0 +1,8 @@
+("James", "exercised contract option to leave", "Cavaliers");
+("James", "signed with", "Lakers");
+("James", "won", "2020 NBA championship");
+("James", "received", "fourth Finals MVP");
+("2018", "is year", "James");
+("Lakers", "won", "2020 NBA championship");
+("Lakers", "player", "James");
+("Finals MVP", "awarded to", "James");

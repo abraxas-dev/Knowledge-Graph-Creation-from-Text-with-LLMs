@@ -1,0 +1,5 @@
+),
+(Concepts used, from, probability),
+(Concepts used, from, economics)]
+
+This structured list breaks down the complex sentence into individual triples that capture the key elements and their relationships. Each triple is formatted as (Subject, Predicate, Object) to clearly define the action, the actor, and the target of that action. The use of probability and economics as concepts from which methods were developed is also highlighted as separate triples to emphasize their distinct roles in the advancement of algorithmic reasoning.

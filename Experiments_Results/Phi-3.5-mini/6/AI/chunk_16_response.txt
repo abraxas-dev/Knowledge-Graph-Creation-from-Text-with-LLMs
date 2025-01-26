@@ -1,0 +1,7 @@
+
+
+Triples:
+(The average person, knows, enormous set of atomic facts)
+(Commonsense knowledge, is, sub-symbolic form)
+(Most commonsense knowledge, is not, represented as "facts" or "statements")
+

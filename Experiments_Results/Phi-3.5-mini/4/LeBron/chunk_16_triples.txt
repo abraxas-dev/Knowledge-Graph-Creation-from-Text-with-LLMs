@@ -1,0 +1,11 @@
+("James", "was growing up", "life");
+("life", "was", "a struggle for the family");
+("family", "moved from", "apartment");
+("apartment", "in", "seedier neighborhoods of Akron");
+("Gloria", "struggled to find", "steady work");
+("Note: The triples are extracted based on the relationships and entities mentioned in the text. The subject is the entity involved in the action or relationship", "the predicate describes the action or relationship", "and the object is the entity affected by the action or involved in the relationship.");
+("James", "was growing up", "life");
+("life", "was", "a struggle for the family");
+("family", "moved from", "apartment");
+("apartment", "in", "seedier neighborhoods of Akron");
+("Gloria", "struggled to find", "steady work");

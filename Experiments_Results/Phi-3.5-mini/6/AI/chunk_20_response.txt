@@ -1,0 +1,7 @@
+
+Triples:
+(Agent, may not be certain about, Situation)
+(Agent, may not know, Future outcome of actions)
+(Agent, chooses action, Probabilistic guess)
+(Agent, reassesses situation, Effectiveness of action)
+

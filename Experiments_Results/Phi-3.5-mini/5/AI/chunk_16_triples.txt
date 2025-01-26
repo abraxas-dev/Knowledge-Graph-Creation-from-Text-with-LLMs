@@ -1,0 +1,4 @@
+("Problems", "are", "the breadth of commonsense knowledge");
+("Problems", "are", "the sub-symbolic form of most commonsense knowledge");
+("Commonsense knowledge", "is", "enormous");
+("Commonsense knowledge", "is not represented as", "facts or statements");

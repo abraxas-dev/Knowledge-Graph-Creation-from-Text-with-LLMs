@@ -1,0 +1,8 @@
+("James", "left", "Miami Heat");
+("James", "joined", "Miami Heat");
+("James", "won", "NBA championships");
+("James", "earned", "MVP");
+("James", "earned", "Finals MVP");
+("The Decision", "announced", "James' free agency move");
+("2012", "saw", "James winning NBA championships and MVP");
+("2013", "saw", "James winning NBA championships and MVP");

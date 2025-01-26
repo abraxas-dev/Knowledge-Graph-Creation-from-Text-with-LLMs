@@ -1,0 +1,11 @@
+("- (Problem of simulating intelligence", "consists of", "subproblems");
+("- (Subproblems", "consist of", "particular traits or capabilities");
+("- (Particular traits or capabilities", "have received the most attention", "scope of AI research");
+("Problem of simulating intelligence", "consists of", "subproblems");
+("- (Subproblems", "consist of", "particular traits or capabilities");
+("Subproblems", "consist of", "particular traits or capabilities");
+("- (Particular traits or capabilities", "have received the most attention", "scope of AI research");
+("Problem of simulating intelligence", "consists of", "problem of understanding natural language");
+("Problem of simulating intelligence", "consists of", "problem of visual perception");
+("Problem of simulating intelligence", "consists of", "problem of decision making");
+("- (Problem of decision making", "consists of", "subproblems of probabilistic reasoning,");

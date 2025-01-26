@@ -1,0 +1,5 @@
+("The group", "promised", "to attend high school together),");
+("The group", "chose", "St. Vincent–St. Mary High School),");
+("St. Vincent–St. Mary High School", "stirred", "local controversy),");
+("St. Vincent–St. Mary High School", "is", "private Catholic school),");
+("St. Vincent–St. Mary High School", "has", "predominantly white students)]");

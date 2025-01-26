@@ -1,0 +1,13 @@
+
+Output:
+1. (Artificial intelligence, is, in its broadest sense)
+2. (Artificial intelligence, is exhibited by, machines)
+3. (Artificial intelligence, is particularly, computer systems)
+4. (Artificial intelligence, is a field of research in, computer science)
+5. (Artificial intelligence, develops and studies, methods)
+6. (Artificial intelligence, develops and studies, software)
+7. (Artificial intelligence, enables, machines to perceive their environment)
+8. (Artificial intelligence, uses, learning)
+9. (Artificial intelligence, uses, intelligence)
+10. (Artificial intelligence, takes actions that, maximize their chances of achieving defined goals)
+

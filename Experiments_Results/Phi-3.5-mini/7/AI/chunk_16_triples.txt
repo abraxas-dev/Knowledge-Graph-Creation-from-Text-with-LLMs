@@ -1,0 +1,2 @@
+("- [(Challenge", "is", "breadth of commonsense knowledge)]");
+("- [(Challenge", "is", "sub-symbolic form of most commonsense knowledge)]");

@@ -1,0 +1,17 @@
+("High-profile applications", "include", "advanced web search engines");
+("High-profile applications", "include", "recommendation systems");
+("Recommendation systems", "used by", "YouTube");
+("Recommendation systems", "used by", "Amazon");
+("Recommendation systems", "used by", "Netflix");
+("High-profile applications", "include", "virtual assistants");
+("Virtual assistants", "e.g.", "Google Assistant");
+("Virtual assistants", "e.g.", "Siri");
+("Virtual assistants", "e.g.", "Alexa");
+("High-profile applications", "include", "autonomous vehicles");
+("Autonomous vehicles", "e.g.", "Waymo");
+("High-profile applications", "include", "generative and creative tools");
+("Generative and creative tools", "e.g.", "ChatGPT");
+("Generative and creative tools", "e.g.", "AI art");
+("High-profile applications", "include", "superhuman play and analysis in strategy games");
+("Superhuman play and analysis in strategy games", "e.g.", "chess");
+("Superhuman play and analysis in strategy games", "e.g.", "Go");

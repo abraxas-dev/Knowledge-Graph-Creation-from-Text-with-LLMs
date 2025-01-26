@@ -1,0 +1,7 @@
+epresentations, used in, content-based indexing and retrieval)
+4. (Formal knowledge representations, used in, scene interpretation)
+5. (Formal knowledge representations, used in, clinical decision support)
+6. (Formal knowledge representations, used in, knowledge discovery)
+7. (Knowledge discovery, involves, mining "interesting" and actionable inferences from large databases)
+
+These triples represent the key concepts and their relationships as described in the text. They are structured in a way that clearly identifies the subject, predicate, and object, which is essential for understanding and processing the information in a formal knowledge representation system.

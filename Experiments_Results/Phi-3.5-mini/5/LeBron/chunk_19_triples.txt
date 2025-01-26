@@ -1,0 +1,6 @@
+("James", "is", "6-foot-2-inch tall");
+("James", "averaged", "18 points per game");
+("James", "averaged", "6.2 rebounds per game");
+("St. Vincent–St. Mary varsity basketball team", "went", "27–0");
+("St. Vincent–St. Mary varsity basketball team", "won", "Division III state title");
+("St. Vincent–St. Mary varsity basketball team", "is", "the only boys high school team in Ohio to finish the season undefeated");

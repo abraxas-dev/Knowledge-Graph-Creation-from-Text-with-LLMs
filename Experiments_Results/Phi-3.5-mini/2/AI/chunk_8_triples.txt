@@ -1,0 +1,5 @@
+("Growth", "accelerated further after", "2017");
+("Transformer architecture", "led to", "increased investment in AI");
+("Early 2020s", "saw", "billions of dollars invested in AI");
+("AI field", "experienced", "rapid ongoing progress");
+("Progress in AI", "known as", "AI boom");

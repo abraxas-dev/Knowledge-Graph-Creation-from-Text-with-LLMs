@@ -1,0 +1,6 @@
+("James", "is", "oldest active player in the NBA");
+("James", "is tied with", "Vince Carter");
+("James", "holds", "record for the most seasons played in NBA history");
+("James", "holds", "22 seasons");
+("James", "holds", "record for the most minutes played in NBA history");
+("James", "grew up playing basketball for", "St. Vincent–St. Mary High School");

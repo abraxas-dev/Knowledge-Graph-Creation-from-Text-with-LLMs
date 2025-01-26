@@ -1,0 +1,14 @@
+
+
+Triples:
+(Knowledge representation, allow, AI programs to answer questions intelligently)
+(Knowledge representation, used in, content-based indexing and retrieval)
+(Knowledge representation, used in, scene interpretation)
+(Knowledge representation, used in, clinical decision support)
+(Knowledge representation, used in, knowledge discovery)
+(Formal knowledge representations, used in, content-based indexing and retrieval)
+(Formal knowledge representations, used in, scene interpretation)
+(Formal knowledge representations, used in, clinical decision support)
+(Formal knowledge representations, used in, knowledge discovery)
+
+

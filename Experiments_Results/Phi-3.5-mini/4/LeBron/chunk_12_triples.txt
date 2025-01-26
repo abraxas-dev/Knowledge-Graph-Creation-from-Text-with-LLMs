@@ -1,0 +1,7 @@
+("James", "surpassed", "Kareem Abdul-Jabbar");
+("James", "became", "leading scorer in league history");
+("James", "became", "part of first father-son teammate duo");
+("James", "played with", "Bronny");
+("James", "played for", "Lakers");
+("James", "earned", "wealth and fame");
+("James", "earned", "from endorsement contracts");

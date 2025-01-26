@@ -1,0 +1,10 @@
+("The team", "enjoyed", "success");
+("The team", "led by", "James");
+("James", "led by", "Sian Cotton");
+("James", "led by", "Dru Joyce III");
+("James", "led by", "Willie McGee");
+("The group", "dubbed themselves", "the "Fab Four"");
+("The "Fab Four"", "promised each other", "to attend high school together");
+("The group", "chose", "St. Vincent–St. Mary High School");
+("St. Vincent–St. Mary High School", "stirred", "local controversy");
+("St. Vincent–St. Mary High School", "has", "predominantly white students");

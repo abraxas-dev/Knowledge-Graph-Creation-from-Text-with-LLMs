@@ -1,0 +1,8 @@
+
+Output:
+1. (difficulty, of, knowledge acquisition)
+2. (agent, is, anything that perceives and takes actions in the world)
+3. (rational agent, has, goals or preferences)
+4. (rational agent, takes actions, to make goals or preferences happen)
+5. (agent, has, a specific goal in automated planning)
+

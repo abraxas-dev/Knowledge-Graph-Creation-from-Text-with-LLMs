@@ -1,0 +1,16 @@
+
+Output:
+(Problems, are, in knowledge representation)
+(Knowledge representation, have, breadth of commonsense knowledge)
+(Commonsense knowledge, is, enormous)
+(Commonsense knowledge, have, sub-symbolic form)
+(Much of what people know, is not, represented as "facts" or "statements")
+(Represented as "facts" or "statements", is not, expressed verbally)
+
+Note: The above triples are generated based on the assumption that the text is describing relationships between concepts. The subject, predicate, and object are identified based on these relationships. The predicates are verbs or phrases that describe the relationship between the subject and object. The objects are the concepts or entities that are related to the subject by the predicate.
+
+For example:
+(Problems, are, in knowledge representation) - Here, "problems" is the subject, "are" is the predicate, and "in knowledge representation" is the object.
+(Knowledge representation, have, breadth of commonsense knowledge) - Here, "knowledge representation" is the subject, "have" is the predicate, and "breadth of commonsense knowledge" is the object.
+(Commonsense knowledge, is, enormous) - Here, "commonsense knowledge" is the subject, "is" is the predicate, and "enormous" is the object.
+(Commonsense knowledge, have, sub-symbolic form) - Here, "commonsense knowledge" is the subject, "have" is the predicate, and "sub

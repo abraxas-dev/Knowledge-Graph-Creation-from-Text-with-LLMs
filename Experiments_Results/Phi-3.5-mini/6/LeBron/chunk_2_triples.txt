@@ -1,0 +1,18 @@
+("Nicknamed "King James"", "is", "one of the greatest basketball players of all time");
+("Nicknamed "King James"", "is", "frequently at the center of debates regarding the sport's all-time best");
+("Nicknamed "King James"", "is", "often compared to Michael Jordan");
+("Nicknamed "King James"", "has won", "four NBA championships");
+("Nicknamed "King James"", "made", "eight consecutive appearances");
+("Nicknamed "King James"", "made appearances", "in 2011 NBA Finals");
+("Nicknamed "King James"", "made appearances", "in 2012 NBA Finals");
+("Nicknamed "King James"", "made appearances", "in 2013 NBA Finals");
+("Nicknamed "King James"", "made appearances", "in 2014 NBA Finals");
+("Nicknamed "King James"", "made appearances", "in 2015 NBA Finals");
+("Nicknamed "King James"", "made appearances", "in 2016 NBA Finals");
+("Nicknamed "King James"", "made appearances", "in 2017 NBA Finals");
+("Nicknamed "King James"", "made appearances", "in 2018 NBA Finals");
+("Nicknamed "King James"", "is", "frequently at the center of debates regarding the sport's all-time best");
+("Nicknamed "King James"", "is", "often compared to Michael Jordan");
+("Nicknamed "King James"", "has won", "four NBA championships");
+("Nicknamed "King James"", "made", "eight consecutive appearances");
+("Nicknamed "King James"", "made appearances", "in 2011 NBA Finals");

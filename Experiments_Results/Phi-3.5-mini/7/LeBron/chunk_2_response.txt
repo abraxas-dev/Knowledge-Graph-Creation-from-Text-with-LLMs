@@ -1,0 +1,17 @@
+to, Michael Jordan), (King James, has won, four NBA championships), (King James, made, eight consecutive NBA Finals appearances), (King James, between, 2011 and 2018)]
+
+
+In this solution, I have extracted the key pieces of information from the text and structured them into triples. Each triple consists of a subject, predicate, and object, which together convey a clear and concise relationship.
+
+
+1. (King James, is widely regarded as, greatest basketball player of all time) - This triple indicates that King James is considered by many to be the greatest basketball player ever.
+
+2. (King James, is frequently at the center of, debates regarding the sport's all-time best) - Here, the subject is King James, and the predicate indicates his frequent involvement in discussions about who the best basketball player of all time is.
+
+3. (King James, is often compared to, Michael Jordan) - This triple shows that King James is often put in a comparative context with Michael Jordan, another legendary basketball player.
+
+4. (King James, has won, four NBA championships) - This triple states a fact about King James's achievements, specifically his four NBA championship wins.
+
+5. (King James, made, eight consecutive NBA Finals appearances) - This triple provides information about King James's consistency and success in reaching the NBA Finals over a span of years.
+
+6. (King James, between, 2011 and 2018) - The final triple

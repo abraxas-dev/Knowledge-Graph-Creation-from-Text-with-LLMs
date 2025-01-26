@@ -1,0 +1,12 @@
+on III state title), (St. Vincent–St. Mary varsity basketball team, was, undefeated), (St. Vincent–St. Mary varsity basketball team, from, Ohio)]
+
+In this structured list, I have extracted the following triples from the given text:
+
+1. (James, averaged, 18 points per game) - This triple indicates that James, the freshman, averaged 18 points per game during the season.
+2. (James, averaged, 6.2 rebounds per game) - This triple shows that James also averaged 6.2 rebounds per game.
+3. (St. Vincent–St. Mary varsity basketball team, went, 27–0) - This triple reflects the team's record of 27 wins and 0 losses.
+4. (St. Vincent–St. Mary varsity basketball team, won, Division III state title) - This triple indicates that the team won the Division III state title.
+5. (St. Vincent–St. Mary varsity basketball team, was, undefeated) - This triple emphasizes that the team did not lose any games during the season.
+6. (St. Vincent–St. Mary varsity basketball team, from, Ohio) - This triple provides information about the team's location, indicating that it is from Ohio.
+
+Each triple is formatted as (Subject, Predicate, Object), which captures the essential information presented in the text.

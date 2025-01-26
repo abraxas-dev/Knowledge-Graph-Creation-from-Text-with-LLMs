@@ -1,0 +1,3 @@
+("complex sentence into individual triples that capture the key events and their corresponding subjects", "predicates", "and objects. Each triple is a simple statement that can be understood independently while collectively they provide a comprehensive summary of the events described in the sentence.");
+("James", "exercised contract option to leave", "Cavaliers) - This triple indicates that James took action to terminate his contract with the Cavaliers.");
+("James", "signed with", "Lakers) - This triple shows that James joined the Lakers as a result of exercising his contract option.");

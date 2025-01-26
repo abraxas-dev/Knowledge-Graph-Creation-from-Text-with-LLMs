@@ -1,0 +1,27 @@
+config_file: 7.yaml
+configuration:
+  api_key: ''
+  max_chunks: null
+  model_generate_parameters:
+    do_sample: false
+    max_new_tokens: 400
+    pad_token_id: 32000
+  model_name: microsoft/Phi-3.5-mini-instruct
+  prompt_template: "<|user|>\nAlbert Einstein developed the theory of relativity.<|end|>\n\
+    <|assistant|>\n[(Albert Einstein, developed, theory of relativity)]<|end|>\n<|user|>\n\
+    The Eiffel Tower is located in Paris, France.<|end|>\n<|assistant|>\n[(The Eiffel\
+    \ Tower, is located in, Paris), (The Eiffel Tower, is located in, France)]<|end|>\n\
+    <|user|>\nMarie Curie discovered radium and polonium.<|end|>\n<|assistant|>\n\
+    [(Marie Curie, discovered, radium), (Marie Curie, discovered, polonium)]<|end|>\n\
+    <|user|>\nMicrosoft acquired LinkedIn in 2016.<|end|>\n<|assistant|>\n[(Microsoft,\
+    \ acquired, LinkedIn), (Microsoft, in, 2016)]<|end|>\n<|user|>\n{text}\n<|assistant|>\n\
+    Output: \n"
+  system_message: "<|system|>\nYou are a highly advanced language model specializing\
+    \ in extracting structured triples from text. A triple consists of a subject,\
+    \ predicate, and object in the format (Subject, Predicate, Object). Process the\
+    \ input text only once and extract all triples efficiently without revisiting\
+    \ or iterating through the text multiple times. Do not generate explanatory text\
+    \ or add any additional context\u2014only return the extracted triples as a structured\
+    \ list.\n<|end|>\n"
+metrics: {}
+timestamp: '20250126_121635'

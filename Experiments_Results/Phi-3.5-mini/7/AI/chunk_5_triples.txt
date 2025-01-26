@@ -1,0 +1,5 @@
+("AI research", "includes", "perception),");
+("AI research", "includes", "support for robotics),");
+("AI research", "long-term goal", "general intelligence),");
+("Microsoft", "acquired", "LinkedIn),");
+("Microsoft", "acquisition year", "2016)]");

@@ -1,0 +1,6 @@
+("Growth", "accelerated further after", "2017");
+("Transformer architecture", "led to", "Increased investment in AI");
+("Early 2020s", "saw", "Billions of dollars invested in AI");
+("AI field", "experienced", "Rapid ongoing progress");
+("Progress", "has become known as", "AI boom");
+("Note: The above triples are generated based on the context and relationships implied in the text. The subject", "predicate", "and object may not be explicitly mentioned but are inferred from the text.");

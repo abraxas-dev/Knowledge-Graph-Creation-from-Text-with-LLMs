@@ -1,0 +1,6 @@
+("James", "was heavily touted by", "national media");
+("James", "has", "all-around scoring");
+("James", "has", "passing");
+("James", "has", "athleticism");
+("James", "has", "playmaking abilities");
+("James", "was selected by", "Cleveland Cavaliers");

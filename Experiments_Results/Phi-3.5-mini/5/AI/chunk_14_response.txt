@@ -1,0 +1,10 @@
+
+Output:
+1.(A knowledge base, is represented as, a form)
+2.(A form, can be used by, a program)
+3.(An ontology, is the set of, objects)
+4.(An ontology, is the set of, relations)
+5.(An ontology, is the set of, concepts)
+6.(An ontology, is the set of, properties)
+7.(A domain of knowledge, uses, an ontology)
+

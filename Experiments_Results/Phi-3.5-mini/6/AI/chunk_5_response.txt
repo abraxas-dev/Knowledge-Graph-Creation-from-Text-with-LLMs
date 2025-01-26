@@ -1,0 +1,15 @@
+
+
+Triples:
+(AI research, include, reasoning)
+(AI research, include, knowledge representation)
+(AI research, include, planning)
+(AI research, include, learning)
+(AI research, include, natural language processing)
+(AI research, include, perception)
+(AI research, include, support for robotics)
+(AI research, long-term goal, general intelligence)
+(general intelligence, ability, complete any task performed by a human)
+(general intelligence, at least equal level, task performed by a human)
+
+

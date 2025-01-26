@@ -1,0 +1,7 @@
+
+Output:
+1. (James, was growing up, family)
+2. (family, moved, apartment)
+3. (apartment, in, seedier neighborhoods of Akron)
+4. (Gloria, struggled, to find steady work)
+

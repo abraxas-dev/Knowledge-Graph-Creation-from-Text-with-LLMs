@@ -1,0 +1,24 @@
+
+Output:
+(James, was born on, December 30, 1984)
+(James, was born in, Akron, Ohio)
+(Gloria Marie James, was mother of, James)
+(Gloria Marie James, was 16 at the time of, James' birth)
+(Anthony McClelland, has an extensive criminal record, True)
+(Anthony McClelland, was not involved in, James' life)
+
+Note: The predicate "has an extensive criminal record" and "was not involved in" are considered as properties of the subject "Anthony McClelland". The value "True" is considered as the object for the predicate "has an extensive criminal record".
+
+Remember that the output should strictly follow the format (subject, predicate, object).
+
+Output:
+(James, was born on, December 30, 1984)
+(James, was born in, Akron, Ohio)
+(Gloria Marie James, was mother of, James)
+(Gloria Marie James, was 16 at the time of, James' birth)
+(Anthony McClelland, has an extensive criminal record, True)
+(Anthony McClelland, was not involved in, James' life)
+
+In this output, each triple is formatted as follows:
+
+1. (James, was born on, December 30, 1984) - Subject: James, Predicate: was born on, Object: December 30, 1984

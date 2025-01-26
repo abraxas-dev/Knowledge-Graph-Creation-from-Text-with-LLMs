@@ -1,0 +1,4 @@
+("Artificial intelligence", "saw", "increase in funding and interest after 2012),");
+("The cycles of optimism and disappointment reflect the dynamic nature of AI research and development", "where advancements often lead to high expectations", "followed by setbacks that can dampen enthusiasm and funding.");
+("The term "AI winters" is used to describe the periods when the field faced significant challenges", "which resulted in reduced funding and interest. These periods are critical to understanding the evolution of AI", "as they often lead to reevaluation and innovation.");
+("The increase in funding and interest after 2012 is a pivotal moment in AI history", "indicating a resurgence in the field. This resurgence is attributed to the success of deep learning", "a subset of machine learning that has demonstrated remarkable performance in various applications.");

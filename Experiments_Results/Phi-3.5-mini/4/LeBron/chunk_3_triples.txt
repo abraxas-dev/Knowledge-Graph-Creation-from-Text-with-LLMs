@@ -1,0 +1,12 @@
+("He", "won", "inaugural NBA Cup in 2023");
+("He", "won", "three Olympic gold medals");
+("He", "was MVP in", "2024 Summer Olympics");
+("U.S. national team", "member of", "He");
+("Lakers", "won", "inaugural NBA Cup in 2023");
+("Lakers", "member of", "U.S. national team");
+("The company", "has been recognized for", "innovative approach to sustainability");
+("The company", "won", "Green Business Award in 2021");
+("Jane Smith", "CEO of", "The company");
+("Jane Smith", "instrumental in", "company's eco-friendly initiatives");
+("The company", "reduced carbon emissions by", "30% over the past five years");
+("The company", "implemented", "comprehensive recycling program");

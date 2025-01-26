@@ -1,0 +1,33 @@
+config_file: 4.yaml
+configuration:
+  api_key: ''
+  max_chunks: null
+  model_generate_parameters:
+    do_sample: true
+    max_new_tokens: 350
+    pad_token_id: 32000
+    temperature: 0.2
+  model_name: microsoft/Phi-3.5-mini-instruct
+  prompt_template: 'Generate triples for the following text:
+
+    {text}
+
+    '
+  system_message: 'Extract RDF triples from the following text. Each triple should
+    be of the form (subject, predicate, object).
+
+    Example:
+
+    Text: ''The Eiffel Tower is located in Paris, France, and was completed in 1889.''
+
+    Output:
+
+    (Eiffel Tower, is located in, Paris)
+
+    (Paris, is in, France)
+
+    (Eiffel Tower, was completed in, 1889)
+
+    '
+metrics: {}
+timestamp: '20250126_114224'

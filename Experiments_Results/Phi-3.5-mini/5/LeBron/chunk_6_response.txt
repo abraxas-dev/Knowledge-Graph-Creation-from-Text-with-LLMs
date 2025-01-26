@@ -1,0 +1,10 @@
+
+Output:
+1.(James, is, oldest active player in the NBA)
+2.(James, is tied with, Vince Carter)
+3.(James, holds, record for the most seasons played in NBA history)
+4.(James, holds, 22 seasons)
+5.(James, holds, record for the most minutes played in NBA history)
+6.(James, grew up playing basketball for, St. Vincent–St. Mary High School)
+7.(James, from, Akron, Ohio)
+

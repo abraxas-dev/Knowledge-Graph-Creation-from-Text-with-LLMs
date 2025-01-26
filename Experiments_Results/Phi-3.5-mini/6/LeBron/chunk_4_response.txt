@@ -1,0 +1,10 @@
+
+Triples:
+(LeBron James, holds, NBA Most Valuable Player (MVP) Awards)
+(LeBron James, holds, NBA Finals MVP Awards)
+(LeBron James, holds, NBA Rookie of the Year Award)
+(LeBron James, holds, NBA All-Star Game MVP Awards)
+(LeBron James, holds, NBA Cup MVP award)
+(LeBron James, ranking, fourth in NBA career assists)
+(LeBron James, ranking, seventh in NBA career steals)
+

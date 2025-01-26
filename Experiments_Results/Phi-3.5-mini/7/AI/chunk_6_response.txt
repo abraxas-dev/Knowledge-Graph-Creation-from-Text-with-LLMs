@@ -1,0 +1,11 @@
+ods based on statistics)
+5. (AI researchers, employed, operations research)
+6. (AI researchers, utilized, economics)
+7. (AI researchers, drew upon, psychology)
+8. (AI researchers, incorporated, linguistics)
+9. (AI researchers, referenced, philosophy)
+10. (AI researchers, applied, neuroscience)
+11. (AI researchers, integrated, a wide range of techniques)
+12. (AI, draws upon, various fields including psychology, linguistics, philosophy, neuroscience)
+
+Note: The last triple is a general statement summarizing the diverse interdisciplinary nature of AI research. It does not specify a subject, predicate, and object in the traditional sense but rather encapsulates the overall theme of the input text.

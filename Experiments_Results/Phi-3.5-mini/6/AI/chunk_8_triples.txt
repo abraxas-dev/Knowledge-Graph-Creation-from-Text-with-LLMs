@@ -1,0 +1,4 @@
+("Growth", "accelerated", "transformer architecture");
+("Growth", "led to", "billions of dollars investment in AI");
+("AI field", "experienced", "rapid ongoing progress");
+("AI boom", "became known as", "rapid ongoing progress");

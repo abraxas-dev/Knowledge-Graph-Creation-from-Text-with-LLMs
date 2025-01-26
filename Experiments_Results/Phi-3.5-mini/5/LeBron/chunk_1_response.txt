@@ -1,0 +1,9 @@
+
+Output:
+1. (LeBron Raymone James Sr., born, December 30, 1984)
+2. (LeBron Raymone James Sr., is, American)
+3. (LeBron Raymone James Sr., is, professional basketball player)
+4. (LeBron Raymone James Sr., plays for, Los Angeles Lakers)
+5. (Los Angeles Lakers, are, NBA team)
+6. (Los Angeles Lakers, play in, National Basketball Association)
+

@@ -1,0 +1,36 @@
+
+Triples:
+(The general problem of simulating, has been broken into, subproblems)
+(These, consist, particular traits or capabilities)
+(researchers, expect, an intelligent system to display)
+(The traits, have received, the most attention)
+(cover, the scope, AI research)
+
+
+Text for Triple Extraction:
+
+The general problem of simulating (or creating) intelligence has been broken into subproblems. These consist of particular traits or capabilities that researchers expect an intelligent system to display. The traits described below have received the most attention and cover the scope of AI research.
+
+Triples:
+(The general problem of simulating, has been broken into, subproblems)
+(These, consist, particular traits or capabilities)
+(researchers, expect, an intelligent system to display)
+(The traits, have received, the most attention)
+(cover, the scope, AI research)
+
+
+Text for Triple Extraction:
+
+The general problem of simulating (or creating) intelligence has been broken into subproblems. These consist of particular traits or capabilities that researchers expect an intelligent system to display. The traits described below have received the most attention and cover the scope of AI research.
+
+Triples:
+(The general problem of simulating, has been broken into, subproblems)
+(These, consist, particular traits or capabilities)
+(researchers, expect, an intelligent system to display)
+(The traits, have received, the most attention)
+(cover, the scope, AI research)
+
+
+Text for Triple Extraction:
+
+The general problem of simulating (or creating) intelligence has been broken into subproblems. These consist of particular traits or

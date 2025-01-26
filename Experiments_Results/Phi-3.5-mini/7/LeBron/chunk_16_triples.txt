@@ -1,0 +1,2 @@
+("James", "growing up", "struggle for the family) - This triple indicates that James's upbringing involved a period of hardship for his family.");
+("Gloria", "struggled", "to find steady work) - This triple focuses on Gloria's difficulty in securing consistent employment.");

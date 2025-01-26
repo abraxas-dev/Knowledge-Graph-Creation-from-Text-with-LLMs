@@ -1,0 +1,14 @@
+
+Output:
+(Early researchers, developed, algorithms)
+(Algorithms, imitated, step-by-step reasoning)
+(Step-by-step reasoning, used by, humans)
+(Humans, solve, puzzles)
+(Humans, make, logical deductions)
+(Methods, developed, for, uncertain or incomplete information)
+(Methods, employing, concepts from, probability)
+(Methods, employing, concepts from, economics)
+(Late 1980s and 1990s, period, for, development of methods)
+
+Note: The above triples are extracted based on the relationships and entities mentioned in the text. The predicates represent the relationship between the subject and object, and the objects represent the entities involved.
+

@@ -1,0 +1,12 @@
+
+Output:
+(Agent, can calculate, Expected Utility)
+(Action, has effect, Outcome)
+(Outcome, has probability, Probability)
+(Expected Utility, is calculated by, (Action, has effect, Outcome), (Outcome, has probability, Probability))
+(Agent, chooses, Action with maximum Expected Utility)
+(Action, has Expected Utility, Calculated Expected Utility)
+(Calculated Expected Utility, is maximum, Action with maximum Expected Utility)
+
+Note: The above triples are inferred from the text and may not cover all possible interpretations. The exact triples may vary depending on the specific details and context provided in the text.
+

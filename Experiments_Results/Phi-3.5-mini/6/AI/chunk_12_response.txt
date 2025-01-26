@@ -1,0 +1,11 @@
+
+
+Triples:
+(Many of these algorithms, experience, combinatorial explosion)
+(combinatorial explosion, become, exponentially slower)
+(Many of these algorithms, solve, large reasoning problems)
+(humans, use, fast, intuitive judgments)
+(fast, intuitive judgments, solve most problems)
+(accurate and efficient reasoning, is, an unsolved problem)
+
+

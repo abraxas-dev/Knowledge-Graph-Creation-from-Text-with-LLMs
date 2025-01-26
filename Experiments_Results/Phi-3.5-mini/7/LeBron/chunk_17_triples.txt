@@ -1,0 +1,7 @@
+("James", "represented", "Northeast Ohio Shooting Stars)]");
+("Gloria", "allowed", "son to move in with) - Gloria is the subject who permits her son to live with someone else.");
+("son", "moved in with", "Frank Walker) - The son is the subject who relocates to live with Frank Walker.");
+("Frank Walker", "introduced", "James to basketball) - Frank Walker is the subject who introduces James to the sport of basketball.");
+("James", "began playing", "organized basketball in fifth grade) - James is the subject who starts participating in organized basketball during his fifth-grade year.");
+("James", "played", "Amateur Athletic Union basketball) - James is the subject who engages in playing AAU basketball.");
+("James", "represented", "Northeast Ohio Shooting Stars) - James is the subject who represents the Northeast Ohio Shooting Stars in AAU basketball.");

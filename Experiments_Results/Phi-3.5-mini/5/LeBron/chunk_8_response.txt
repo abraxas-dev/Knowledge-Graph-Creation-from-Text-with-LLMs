@@ -1,0 +1,8 @@
+
+Output:
+1.(Player, named, 2004 NBA Rookie of the Year)
+2.(Player, established, as one of the league's premier players)
+3.(Player, led, Cavaliers to their first NBA Finals appearance in 2007)
+4.(Player, won, NBA MVP award in 2009)
+5.(Player, won, NBA MVP award in 2010)
+

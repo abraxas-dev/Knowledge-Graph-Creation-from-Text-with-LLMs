@@ -1,0 +1,12 @@
+
+Output:
+(Artificial intelligence, was founded as, academic discipline in 1956)
+(AI history, went through, cycles of optimism)
+(AI history, experienced, periods of disappointment)
+(AI history, experienced, loss of funding)
+(AI winters, are, periods of disappointment and loss of funding)
+(2012, saw, increase in funding and interest)
+(deep learning, outperformed, previous AI techniques)
+
+Note: The triples are extracted based on the relationships and entities mentioned in the text. The predicates are inferred from the context.
+

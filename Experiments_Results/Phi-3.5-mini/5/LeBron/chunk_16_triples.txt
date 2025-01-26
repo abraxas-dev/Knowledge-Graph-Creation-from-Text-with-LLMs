@@ -1,0 +1,4 @@
+("James", "was growing up", "family");
+("family", "moved", "apartment");
+("apartment", "in", "seedier neighborhoods of Akron");
+("Gloria", "struggled", "to find steady work");

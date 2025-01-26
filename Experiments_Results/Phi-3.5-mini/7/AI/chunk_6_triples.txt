@@ -1,0 +1,8 @@
+("AI researchers", "employed", "operations research");
+("AI researchers", "utilized", "economics");
+("AI researchers", "drew upon", "psychology");
+("AI researchers", "incorporated", "linguistics");
+("AI researchers", "referenced", "philosophy");
+("AI researchers", "applied", "neuroscience");
+("AI researchers", "integrated", "a wide range of techniques");
+("Note: The last triple is a general statement summarizing the diverse interdisciplinary nature of AI research. It does not specify a subject", "predicate", "and object in the traditional sense but rather encapsulates the overall theme of the input text.");

@@ -1,0 +1,14 @@
+
+Output:
+(Many algorithms, are insufficient for, solving large reasoning problems)
+(Many algorithms, experience, combinatorial explosion)
+(Combinatorial explosion, makes, algorithms exponentially slower)
+(Problems, grow, as algorithms experience combinatorial explosion)
+(Early AI research, could model, step-by-step deduction)
+(Humans, rarely use, step-by-step deduction)
+(Humans, solve, most problems using)
+(Humans, use, fast, intuitive judgments)
+(Accurate and efficient reasoning, is an unsolved problem)
+
+Note: The above triples are generated based on the context and relationships implied in the text. The predicates are inferred from the text and may not cover all possible interpretations.
+

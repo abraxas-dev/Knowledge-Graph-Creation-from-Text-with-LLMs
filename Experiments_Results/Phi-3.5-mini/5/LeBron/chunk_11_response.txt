@@ -1,0 +1,8 @@
+
+Output:
+1. (James, exercised, contract option)
+2. (James, left, Cavaliers)
+3. (James, signed, Lakers)
+4. (James, won, 2020 NBA championship)
+5. (James, received, fourth Finals MVP)
+

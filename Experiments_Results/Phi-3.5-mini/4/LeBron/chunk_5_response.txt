@@ -1,0 +1,23 @@
+Output:
+(Player, has been named an NBA All-Star, 21 times)
+(Player, selected to the All-NBA Team, 20 times)
+(Player, First Team selection, 13 times)
+(Player, All-Defensive Team selection, 6 times)
+(Player, First Team selection, 5 times)
+(Player, runner-up for NBA Defensive Player of the Year Award, 2 times)
+
+            Generate triples for the following text:
+The novel "Pride and Prejudice" by Jane Austen was first published in 1813. It is a romantic novel that explores the issues of morality, upbringing, and marriage in the society of the landed gentry of early 19th-century England.
+Output:
+(Novel, "Pride and Prejudice", Jane Austen)
+(Novel, first published, 1813)
+(Novel, type, romantic)
+(Novel, explores, morality)
+(Novel, explores, upbringing)
+(Novel, explores, marriage)
+(Novel, set in, early 19th-century England)
+(Novel, set in, landed gentry)
+(Novel, set in, England)
+
+            Generate triples for the following text:
+The Great Barrier Reef, off the coast of Queensland, Australia, is the world's largest coral reef system, composed of over 2,900 individual reefs and 

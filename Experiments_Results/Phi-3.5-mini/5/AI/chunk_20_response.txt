@@ -1,0 +1,7 @@
+
+Output:
+1.(agent, is uncertain about, situation)
+2.(agent, does not know, outcome of actions)
+3.(agent, chooses action, probabilistic guess)
+4.(agent, reassesses, situation after action)
+

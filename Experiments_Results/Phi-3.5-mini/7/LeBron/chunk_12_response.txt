@@ -1,0 +1,5 @@
+ar),
+(James, earned, wealth and fame, from, endorsement contracts)]
+
+
+This structured list of triples captures the key events and relationships described in the input text. Each triple is formatted as (Subject, Predicate, Object/Detail), with additional contextual information such as dates and locations included where relevant. The triples are designed to be clear and concise, reflecting the factual content of the text without any additional commentary or interpretation.

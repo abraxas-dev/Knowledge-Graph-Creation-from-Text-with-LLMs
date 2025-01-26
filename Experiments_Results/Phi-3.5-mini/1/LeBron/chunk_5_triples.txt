@@ -1,0 +1,6 @@
+("Player", "has been named an NBA All-Star", "21 times");
+("Player", "selected to the All-NBA Team", "20 times");
+("Player", "First Team selection", "13 times");
+("Player", "All-Defensive Team selection", "6 times");
+("Player", "First Team selection", "5 times");
+("Player", "runner-up for NBA Defensive Player of the Year Award", "2 times");

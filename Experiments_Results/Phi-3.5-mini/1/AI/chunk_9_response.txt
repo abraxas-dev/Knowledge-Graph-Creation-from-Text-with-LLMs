@@ -1,0 +1,12 @@
+
+Output:
+(advanced generative AI, emerged in, midst of AI boom)
+(advanced generative AI, creates and modifies, content)
+(content creation by AI, exposed, unintended consequences and harms)
+(unintended consequences and harms, raised, concerns about risks of AI)
+(risks of AI, prompted, discussions about regulatory policies)
+(discussions about regulatory policies, aim to ensure, safety and benefits of technology)
+(technology, subject of regulatory policies, advanced generative AI)
+
+Note: The above triples are generated based on the semantic relationships present in the text. The predicates are inferred from the context and may not cover all possible interpretations.
+

@@ -1,0 +1,28 @@
+n, scope of AI research)
+
+Structured List:
+
+- (Problem of simulating intelligence, consists of, subproblems)
+- (Subproblems, consist of, particular traits or capabilities)
+- (Particular traits or capabilities, have received the most attention, scope of AI research)
+
+Specific Triples:
+
+1. (Problem of simulating intelligence, consists of, subproblems)
+   - (Subproblems, consist of, particular traits or capabilities)
+
+2. (Subproblems, consist of, particular traits or capabilities)
+   - (Particular traits or capabilities, have received the most attention, scope of AI research)
+
+Example Triples:
+
+1. (Problem of simulating intelligence, consists of, problem of understanding natural language)
+   - (Problem of understanding natural language, consists of, subproblems of syntax, semantics, and pragmatics)
+   - (Subproblems of syntax, semantics, and pragmatics, have received the most attention, scope of AI research)
+
+2. (Problem of simulating intelligence, consists of, problem of visual perception)
+   - (Problem of visual perception, consists of, subproblems of object recognition, scene understanding, and motion tracking)
+   - (Subproblems of object recognition, scene understanding, and motion tracking, have received the most attention, scope of AI research)
+
+3. (Problem of simulating intelligence, consists of, problem of decision making)
+   - (Problem of decision making, consists of, subproblems of probabilistic reasoning,

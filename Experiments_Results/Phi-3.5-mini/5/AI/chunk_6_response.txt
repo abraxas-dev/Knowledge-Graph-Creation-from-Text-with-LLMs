@@ -1,0 +1,14 @@
+
+Output:
+1. (AI researchers, have adapted, search and mathematical optimization)
+2. (AI researchers, have integrated, formal logic)
+3. (AI researchers, have integrated, artificial neural networks)
+4. (AI researchers, have integrated, methods based on statistics)
+5. (AI researchers, have integrated, operations research)
+6. (AI researchers, have integrated, economics)
+7. (AI, draws upon, psychology)
+8. (AI, draws upon, linguistics)
+9. (AI, draws upon, philosophy)
+10. (AI, draws upon, neuroscience)
+11. (AI, draws upon, other fields)
+

@@ -1,0 +1,11 @@
+
+Output:
+(Problems, are, in knowledge representation)
+(Knowledge representation, have, breadth of commonsense knowledge)
+(Commonsense knowledge, is, enormous)
+(Commonsense knowledge, have, sub-symbolic form)
+(Sub-symbolic form, is not, represented as "facts" or "statements")
+(Facts or statements, cannot be expressed verbally)
+
+Note: The above triples are generated based on the assumption that the text contains implicit information that can be represented as RDF triples. In some cases, the extraction might require additional context or domain-specific knowledge to accurately represent the information in RDF format.
+

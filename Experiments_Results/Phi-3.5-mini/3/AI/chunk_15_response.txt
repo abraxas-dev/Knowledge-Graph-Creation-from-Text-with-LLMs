@@ -1,0 +1,20 @@
+
+Output:
+(Knowledge bases, represent, objects)
+(Knowledge bases, represent, properties)
+(Knowledge bases, represent, categories)
+(Knowledge bases, represent, relations between objects)
+(Knowledge bases, represent, situations)
+(Knowledge bases, represent, events)
+(Knowledge bases, represent, states)
+(Knowledge bases, represent, time)
+(Knowledge bases, represent, causes)
+(Knowledge bases, represent, effects)
+(Knowledge bases, represent, knowledge about knowledge)
+(Knowledge bases, use, default reasoning)
+(Knowledge bases, assume, things are true until told otherwise)
+(Knowledge bases, maintain, truths even when other facts change)
+(Knowledge bases, cover, many aspects and domains of knowledge)
+
+Note: The above triples are generated based on the assumption that the text is describing the functions and features of knowledge bases. The predicates are inferred from the context and may not cover all possible interpretations of the text.
+

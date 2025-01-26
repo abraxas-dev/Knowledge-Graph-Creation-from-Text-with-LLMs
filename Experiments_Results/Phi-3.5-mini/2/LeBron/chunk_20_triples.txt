@@ -1,0 +1,9 @@
+("James", "averaged", "25.3 points");
+("James", "averaged", "7.4 rebounds");
+("James", "averaged", "5.5 assists");
+("James", "averaged", "3.7 steals");
+("St. Vincent–St. Mary", "played at", "University of Akron's Rhodes Arena");
+("University of Akron's Rhodes Arena", "satisfied", "ticket demand from alumni");
+("University of Akron's Rhodes Arena", "satisfied", "fan demand");
+("University of Akron's Rhodes Arena", "satisfied", "college scout demand");
+("University of Akron's Rhodes Arena", "satisfied", "NBA scout demand");

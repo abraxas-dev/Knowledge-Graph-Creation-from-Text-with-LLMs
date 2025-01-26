@@ -1,0 +1,10 @@
+
+Output:
+1.(Knowledge representation, allow, AI programs to answer questions intelligently)
+2.(Knowledge representation, allow, AI programs to make deductions about real-world facts)
+3.(Formal knowledge representations, used in, content-based indexing and retrieval)
+4.(Formal knowledge representations, used in, scene interpretation)
+5.(Formal knowledge representations, used in, clinical decision support)
+6.(Formal knowledge representations, used in, knowledge discovery)
+7.(Knowledge discovery, mine, interesting and actionable inferences from large databases)
+

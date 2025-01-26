@@ -1,0 +1,8 @@
+("Early researchers", "developed", "algorithms");
+("Algorithms", "imitated", "step-by-step reasoning");
+("Step-by-step reasoning", "used by", "humans");
+("Humans", "solve", "puzzles");
+("Humans", "make", "logical deductions");
+("Dealing with uncertain or incomplete information", "employing", "concepts from probability");
+("Dealing with uncertain or incomplete information", "employing", "concepts from economics");
+("Methods", "developed in", "late 1980s and 1990s");

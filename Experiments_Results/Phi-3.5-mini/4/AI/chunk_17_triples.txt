@@ -1,0 +1,6 @@
+("difficulty", "is", "knowledge acquisition");
+("knowledge acquisition", "for", "AI applications");
+("agent", "is", "anything that perceives and takes actions in the world");
+("rational agent", "has", "goals or preferences");
+("rational agent", "takes actions to make happen", "goals or preferences");
+("agent", "has", "a specific goal in automated planning");

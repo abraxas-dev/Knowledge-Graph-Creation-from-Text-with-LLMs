@@ -1,0 +1,23 @@
+Expected Utility)
+
+3. (Action: Know Effects, Subject: Agent, Predicate: knows, Object: Effects of any action)
+
+4. (Action: Determine Probability, Subject: Agent, Predicate: determines, Object: Probability of outcomes)
+
+5. (Action: Weight Outcomes, Subject: Agent, Predicate: weights, Object: Utility of outcomes by probability)
+
+6. (Action: Compare Utilities, Subject: Agent, Predicate: compares, Object: Utilities of different actions)
+
+7. (Action: Select Best Action, Subject: Agent, Predicate: selects, Object: Action with maximum Expected Utility)
+
+8. (Action: Execute Action, Subject: Agent, Predicate: executes, Object: Chosen Action)
+
+9. (Action: Evaluate Outcome, Subject: Agent, Predicate: evaluates, Object: Result of action)
+
+10. (Action: Update Knowledge, Subject: Agent, Predicate: updates, Object: Knowledge of action effects)
+
+11. (Action: Plan Strategy, Subject: Agent, Predicate: plans, Object: Strategy based on Expected Utility)
+
+12. (Action: Monitor Environment, Subject: Agent, Predicate: monitors, Object: Environment for changes)
+
+13. (Action: Adjust Probabilities, Subject: Agent, Predicate: adjusts, Object: Probabilities based

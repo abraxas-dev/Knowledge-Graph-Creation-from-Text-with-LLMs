@@ -1,0 +1,9 @@
+
+Output:
+(Such machines, may be called, AIs)
+
+Note: The output format is a list of triples, each represented as a tuple with three elements (subject, predicate, object).
+
+Solution:
+[(Such machines, may be called, AIs)]
+

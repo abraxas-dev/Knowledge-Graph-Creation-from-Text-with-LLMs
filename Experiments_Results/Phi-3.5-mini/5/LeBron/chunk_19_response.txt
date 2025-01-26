@@ -1,0 +1,9 @@
+
+Output:
+1. (James, is, 6-foot-2-inch tall)
+2. (James, averaged, 18 points per game)
+3. (James, averaged, 6.2 rebounds per game)
+4. (St. Vincent–St. Mary varsity basketball team, went, 27–0)
+5. (St. Vincent–St. Mary varsity basketball team, won, Division III state title)
+6. (St. Vincent–St. Mary varsity basketball team, is, the only boys high school team in Ohio to finish the season undefeated)
+

@@ -1,0 +1,13 @@
+
+Output:
+1. (He, is, first player in NBA history)
+2. (He, accumulate, $1 billion in earnings as an active player)
+3. (James, featured in, books)
+4. (James, featured in, documentaries)
+5. (James, won, three Sports Emmy Awards as an executive producer)
+6. (James, among, Time's 100 most influential people)
+7. (James, selection, 2005)
+8. (James, selection, 2013)
+9. (James, selection, 2017)
+10. (James, selection, 2019)
+

@@ -1,0 +1,13 @@
+n captures the key events and associated details as structured triples:
+
+1. (He, won, inaugural NBA Cup in 2023): This triple indicates that the subject ("He") achieved the victory of the inaugural NBA Cup in the year 2023.
+
+2. (He, with, Lakers): Here, the subject ("He") is associated with the object ("Lakers"), indicating that the Lakers were the team with which he won the NBA Cup.
+
+3. (He, won, three Olympic gold medals): This triple shows that the subject ("He") won a total of three Olympic gold medals.
+
+4. (He, as, member of U.S. national team): This triple establishes the subject ("He") as a member of the U.S. national team, which is relevant to the context of his Olympic achievements.
+
+5. (He, won, Olympics MVP in 2024 Summer Olympics): The final triple indicates that the subject ("He") was awarded the Most Valuable Player (MVP) title at the 2024 Summer Olympics.
+
+Each triple follows the format (Subject, Predicate, Object) and is directly extracted from the provided text without additional context or explanation.

@@ -1,0 +1,12 @@
+("Knowledge bases", "represent", "objects");
+("Knowledge bases", "represent", "properties");
+("Knowledge bases", "represent", "categories");
+("Knowledge bases", "represent", "relations between objects");
+("Knowledge bases", "represent", "situations");
+("Knowledge bases", "represent", "events");
+("Knowledge bases", "represent", "states");
+("Knowledge bases", "represent", "time");
+("Knowledge bases", "represent", "causes");
+("Knowledge bases", "represent", "effects");
+("Knowledge bases", "represent", "knowledge about knowledge");
+("Knowledge bases", "represent", "default reasoning");

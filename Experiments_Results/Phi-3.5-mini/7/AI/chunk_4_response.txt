@@ -1,0 +1,7 @@
+his extraction focuses on the key concepts and relationships mentioned in the text:
+
+1. The integration of advanced AI into more common applications.
+2. The phenomenon where these AI-enhanced applications are not always recognized as AI.
+3. The idea that as technology becomes more widespread and integrated into everyday use, it loses its "AI" label due to its ubiquity and perceived normalcy.
+
+These triples capture the essence of the statement by identifying the main subjects (cutting edge AI, general applications, and the labeling of AI), the predicates (has filtered into, often without being called, becomes useful enough and common enough), and the objects (general applications, AI). The triples are structured to reflect the cause-and-effect and the process described in the text.

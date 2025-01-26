@@ -1,0 +1,6 @@
+("AI", "stands for", "Artificial Intelligence");
+("AI", "is a branch of", "computer science");
+("AI systems", "can learn from", "data");
+("AI systems", "can perform tasks that", "typically require human intelligence");
+("- Predicate: The verb", "action", "or relationship connecting the subject and object.");
+("- Distinguish between causal relationships (e.g.", ""causes," "leads to") and correlational relationships (e.g.", ""associated with," "related to").");

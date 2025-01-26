@@ -1,0 +1,7 @@
+("Artificial intelligence", "was founded as", "an academic discipline in 1956");
+("AI history", "went through", "cycles of optimism");
+("AI history", "had periods of", "disappointment");
+("AI history", "had periods of", "loss of funding");
+("AI winters", "are periods of", "disappointment and loss of funding");
+("Funding and interest", "increased after", "2012");
+("Deep learning", "outperformed previous AI techniques in", "2012");

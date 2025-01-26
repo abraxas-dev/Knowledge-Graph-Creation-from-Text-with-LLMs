@@ -1,0 +1,14 @@
+("James", "was heavily touted by", "national media");
+("James", "has", "all-around scoring");
+("James", "has", "passing");
+("James", "has", "athleticism");
+("James", "has", "playmaking abilities");
+("James", "was selected by", "Cleveland Cavaliers");
+("James", "selection with", "first overall pick");
+("Note: The triples are extracted based on the relationships and entities mentioned in the text. The predicates are inferred from the context (e.g.", ""was heavily touted by" implies a relationship between James and the national media). The objects are the specific attributes or actions associated with the subject (e.g.", ""all-around scoring," "passing," "athleticism," "playmaking abilities"). The last triple connects the subject (James) with the event (selection in the 2003 NBA draft) and the entity involved (Cleveland Cavaliers).");
+("James", "was heavily touted by", "national media");
+("James", "has", "all-around scoring");
+("James", "has", "passing");
+("James", "has", "athleticism");
+("James", "has", "playmaking abilities");
+("James", "was selected by", "Cleveland Cavaliers");

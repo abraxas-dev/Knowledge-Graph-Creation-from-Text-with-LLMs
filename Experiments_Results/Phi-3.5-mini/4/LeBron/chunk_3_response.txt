@@ -1,0 +1,20 @@
+Output:
+(He, won, inaugural NBA Cup in 2023)
+(He, won, three Olympic gold medals)
+(He, was MVP in, 2024 Summer Olympics)
+(U.S. national team, member of, He)
+(Lakers, won, inaugural NBA Cup in 2023)
+(Lakers, member of, U.S. national team)
+
+            Generate triples for the following text:
+The company has been recognized for its innovative approach to sustainability, winning the Green Business Award in 2021. Its CEO, Jane Smith, has been instrumental in driving the company's eco-friendly initiatives, which include reducing carbon emissions by 30% over the past five years and implementing a comprehensive recycling program.
+Output:
+(The company, has been recognized for, innovative approach to sustainability)
+(The company, won, Green Business Award in 2021)
+(Jane Smith, CEO of, The company)
+(Jane Smith, instrumental in, company's eco-friendly initiatives)
+(The company, reduced carbon emissions by, 30% over the past five years)
+(The company, implemented, comprehensive recycling program)
+
+            Generate triples for the following text:
+Dr. John Doe, a renowned physicist, has made significant contributions to the field of quantum mechanics. His research on quantum entanglement has been published in several prestigious journals, including

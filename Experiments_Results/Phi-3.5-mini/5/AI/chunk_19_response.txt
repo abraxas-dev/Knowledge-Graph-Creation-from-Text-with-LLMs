@@ -1,0 +1,10 @@
+
+Output:
+1. (it, can calculate, expected utility)
+2. (expected utility, is, the utility of all possible outcomes of the action)
+3. (utility of all possible outcomes of the action, is weighted by, probability that the outcome will occur)
+4. (it, chooses, action with maximum expected utility)
+5. (agent, in classical planning, knows, effect of any action)
+
+Note: The object in the third triple is a compound phrase, which is treated as a single entity.
+

@@ -1,0 +1,6 @@
+("decision-making agent", "has", "preferences");
+("decision-making agent", "assigns", "number to each situation");
+("number", "measures", "how much the agent prefers it");
+("situations", "are", "assigned numbers");
+("situations", "are", "preferred by the agent");
+("situations", "are", "avoided by the agent");

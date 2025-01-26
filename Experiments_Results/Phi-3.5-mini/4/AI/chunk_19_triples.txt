@@ -1,0 +1,15 @@
+("Agent", "can calculate", "Expected Utility");
+("Action", "has effect", "Outcome");
+("Outcome", "has probability", "Probability");
+("Agent", "chooses", "Action with maximum Expected Utility");
+("Agent", "can perform", "Action");
+("Action", "has effect", "Outcome");
+("Outcome", "has probability", "Probability");
+("Agent", "calculates", "Expected Utility");
+("Agent", "chooses", "Action with maximum Expected Utility");
+("Action", "is performed by", "Agent");
+("Agent", "knows", "Effect of Action");
+("Effect of Action", "is known by", "Agent");
+("Agent", "uses", "Calculation of Expected Utility");
+("Calculation of Expected Utility", "is used for", "Choosing Action");
+("Agent", "chooses action based on", "Calculation of Expected Utility");

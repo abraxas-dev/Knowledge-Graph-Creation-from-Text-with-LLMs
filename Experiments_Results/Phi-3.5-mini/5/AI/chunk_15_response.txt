@@ -1,0 +1,15 @@
+
+Output:
+1. (Knowledge bases, represent, objects)
+2. (Knowledge bases, represent, properties)
+3. (Knowledge bases, represent, categories)
+4. (Knowledge bases, represent, relations between objects)
+5. (Knowledge bases, represent, situations)
+6. (Knowledge bases, represent, events)
+7. (Knowledge bases, represent, states)
+8. (Knowledge bases, represent, time)
+9. (Knowledge bases, represent, causes)
+10. (Knowledge bases, represent, effects)
+11. (Knowledge bases, represent, knowledge about knowledge)
+12. (Knowledge bases, represent, default reasoning)
+

@@ -1,0 +1,9 @@
+("James", "left in", "2010");
+("James", "joined", "Miami Heat");
+("The Decision", "was announced in", "nationally televised special");
+("James", "won", "NBA championships in 2012");
+("James", "earned", "MVP award in 2012");
+("James", "won", "NBA championships in 2013");
+("James", "earned", "Finals MVP award in 2013");
+("Note: The above triples are extracted based on the relationships and entities mentioned in the text. The predicates are inferred from the context. For example", ""left in" and "joined" are used as predicates to describe the action between James and Miami Heat. Similarly", ""was announced in" and "won" are used to describe the events related to The Decision and James's achievements. The objects are the entities or the outcomes of these actions.");
+("Remember", "the extraction of RDF triples can be subjective and may vary slightly depending on the interpretation of the text. However", "the above triples capture the main entities and their relationships as described in the text.");

@@ -1,0 +1,10 @@
+("AI research", "include", "reasoning");
+("AI research", "include", "knowledge representation");
+("AI research", "include", "planning");
+("AI research", "include", "learning");
+("AI research", "include", "natural language processing");
+("AI research", "include", "perception");
+("AI research", "include", "support for robotics");
+("General intelligence", "among", "field's long-term goals");
+("General intelligence", "ability", "complete any task performed by a human");
+("General intelligence", "on", "at least equal level");

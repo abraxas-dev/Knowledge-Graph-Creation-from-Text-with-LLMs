@@ -1,0 +1,3 @@
+mone James Sr., born, December 30, 1984)]
+
+Note: The predicate-object pairs are extracted directly from the text, and the additional details such as date of birth are included as separate entities to maintain the structured format. The entities are not connected by a common predicate but are listed individually to reflect the information provided.

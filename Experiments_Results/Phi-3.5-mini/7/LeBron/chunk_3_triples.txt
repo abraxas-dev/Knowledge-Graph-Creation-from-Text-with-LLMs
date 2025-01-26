@@ -1,0 +1,4 @@
+("He", "won", "inaugural NBA Cup in 2023): This triple indicates that the subject ("He") achieved the victory of the inaugural NBA Cup in the year 2023.");
+("He", "won", "three Olympic gold medals): This triple shows that the subject ("He") won a total of three Olympic gold medals.");
+("He", "won", "Olympics MVP in 2024 Summer Olympics): The final triple indicates that the subject ("He") was awarded the Most Valuable Player (MVP) title at the 2024 Summer Olympics.");
+("Each triple follows the format (Subject", "Predicate", "Object) and is directly extracted from the provided text without additional context or explanation.");

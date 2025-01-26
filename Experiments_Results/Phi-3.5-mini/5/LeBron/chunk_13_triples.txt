@@ -1,0 +1,10 @@
+("He", "is", "first player in NBA history");
+("He", "accumulate", "$1 billion in earnings as an active player");
+("James", "featured in", "books");
+("James", "featured in", "documentaries");
+("James", "won", "three Sports Emmy Awards as an executive producer");
+("James", "among", "Time's 100 most influential people");
+("James", "selection", "2005");
+("James", "selection", "2013");
+("James", "selection", "2017");
+("James", "selection", "2019");

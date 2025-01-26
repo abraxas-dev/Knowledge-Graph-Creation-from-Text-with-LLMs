@@ -1,0 +1,8 @@
+("AI research", "includes", "reasoning");
+("AI research", "includes", "knowledge representation");
+("AI research", "includes", "planning");
+("AI research", "includes", "learning");
+("AI research", "includes", "natural language processing");
+("AI research", "includes", "perception");
+("AI research", "includes", "support for robotics");
+("General intelligence", "is among", "long-term goals of AI research");

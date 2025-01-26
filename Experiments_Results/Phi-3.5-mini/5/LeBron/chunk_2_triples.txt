@@ -1,0 +1,6 @@
+("Nicknamed "King James"", "is", "one of the greatest basketball players of all time");
+("James", "is frequently at the center of", "debates regarding the sport's all-time best");
+("James", "is often compared to", "Michael Jordan");
+("James", "has won", "four NBA championships");
+("James", "made", "eight consecutive NBA Finals appearances");
+("James", "appearances", "between 2011 and 2018");

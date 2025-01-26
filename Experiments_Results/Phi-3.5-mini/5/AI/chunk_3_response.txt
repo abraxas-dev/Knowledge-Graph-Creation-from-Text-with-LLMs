@@ -1,0 +1,20 @@
+
+Output:
+1. (High-profile applications, include, advanced web search engines)
+2. (High-profile applications, include, recommendation systems)
+3. (Recommendation systems, used by, YouTube)
+4. (Recommendation systems, used by, Amazon)
+5. (Recommendation systems, used by, Netflix)
+6. (High-profile applications, include, virtual assistants)
+7. (Virtual assistants, e.g., Google Assistant)
+8. (Virtual assistants, e.g., Siri)
+9. (Virtual assistants, e.g., Alexa)
+10. (High-profile applications, include, autonomous vehicles)
+11. (Autonomous vehicles, e.g., Waymo)
+12. (High-profile applications, include, generative and creative tools)
+13. (Generative and creative tools, e.g., ChatGPT)
+14. (Generative and creative tools, e.g., AI art)
+15. (High-profile applications, include, superhuman play and analysis in strategy games)
+16. (Superhuman play and analysis in strategy games, e.g., chess)
+17. (Superhuman play and analysis in strategy games, e.g., Go)
+

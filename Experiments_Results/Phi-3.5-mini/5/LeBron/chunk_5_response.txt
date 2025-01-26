@@ -1,0 +1,9 @@
+
+Output:
+1.(He, has been named, NBA All-Star a record 21 times)
+2.(He, selected to, All-NBA Team a record 20 times)
+3.(He, with record, 13 First Team selections)
+4.(He, selected to, All-Defensive Team six times)
+5.(He, with record, 5 First Team selections)
+6.(He, was a runner-up for, NBA Defensive Player of the Year Award twice)
+

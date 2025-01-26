@@ -1,0 +1,11 @@
+
+Output:
+(agent, is uncertain about, situation)
+(situation, is unknown or unobservable, agent)
+(agent, chooses action by, probabilistic guess)
+(agent, reassesses situation after, action)
+(action, outcome, situation)
+(situation, is not deterministic, agent)
+
+Note: The above triples are inferred from the text and may not cover all possible interpretations. The exact triples may vary depending on the specific ontology or knowledge base used.
+

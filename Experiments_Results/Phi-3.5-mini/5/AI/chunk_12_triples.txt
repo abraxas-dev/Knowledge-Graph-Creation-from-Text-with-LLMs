@@ -1,0 +1,4 @@
+("Many algorithms", "experience", "combinatorial explosion");
+("Combinatorial explosion", "make", "algorithms exponentially slower");
+("Algorithms", "grow", "problems");
+("Accurate and efficient reasoning", "is", "an unsolved problem");

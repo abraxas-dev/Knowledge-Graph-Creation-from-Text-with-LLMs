@@ -1,0 +1,5 @@
+("Problems", "are", "in knowledge representation");
+("Knowledge representation", "have", "breadth of commonsense knowledge");
+("Commonsense knowledge", "is", "enormous");
+("Commonsense knowledge", "have", "sub-symbolic form");
+("Sub-symbolic form", "is not", "represented as "facts" or "statements"");

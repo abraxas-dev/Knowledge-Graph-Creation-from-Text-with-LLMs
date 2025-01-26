@@ -1,0 +1,9 @@
+("James", "has won", "20 ESPY Awards");
+("James", "hosted", "Saturday Night Live");
+("James", "starred in", "Space Jam: A New Legacy (2021");
+("James", "has been a part-owner of", "Liverpool F.C.");
+("James", "leads", "LeBron James Family Foundation");
+("LeBron James Family Foundation", "has opened", "elementary school");
+("LeBron James Family Foundation", "has opened", "housing complex");
+("LeBron James Family Foundation", "has opened", "retail plaza");
+("LeBron James Family Foundation", "has opened", "medical center");

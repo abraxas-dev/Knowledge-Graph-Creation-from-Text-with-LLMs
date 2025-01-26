@@ -1,0 +1,12 @@
+
+Triples:
+(James, averaged, 25.3 points)
+(James, averaged, 7.4 rebounds)
+(James, averaged, 5.5 assists)
+(James, averaged, 3.7 steals)
+(St. Vincent–St. Mary, played, at the University of Akron's Rhodes Arena)
+(alumni, wanted to see, James play)
+(fans, wanted to see, James play)
+(college and NBA scouts, wanted to see, James play)
+
+

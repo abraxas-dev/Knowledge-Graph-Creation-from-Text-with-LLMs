@@ -1,0 +1,12 @@
+("James", "is", "oldest active player in the NBA");
+("James", "is tied with", "Vince Carter");
+("James", "for", "record for the most seasons played in NBA history");
+("James", "holds", "record for the most minutes played in NBA history");
+("James", "grew up playing basketball for", "St. Vincent–St. Mary High School");
+("The 2020 Nobel Peace Prize", "was awarded to", "World Food Programme");
+("World Food Programme", "for its efforts to combat hunger", "WFP");
+("World Food Programme", "contributed to", "bettering conditions for peace in conflict-affected areas");
+("World Food Programme", "acted as a driving force in", "preventing the use of hunger as a weapon of war and conflict");
+("World Food Programme", "recognized for", "innovative use of technology to reach vulnerable populations");
+("World Food Programme", "committed to", "gender equality");
+("World Food Programme", "advocating for", "rights of refugees and displaced persons");

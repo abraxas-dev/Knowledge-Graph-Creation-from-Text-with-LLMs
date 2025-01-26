@@ -1,0 +1,12 @@
+("James", "averaged", "25.3 points");
+("James", "averaged", "7.4 rebounds");
+("James", "averaged", "5.5 assists");
+("James", "averaged", "3.7 steals");
+("St. Vincent–St. Mary", "played", "at the University of Akron's Rhodes Arena");
+("St. Vincent–St. Mary", "for", "home games");
+("St. Vincent–St. Mary", "to satisfy", "ticket demand");
+("Ticket demand", "from", "alumni");
+("Ticket demand", "from", "fans");
+("Ticket demand", "from", "college scouts");
+("Ticket demand", "from", "NBA scouts");
+("NBA scouts", "wanted to see", "James play");

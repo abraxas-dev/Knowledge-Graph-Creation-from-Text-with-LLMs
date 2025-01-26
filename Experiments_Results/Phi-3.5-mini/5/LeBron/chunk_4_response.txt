@@ -1,0 +1,11 @@
+
+Output:
+1. (James, is, NBA's all-time leading scorer)
+2. (James, ranks, fourth in NBA career assists)
+3. (James, ranks, seventh in NBA career steals)
+4. (James, has, four NBA Most Valuable Player Awards)
+5. (James, has, four NBA Finals MVP Awards)
+6. (James, received, NBA Rookie of the Year Award)
+7. (James, has, three NBA All-Star Game MVP Awards)
+8. (James, received, inaugural NBA Cup MVP award)
+

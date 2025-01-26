@@ -1,0 +1,1 @@
+e triples capture the essential elements of the definitions provided. The first triple connects a knowledge base with its representation and usability. The second and third triples define what an ontology is and its application to a domain of knowledge.

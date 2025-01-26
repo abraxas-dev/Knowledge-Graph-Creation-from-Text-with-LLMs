@@ -1,0 +1,9 @@
+
+Output:
+1. (James, was born on, December 30, 1984)
+2. (James, born in, Akron, Ohio)
+3. (Gloria Marie James, was, mother of James)
+4. (Gloria Marie James, was, 16 years old at the time of James' birth)
+5. (Anthony McClelland, has, extensive criminal record)
+6. (Anthony McClelland, was not involved in, James' life)
+

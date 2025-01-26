@@ -1,0 +1,17 @@
+ss of funding, known as AI winters),
+(Artificial intelligence, saw, increase in funding and interest after 2012),
+(Deep learning, outperformed previous AI techniques after 2012)]
+
+
+This structured list captures the key historical milestones and shifts in the development of artificial intelligence (AI) as described in the input text. Each triplet is formatted to clearly identify the subject, predicate, and object, providing a concise and factual representation of the information.
+
+
+1. The founding of AI as an academic discipline is a significant historical event, marking the beginning of the formal study and development of AI concepts and technologies.
+
+2. The cycles of optimism and disappointment reflect the dynamic nature of AI research and development, where advancements often lead to high expectations, followed by setbacks that can dampen enthusiasm and funding.
+
+3. The term "AI winters" is used to describe the periods when the field faced significant challenges, which resulted in reduced funding and interest. These periods are critical to understanding the evolution of AI, as they often lead to reevaluation and innovation.
+
+4. The increase in funding and interest after 2012 is a pivotal moment in AI history, indicating a resurgence in the field. This resurgence is attributed to the success of deep learning, a subset of machine learning that has demonstrated remarkable performance in various applications.
+
+5. The outperformance of deep learning techniques is a specific event that signifies a major shift in AI

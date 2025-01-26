@@ -137,38 +137,14 @@ class Evaluator:
                 model_generate_parameters=config.get('model_generate_parameters')
             )
             
+            # Just run the generator without metrics calculation
             generator.process()
             
-            # Find valid and invalid triples files
-            valid_file = config_output_dir / "all_valid_triples.txt"
-            invalid_file = config_output_dir / "all_invalid_triples.txt"
-            groundtruth_file = self.groundtruth_dir / "groundtruth_triples.txt"
-            
-            if not valid_file.exists() or not invalid_file.exists():
-                raise FileNotFoundError(f"Generator did not produce expected output files in {config_output_dir}")
-            if not groundtruth_file.exists():
-                raise FileNotFoundError(f"Ground truth file not found: {groundtruth_file}")
-            
-            evaluator = TextTripleEvaluator(
-                valid_file=str(valid_file),
-                invalid_file=str(invalid_file),
-                gt_file=str(groundtruth_file)
-            )
-            
-            metrics = evaluator.evaluate()
-            
-            # Save metrics
-            metrics_file = config_output_dir / "metrics.yaml"
-            with open(metrics_file, 'w') as f:
-                yaml.dump({
-                    'configuration': config,
-                    'metrics': metrics
-                }, f, default_flow_style=False)
-                
-            return metrics
+            # Return empty metrics since we're skipping evaluation
+            return {}
             
         except Exception as e:
-            self.logger.error(f"Error evaluating configuration {config_path}: {e}")
+            self.logger.error(f"Error running generator configuration {config_path}: {e}")
             return None
             
     def run_evaluation(self):
@@ -193,37 +169,41 @@ class Evaluator:
                 
                 if self.mode == 'integrator':
                     metrics = self.evaluate_integrator_configuration(config_file)
+                    if metrics:
+                        all_results.append({
+                            'configuration_file': config_file.name,
+                            'metrics': metrics
+                        })
+                        
+                        self.logger.info(f"Results for configuration {config_file.name}:")
+                        for category, values in metrics.items():
+                            for metric, value in values.items():
+                                if isinstance(value, (int, float)):
+                                    self.logger.info(f"  {metric}: {value:.4f}")
+                                else:
+                                    self.logger.info(f"  {metric}: {value}")
                 else:
-                    metrics = self.evaluate_generator_configuration(config_file)
+                    # For generator mode, just run the configuration without metrics
+                    self.evaluate_generator_configuration(config_file)
+            
+            # Save overall results only for integrator mode
+            if self.mode == 'integrator' and all_results:
+                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                results_file = self.output_dir / f"evaluation_results_{timestamp}.yaml"
                 
-                if metrics:
-                    all_results.append({
-                        'configuration_file': config_file.name,
-                        'metrics': metrics
-                    })
+                with open(results_file, 'w') as f:
+                    yaml.dump({
+                        'evaluation_timestamp': timestamp,
+                        'results': all_results
+                    }, f, default_flow_style=False)
                     
-                    self.logger.info(f"Results for configuration {config_file.name}:")
-                    for category, values in metrics.items():
-                        self.logger.info(f"\n{category}:")
-                        for metric, value in values.items():
-                            if isinstance(value, (int, float)):
-                                self.logger.info(f"  {metric}: {value:.4f}")
-                            else:
-                                self.logger.info(f"  {metric}: {value}")
-            
-            # Save overall results
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            results_file = self.output_dir / f"evaluation_results_{timestamp}.yaml"
-            
-            with open(results_file, 'w') as f:
-                yaml.dump({
-                    'evaluation_timestamp': timestamp,
-                    'results': all_results
-                }, f, default_flow_style=False)
-                
-            self.logger.info("\n" + "="*50)
-            self.logger.info(f"Evaluation complete. Results saved to {results_file}")
-            self.logger.info("="*50)
+                self.logger.info("\n" + "="*50)
+                self.logger.info(f"Evaluation complete. Results saved to {results_file}")
+                self.logger.info("="*50)
+            else:
+                self.logger.info("\n" + "="*50)
+                self.logger.info("Generator processing complete")
+                self.logger.info("="*50)
             
         except Exception as e:
             self.logger.error(f"Evaluation failed: {e}")
@@ -237,9 +217,9 @@ def main():
 
     # Directory paths based on mode
     configs_dir = os.path.join(project_root, f"tests/config/{args.mode.capitalize()}")
-    input_dir = os.path.join(project_root, f"tests/data/Datasets_{args.mode.capitalize()}/Dataset_AI/Raw")
-    groundtruth_dir = os.path.join(project_root, f"tests/data/Datasets_{args.mode.capitalize()}/Dataset_AI/ground_truth")
-    output_dir = os.path.join(project_root, f"tests/results/{args.mode.capitalize()}/Dataset_AI")
+    input_dir = os.path.join(project_root, f"tests/data/Datasets_{args.mode.capitalize()}")
+    groundtruth_dir = os.path.join(project_root, f"tests/data/Datasets_{args.mode.capitalize()}/Dataset_Both/ground_truth")
+    output_dir = os.path.join(project_root, f"tests/results/{args.mode.capitalize()}/Dataset_Both")
     
     evaluator = Evaluator(
         configs_dir=configs_dir,

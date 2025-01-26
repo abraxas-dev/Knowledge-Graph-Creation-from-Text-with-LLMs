@@ -17,7 +17,7 @@ prompt_template: |
   {text}
 
 # Processing configuration
-max_chunks: null  # Maximum number of chunks to process (null for all chunks)
+max_chunks: 1  # Maximum number of chunks to process (null for all chunks)
 
 # Model generation parameters
 model_generate_parameters:

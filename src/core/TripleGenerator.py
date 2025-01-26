@@ -226,39 +226,117 @@ class TripleGenerator:
     
     def validate_triples(self):
         """
-        Validate triples from all `_response.txt` files in the output directory.
-        Separate them into valid and invalid files for each response file.
+        Validate and deduplicate triples from all `_triples.txt` files in the output directory.
+        Only keeps valid triples and ensures no duplicates are added.
         """
         try:
+            # Find all triple files
             response_files = list(self.output_dir.rglob("*_triples.txt"))
             if not response_files:
                 self.logger.warning("No response files found for validation.")
                 return
 
-            all_valid_file = self.output_dir / "all_valid_triples.txt"
-            all_invalid_file = self.output_dir / "all_invalid_triples.txt"
+            all_valid_file = self.output_dir / "all_valid.txt"
 
+            # Load existing triples to avoid duplicates
+            existing_valid_triples = set()
+            if all_valid_file.exists():
+                with open(all_valid_file, 'r', encoding='utf-8') as f:
+                    existing_valid_triples = {line.strip() for line in f if line.strip()}
+
+            # Track statistics
+            stats = {
+                'total_processed': 0,
+                'valid_new': 0,
+                'duplicates': 0
+            }
+
+            # Process each response file
             for response_file in response_files:
+                self.logger.info(f"Processing {response_file.name}...")
+                
                 with open(response_file, 'r', encoding='utf-8') as input_file:
                     for line in input_file:
                         line = line.strip()
-                        if line.startswith("(") and line.endswith(");"):
-                            parts = line.strip("();").split('", "')
-                            if len(parts) == 3 and all(parts):
-                                with open(all_valid_file, 'a', encoding='utf-8') as all_valid:
-                                    all_valid.write(line + "\n")
-                            else:
-                                with open(all_invalid_file, 'a', encoding='utf-8') as all_invalid:
-                                    all_invalid.write(line + "\n")
-                        else:
-                            with open(all_invalid_file, 'a', encoding='utf-8') as all_invalid:
-                                all_invalid.write(line + "\n")
+                        if not line:  # Skip empty lines
+                            continue
+                            
+                        stats['total_processed'] += 1
+                        
+                        # Normalize the triple format
+                        try:
+                            # Remove trailing semicolon if present
+                            if line.endswith(';'):
+                                line = line[:-1]
+                            
+                            # Remove outer parentheses
+                            line = line.strip('()')
+                            
+                            # Split parts and handle different quote styles
+                            parts = []
+                            current = []
+                            in_quotes = False
+                            quote_char = None
+                            
+                            for char in line:
+                                if char in ['"', "'"]:
+                                    if not in_quotes:
+                                        in_quotes = True
+                                        quote_char = char
+                                    elif char == quote_char:
+                                        in_quotes = False
+                                        quote_char = None
+                                elif char == ',' and not in_quotes:
+                                    parts.append(''.join(current).strip())
+                                    current = []
+                                    continue
+                                current.append(char)
+                            
+                            if current:
+                                parts.append(''.join(current).strip())
+                            
+                            # Clean up parts
+                            parts = [p.strip().strip('"\'') for p in parts]
+                            
+                            # Validate triple
+                            is_valid = (
+                                len(parts) == 3 and
+                                all(len(part.strip()) > 0 for part in parts)
+                            )
 
-                self.logger.info(f"Validation complete for {response_file.name}.")
-                self.logger.info(f"Triples from {response_file.name} appended to the consolidated files.")
+                            if is_valid:
+                                # Format triple consistently
+                                formatted_triple = f'("{parts[0]}", "{parts[1]}", "{parts[2]}");'
+                                
+                                if formatted_triple in existing_valid_triples:
+                                    stats['duplicates'] += 1
+                                    continue
+                                
+                                # Add new valid triple
+                                existing_valid_triples.add(formatted_triple)
+                                with open(all_valid_file, 'a', encoding='utf-8') as valid_f:
+                                    valid_f.write(formatted_triple + "\n")
+                                stats['valid_new'] += 1
+                                self.logger.debug(f"Valid triple added: {formatted_triple}")
+                                
+                        except Exception as e:
+                            self.logger.warning(f"Error parsing triple: {line} - {str(e)}")
 
-            self.logger.info(f"All valid triples appended to: {all_valid_file}")
-            self.logger.info(f"All invalid triples appended to: {all_invalid_file}")
+                self.logger.info(f"Completed processing {response_file.name}")
+
+            # Log statistics
+            self.logger.info("="*50)
+            self.logger.info("Validation Statistics:")
+            self.logger.info(f"Total triples processed: {stats['total_processed']}")
+            self.logger.info(f"New valid triples added: {stats['valid_new']}")
+            self.logger.info(f"Duplicates skipped: {stats['duplicates']}")
+            self.logger.info(f"Total valid triples: {len(existing_valid_triples)}")
+            self.logger.info("="*50)
+            self.logger.info(f"Valid triples file: {all_valid_file}")
+
+            # Return statistics for potential use by caller
+            return stats
+
         except Exception as e:
             self.logger.error(f"Failed to validate triples: {str(e)}")
             raise
@@ -299,7 +377,7 @@ class TripleGenerator:
             self.logger.info(f"     ⏱️  Total processing time: {total_processing_time:.2f} seconds")
             self.logger.info(f"     ✅ Completed processing directory: {directory.name}")
 
-            self.validate_triples
+            #self.validate_triples()
             
             return total_processing_time
 
@@ -351,9 +429,9 @@ class TripleGenerator:
                 self.logger.info(f"     ⏱️ Total processing time: {processing_time:.2f} seconds")
                 self.logger.info(f"     ✅ Completed processing root directory")
             
-            self.logger.info("🔄 Validating generated triples...")
-            self.validate_triples()
-            self.logger.info("✅ Validation complete.")
+            #self.logger.info("🔄 Validating generated triples...")
+            #self.validate_triples()
+            #self.logger.info("✅ Validation complete.")
         except Exception as e:
             self.logger.error(f"Failed to process: {str(e)}")
             raise

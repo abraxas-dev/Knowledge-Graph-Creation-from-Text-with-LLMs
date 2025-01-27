@@ -1,0 +1,53 @@
+Top matches for predicate: "went through"
+==================================================
+
+1. Match Details:
+   Property ID: P177
+   Label: crosses
+   Similarity Score: 0.8074
+
+2. Match Details:
+   Property ID: P467
+   Label: legislated by
+   Similarity Score: 0.7724
+
+3. Match Details:
+   Property ID: P1344
+   Label: participant in
+   Similarity Score: 0.7552
+
+4. Match Details:
+   Property ID: P571
+   Label: inception
+   Similarity Score: 0.7428
+
+5. Match Details:
+   Property ID: P108
+   Label: employer
+   Similarity Score: 0.7396
+
+6. Match Details:
+   Property ID: P2443
+   Label: stage reached
+   Similarity Score: 0.7210
+
+7. Match Details:
+   Property ID: P4101
+   Label: thesis submitted to
+   Similarity Score: 0.7201
+
+8. Match Details:
+   Property ID: P577
+   Label: publication date
+   Similarity Score: 0.7179
+
+9. Match Details:
+   Property ID: P12912
+   Label: object of occurrence
+   Similarity Score: 0.7166
+
+10. Match Details:
+   Property ID: P991
+   Label: successful candidate
+   Similarity Score: 0.7159
+

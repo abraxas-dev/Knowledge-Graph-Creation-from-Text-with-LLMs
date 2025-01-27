@@ -1,0 +1,53 @@
+Top matches for predicate: "announced decision"
+==================================================
+
+1. Match Details:
+   Property ID: P9731
+   Label: announced at
+   Similarity Score: 0.7703
+
+2. Match Details:
+   Property ID: P6949
+   Label: announcement date
+   Similarity Score: 0.7622
+
+3. Match Details:
+   Property ID: P805
+   Label: statement is subject of
+   Similarity Score: 0.5769
+
+4. Match Details:
+   Property ID: P790
+   Label: approved by
+   Similarity Score: 0.5464
+
+5. Match Details:
+   Property ID: P1435
+   Label: heritage designation
+   Similarity Score: 0.5333
+
+6. Match Details:
+   Property ID: P7658
+   Label: Juricaf decision ID
+   Similarity Score: 0.5116
+
+7. Match Details:
+   Property ID: P5194
+   Label: officialized by
+   Similarity Score: 0.5105
+
+8. Match Details:
+   Property ID: P6193
+   Label: ratified by
+   Similarity Score: 0.5084
+
+9. Match Details:
+   Property ID: P1411
+   Label: nominated for
+   Similarity Score: 0.4954
+
+10. Match Details:
+   Property ID: P577
+   Label: publication date
+   Similarity Score: 0.4847
+

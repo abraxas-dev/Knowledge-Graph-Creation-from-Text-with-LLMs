@@ -1,0 +1,53 @@
+Top matches for predicate: "includes"
+==================================================
+
+1. Match Details:
+   Property ID: P527
+   Label: has part(s)
+   Similarity Score: 1.0000
+
+2. Match Details:
+   Property ID: P180
+   Label: depicts
+   Similarity Score: 1.0000
+
+3. Match Details:
+   Property ID: P1012
+   Label: including
+   Similarity Score: 0.8836
+
+4. Match Details:
+   Property ID: P1574
+   Label: exemplar of
+   Similarity Score: 0.8577
+
+5. Match Details:
+   Property ID: P4330
+   Label: contains
+   Similarity Score: 0.8464
+
+6. Match Details:
+   Property ID: P150
+   Label: contains the administrative territorial entity
+   Similarity Score: 0.8464
+
+7. Match Details:
+   Property ID: P8263
+   Label: curriculum topics
+   Similarity Score: 0.8310
+
+8. Match Details:
+   Property ID: P1382
+   Label: partially coincident with
+   Similarity Score: 0.7933
+
+9. Match Details:
+   Property ID: P4224
+   Label: category contains
+   Similarity Score: 0.7663
+
+10. Match Details:
+   Property ID: P1011
+   Label: excluding
+   Similarity Score: 0.7632
+

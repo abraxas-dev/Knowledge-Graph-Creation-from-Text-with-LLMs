@@ -1,0 +1,53 @@
+Top matches for predicate: "led"
+==================================================
+
+1. Match Details:
+   Property ID: P8228
+   Label: lighting
+   Similarity Score: 0.8089
+
+2. Match Details:
+   Property ID: P465
+   Label: sRGB color hex triplet
+   Similarity Score: 0.8058
+
+3. Match Details:
+   Property ID: P878
+   Label: avionics
+   Similarity Score: 0.7639
+
+4. Match Details:
+   Property ID: P2389
+   Label: organization directed by the office or position
+   Similarity Score: 0.7286
+
+5. Match Details:
+   Property ID: P462
+   Label: color
+   Similarity Score: 0.7260
+
+6. Match Details:
+   Property ID: P1542
+   Label: has effect
+   Similarity Score: 0.7256
+
+7. Match Details:
+   Property ID: P1030
+   Label: light characteristic
+   Similarity Score: 0.7047
+
+8. Match Details:
+   Property ID: P400
+   Label: platform
+   Similarity Score: 0.7023
+
+9. Match Details:
+   Property ID: P180
+   Label: depicts
+   Similarity Score: 0.7009
+
+10. Match Details:
+   Property ID: P2560
+   Label: GPU
+   Similarity Score: 0.6999
+

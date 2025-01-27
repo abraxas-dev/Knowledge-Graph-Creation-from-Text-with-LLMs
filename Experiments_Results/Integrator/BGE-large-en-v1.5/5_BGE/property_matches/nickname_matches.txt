@@ -1,0 +1,53 @@
+Top matches for predicate: "nickname"
+==================================================
+
+1. Match Details:
+   Property ID: P1449
+   Label: nickname
+   Similarity Score: 1.0000
+
+2. Match Details:
+   Property ID: P138
+   Label: named after
+   Similarity Score: 0.7776
+
+3. Match Details:
+   Property ID: P1549
+   Label: demonym
+   Similarity Score: 0.7664
+
+4. Match Details:
+   Property ID: P8822
+   Label: epithet
+   Similarity Score: 0.7559
+
+5. Match Details:
+   Property ID: P3938
+   Label: named by
+   Similarity Score: 0.7548
+
+6. Match Details:
+   Property ID: P1813
+   Label: short name
+   Similarity Score: 0.7465
+
+7. Match Details:
+   Property ID: P4970
+   Label: alternative name
+   Similarity Score: 0.7446
+
+8. Match Details:
+   Property ID: P6593
+   Label: hyperonym
+   Similarity Score: 0.7306
+
+9. Match Details:
+   Property ID: P742
+   Label: pseudonym
+   Similarity Score: 0.7267
+
+10. Match Details:
+   Property ID: P6271
+   Label: demonym of
+   Similarity Score: 0.7255
+

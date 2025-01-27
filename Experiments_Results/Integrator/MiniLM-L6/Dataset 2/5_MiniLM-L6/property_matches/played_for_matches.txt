@@ -1,0 +1,53 @@
+Top matches for predicate: "played for"
+==================================================
+
+1. Match Details:
+   Property ID: P1358
+   Label: points for
+   Similarity Score: 0.5878
+
+2. Match Details:
+   Property ID: P9140
+   Label: time played
+   Similarity Score: 0.5788
+
+3. Match Details:
+   Property ID: P9883
+   Label: created for
+   Similarity Score: 0.5338
+
+4. Match Details:
+   Property ID: P2522
+   Label: victory
+   Similarity Score: 0.4730
+
+5. Match Details:
+   Property ID: P1686
+   Label: for work
+   Similarity Score: 0.4676
+
+6. Match Details:
+   Property ID: P1535
+   Label: used by
+   Similarity Score: 0.4606
+
+7. Match Details:
+   Property ID: P6872
+   Label: has written for
+   Similarity Score: 0.4509
+
+8. Match Details:
+   Property ID: P741
+   Label: playing hand
+   Similarity Score: 0.4454
+
+9. Match Details:
+   Property ID: P2283
+   Label: uses
+   Similarity Score: 0.4395
+
+10. Match Details:
+   Property ID: P642
+   Label: of
+   Similarity Score: 0.4272
+

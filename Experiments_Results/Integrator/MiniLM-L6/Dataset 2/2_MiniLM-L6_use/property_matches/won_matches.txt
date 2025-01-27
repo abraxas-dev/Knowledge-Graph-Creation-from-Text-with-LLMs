@@ -1,0 +1,53 @@
+Top matches for predicate: "won"
+==================================================
+
+1. Match Details:
+   Property ID: P2522
+   Label: competition won
+   Similarity Score: 1.0000
+
+2. Match Details:
+   Property ID: P1355
+   Label: number of wins
+   Similarity Score: 1.0000
+
+3. Match Details:
+   Property ID: P1346
+   Label: winner
+   Similarity Score: 0.8041
+
+4. Match Details:
+   Property ID: P166
+   Label: award received
+   Similarity Score: 0.7618
+
+5. Match Details:
+   Property ID: P991
+   Label: successful candidate
+   Similarity Score: 0.6298
+
+6. Match Details:
+   Property ID: P2501
+   Label: results
+   Similarity Score: 0.5908
+
+7. Match Details:
+   Property ID: P1542
+   Label: has effect
+   Similarity Score: 0.5908
+
+8. Match Details:
+   Property ID: P11081
+   Label: won sets
+   Similarity Score: 0.5881
+
+9. Match Details:
+   Property ID: P793
+   Label: significant event
+   Similarity Score: 0.5793
+
+10. Match Details:
+   Property ID: P4622
+   Label: trophy awarded
+   Similarity Score: 0.5763
+

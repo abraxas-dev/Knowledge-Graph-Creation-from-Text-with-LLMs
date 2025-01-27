@@ -1,0 +1,53 @@
+Top matches for predicate: "plays in"
+==================================================
+
+1. Match Details:
+   Property ID: P9140
+   Label: time played
+   Similarity Score: 0.7512
+
+2. Match Details:
+   Property ID: P10606
+   Label: notable role
+   Similarity Score: 0.7435
+
+3. Match Details:
+   Property ID: P13187
+   Label: role named in credits as
+   Similarity Score: 0.7407
+
+4. Match Details:
+   Property ID: P1344
+   Label: participant in
+   Similarity Score: 0.7405
+
+5. Match Details:
+   Property ID: P3712
+   Label: has goal
+   Similarity Score: 0.7375
+
+6. Match Details:
+   Property ID: P5072
+   Label: presented in
+   Similarity Score: 0.7264
+
+7. Match Details:
+   Property ID: P54
+   Label: member of sports team
+   Similarity Score: 0.7213
+
+8. Match Details:
+   Property ID: P1923
+   Label: participating team
+   Similarity Score: 0.7172
+
+9. Match Details:
+   Property ID: P11321
+   Label: Play:Right company ID
+   Similarity Score: 0.7166
+
+10. Match Details:
+   Property ID: P361
+   Label: part of
+   Similarity Score: 0.7132
+

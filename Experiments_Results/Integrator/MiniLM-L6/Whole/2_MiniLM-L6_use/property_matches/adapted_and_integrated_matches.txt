@@ -1,0 +1,53 @@
+Top matches for predicate: "adapted and integrated"
+==================================================
+
+1. Match Details:
+   Property ID: P4969
+   Label: derivative work
+   Similarity Score: 0.7585
+
+2. Match Details:
+   Property ID: P144
+   Label: based on
+   Similarity Score: 0.6565
+
+3. Match Details:
+   Property ID: P5202
+   Label: adapted by
+   Similarity Score: 0.6553
+
+4. Match Details:
+   Property ID: P5059
+   Label: modified version of
+   Similarity Score: 0.6542
+
+5. Match Details:
+   Property ID: P527
+   Label: has part(s)
+   Similarity Score: 0.5255
+
+6. Match Details:
+   Property ID: P1547
+   Label: depends on software
+   Similarity Score: 0.4922
+
+7. Match Details:
+   Property ID: P11230
+   Label: Collins Online English Dictionary entry
+   Similarity Score: 0.4627
+
+8. Match Details:
+   Property ID: P119
+   Label: place of burial
+   Similarity Score: 0.4478
+
+9. Match Details:
+   Property ID: P514
+   Label: interleaves with
+   Similarity Score: 0.4236
+
+10. Match Details:
+   Property ID: P3403
+   Label: coextensive with
+   Similarity Score: 0.4186
+

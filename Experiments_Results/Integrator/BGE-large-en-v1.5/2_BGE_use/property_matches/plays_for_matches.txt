@@ -1,0 +1,53 @@
+Top matches for predicate: "plays for"
+==================================================
+
+1. Match Details:
+   Property ID: P54
+   Label: member of sports team
+   Similarity Score: 1.0000
+
+2. Match Details:
+   Property ID: P453
+   Label: character role
+   Similarity Score: 0.8003
+
+3. Match Details:
+   Property ID: P641
+   Label: sport
+   Similarity Score: 0.8003
+
+4. Match Details:
+   Property ID: P5436
+   Label: number of viewers/listeners
+   Similarity Score: 0.8003
+
+5. Match Details:
+   Property ID: P1303
+   Label: instrument
+   Similarity Score: 0.8003
+
+6. Match Details:
+   Property ID: P1299
+   Label: depicted by
+   Similarity Score: 0.7876
+
+7. Match Details:
+   Property ID: P1535
+   Label: used by
+   Similarity Score: 0.7876
+
+8. Match Details:
+   Property ID: P175
+   Label: performer
+   Similarity Score: 0.7876
+
+9. Match Details:
+   Property ID: P840
+   Label: narrative location
+   Similarity Score: 0.7814
+
+10. Match Details:
+   Property ID: P8411
+   Label: set in environment
+   Similarity Score: 0.7814
+

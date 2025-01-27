@@ -1,0 +1,53 @@
+Top matches for predicate: "established"
+==================================================
+
+1. Match Details:
+   Property ID: P571
+   Label: inception
+   Similarity Score: 1.0000
+
+2. Match Details:
+   Property ID: P729
+   Label: service entry
+   Similarity Score: 1.0000
+
+3. Match Details:
+   Property ID: P1810
+   Label: subject named as
+   Similarity Score: 0.9108
+
+4. Match Details:
+   Property ID: P457
+   Label: foundational text
+   Similarity Score: 0.8040
+
+5. Match Details:
+   Property ID: P112
+   Label: founded by
+   Similarity Score: 0.8040
+
+6. Match Details:
+   Property ID: P800
+   Label: notable work
+   Similarity Score: 0.7668
+
+7. Match Details:
+   Property ID: P740
+   Label: location of formation
+   Similarity Score: 0.6970
+
+8. Match Details:
+   Property ID: P92
+   Label: main regulatory text
+   Similarity Score: 0.6120
+
+9. Match Details:
+   Property ID: P10786
+   Label: date of incorporation
+   Similarity Score: 0.5613
+
+10. Match Details:
+   Property ID: P580
+   Label: start time
+   Similarity Score: 0.5484
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "opted out of"
+==================================================
+
+1. Match Details:
+   Property ID: P7122
+   Label: opinion joined by
+   Similarity Score: 0.4245
+
+2. Match Details:
+   Property ID: P790
+   Label: approved by
+   Similarity Score: 0.4217
+
+3. Match Details:
+   Property ID: P9237
+   Label: reissue of
+   Similarity Score: 0.4161
+
+4. Match Details:
+   Property ID: P642
+   Label: of
+   Similarity Score: 0.4107
+
+5. Match Details:
+   Property ID: P647
+   Label: drafted by
+   Similarity Score: 0.4100
+
+6. Match Details:
+   Property ID: P361
+   Label: part of
+   Similarity Score: 0.4015
+
+7. Match Details:
+   Property ID: P9681
+   Label: voted on by
+   Similarity Score: 0.4000
+
+8. Match Details:
+   Property ID: P756
+   Label: removed feature
+   Similarity Score: 0.3982
+
+9. Match Details:
+   Property ID: P6938
+   Label: seconded by
+   Similarity Score: 0.3969
+
+10. Match Details:
+   Property ID: P9831
+   Label: release of
+   Similarity Score: 0.3964
+

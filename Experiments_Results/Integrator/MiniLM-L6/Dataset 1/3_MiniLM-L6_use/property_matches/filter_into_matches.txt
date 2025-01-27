@@ -1,0 +1,53 @@
+Top matches for predicate: "filter into"
+==================================================
+
+1. Match Details:
+   Property ID: P1227
+   Label: astronomical filter
+   Similarity Score: 0.8255
+
+2. Match Details:
+   Property ID: P8460
+   Label: applies if regular expression matches
+   Similarity Score: 0.5302
+
+3. Match Details:
+   Property ID: P527
+   Label: has part(s)
+   Similarity Score: 0.4836
+
+4. Match Details:
+   Property ID: P361
+   Label: part of
+   Similarity Score: 0.4794
+
+5. Match Details:
+   Property ID: P403
+   Label: mouth of the watercourse
+   Similarity Score: 0.4780
+
+6. Match Details:
+   Property ID: P4330
+   Label: contains
+   Similarity Score: 0.4636
+
+7. Match Details:
+   Property ID: P150
+   Label: contains the administrative territorial entity
+   Similarity Score: 0.4636
+
+8. Match Details:
+   Property ID: P4675
+   Label: appears in the form of
+   Similarity Score: 0.4479
+
+9. Match Details:
+   Property ID: P958
+   Label: section, verse, paragraph, or clause
+   Similarity Score: 0.4312
+
+10. Match Details:
+   Property ID: P1343
+   Label: described by source
+   Similarity Score: 0.4312
+

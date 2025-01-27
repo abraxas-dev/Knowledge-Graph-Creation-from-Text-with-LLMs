@@ -1,0 +1,53 @@
+Top matches for predicate: "selected by"
+==================================================
+
+1. Match Details:
+   Property ID: P647
+   Label: drafted by
+   Similarity Score: 0.8059
+
+2. Match Details:
+   Property ID: P4353
+   Label: nominated by
+   Similarity Score: 0.8012
+
+3. Match Details:
+   Property ID: P3938
+   Label: named by
+   Similarity Score: 0.7884
+
+4. Match Details:
+   Property ID: P748
+   Label: appointed by
+   Similarity Score: 0.7784
+
+5. Match Details:
+   Property ID: P790
+   Label: approved by
+   Similarity Score: 0.7762
+
+6. Match Details:
+   Property ID: P9681
+   Label: voted on by
+   Similarity Score: 0.7600
+
+7. Match Details:
+   Property ID: P1535
+   Label: used by
+   Similarity Score: 0.7503
+
+8. Match Details:
+   Property ID: P5202
+   Label: adapted by
+   Similarity Score: 0.7496
+
+9. Match Details:
+   Property ID: P6939
+   Label: moved by
+   Similarity Score: 0.7434
+
+10. Match Details:
+   Property ID: P10894
+   Label: spoken by
+   Similarity Score: 0.7427
+

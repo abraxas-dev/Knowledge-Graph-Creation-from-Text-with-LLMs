@@ -1,0 +1,53 @@
+Top matches for predicate: "is"
+==================================================
+
+1. Match Details:
+   Property ID: P946
+   Label: ISIN
+   Similarity Score: 0.8037
+
+2. Match Details:
+   Property ID: P213
+   Label: ISNI
+   Similarity Score: 0.7789
+
+3. Match Details:
+   Property ID: P3906
+   Label: Ishim ID
+   Similarity Score: 0.7238
+
+4. Match Details:
+   Property ID: P527
+   Label: has part(s)
+   Similarity Score: 0.7149
+
+5. Match Details:
+   Property ID: P1243
+   Label: ISRC
+   Similarity Score: 0.7111
+
+6. Match Details:
+   Property ID: P13150
+   Label: ISCC
+   Similarity Score: 0.7082
+
+7. Match Details:
+   Property ID: P5092
+   Label: ISC event ID
+   Similarity Score: 0.6966
+
+8. Match Details:
+   Property ID: P6439
+   Label: has lyrics
+   Similarity Score: 0.6958
+
+9. Match Details:
+   Property ID: P8283
+   Label: ISCO-08 occupation class
+   Similarity Score: 0.6894
+
+10. Match Details:
+   Property ID: P642
+   Label: of
+   Similarity Score: 0.6894
+

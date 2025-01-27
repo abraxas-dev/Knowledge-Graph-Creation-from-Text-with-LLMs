@@ -1,0 +1,53 @@
+Top matches for predicate: "opted out of"
+==================================================
+
+1. Match Details:
+   Property ID: P1011
+   Label: excluding
+   Similarity Score: 0.7745
+
+2. Match Details:
+   Property ID: P11484
+   Label: does not use
+   Similarity Score: 0.7719
+
+3. Match Details:
+   Property ID: P1344
+   Label: participant in
+   Similarity Score: 0.7382
+
+4. Match Details:
+   Property ID: P756
+   Label: removed feature
+   Similarity Score: 0.7246
+
+5. Match Details:
+   Property ID: P5004
+   Label: in opposition to
+   Similarity Score: 0.7164
+
+6. Match Details:
+   Property ID: P1012
+   Label: including
+   Similarity Score: 0.7148
+
+7. Match Details:
+   Property ID: P4330
+   Label: contains
+   Similarity Score: 0.6974
+
+8. Match Details:
+   Property ID: P11633
+   Label: colocated with
+   Similarity Score: 0.6946
+
+9. Match Details:
+   Property ID: P11108
+   Label: recorded participant
+   Similarity Score: 0.6929
+
+10. Match Details:
+   Property ID: P7137
+   Label: acknowledged
+   Similarity Score: 0.6926
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "occupation"
+==================================================
+
+1. Match Details:
+   Property ID: P106
+   Label: occupation
+   Similarity Score: 1.0000
+
+2. Match Details:
+   Property ID: P425
+   Label: field of this occupation
+   Similarity Score: 0.7575
+
+3. Match Details:
+   Property ID: P3989
+   Label: members have occupation
+   Similarity Score: 0.6504
+
+4. Match Details:
+   Property ID: P108
+   Label: employer
+   Similarity Score: 0.6490
+
+5. Match Details:
+   Property ID: P8283
+   Label: ISCO-08 occupation class
+   Similarity Score: 0.5947
+
+6. Match Details:
+   Property ID: P2553
+   Label: in work
+   Similarity Score: 0.5926
+
+7. Match Details:
+   Property ID: P1023
+   Label: SBC-2010 occupation code
+   Similarity Score: 0.5800
+
+8. Match Details:
+   Property ID: P1441
+   Label: present in work
+   Similarity Score: 0.5786
+
+9. Match Details:
+   Property ID: P952
+   Label: ISCO-88 occupation class
+   Similarity Score: 0.5719
+
+10. Match Details:
+   Property ID: P101
+   Label: field of work
+   Similarity Score: 0.5714
+

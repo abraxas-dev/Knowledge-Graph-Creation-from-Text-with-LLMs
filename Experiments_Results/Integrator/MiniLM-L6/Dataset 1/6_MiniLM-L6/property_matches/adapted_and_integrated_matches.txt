@@ -1,0 +1,53 @@
+Top matches for predicate: "adapted and integrated"
+==================================================
+
+1. Match Details:
+   Property ID: P5202
+   Label: adapted by
+   Similarity Score: 0.6553
+
+2. Match Details:
+   Property ID: P3403
+   Label: coextensive with
+   Similarity Score: 0.4186
+
+3. Match Details:
+   Property ID: P514
+   Label: interleaves with
+   Similarity Score: 0.4139
+
+4. Match Details:
+   Property ID: P277
+   Label: programmed in
+   Similarity Score: 0.4008
+
+5. Match Details:
+   Property ID: P5572
+   Label: expressed in
+   Similarity Score: 0.3827
+
+6. Match Details:
+   Property ID: P2567
+   Label: amended by
+   Similarity Score: 0.3701
+
+7. Match Details:
+   Property ID: P3771
+   Label: activator of
+   Similarity Score: 0.3671
+
+8. Match Details:
+   Property ID: P8339
+   Label: entry receptor
+   Similarity Score: 0.3573
+
+9. Match Details:
+   Property ID: P5560
+   Label: passive voice
+   Similarity Score: 0.3563
+
+10. Match Details:
+   Property ID: P2575
+   Label: measures
+   Similarity Score: 0.3553
+

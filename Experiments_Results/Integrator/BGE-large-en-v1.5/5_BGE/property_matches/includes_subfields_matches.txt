@@ -1,0 +1,53 @@
+Top matches for predicate: "includes subfields"
+==================================================
+
+1. Match Details:
+   Property ID: P1012
+   Label: including
+   Similarity Score: 0.7391
+
+2. Match Details:
+   Property ID: P4330
+   Label: contains
+   Similarity Score: 0.7096
+
+3. Match Details:
+   Property ID: P9488
+   Label: field of usage
+   Similarity Score: 0.6959
+
+4. Match Details:
+   Property ID: P10629
+   Label: suggested data fields
+   Similarity Score: 0.6954
+
+5. Match Details:
+   Property ID: P4224
+   Label: category contains
+   Similarity Score: 0.6886
+
+6. Match Details:
+   Property ID: P971
+   Label: category combines topics
+   Similarity Score: 0.6777
+
+7. Match Details:
+   Property ID: P1383
+   Label: contains settlement
+   Similarity Score: 0.6764
+
+8. Match Details:
+   Property ID: P150
+   Label: contains the administrative territorial entity
+   Similarity Score: 0.6749
+
+9. Match Details:
+   Property ID: P101
+   Label: field of work
+   Similarity Score: 0.6699
+
+10. Match Details:
+   Property ID: P279
+   Label: subclass of
+   Similarity Score: 0.6602
+

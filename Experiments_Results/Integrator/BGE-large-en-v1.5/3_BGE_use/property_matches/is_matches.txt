@@ -1,0 +1,53 @@
+Top matches for predicate: "is"
+==================================================
+
+1. Match Details:
+   Property ID: P276
+   Label: location
+   Similarity Score: 0.8636
+
+2. Match Details:
+   Property ID: P706
+   Label: located in/on physical feature
+   Similarity Score: 0.8636
+
+3. Match Details:
+   Property ID: P31
+   Label: instance of
+   Similarity Score: 0.8523
+
+4. Match Details:
+   Property ID: P946
+   Label: ISIN
+   Similarity Score: 0.8037
+
+5. Match Details:
+   Property ID: P1889
+   Label: different from
+   Similarity Score: 0.7915
+
+6. Match Details:
+   Property ID: P213
+   Label: ISNI
+   Similarity Score: 0.7789
+
+7. Match Details:
+   Property ID: P361
+   Label: part of
+   Similarity Score: 0.7735
+
+8. Match Details:
+   Property ID: P815
+   Label: ITIS TSN
+   Similarity Score: 0.7562
+
+9. Match Details:
+   Property ID: P2361
+   Label: online service
+   Similarity Score: 0.7559
+
+10. Match Details:
+   Property ID: P10107
+   Label: specific impulse by weight
+   Similarity Score: 0.7559
+

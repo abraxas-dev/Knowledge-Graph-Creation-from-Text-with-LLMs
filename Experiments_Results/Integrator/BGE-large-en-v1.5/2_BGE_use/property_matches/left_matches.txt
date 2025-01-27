@@ -1,0 +1,53 @@
+Top matches for predicate: "left"
+==================================================
+
+1. Match Details:
+   Property ID: P552
+   Label: handedness
+   Similarity Score: 0.7641
+
+2. Match Details:
+   Property ID: P1357
+   Label: number of draws/ties
+   Similarity Score: 0.7572
+
+3. Match Details:
+   Property ID: P3712
+   Label: has goal
+   Similarity Score: 0.7515
+
+4. Match Details:
+   Property ID: P7469
+   Label: orientation
+   Similarity Score: 0.7515
+
+5. Match Details:
+   Property ID: P560
+   Label: direction
+   Similarity Score: 0.7515
+
+6. Match Details:
+   Property ID: P576
+   Label: dissolved, abolished or demolished date
+   Similarity Score: 0.7324
+
+7. Match Details:
+   Property ID: P625
+   Label: coordinate location
+   Similarity Score: 0.7300
+
+8. Match Details:
+   Property ID: P413
+   Label: position played on team / speciality
+   Similarity Score: 0.7300
+
+9. Match Details:
+   Property ID: P6022
+   Label: expression, gesture or body pose
+   Similarity Score: 0.7300
+
+10. Match Details:
+   Property ID: P1352
+   Label: ranking
+   Similarity Score: 0.7300
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "tied for most seasons played"
+==================================================
+
+1. Match Details:
+   Property ID: P1706
+   Label: together with
+   Similarity Score: 0.7428
+
+2. Match Details:
+   Property ID: P1350
+   Label: number of matches played/races/starts
+   Similarity Score: 0.7227
+
+3. Match Details:
+   Property ID: P54
+   Label: member of sports team
+   Similarity Score: 0.7128
+
+4. Match Details:
+   Property ID: P555
+   Label: doubles record
+   Similarity Score: 0.7027
+
+5. Match Details:
+   Property ID: P641
+   Label: sport
+   Similarity Score: 0.7000
+
+6. Match Details:
+   Property ID: P6118
+   Label: season ends
+   Similarity Score: 0.6976
+
+7. Match Details:
+   Property ID: P2437
+   Label: number of seasons
+   Similarity Score: 0.6911
+
+8. Match Details:
+   Property ID: P1357
+   Label: number of draws/ties
+   Similarity Score: 0.6852
+
+9. Match Details:
+   Property ID: P9220
+   Label: doubles hit
+   Similarity Score: 0.6799
+
+10. Match Details:
+   Property ID: P9140
+   Label: time played
+   Similarity Score: 0.6795
+

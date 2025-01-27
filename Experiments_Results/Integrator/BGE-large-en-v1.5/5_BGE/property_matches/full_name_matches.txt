@@ -1,0 +1,53 @@
+Top matches for predicate: "full name"
+==================================================
+
+1. Match Details:
+   Property ID: P1477
+   Label: birth name
+   Similarity Score: 0.7970
+
+2. Match Details:
+   Property ID: P2561
+   Label: name
+   Similarity Score: 0.7923
+
+3. Match Details:
+   Property ID: P735
+   Label: given name
+   Similarity Score: 0.7877
+
+4. Match Details:
+   Property ID: P1813
+   Label: short name
+   Similarity Score: 0.7553
+
+5. Match Details:
+   Property ID: P569
+   Label: date of birth
+   Similarity Score: 0.7512
+
+6. Match Details:
+   Property ID: P19
+   Label: place of birth
+   Similarity Score: 0.7507
+
+7. Match Details:
+   Property ID: P2838
+   Label: professional name
+   Similarity Score: 0.7451
+
+8. Match Details:
+   Property ID: P734
+   Label: family name
+   Similarity Score: 0.7413
+
+9. Match Details:
+   Property ID: P2562
+   Label: married name
+   Similarity Score: 0.7362
+
+10. Match Details:
+   Property ID: P7407
+   Label: name (image)
+   Similarity Score: 0.7288
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "instance of"
+==================================================
+
+1. Match Details:
+   Property ID: P31
+   Label: instance of
+   Similarity Score: 1.0000
+
+2. Match Details:
+   Property ID: P1574
+   Label: exemplar of
+   Similarity Score: 0.7871
+
+3. Match Details:
+   Property ID: P5831
+   Label: usage example
+   Similarity Score: 0.7469
+
+4. Match Details:
+   Property ID: P1557
+   Label: manifestation of
+   Similarity Score: 0.7334
+
+5. Match Details:
+   Property ID: P12912
+   Label: object of occurrence
+   Similarity Score: 0.7214
+
+6. Match Details:
+   Property ID: P4675
+   Label: appears in the form of
+   Similarity Score: 0.7181
+
+7. Match Details:
+   Property ID: P279
+   Label: subclass of
+   Similarity Score: 0.6966
+
+8. Match Details:
+   Property ID: P3701
+   Label: incarnation of
+   Similarity Score: 0.6962
+
+9. Match Details:
+   Property ID: P12913
+   Label: class of object(s) of occurrence
+   Similarity Score: 0.6952
+
+10. Match Details:
+   Property ID: P1299
+   Label: depicted by
+   Similarity Score: 0.6930
+

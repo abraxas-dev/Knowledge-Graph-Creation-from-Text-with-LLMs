@@ -1,0 +1,53 @@
+Top matches for predicate: "is"
+==================================================
+
+1. Match Details:
+   Property ID: P642
+   Label: of
+   Similarity Score: 0.8192
+
+2. Match Details:
+   Property ID: P144
+   Label: based on
+   Similarity Score: 0.7865
+
+3. Match Details:
+   Property ID: P4330
+   Label: contains
+   Similarity Score: 0.7797
+
+4. Match Details:
+   Property ID: P5109
+   Label: has grammatical gender
+   Similarity Score: 0.7735
+
+5. Match Details:
+   Property ID: P10476
+   Label: identifies
+   Similarity Score: 0.7722
+
+6. Match Details:
+   Property ID: P103
+   Label: native language
+   Similarity Score: 0.7715
+
+7. Match Details:
+   Property ID: P2384
+   Label: statement describes
+   Similarity Score: 0.7690
+
+8. Match Details:
+   Property ID: P6719
+   Label: specified by sense
+   Similarity Score: 0.7666
+
+9. Match Details:
+   Property ID: P37
+   Label: official language
+   Similarity Score: 0.7664
+
+10. Match Details:
+   Property ID: P6001
+   Label: applies to people
+   Similarity Score: 0.7658
+

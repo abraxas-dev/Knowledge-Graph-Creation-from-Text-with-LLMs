@@ -1,0 +1,53 @@
+Top matches for predicate: "draws upon"
+==================================================
+
+1. Match Details:
+   Property ID: P170
+   Label: creator
+   Similarity Score: 0.7259
+
+2. Match Details:
+   Property ID: P1357
+   Label: number of draws/ties
+   Similarity Score: 0.7121
+
+3. Match Details:
+   Property ID: P18
+   Label: image
+   Similarity Score: 0.5868
+
+4. Match Details:
+   Property ID: P11801
+   Label: visited by
+   Similarity Score: 0.4832
+
+5. Match Details:
+   Property ID: P8824
+   Label: attraction to
+   Similarity Score: 0.4687
+
+6. Match Details:
+   Property ID: P180
+   Label: depicts
+   Similarity Score: 0.4462
+
+7. Match Details:
+   Property ID: P5555
+   Label: schematic
+   Similarity Score: 0.4394
+
+8. Match Details:
+   Property ID: P2556
+   Label: bore
+   Similarity Score: 0.4295
+
+9. Match Details:
+   Property ID: P837
+   Label: day in year for periodic occurrence
+   Similarity Score: 0.4280
+
+10. Match Details:
+   Property ID: P110
+   Label: illustrator
+   Similarity Score: 0.4280
+

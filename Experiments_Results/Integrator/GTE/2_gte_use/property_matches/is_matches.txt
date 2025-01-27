@@ -1,0 +1,53 @@
+Top matches for predicate: "is"
+==================================================
+
+1. Match Details:
+   Property ID: P31
+   Label: instance of
+   Similarity Score: 0.8923
+
+2. Match Details:
+   Property ID: P1889
+   Label: different from
+   Similarity Score: 0.8363
+
+3. Match Details:
+   Property ID: P276
+   Label: location
+   Similarity Score: 0.8274
+
+4. Match Details:
+   Property ID: P706
+   Label: located in/on physical feature
+   Similarity Score: 0.8274
+
+5. Match Details:
+   Property ID: P5137
+   Label: item for this sense
+   Similarity Score: 0.8223
+
+6. Match Details:
+   Property ID: P453
+   Label: character role
+   Similarity Score: 0.8200
+
+7. Match Details:
+   Property ID: P366
+   Label: has use
+   Similarity Score: 0.8200
+
+8. Match Details:
+   Property ID: P5276
+   Label: Slavistic Phonetic Alphabet transcription
+   Similarity Score: 0.8200
+
+9. Match Details:
+   Property ID: P3831
+   Label: object of statement has role
+   Similarity Score: 0.8200
+
+10. Match Details:
+   Property ID: P1932
+   Label: object named as
+   Similarity Score: 0.8200
+

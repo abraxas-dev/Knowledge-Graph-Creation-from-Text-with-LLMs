@@ -1,0 +1,53 @@
+Top matches for predicate: "was"
+==================================================
+
+1. Match Details:
+   Property ID: P276
+   Label: location
+   Similarity Score: 0.7703
+
+2. Match Details:
+   Property ID: P706
+   Label: located in/on physical feature
+   Similarity Score: 0.7703
+
+3. Match Details:
+   Property ID: P31
+   Label: instance of
+   Similarity Score: 0.7621
+
+4. Match Details:
+   Property ID: P527
+   Label: has part(s)
+   Similarity Score: 0.7526
+
+5. Match Details:
+   Property ID: P155
+   Label: follows
+   Similarity Score: 0.7499
+
+6. Match Details:
+   Property ID: P669
+   Label: located on street
+   Similarity Score: 0.7200
+
+7. Match Details:
+   Property ID: P81
+   Label: connecting line
+   Similarity Score: 0.7200
+
+8. Match Details:
+   Property ID: P576
+   Label: dissolved, abolished or demolished date
+   Similarity Score: 0.7093
+
+9. Match Details:
+   Property ID: P366
+   Label: has use
+   Similarity Score: 0.7076
+
+10. Match Details:
+   Property ID: P3828
+   Label: wears
+   Similarity Score: 0.7074
+

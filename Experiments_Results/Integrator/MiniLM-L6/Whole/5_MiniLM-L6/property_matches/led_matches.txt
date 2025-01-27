@@ -1,0 +1,53 @@
+Top matches for predicate: "led"
+==================================================
+
+1. Match Details:
+   Property ID: P8228
+   Label: lighting
+   Similarity Score: 0.7028
+
+2. Match Details:
+   Property ID: P462
+   Label: color
+   Similarity Score: 0.5748
+
+3. Match Details:
+   Property ID: P545
+   Label: torch lit by
+   Similarity Score: 0.5106
+
+4. Match Details:
+   Property ID: P3922
+   Label: light sector
+   Similarity Score: 0.4703
+
+5. Match Details:
+   Property ID: P478
+   Label: volume
+   Similarity Score: 0.4544
+
+6. Match Details:
+   Property ID: P3528
+   Label: Luding game ID
+   Similarity Score: 0.4504
+
+7. Match Details:
+   Property ID: P3041
+   Label: luminous intensity
+   Similarity Score: 0.4498
+
+8. Match Details:
+   Property ID: P1340
+   Label: eye color
+   Similarity Score: 0.4476
+
+9. Match Details:
+   Property ID: P3530
+   Label: par
+   Similarity Score: 0.4415
+
+10. Match Details:
+   Property ID: P4671
+   Label: Hall of Light ID
+   Similarity Score: 0.4393
+

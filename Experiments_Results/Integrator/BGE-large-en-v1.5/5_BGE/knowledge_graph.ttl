@@ -1,0 +1,121 @@
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+<http://example.org/entity/Goals%20of%20Artificial%20intelligence%20%28AI%29> wdt:P1012 wd:Q133500,
+        wd:Q170978,
+        wd:Q2070151,
+        wd:Q30642,
+        wd:Q309100,
+        wd:Q3478658 .
+
+<http://example.org/entity/Subfields%20of%20AI> wdt:P11633 wd:Q4503831 .
+
+wd:Q115564437 wdt:P31 "generative tool" .
+
+wd:Q15330 wdt:P31 wd:Q116285085 .
+
+wd:Q1752733 wdt:P31 wd:Q121329598 .
+
+wd:Q1753797 wdt:P946 "the ability to perform tasks" .
+
+wd:Q1772342 wdt:P31 wd:Q121329598 .
+
+wd:Q197536 wdt:P2522 "previous AI techniques" .
+
+wd:Q241625 wdt:P1911 "after 2012" .
+
+wd:Q25025241 wdt:P31 wd:Q121329598 .
+
+wd:Q37227 wdt:P31 wd:Q1150710 .
+
+wd:Q372353 wdt:P1911 "after 2012" .
+
+wd:Q3884 wdt:P31 wd:Q109330091 .
+
+wd:Q567303 wdt:P7855 "one of the most controversial moves" .
+
+wd:Q59087900 wdt:P5202 wd:Q23907496 .
+
+wd:Q65066631 wdt:P31 "generative tool" .
+
+wd:Q718 wdt:P31 wd:Q1150710 .
+
+wd:Q866 wdt:P31 wd:Q109330091 .
+
+wd:Q907311 wdt:P31 wd:Q109330091 .
+
+wd:Q9366 wdt:P31 wd:Q56880266 .
+
+wd:Q96325649 wdt:P12090 wd:Q11660 ;
+    wdt:P4330 wd:Q52578816 ;
+    wdt:P6477 wd:Q25228 .
+
+wd:Q11660 wdt:P1012 wd:Q109330091,
+        wd:Q121329598,
+        wd:Q56880266,
+        wd:Q87194671,
+        wd:Q88642937,
+        "generative and creative tools" ;
+    wdt:P112 wd:Q5221 ;
+    wdt:P12876 wd:Q1003009,
+        wd:Q12483,
+        wd:Q141495,
+        wd:Q192776,
+        wd:Q194292,
+        wd:Q7441680,
+        wd:Q8134 ;
+    wdt:P1356 wd:Q6055890 ;
+    wdt:P941 wd:Q15708571,
+        wd:Q5891,
+        wd:Q8162,
+        wd:Q9418,
+        "other fields" ;
+    wdt:P991 "cycles of optimism and disappointment" .
+
+wd:Q36159 wdt:P1000 "most minutes played in NBA history" ;
+    wdt:P10408 "1st overall" ;
+    wdt:P106 wd:Q3665646 ;
+    wdt:P11081 wd:Q644357,
+        "3 NBA All-Star Game MVP Awards",
+        "3 Olympic gold medals",
+        "4 NBA Finals MVP Awards",
+        "4 NBA Most Valuable Player Awards",
+        "4 NBA championships",
+        "NBA Championship in 2012",
+        "NBA Championship in 2013",
+        "Olympics MVP",
+        "in 2009 NBA MVP Award",
+        "in 2010 NBA MVP Award",
+        "in 2012 NBA Finals MVP Award",
+        "in 2012 NBA MVP Award",
+        "in 2013 NBA Finals MVP Award",
+        "in 2013 NBA MVP Award",
+        "inaugural NBA Cup",
+        "inaugural NBA Cup MVP Award" ;
+    wdt:P1299 wd:Q541497 ;
+    wdt:P1352 "4th in NBA career assists",
+        "8th in NBA career steals" ;
+    wdt:P1433 "10 NBA Finals" ;
+    wdt:P1449 wd:Q36159 ;
+    wdt:P1477 wd:Q36159 ;
+    wdt:P2210 wd:Q41421 ;
+    wdt:P2579 wd:Q163132 ;
+    wdt:P27 wd:Q7976 ;
+    wdt:P3938 "2004 NBA Rookie of the Year" ;
+    wdt:P4584 "8 NBA Finals" ;
+    wdt:P463 wd:Q169138 ;
+    wdt:P5166 "league's premier players" ;
+    wdt:P552 wd:Q162990 ;
+    wdt:P555 wd:Q241261 ;
+    wdt:P569 wd:Q69296294 ;
+    wdt:P5824 "Miami Heat contract in 2014" ;
+    wdt:P647 "in 2003 Cleveland Cavaliers" ;
+    wdt:P7855 "one of the greatest basketball players of all time" ;
+    wdt:P813 "Cleveland Cavaliers in 2014" ;
+    wdt:P8228 "Cleveland Cavaliers to their first NBA Finals appearance" ;
+    wdt:P9140 wd:Q121783,
+        wd:Q7592124,
+        "National Basketball Association (NBA)" ;
+    wdt:P946 "NBA's all-time leading scorer" ;
+    wdt:P9731 wd:Q597933 .
+

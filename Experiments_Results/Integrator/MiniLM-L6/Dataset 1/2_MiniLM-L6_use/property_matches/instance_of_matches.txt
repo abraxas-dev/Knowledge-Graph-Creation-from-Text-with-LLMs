@@ -1,0 +1,53 @@
+Top matches for predicate: "instance of"
+==================================================
+
+1. Match Details:
+   Property ID: P31
+   Label: instance of
+   Similarity Score: 1.0000
+
+2. Match Details:
+   Property ID: P1114
+   Label: quantity
+   Similarity Score: 0.7989
+
+3. Match Details:
+   Property ID: P1647
+   Label: subproperty of
+   Similarity Score: 0.6767
+
+4. Match Details:
+   Property ID: P8225
+   Label: is metaclass for
+   Similarity Score: 0.6711
+
+5. Match Details:
+   Property ID: P279
+   Label: subclass of
+   Similarity Score: 0.6635
+
+6. Match Details:
+   Property ID: P7124
+   Label: date of the first one
+   Similarity Score: 0.6618
+
+7. Match Details:
+   Property ID: P1382
+   Label: partially coincident with
+   Similarity Score: 0.6442
+
+8. Match Details:
+   Property ID: P1855
+   Label: Wikidata property example
+   Similarity Score: 0.6231
+
+9. Match Details:
+   Property ID: P10241
+   Label: individual of taxon
+   Similarity Score: 0.6134
+
+10. Match Details:
+   Property ID: P10726
+   Label: class of non-item property value
+   Similarity Score: 0.5872
+

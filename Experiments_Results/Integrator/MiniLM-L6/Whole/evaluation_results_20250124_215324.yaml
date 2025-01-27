@@ -1,0 +1,182 @@
+evaluation_timestamp: '20250124_215324'
+results:
+- configuration_file: 3_MiniLM-L6_use.yaml
+  metrics:
+    Entities:
+      F1: 0.81981981981982
+      False Negatives: 14
+      False Positives: 26
+      Precision: 0.7777777777777778
+      Recall: 0.8666666666666667
+      True Positives: 91
+    Objects:
+      F1: 0.36538461538461536
+      False Negatives: 67
+      False Positives: 65
+      Precision: 0.36893203883495146
+      Recall: 0.3619047619047619
+      True Positives: 38
+    Properties:
+      F1: 0.47393364928909953
+      False Negatives: 55
+      False Positives: 56
+      Precision: 0.4716981132075472
+      Recall: 0.47619047619047616
+      True Positives: 50
+    Triples:
+      F1: 0.08695652173913045
+      False Negatives: 96
+      False Positives: 93
+      Precision: 0.08823529411764706
+      Recall: 0.08571428571428572
+      True Positives: 9
+- configuration_file: 4_MiniLM-L6.yaml
+  metrics:
+    Entities:
+      F1: 0.81981981981982
+      False Negatives: 14
+      False Positives: 26
+      Precision: 0.7777777777777778
+      Recall: 0.8666666666666667
+      True Positives: 91
+    Objects:
+      F1: 0.36538461538461536
+      False Negatives: 67
+      False Positives: 65
+      Precision: 0.36893203883495146
+      Recall: 0.3619047619047619
+      True Positives: 38
+    Properties:
+      F1: 0.38738738738738737
+      False Negatives: 62
+      False Positives: 74
+      Precision: 0.36752136752136755
+      Recall: 0.4095238095238095
+      True Positives: 43
+    Triples:
+      F1: 0.07729468599033816
+      False Negatives: 97
+      False Positives: 94
+      Precision: 0.0784313725490196
+      Recall: 0.0761904761904762
+      True Positives: 8
+- configuration_file: 5_MiniLM-L6.yaml
+  metrics:
+    Entities:
+      F1: 0.81981981981982
+      False Negatives: 14
+      False Positives: 26
+      Precision: 0.7777777777777778
+      Recall: 0.8666666666666667
+      True Positives: 91
+    Objects:
+      F1: 0.36538461538461536
+      False Negatives: 67
+      False Positives: 65
+      Precision: 0.36893203883495146
+      Recall: 0.3619047619047619
+      True Positives: 38
+    Properties:
+      F1: 0.37442922374429227
+      False Negatives: 64
+      False Positives: 73
+      Precision: 0.35964912280701755
+      Recall: 0.3904761904761905
+      True Positives: 41
+    Triples:
+      F1: 0.09661835748792272
+      False Negatives: 95
+      False Positives: 92
+      Precision: 0.09803921568627451
+      Recall: 0.09523809523809523
+      True Positives: 10
+- configuration_file: 2_MiniLM-L6_use.yaml
+  metrics:
+    Entities:
+      F1: 0.81981981981982
+      False Negatives: 14
+      False Positives: 26
+      Precision: 0.7777777777777778
+      Recall: 0.8666666666666667
+      True Positives: 91
+    Objects:
+      F1: 0.36538461538461536
+      False Negatives: 67
+      False Positives: 65
+      Precision: 0.36893203883495146
+      Recall: 0.3619047619047619
+      True Positives: 38
+    Properties:
+      F1: 0.47393364928909953
+      False Negatives: 55
+      False Positives: 56
+      Precision: 0.4716981132075472
+      Recall: 0.47619047619047616
+      True Positives: 50
+    Triples:
+      F1: 0.08695652173913045
+      False Negatives: 96
+      False Positives: 93
+      Precision: 0.08823529411764706
+      Recall: 0.08571428571428572
+      True Positives: 9
+- configuration_file: 1_MiniLM-L6_use.yaml
+  metrics:
+    Entities:
+      F1: 0.81981981981982
+      False Negatives: 14
+      False Positives: 26
+      Precision: 0.7777777777777778
+      Recall: 0.8666666666666667
+      True Positives: 91
+    Objects:
+      F1: 0.36538461538461536
+      False Negatives: 67
+      False Positives: 65
+      Precision: 0.36893203883495146
+      Recall: 0.3619047619047619
+      True Positives: 38
+    Properties:
+      F1: 0.38738738738738737
+      False Negatives: 62
+      False Positives: 74
+      Precision: 0.36752136752136755
+      Recall: 0.4095238095238095
+      True Positives: 43
+    Triples:
+      F1: 0.07729468599033816
+      False Negatives: 97
+      False Positives: 94
+      Precision: 0.0784313725490196
+      Recall: 0.0761904761904762
+      True Positives: 8
+- configuration_file: 6_MiniLM-L6.yaml
+  metrics:
+    Entities:
+      F1: 0.81981981981982
+      False Negatives: 14
+      False Positives: 26
+      Precision: 0.7777777777777778
+      Recall: 0.8666666666666667
+      True Positives: 91
+    Objects:
+      F1: 0.36538461538461536
+      False Negatives: 67
+      False Positives: 65
+      Precision: 0.36893203883495146
+      Recall: 0.3619047619047619
+      True Positives: 38
+    Properties:
+      F1: 0.37442922374429227
+      False Negatives: 64
+      False Positives: 73
+      Precision: 0.35964912280701755
+      Recall: 0.3904761904761905
+      True Positives: 41
+    Triples:
+      F1: 0.09661835748792272
+      False Negatives: 95
+      False Positives: 92
+      Precision: 0.09803921568627451
+      Recall: 0.09523809523809523
+      True Positives: 10

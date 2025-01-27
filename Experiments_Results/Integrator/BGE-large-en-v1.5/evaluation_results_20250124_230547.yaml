@@ -1,0 +1,182 @@
+evaluation_timestamp: '20250124_230547'
+results:
+- configuration_file: 3_BGE_use.yaml
+  metrics:
+    Entities:
+      F1: 0.81981981981982
+      False Negatives: 14
+      False Positives: 26
+      Precision: 0.7777777777777778
+      Recall: 0.8666666666666667
+      True Positives: 91
+    Objects:
+      F1: 0.36538461538461536
+      False Negatives: 67
+      False Positives: 65
+      Precision: 0.36893203883495146
+      Recall: 0.3619047619047619
+      True Positives: 38
+    Properties:
+      F1: 0.44339622641509435
+      False Negatives: 58
+      False Positives: 60
+      Precision: 0.4392523364485981
+      Recall: 0.44761904761904764
+      True Positives: 47
+    Triples:
+      F1: 0.07729468599033816
+      False Negatives: 97
+      False Positives: 94
+      Precision: 0.0784313725490196
+      Recall: 0.0761904761904762
+      True Positives: 8
+- configuration_file: 6_BGE.yaml
+  metrics:
+    Entities:
+      F1: 0.81981981981982
+      False Negatives: 14
+      False Positives: 26
+      Precision: 0.7777777777777778
+      Recall: 0.8666666666666667
+      True Positives: 91
+    Objects:
+      F1: 0.36538461538461536
+      False Negatives: 67
+      False Positives: 65
+      Precision: 0.36893203883495146
+      Recall: 0.3619047619047619
+      True Positives: 38
+    Properties:
+      F1: 0.28703703703703703
+      False Negatives: 74
+      False Positives: 80
+      Precision: 0.27927927927927926
+      Recall: 0.29523809523809524
+      True Positives: 31
+    Triples:
+      F1: 0.04830917874396136
+      False Negatives: 100
+      False Positives: 97
+      Precision: 0.049019607843137254
+      Recall: 0.047619047619047616
+      True Positives: 5
+- configuration_file: 2_BGE_use.yaml
+  metrics:
+    Entities:
+      F1: 0.81981981981982
+      False Negatives: 14
+      False Positives: 26
+      Precision: 0.7777777777777778
+      Recall: 0.8666666666666667
+      True Positives: 91
+    Objects:
+      F1: 0.36538461538461536
+      False Negatives: 67
+      False Positives: 65
+      Precision: 0.36893203883495146
+      Recall: 0.3619047619047619
+      True Positives: 38
+    Properties:
+      F1: 0.44339622641509435
+      False Negatives: 58
+      False Positives: 60
+      Precision: 0.4392523364485981
+      Recall: 0.44761904761904764
+      True Positives: 47
+    Triples:
+      F1: 0.07729468599033816
+      False Negatives: 97
+      False Positives: 94
+      Precision: 0.0784313725490196
+      Recall: 0.0761904761904762
+      True Positives: 8
+- configuration_file: 4_BGE.yaml
+  metrics:
+    Entities:
+      F1: 0.81981981981982
+      False Negatives: 14
+      False Positives: 26
+      Precision: 0.7777777777777778
+      Recall: 0.8666666666666667
+      True Positives: 91
+    Objects:
+      F1: 0.36538461538461536
+      False Negatives: 67
+      False Positives: 65
+      Precision: 0.36893203883495146
+      Recall: 0.3619047619047619
+      True Positives: 38
+    Properties:
+      F1: 0.38738738738738737
+      False Negatives: 62
+      False Positives: 74
+      Precision: 0.36752136752136755
+      Recall: 0.4095238095238095
+      True Positives: 43
+    Triples:
+      F1: 0.07729468599033816
+      False Negatives: 97
+      False Positives: 94
+      Precision: 0.0784313725490196
+      Recall: 0.0761904761904762
+      True Positives: 8
+- configuration_file: 5_BGE.yaml
+  metrics:
+    Entities:
+      F1: 0.81981981981982
+      False Negatives: 14
+      False Positives: 26
+      Precision: 0.7777777777777778
+      Recall: 0.8666666666666667
+      True Positives: 91
+    Objects:
+      F1: 0.36538461538461536
+      False Negatives: 67
+      False Positives: 65
+      Precision: 0.36893203883495146
+      Recall: 0.3619047619047619
+      True Positives: 38
+    Properties:
+      F1: 0.28703703703703703
+      False Negatives: 74
+      False Positives: 80
+      Precision: 0.27927927927927926
+      Recall: 0.29523809523809524
+      True Positives: 31
+    Triples:
+      F1: 0.04830917874396136
+      False Negatives: 100
+      False Positives: 97
+      Precision: 0.049019607843137254
+      Recall: 0.047619047619047616
+      True Positives: 5
+- configuration_file: 1_BGE_use.yaml
+  metrics:
+    Entities:
+      F1: 0.81981981981982
+      False Negatives: 14
+      False Positives: 26
+      Precision: 0.7777777777777778
+      Recall: 0.8666666666666667
+      True Positives: 91
+    Objects:
+      F1: 0.36538461538461536
+      False Negatives: 67
+      False Positives: 65
+      Precision: 0.36893203883495146
+      Recall: 0.3619047619047619
+      True Positives: 38
+    Properties:
+      F1: 0.38738738738738737
+      False Negatives: 62
+      False Positives: 74
+      Precision: 0.36752136752136755
+      Recall: 0.4095238095238095
+      True Positives: 43
+    Triples:
+      F1: 0.07729468599033816
+      False Negatives: 97
+      False Positives: 94
+      Precision: 0.0784313725490196
+      Recall: 0.0761904761904762
+      True Positives: 8

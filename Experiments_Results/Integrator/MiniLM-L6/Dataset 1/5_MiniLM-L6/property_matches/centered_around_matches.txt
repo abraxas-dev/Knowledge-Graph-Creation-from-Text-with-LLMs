@@ -1,0 +1,53 @@
+Top matches for predicate: "centered around"
+==================================================
+
+1. Match Details:
+   Property ID: P1776
+   Label: circle of
+   Similarity Score: 0.5301
+
+2. Match Details:
+   Property ID: P5051
+   Label: towards
+   Similarity Score: 0.4962
+
+3. Match Details:
+   Property ID: P2120
+   Label: radius
+   Similarity Score: 0.4633
+
+4. Match Details:
+   Property ID: P2049
+   Label: width
+   Similarity Score: 0.4483
+
+5. Match Details:
+   Property ID: P8621
+   Label: turning radius
+   Similarity Score: 0.4372
+
+6. Match Details:
+   Property ID: P5873
+   Label: place of devotion
+   Similarity Score: 0.4367
+
+7. Match Details:
+   Property ID: P7469
+   Label: orientation
+   Similarity Score: 0.4297
+
+8. Match Details:
+   Property ID: P135
+   Label: movement
+   Similarity Score: 0.4263
+
+9. Match Details:
+   Property ID: P1419
+   Label: shape
+   Similarity Score: 0.4224
+
+10. Match Details:
+   Property ID: P2211
+   Label: position angle
+   Similarity Score: 0.4217
+

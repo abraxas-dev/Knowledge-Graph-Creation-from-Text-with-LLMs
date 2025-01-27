@@ -1,0 +1,53 @@
+Top matches for predicate: "regarded as"
+==================================================
+
+1. Match Details:
+   Property ID: P1777
+   Label: manner of
+   Similarity Score: 0.4410
+
+2. Match Details:
+   Property ID: P1299
+   Label: depicted by
+   Similarity Score: 0.4274
+
+3. Match Details:
+   Property ID: P3701
+   Label: incarnation of
+   Similarity Score: 0.4254
+
+4. Match Details:
+   Property ID: P1557
+   Label: manifestation of
+   Similarity Score: 0.4233
+
+5. Match Details:
+   Property ID: P2210
+   Label: relative to
+   Similarity Score: 0.4121
+
+6. Match Details:
+   Property ID: P1038
+   Label: relative
+   Similarity Score: 0.4105
+
+7. Match Details:
+   Property ID: P8471
+   Label: pertainym of
+   Similarity Score: 0.4019
+
+8. Match Details:
+   Property ID: P5134
+   Label: evaluation of
+   Similarity Score: 0.3867
+
+9. Match Details:
+   Property ID: P1027
+   Label: conferred by
+   Similarity Score: 0.3844
+
+10. Match Details:
+   Property ID: P6719
+   Label: specified by sense
+   Similarity Score: 0.3837
+

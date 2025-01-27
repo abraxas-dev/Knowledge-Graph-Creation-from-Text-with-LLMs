@@ -1,0 +1,53 @@
+Top matches for predicate: "centered around"
+==================================================
+
+1. Match Details:
+   Property ID: P501
+   Label: enclave within
+   Similarity Score: 0.5547
+
+2. Match Details:
+   Property ID: P5140
+   Label: coordinates of geographic center
+   Similarity Score: 0.5539
+
+3. Match Details:
+   Property ID: P1387
+   Label: political alignment
+   Similarity Score: 0.5389
+
+4. Match Details:
+   Property ID: P7469
+   Label: orientation
+   Similarity Score: 0.5389
+
+5. Match Details:
+   Property ID: P1776
+   Label: circle of
+   Similarity Score: 0.5301
+
+6. Match Details:
+   Property ID: P625
+   Label: coordinate location
+   Similarity Score: 0.5024
+
+7. Match Details:
+   Property ID: P413
+   Label: position played on team / speciality
+   Similarity Score: 0.5024
+
+8. Match Details:
+   Property ID: P6022
+   Label: expression, gesture or body pose
+   Similarity Score: 0.5024
+
+9. Match Details:
+   Property ID: P1352
+   Label: ranking
+   Similarity Score: 0.5024
+
+10. Match Details:
+   Property ID: P47
+   Label: shares border with
+   Similarity Score: 0.5002
+

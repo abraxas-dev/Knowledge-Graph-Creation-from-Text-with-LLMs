@@ -1,0 +1,53 @@
+Top matches for predicate: "increased"
+==================================================
+
+1. Match Details:
+   Property ID: P5520
+   Label: toughness
+   Similarity Score: 0.8496
+
+2. Match Details:
+   Property ID: P3029
+   Label: UK National Archives ID
+   Similarity Score: 0.8306
+
+3. Match Details:
+   Property ID: P2847
+   Label: Google+ ID (archived)
+   Similarity Score: 0.8305
+
+4. Match Details:
+   Property ID: P6291
+   Label: advertises
+   Similarity Score: 0.8303
+
+5. Match Details:
+   Property ID: P1056
+   Label: product, material, or service produced or provided
+   Similarity Score: 0.8290
+
+6. Match Details:
+   Property ID: P5017
+   Label: last update
+   Similarity Score: 0.8275
+
+7. Match Details:
+   Property ID: P1107
+   Label: proportion
+   Similarity Score: 0.8266
+
+8. Match Details:
+   Property ID: P5448
+   Label: upper limit
+   Similarity Score: 0.8253
+
+9. Match Details:
+   Property ID: P527
+   Label: has part(s)
+   Similarity Score: 0.8227
+
+10. Match Details:
+   Property ID: P4330
+   Label: contains
+   Similarity Score: 0.8227
+

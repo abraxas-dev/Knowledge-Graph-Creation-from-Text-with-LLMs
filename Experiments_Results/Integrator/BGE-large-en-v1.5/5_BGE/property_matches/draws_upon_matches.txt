@@ -1,0 +1,53 @@
+Top matches for predicate: "draws upon"
+==================================================
+
+1. Match Details:
+   Property ID: P941
+   Label: inspired by
+   Similarity Score: 0.7029
+
+2. Match Details:
+   Property ID: P129
+   Label: physically interacts with
+   Similarity Score: 0.6989
+
+3. Match Details:
+   Property ID: P1877
+   Label: after a work by
+   Similarity Score: 0.6960
+
+4. Match Details:
+   Property ID: P3828
+   Label: wears
+   Similarity Score: 0.6918
+
+5. Match Details:
+   Property ID: P2077
+   Label: under pressure
+   Similarity Score: 0.6910
+
+6. Match Details:
+   Property ID: P3919
+   Label: contributed to creative work
+   Similarity Score: 0.6875
+
+7. Match Details:
+   Property ID: P3081
+   Label: damaged
+   Similarity Score: 0.6866
+
+8. Match Details:
+   Property ID: P2556
+   Label: bore
+   Similarity Score: 0.6857
+
+9. Match Details:
+   Property ID: P180
+   Label: depicts
+   Similarity Score: 0.6852
+
+10. Match Details:
+   Property ID: P10837
+   Label: penciller
+   Similarity Score: 0.6848
+

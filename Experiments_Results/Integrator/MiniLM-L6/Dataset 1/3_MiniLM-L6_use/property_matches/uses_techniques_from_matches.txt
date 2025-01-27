@@ -1,0 +1,53 @@
+Top matches for predicate: "uses techniques from"
+==================================================
+
+1. Match Details:
+   Property ID: P2079
+   Label: fabrication method
+   Similarity Score: 0.7821
+
+2. Match Details:
+   Property ID: P2283
+   Label: uses
+   Similarity Score: 0.6071
+
+3. Match Details:
+   Property ID: P4510
+   Label: describes a project that uses
+   Similarity Score: 0.6071
+
+4. Match Details:
+   Property ID: P6684
+   Label: first attested from
+   Similarity Score: 0.6039
+
+5. Match Details:
+   Property ID: P6530
+   Label: has role in modeling
+   Similarity Score: 0.5919
+
+6. Match Details:
+   Property ID: P459
+   Label: determination method or standard
+   Similarity Score: 0.5900
+
+7. Match Details:
+   Property ID: P4988
+   Label: test method
+   Similarity Score: 0.5900
+
+8. Match Details:
+   Property ID: P2559
+   Label: Wikidata usage instructions
+   Similarity Score: 0.5537
+
+9. Match Details:
+   Property ID: P7014
+   Label: terms of service URL
+   Similarity Score: 0.5260
+
+10. Match Details:
+   Property ID: P425
+   Label: field of this occupation
+   Similarity Score: 0.5139
+

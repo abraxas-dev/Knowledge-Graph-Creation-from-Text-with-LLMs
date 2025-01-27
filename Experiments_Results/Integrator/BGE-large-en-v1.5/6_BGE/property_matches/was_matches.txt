@@ -1,0 +1,53 @@
+Top matches for predicate: "was"
+==================================================
+
+1. Match Details:
+   Property ID: P10408
+   Label: created during
+   Similarity Score: 0.6889
+
+2. Match Details:
+   Property ID: P642
+   Label: of
+   Similarity Score: 0.6771
+
+3. Match Details:
+   Property ID: P946
+   Label: ISIN
+   Similarity Score: 0.6747
+
+4. Match Details:
+   Property ID: P3082
+   Label: destroyed
+   Similarity Score: 0.6708
+
+5. Match Details:
+   Property ID: P3081
+   Label: damaged
+   Similarity Score: 0.6662
+
+6. Match Details:
+   Property ID: P2936
+   Label: language used
+   Similarity Score: 0.6647
+
+7. Match Details:
+   Property ID: P813
+   Label: retrieved
+   Similarity Score: 0.6600
+
+8. Match Details:
+   Property ID: P527
+   Label: has part(s)
+   Similarity Score: 0.6547
+
+9. Match Details:
+   Property ID: P7376
+   Label: worn by
+   Similarity Score: 0.6532
+
+10. Match Details:
+   Property ID: P1535
+   Label: used by
+   Similarity Score: 0.6530
+

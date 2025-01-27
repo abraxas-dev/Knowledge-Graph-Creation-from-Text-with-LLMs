@@ -1,0 +1,53 @@
+Top matches for predicate: "joined"
+==================================================
+
+1. Match Details:
+   Property ID: P7122
+   Label: opinion joined by
+   Similarity Score: 0.5605
+
+2. Match Details:
+   Property ID: P3226
+   Label: HAS member ID
+   Similarity Score: 0.5567
+
+3. Match Details:
+   Property ID: P9078
+   Label: Discord invite ID
+   Similarity Score: 0.5440
+
+4. Match Details:
+   Property ID: P1923
+   Label: participating team
+   Similarity Score: 0.5395
+
+5. Match Details:
+   Property ID: P7888
+   Label: merged into
+   Similarity Score: 0.5351
+
+6. Match Details:
+   Property ID: P463
+   Label: member of
+   Similarity Score: 0.5341
+
+7. Match Details:
+   Property ID: P11624
+   Label: HAA member ID
+   Similarity Score: 0.5253
+
+8. Match Details:
+   Property ID: P2789
+   Label: connects with
+   Similarity Score: 0.5185
+
+9. Match Details:
+   Property ID: P2273
+   Label: HAdW member ID
+   Similarity Score: 0.5158
+
+10. Match Details:
+   Property ID: P7650
+   Label: WeChat ID
+   Similarity Score: 0.4982
+

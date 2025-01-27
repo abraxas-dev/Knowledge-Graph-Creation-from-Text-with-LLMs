@@ -1,0 +1,53 @@
+Top matches for predicate: "outperformed"
+==================================================
+
+1. Match Details:
+   Property ID: P3452
+   Label: inferred from
+   Similarity Score: 0.4806
+
+2. Match Details:
+   Property ID: P201
+   Label: outflows
+   Similarity Score: 0.4402
+
+3. Match Details:
+   Property ID: P567
+   Label: underlies
+   Similarity Score: 0.3972
+
+4. Match Details:
+   Property ID: P2077
+   Label: under pressure
+   Similarity Score: 0.3971
+
+5. Match Details:
+   Property ID: P1352
+   Label: ranking
+   Similarity Score: 0.3860
+
+6. Match Details:
+   Property ID: P2501
+   Label: results
+   Similarity Score: 0.3816
+
+7. Match Details:
+   Property ID: P7377
+   Label: infix
+   Similarity Score: 0.3754
+
+8. Match Details:
+   Property ID: P7563
+   Label: Home of the Underdogs game ID
+   Similarity Score: 0.3751
+
+9. Match Details:
+   Property ID: P5828
+   Label: seed
+   Similarity Score: 0.3673
+
+10. Match Details:
+   Property ID: P144
+   Label: based on
+   Similarity Score: 0.3652
+

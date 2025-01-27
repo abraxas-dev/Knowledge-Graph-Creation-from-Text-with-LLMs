@@ -1,0 +1,53 @@
+Top matches for predicate: "not perceived as"
+==================================================
+
+1. Match Details:
+   Property ID: P6477
+   Label: does not have characteristic
+   Similarity Score: 0.6665
+
+2. Match Details:
+   Property ID: P1889
+   Label: different from
+   Similarity Score: 0.6566
+
+3. Match Details:
+   Property ID: P9660
+   Label: not found in
+   Similarity Score: 0.6472
+
+4. Match Details:
+   Property ID: P9353
+   Label: does not have cause
+   Similarity Score: 0.6455
+
+5. Match Details:
+   Property ID: P461
+   Label: opposite of
+   Similarity Score: 0.6246
+
+6. Match Details:
+   Property ID: P1557
+   Label: manifestation of
+   Similarity Score: 0.6180
+
+7. Match Details:
+   Property ID: P12090
+   Label: non-self-identified name
+   Similarity Score: 0.6175
+
+8. Match Details:
+   Property ID: P3005
+   Label: valid in place
+   Similarity Score: 0.6122
+
+9. Match Details:
+   Property ID: P1354
+   Label: shown with features
+   Similarity Score: 0.6102
+
+10. Match Details:
+   Property ID: P7855
+   Label: attested as
+   Similarity Score: 0.6008
+

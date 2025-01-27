@@ -1,0 +1,53 @@
+Top matches for predicate: "established"
+==================================================
+
+1. Match Details:
+   Property ID: P5166
+   Label: established from medical condition
+   Similarity Score: 0.7891
+
+2. Match Details:
+   Property ID: P5194
+   Label: officialized by
+   Similarity Score: 0.7419
+
+3. Match Details:
+   Property ID: P2881
+   Label: promoted
+   Similarity Score: 0.7402
+
+4. Match Details:
+   Property ID: P112
+   Label: founded by
+   Similarity Score: 0.7321
+
+5. Match Details:
+   Property ID: P11633
+   Label: colocated with
+   Similarity Score: 0.7265
+
+6. Match Details:
+   Property ID: P542
+   Label: officially opened by
+   Similarity Score: 0.7161
+
+7. Match Details:
+   Property ID: P127
+   Label: owned by
+   Similarity Score: 0.7152
+
+8. Match Details:
+   Property ID: P108
+   Label: employer
+   Similarity Score: 0.7089
+
+9. Match Details:
+   Property ID: P3005
+   Label: valid in place
+   Similarity Score: 0.7088
+
+10. Match Details:
+   Property ID: P69
+   Label: educated at
+   Similarity Score: 0.7060
+

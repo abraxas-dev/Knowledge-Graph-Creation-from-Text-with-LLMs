@@ -1,0 +1,53 @@
+Top matches for predicate: "was"
+==================================================
+
+1. Match Details:
+   Property ID: P7855
+   Label: attested as
+   Similarity Score: 0.7580
+
+2. Match Details:
+   Property ID: P31
+   Label: instance of
+   Similarity Score: 0.7298
+
+3. Match Details:
+   Property ID: P5323
+   Label: attested in
+   Similarity Score: 0.7232
+
+4. Match Details:
+   Property ID: P1366
+   Label: replaced by
+   Similarity Score: 0.7226
+
+5. Match Details:
+   Property ID: P8866
+   Label: has operator
+   Similarity Score: 0.7216
+
+6. Match Details:
+   Property ID: P248
+   Label: stated in
+   Similarity Score: 0.7214
+
+7. Match Details:
+   Property ID: P11053
+   Label: grammatical person
+   Similarity Score: 0.7208
+
+8. Match Details:
+   Property ID: P1574
+   Label: exemplar of
+   Similarity Score: 0.7177
+
+9. Match Details:
+   Property ID: P11633
+   Label: colocated with
+   Similarity Score: 0.7170
+
+10. Match Details:
+   Property ID: P642
+   Label: of
+   Similarity Score: 0.7161
+

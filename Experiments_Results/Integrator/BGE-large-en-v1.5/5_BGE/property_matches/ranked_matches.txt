@@ -1,0 +1,53 @@
+Top matches for predicate: "ranked"
+==================================================
+
+1. Match Details:
+   Property ID: P1352
+   Label: ranking
+   Similarity Score: 0.8222
+
+2. Match Details:
+   Property ID: P1087
+   Label: Elo rating
+   Similarity Score: 0.7393
+
+3. Match Details:
+   Property ID: P1661
+   Label: Alexa rank
+   Similarity Score: 0.7349
+
+4. Match Details:
+   Property ID: P2881
+   Label: promoted
+   Similarity Score: 0.7305
+
+5. Match Details:
+   Property ID: P3730
+   Label: next higher rank
+   Similarity Score: 0.7255
+
+6. Match Details:
+   Property ID: P3729
+   Label: next lower rank
+   Similarity Score: 0.7222
+
+7. Match Details:
+   Property ID: P8004
+   Label: ordered by
+   Similarity Score: 0.7017
+
+8. Match Details:
+   Property ID: P105
+   Label: taxon rank
+   Similarity Score: 0.7013
+
+9. Match Details:
+   Property ID: P4271
+   Label: rating
+   Similarity Score: 0.7012
+
+10. Match Details:
+   Property ID: P39
+   Label: position held
+   Similarity Score: 0.7008
+

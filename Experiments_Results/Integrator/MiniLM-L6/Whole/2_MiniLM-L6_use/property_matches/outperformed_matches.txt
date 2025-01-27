@@ -1,0 +1,53 @@
+Top matches for predicate: "outperformed"
+==================================================
+
+1. Match Details:
+   Property ID: P403
+   Label: mouth of the watercourse
+   Similarity Score: 0.4819
+
+2. Match Details:
+   Property ID: P201
+   Label: outflows
+   Similarity Score: 0.4819
+
+3. Match Details:
+   Property ID: P3452
+   Label: inferred from
+   Similarity Score: 0.4806
+
+4. Match Details:
+   Property ID: P5460
+   Label: grants
+   Similarity Score: 0.4788
+
+5. Match Details:
+   Property ID: P1480
+   Label: sourcing circumstances
+   Similarity Score: 0.4746
+
+6. Match Details:
+   Property ID: P730
+   Label: service retirement
+   Similarity Score: 0.4656
+
+7. Match Details:
+   Property ID: P1011
+   Label: excluding
+   Similarity Score: 0.4600
+
+8. Match Details:
+   Property ID: P1056
+   Label: product, material, or service produced or provided
+   Similarity Score: 0.4492
+
+9. Match Details:
+   Property ID: P1542
+   Label: has effect
+   Similarity Score: 0.4492
+
+10. Match Details:
+   Property ID: P527
+   Label: has part(s)
+   Similarity Score: 0.4466
+

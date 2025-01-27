@@ -1,0 +1,53 @@
+Top matches for predicate: "played for"
+==================================================
+
+1. Match Details:
+   Property ID: P9140
+   Label: time played
+   Similarity Score: 0.7608
+
+2. Match Details:
+   Property ID: P7376
+   Label: worn by
+   Similarity Score: 0.7386
+
+3. Match Details:
+   Property ID: P54
+   Label: member of sports team
+   Similarity Score: 0.7320
+
+4. Match Details:
+   Property ID: P9883
+   Label: created for
+   Similarity Score: 0.7174
+
+5. Match Details:
+   Property ID: P1535
+   Label: used by
+   Similarity Score: 0.7158
+
+6. Match Details:
+   Property ID: P647
+   Label: drafted by
+   Similarity Score: 0.7150
+
+7. Match Details:
+   Property ID: P11081
+   Label: won sets
+   Similarity Score: 0.7031
+
+8. Match Details:
+   Property ID: P6758
+   Label: supported sports team
+   Similarity Score: 0.7023
+
+9. Match Details:
+   Property ID: P6872
+   Label: has written for
+   Similarity Score: 0.7019
+
+10. Match Details:
+   Property ID: P3828
+   Label: wears
+   Similarity Score: 0.7003
+

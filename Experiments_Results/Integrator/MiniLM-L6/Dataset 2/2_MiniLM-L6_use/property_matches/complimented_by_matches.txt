@@ -1,0 +1,53 @@
+Top matches for predicate: "complimented by"
+==================================================
+
+1. Match Details:
+   Property ID: P1706
+   Label: together with
+   Similarity Score: 0.5663
+
+2. Match Details:
+   Property ID: P4353
+   Label: nominated by
+   Similarity Score: 0.5529
+
+3. Match Details:
+   Property ID: P8001
+   Label: endorsed by
+   Similarity Score: 0.5474
+
+4. Match Details:
+   Property ID: P4032
+   Label: reviewed by
+   Similarity Score: 0.5334
+
+5. Match Details:
+   Property ID: P1027
+   Label: conferred by
+   Similarity Score: 0.5180
+
+6. Match Details:
+   Property ID: P175
+   Label: performer
+   Similarity Score: 0.5169
+
+7. Match Details:
+   Property ID: P1299
+   Label: depicted by
+   Similarity Score: 0.5124
+
+8. Match Details:
+   Property ID: P170
+   Label: creator
+   Similarity Score: 0.5072
+
+9. Match Details:
+   Property ID: P3680
+   Label: statement supported by
+   Similarity Score: 0.5063
+
+10. Match Details:
+   Property ID: P5769
+   Label: editor-in-chief
+   Similarity Score: 0.5014
+

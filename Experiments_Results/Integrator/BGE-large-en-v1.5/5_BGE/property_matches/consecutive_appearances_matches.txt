@@ -1,0 +1,53 @@
+Top matches for predicate: "consecutive appearances"
+==================================================
+
+1. Match Details:
+   Property ID: P4584
+   Label: first appearance
+   Similarity Score: 0.7319
+
+2. Match Details:
+   Property ID: P12878
+   Label: last appearance
+   Similarity Score: 0.7299
+
+3. Match Details:
+   Property ID: P12044
+   Label: chronological designation
+   Similarity Score: 0.7078
+
+4. Match Details:
+   Property ID: P11801
+   Label: visited by
+   Similarity Score: 0.6816
+
+5. Match Details:
+   Property ID: P9927
+   Label: number of tries marked
+   Similarity Score: 0.6815
+
+6. Match Details:
+   Property ID: P564
+   Label: singles record
+   Similarity Score: 0.6755
+
+7. Match Details:
+   Property ID: P12992
+   Label: objects of occurrence have role
+   Similarity Score: 0.6751
+
+8. Match Details:
+   Property ID: P12912
+   Label: object of occurrence
+   Similarity Score: 0.6710
+
+9. Match Details:
+   Property ID: P7124
+   Label: date of the first one
+   Similarity Score: 0.6695
+
+10. Match Details:
+   Property ID: P9220
+   Label: doubles hit
+   Similarity Score: 0.6666
+

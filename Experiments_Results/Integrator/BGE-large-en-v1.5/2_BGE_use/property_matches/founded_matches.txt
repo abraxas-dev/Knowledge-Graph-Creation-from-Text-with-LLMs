@@ -1,0 +1,53 @@
+Top matches for predicate: "founded"
+==================================================
+
+1. Match Details:
+   Property ID: P571
+   Label: inception
+   Similarity Score: 1.0000
+
+2. Match Details:
+   Property ID: P800
+   Label: notable work
+   Similarity Score: 1.0000
+
+3. Match Details:
+   Property ID: P112
+   Label: founded by
+   Similarity Score: 0.9054
+
+4. Match Details:
+   Property ID: P740
+   Label: location of formation
+   Similarity Score: 0.8836
+
+5. Match Details:
+   Property ID: P575
+   Label: time of discovery or invention
+   Similarity Score: 0.8246
+
+6. Match Details:
+   Property ID: P61
+   Label: discoverer or inventor
+   Similarity Score: 0.8246
+
+7. Match Details:
+   Property ID: P10786
+   Label: date of incorporation
+   Similarity Score: 0.8171
+
+8. Match Details:
+   Property ID: P729
+   Label: service entry
+   Similarity Score: 0.8148
+
+9. Match Details:
+   Property ID: P457
+   Label: foundational text
+   Similarity Score: 0.7985
+
+10. Match Details:
+   Property ID: P2079
+   Label: fabrication method
+   Similarity Score: 0.7781
+

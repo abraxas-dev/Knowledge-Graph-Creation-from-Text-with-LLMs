@@ -1,0 +1,53 @@
+Top matches for predicate: "holds record for"
+==================================================
+
+1. Match Details:
+   Property ID: P1000
+   Label: record held
+   Similarity Score: 0.9230
+
+2. Match Details:
+   Property ID: P9994
+   Label: record number
+   Similarity Score: 0.7377
+
+3. Match Details:
+   Property ID: P564
+   Label: singles record
+   Similarity Score: 0.7191
+
+4. Match Details:
+   Property ID: P555
+   Label: doubles record
+   Similarity Score: 0.7168
+
+5. Match Details:
+   Property ID: P4214
+   Label: longest observed lifespan
+   Similarity Score: 0.7003
+
+6. Match Details:
+   Property ID: P6591
+   Label: maximum temperature record
+   Similarity Score: 0.6833
+
+7. Match Details:
+   Property ID: P2415
+   Label: personal best
+   Similarity Score: 0.6833
+
+8. Match Details:
+   Property ID: P11851
+   Label: record of
+   Similarity Score: 0.6799
+
+9. Match Details:
+   Property ID: P5239
+   Label: Artists in Canada record number
+   Similarity Score: 0.6689
+
+10. Match Details:
+   Property ID: P2787
+   Label: longest span
+   Similarity Score: 0.6526
+

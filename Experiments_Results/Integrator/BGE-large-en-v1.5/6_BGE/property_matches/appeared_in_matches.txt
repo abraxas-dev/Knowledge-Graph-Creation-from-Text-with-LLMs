@@ -1,0 +1,53 @@
+Top matches for predicate: "appeared in"
+==================================================
+
+1. Match Details:
+   Property ID: P1433
+   Label: published in
+   Similarity Score: 0.7755
+
+2. Match Details:
+   Property ID: P10695
+   Label: introduced in
+   Similarity Score: 0.7731
+
+3. Match Details:
+   Property ID: P6531
+   Label: observed in
+   Similarity Score: 0.7707
+
+4. Match Details:
+   Property ID: P4675
+   Label: appears in the form of
+   Similarity Score: 0.7536
+
+5. Match Details:
+   Property ID: P5323
+   Label: attested in
+   Similarity Score: 0.7491
+
+6. Match Details:
+   Property ID: P4584
+   Label: first appearance
+   Similarity Score: 0.7443
+
+7. Match Details:
+   Property ID: P5072
+   Label: presented in
+   Similarity Score: 0.7383
+
+8. Match Details:
+   Property ID: P5572
+   Label: expressed in
+   Similarity Score: 0.7378
+
+9. Match Details:
+   Property ID: P2715
+   Label: elected in
+   Similarity Score: 0.7342
+
+10. Match Details:
+   Property ID: P248
+   Label: stated in
+   Similarity Score: 0.7168
+

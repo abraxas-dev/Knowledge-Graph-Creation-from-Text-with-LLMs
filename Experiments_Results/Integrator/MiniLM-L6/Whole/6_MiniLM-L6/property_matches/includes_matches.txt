@@ -1,0 +1,53 @@
+Top matches for predicate: "includes"
+==================================================
+
+1. Match Details:
+   Property ID: P1012
+   Label: including
+   Similarity Score: 0.7239
+
+2. Match Details:
+   Property ID: P1011
+   Label: excluding
+   Similarity Score: 0.6522
+
+3. Match Details:
+   Property ID: P4330
+   Label: contains
+   Similarity Score: 0.5662
+
+4. Match Details:
+   Property ID: P361
+   Label: part of
+   Similarity Score: 0.5406
+
+5. Match Details:
+   Property ID: P642
+   Label: of
+   Similarity Score: 0.5102
+
+6. Match Details:
+   Property ID: P518
+   Label: applies to part
+   Similarity Score: 0.4708
+
+7. Match Details:
+   Property ID: P1706
+   Label: together with
+   Similarity Score: 0.4645
+
+8. Match Details:
+   Property ID: P2136
+   Label: total imports
+   Similarity Score: 0.4496
+
+9. Match Details:
+   Property ID: P1092
+   Label: total produced
+   Similarity Score: 0.4470
+
+10. Match Details:
+   Property ID: P5009
+   Label: complies with
+   Similarity Score: 0.4418
+

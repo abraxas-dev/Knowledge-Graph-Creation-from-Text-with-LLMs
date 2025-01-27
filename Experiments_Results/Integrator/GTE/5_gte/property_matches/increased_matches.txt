@@ -1,0 +1,53 @@
+Top matches for predicate: "increased"
+==================================================
+
+1. Match Details:
+   Property ID: P4330
+   Label: contains
+   Similarity Score: 0.8227
+
+2. Match Details:
+   Property ID: P433
+   Label: issue
+   Similarity Score: 0.8199
+
+3. Match Details:
+   Property ID: P1542
+   Label: has effect
+   Similarity Score: 0.8175
+
+4. Match Details:
+   Property ID: P4271
+   Label: rating
+   Similarity Score: 0.8141
+
+5. Match Details:
+   Property ID: P642
+   Label: of
+   Similarity Score: 0.8061
+
+6. Match Details:
+   Property ID: P5135
+   Label: greater than
+   Similarity Score: 0.8014
+
+7. Match Details:
+   Property ID: P366
+   Label: has use
+   Similarity Score: 0.7920
+
+8. Match Details:
+   Property ID: P37
+   Label: official language
+   Similarity Score: 0.7893
+
+9. Match Details:
+   Property ID: P2881
+   Label: promoted
+   Similarity Score: 0.7891
+
+10. Match Details:
+   Property ID: P790
+   Label: approved by
+   Similarity Score: 0.7874
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "experienced loss of"
+==================================================
+
+1. Match Details:
+   Property ID: P1356
+   Label: number of losses
+   Similarity Score: 0.7871
+
+2. Match Details:
+   Property ID: P12912
+   Label: object of occurrence
+   Similarity Score: 0.7672
+
+3. Match Details:
+   Property ID: P7904
+   Label: gave up territory to
+   Similarity Score: 0.7572
+
+4. Match Details:
+   Property ID: P746
+   Label: date of disappearance
+   Similarity Score: 0.7174
+
+5. Match Details:
+   Property ID: P3093
+   Label: recovered by
+   Similarity Score: 0.7089
+
+6. Match Details:
+   Property ID: P3082
+   Label: destroyed
+   Similarity Score: 0.7078
+
+7. Match Details:
+   Property ID: P1446
+   Label: number of missing
+   Similarity Score: 0.7069
+
+8. Match Details:
+   Property ID: P3113
+   Label: does not have part
+   Similarity Score: 0.7069
+
+9. Match Details:
+   Property ID: P585
+   Label: point in time
+   Similarity Score: 0.7062
+
+10. Match Details:
+   Property ID: P2567
+   Label: amended by
+   Similarity Score: 0.7004
+

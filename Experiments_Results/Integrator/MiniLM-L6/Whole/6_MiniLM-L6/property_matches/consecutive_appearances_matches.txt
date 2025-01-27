@@ -1,0 +1,53 @@
+Top matches for predicate: "consecutive appearances"
+==================================================
+
+1. Match Details:
+   Property ID: P1129
+   Label: national team appearances
+   Similarity Score: 0.5944
+
+2. Match Details:
+   Property ID: P555
+   Label: doubles record
+   Similarity Score: 0.4804
+
+3. Match Details:
+   Property ID: P2318
+   Label: debut participant
+   Similarity Score: 0.4765
+
+4. Match Details:
+   Property ID: P12878
+   Label: last appearance
+   Similarity Score: 0.4750
+
+5. Match Details:
+   Property ID: P4584
+   Label: first appearance
+   Similarity Score: 0.4528
+
+6. Match Details:
+   Property ID: P1350
+   Label: number of matches played/races/starts
+   Similarity Score: 0.4392
+
+7. Match Details:
+   Property ID: P1000
+   Label: record held
+   Similarity Score: 0.4380
+
+8. Match Details:
+   Property ID: P1110
+   Label: attendance
+   Similarity Score: 0.4370
+
+9. Match Details:
+   Property ID: P564
+   Label: singles record
+   Similarity Score: 0.4242
+
+10. Match Details:
+   Property ID: P10823
+   Label: fastest laps
+   Similarity Score: 0.4125
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "plays for"
+==================================================
+
+1. Match Details:
+   Property ID: P1358
+   Label: points for
+   Similarity Score: 0.5685
+
+2. Match Details:
+   Property ID: P1686
+   Label: for work
+   Similarity Score: 0.5265
+
+3. Match Details:
+   Property ID: P9140
+   Label: time played
+   Similarity Score: 0.5264
+
+4. Match Details:
+   Property ID: P741
+   Label: playing hand
+   Similarity Score: 0.4977
+
+5. Match Details:
+   Property ID: P641
+   Label: sport
+   Similarity Score: 0.4827
+
+6. Match Details:
+   Property ID: P9883
+   Label: created for
+   Similarity Score: 0.4659
+
+7. Match Details:
+   Property ID: P2283
+   Label: uses
+   Similarity Score: 0.4473
+
+8. Match Details:
+   Property ID: P9143
+   Label: Play:Right ID
+   Similarity Score: 0.4403
+
+9. Match Details:
+   Property ID: P3712
+   Label: has goal
+   Similarity Score: 0.4382
+
+10. Match Details:
+   Property ID: P2522
+   Label: victory
+   Similarity Score: 0.4370
+

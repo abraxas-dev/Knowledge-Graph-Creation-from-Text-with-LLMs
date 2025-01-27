@@ -1,0 +1,36 @@
+configuration:
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  entity_query_method: api
+  properties_file: src/data/Properties/wikidata-properties.json
+  property_query_method: api
+  save_matches: true
+  use_aliases: false
+metrics:
+  Entities:
+    F1: 0.9174311926605505
+    False Negatives: 1
+    False Positives: 8
+    Precision: 0.8620689655172413
+    Recall: 0.9803921568627451
+    True Positives: 50
+  Objects:
+    F1: 0.27777777777777773
+    False Negatives: 36
+    False Positives: 42
+    Precision: 0.2631578947368421
+    Recall: 0.29411764705882354
+    True Positives: 15
+  Properties:
+    F1: 0.169811320754717
+    False Negatives: 42
+    False Positives: 46
+    Precision: 0.16363636363636364
+    Recall: 0.17647058823529413
+    True Positives: 9
+  Triples:
+    F1: 0.13333333333333333
+    False Negatives: 44
+    False Positives: 47
+    Precision: 0.12962962962962962
+    Recall: 0.13725490196078433
+    True Positives: 7

@@ -1,0 +1,53 @@
+Top matches for predicate: "played for"
+==================================================
+
+1. Match Details:
+   Property ID: P54
+   Label: member of sports team
+   Similarity Score: 1.0000
+
+2. Match Details:
+   Property ID: P870
+   Label: instrumentation
+   Similarity Score: 0.8214
+
+3. Match Details:
+   Property ID: P108
+   Label: employer
+   Similarity Score: 0.8086
+
+4. Match Details:
+   Property ID: P641
+   Label: sport
+   Similarity Score: 0.7999
+
+5. Match Details:
+   Property ID: P1303
+   Label: instrument
+   Similarity Score: 0.7847
+
+6. Match Details:
+   Property ID: P1299
+   Label: depicted by
+   Similarity Score: 0.7740
+
+7. Match Details:
+   Property ID: P1535
+   Label: used by
+   Similarity Score: 0.7740
+
+8. Match Details:
+   Property ID: P175
+   Label: performer
+   Similarity Score: 0.7740
+
+9. Match Details:
+   Property ID: P710
+   Label: participant
+   Similarity Score: 0.7623
+
+10. Match Details:
+   Property ID: P3828
+   Label: wears
+   Similarity Score: 0.7616
+

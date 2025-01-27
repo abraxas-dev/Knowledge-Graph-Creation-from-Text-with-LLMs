@@ -1,0 +1,53 @@
+Top matches for predicate: "was"
+==================================================
+
+1. Match Details:
+   Property ID: P155
+   Label: follows
+   Similarity Score: 0.7985
+
+2. Match Details:
+   Property ID: P31
+   Label: instance of
+   Similarity Score: 0.7799
+
+3. Match Details:
+   Property ID: P12995
+   Label: agent of action
+   Similarity Score: 0.7662
+
+4. Match Details:
+   Property ID: P12912
+   Label: object of occurrence
+   Similarity Score: 0.7659
+
+5. Match Details:
+   Property ID: P706
+   Label: located in/on physical feature
+   Similarity Score: 0.7658
+
+6. Match Details:
+   Property ID: P585
+   Label: point in time
+   Similarity Score: 0.7658
+
+7. Match Details:
+   Property ID: P276
+   Label: location
+   Similarity Score: 0.7655
+
+8. Match Details:
+   Property ID: P1012
+   Label: including
+   Similarity Score: 0.7584
+
+9. Match Details:
+   Property ID: P1706
+   Label: together with
+   Similarity Score: 0.7584
+
+10. Match Details:
+   Property ID: P7855
+   Label: attested as
+   Similarity Score: 0.7580
+

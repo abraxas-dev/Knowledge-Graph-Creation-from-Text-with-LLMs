@@ -1,0 +1,53 @@
+Top matches for predicate: "grew up in"
+==================================================
+
+1. Match Details:
+   Property ID: P551
+   Label: residence
+   Similarity Score: 0.8168
+
+2. Match Details:
+   Property ID: P19
+   Label: place of birth
+   Similarity Score: 0.7673
+
+3. Match Details:
+   Property ID: P263
+   Label: official residence
+   Similarity Score: 0.7607
+
+4. Match Details:
+   Property ID: P2579
+   Label: studied in
+   Similarity Score: 0.7463
+
+5. Match Details:
+   Property ID: P69
+   Label: educated at
+   Similarity Score: 0.7417
+
+6. Match Details:
+   Property ID: P276
+   Label: location
+   Similarity Score: 0.7301
+
+7. Match Details:
+   Property ID: P159
+   Label: headquarters location
+   Similarity Score: 0.7301
+
+8. Match Details:
+   Property ID: P706
+   Label: located in/on physical feature
+   Similarity Score: 0.6885
+
+9. Match Details:
+   Property ID: P840
+   Label: narrative location
+   Similarity Score: 0.6885
+
+10. Match Details:
+   Property ID: P8411
+   Label: set in environment
+   Similarity Score: 0.6885
+

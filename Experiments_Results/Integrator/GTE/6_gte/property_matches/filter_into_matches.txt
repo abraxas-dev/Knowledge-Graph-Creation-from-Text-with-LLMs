@@ -1,0 +1,53 @@
+Top matches for predicate: "filter into"
+==================================================
+
+1. Match Details:
+   Property ID: P9970
+   Label: predicate for
+   Similarity Score: 0.7133
+
+2. Match Details:
+   Property ID: P8307
+   Label: has sorting
+   Similarity Score: 0.6895
+
+3. Match Details:
+   Property ID: P2789
+   Label: connects with
+   Similarity Score: 0.6867
+
+4. Match Details:
+   Property ID: P2354
+   Label: has list
+   Similarity Score: 0.6825
+
+5. Match Details:
+   Property ID: P2888
+   Label: exact match
+   Similarity Score: 0.6802
+
+6. Match Details:
+   Property ID: P9926
+   Label: populates category
+   Similarity Score: 0.6760
+
+7. Match Details:
+   Property ID: P366
+   Label: has use
+   Similarity Score: 0.6751
+
+8. Match Details:
+   Property ID: P688
+   Label: encodes
+   Similarity Score: 0.6734
+
+9. Match Details:
+   Property ID: P1012
+   Label: including
+   Similarity Score: 0.6684
+
+10. Match Details:
+   Property ID: P7009
+   Label: extracted from
+   Similarity Score: 0.6679
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "opted out of"
+==================================================
+
+1. Match Details:
+   Property ID: P805
+   Label: statement is subject of
+   Similarity Score: 0.5757
+
+2. Match Details:
+   Property ID: P1344
+   Label: participant in
+   Similarity Score: 0.5209
+
+3. Match Details:
+   Property ID: P4837
+   Label: has command line option
+   Similarity Score: 0.5180
+
+4. Match Details:
+   Property ID: P576
+   Label: dissolved, abolished or demolished date
+   Similarity Score: 0.5010
+
+5. Match Details:
+   Property ID: P1310
+   Label: statement disputed by
+   Similarity Score: 0.4868
+
+6. Match Details:
+   Property ID: P12912
+   Label: object of occurrence
+   Similarity Score: 0.4809
+
+7. Match Details:
+   Property ID: P1411
+   Label: nominated for
+   Similarity Score: 0.4793
+
+8. Match Details:
+   Property ID: P1534
+   Label: end cause
+   Similarity Score: 0.4624
+
+9. Match Details:
+   Property ID: P527
+   Label: has part(s)
+   Similarity Score: 0.4491
+
+10. Match Details:
+   Property ID: P746
+   Label: date of disappearance
+   Similarity Score: 0.4476
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "compared to"
+==================================================
+
+1. Match Details:
+   Property ID: P2210
+   Label: relative to
+   Similarity Score: 0.7597
+
+2. Match Details:
+   Property ID: P5136
+   Label: less than
+   Similarity Score: 0.7337
+
+3. Match Details:
+   Property ID: P460
+   Label: said to be the same as
+   Similarity Score: 0.7317
+
+4. Match Details:
+   Property ID: P5135
+   Label: greater than
+   Similarity Score: 0.7226
+
+5. Match Details:
+   Property ID: P1709
+   Label: equivalent class
+   Similarity Score: 0.6989
+
+6. Match Details:
+   Property ID: P1628
+   Label: equivalent property
+   Similarity Score: 0.6987
+
+7. Match Details:
+   Property ID: P8004
+   Label: ordered by
+   Similarity Score: 0.6940
+
+8. Match Details:
+   Property ID: P10019
+   Label: equivalent in higher rank taxon
+   Similarity Score: 0.6921
+
+9. Match Details:
+   Property ID: P1889
+   Label: different from
+   Similarity Score: 0.6914
+
+10. Match Details:
+   Property ID: P1352
+   Label: ranking
+   Similarity Score: 0.6900
+

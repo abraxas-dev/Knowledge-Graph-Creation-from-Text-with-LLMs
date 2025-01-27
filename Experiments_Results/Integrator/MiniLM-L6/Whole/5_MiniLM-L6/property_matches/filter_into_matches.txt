@@ -1,0 +1,53 @@
+Top matches for predicate: "filter into"
+==================================================
+
+1. Match Details:
+   Property ID: P4330
+   Label: contains
+   Similarity Score: 0.4636
+
+2. Match Details:
+   Property ID: P1227
+   Label: astronomical filter
+   Similarity Score: 0.4494
+
+3. Match Details:
+   Property ID: P807
+   Label: separated from
+   Similarity Score: 0.4127
+
+4. Match Details:
+   Property ID: P4224
+   Label: category contains
+   Similarity Score: 0.3892
+
+5. Match Details:
+   Property ID: P7009
+   Label: extracted from
+   Similarity Score: 0.3871
+
+6. Match Details:
+   Property ID: P813
+   Label: retrieved
+   Similarity Score: 0.3864
+
+7. Match Details:
+   Property ID: P1011
+   Label: excluding
+   Similarity Score: 0.3683
+
+8. Match Details:
+   Property ID: P1366
+   Label: replaced by
+   Similarity Score: 0.3570
+
+9. Match Details:
+   Property ID: P5572
+   Label: expressed in
+   Similarity Score: 0.3423
+
+10. Match Details:
+   Property ID: P1365
+   Label: replaces
+   Similarity Score: 0.3419
+

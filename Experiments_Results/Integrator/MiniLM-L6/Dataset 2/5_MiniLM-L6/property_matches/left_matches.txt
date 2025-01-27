@@ -1,0 +1,53 @@
+Top matches for predicate: "left"
+==================================================
+
+1. Match Details:
+   Property ID: P1622
+   Label: driving side
+   Similarity Score: 0.4983
+
+2. Match Details:
+   Property ID: P560
+   Label: direction
+   Similarity Score: 0.4908
+
+3. Match Details:
+   Property ID: P5051
+   Label: towards
+   Similarity Score: 0.4707
+
+4. Match Details:
+   Property ID: P552
+   Label: handedness
+   Similarity Score: 0.4312
+
+5. Match Details:
+   Property ID: P1366
+   Label: replaced by
+   Similarity Score: 0.4302
+
+6. Match Details:
+   Property ID: P7787
+   Label: heading
+   Similarity Score: 0.4293
+
+7. Match Details:
+   Property ID: P6939
+   Label: moved by
+   Similarity Score: 0.4133
+
+8. Match Details:
+   Property ID: P276
+   Label: location
+   Similarity Score: 0.3931
+
+9. Match Details:
+   Property ID: P6257
+   Label: right ascension
+   Similarity Score: 0.3921
+
+10. Match Details:
+   Property ID: P2505
+   Label: carries
+   Similarity Score: 0.3898
+

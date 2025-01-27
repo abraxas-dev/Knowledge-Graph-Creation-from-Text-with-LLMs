@@ -1,0 +1,53 @@
+Top matches for predicate: "increased"
+==================================================
+
+1. Match Details:
+   Property ID: P1911
+   Label: increased expression in
+   Similarity Score: 0.8020
+
+2. Match Details:
+   Property ID: P8646
+   Label: expansion of
+   Similarity Score: 0.7849
+
+3. Match Details:
+   Property ID: P144
+   Label: based on
+   Similarity Score: 0.7849
+
+4. Match Details:
+   Property ID: P5135
+   Label: greater than
+   Similarity Score: 0.7383
+
+5. Match Details:
+   Property ID: P5017
+   Label: last update
+   Similarity Score: 0.7373
+
+6. Match Details:
+   Property ID: P7719
+   Label: generalization of
+   Similarity Score: 0.7186
+
+7. Match Details:
+   Property ID: P9234
+   Label: supplement to
+   Similarity Score: 0.7186
+
+8. Match Details:
+   Property ID: P7008
+   Label: unabbreviated text
+   Similarity Score: 0.7173
+
+9. Match Details:
+   Property ID: P571
+   Label: inception
+   Similarity Score: 0.7167
+
+10. Match Details:
+   Property ID: P580
+   Label: start time
+   Similarity Score: 0.7167
+

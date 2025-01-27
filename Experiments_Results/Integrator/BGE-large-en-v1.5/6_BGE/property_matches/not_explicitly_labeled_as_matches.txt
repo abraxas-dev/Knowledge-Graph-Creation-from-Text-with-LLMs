@@ -1,0 +1,53 @@
+Top matches for predicate: "not explicitly labeled as"
+==================================================
+
+1. Match Details:
+   Property ID: P12090
+   Label: non-self-identified name
+   Similarity Score: 0.7660
+
+2. Match Details:
+   Property ID: P1810
+   Label: subject named as
+   Similarity Score: 0.7082
+
+3. Match Details:
+   Property ID: P12089
+   Label: self-identified name
+   Similarity Score: 0.7060
+
+4. Match Details:
+   Property ID: P490
+   Label: provisional designation
+   Similarity Score: 0.7057
+
+5. Match Details:
+   Property ID: P4970
+   Label: alternative name
+   Similarity Score: 0.7027
+
+6. Match Details:
+   Property ID: P2521
+   Label: female form of label
+   Similarity Score: 0.6947
+
+7. Match Details:
+   Property ID: P3713
+   Label: category for value not in Wikidata
+   Similarity Score: 0.6863
+
+8. Match Details:
+   Property ID: P3321
+   Label: male form of label
+   Similarity Score: 0.6862
+
+9. Match Details:
+   Property ID: P1932
+   Label: object named as
+   Similarity Score: 0.6852
+
+10. Match Details:
+   Property ID: P9660
+   Label: not found in
+   Similarity Score: 0.6762
+

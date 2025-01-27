@@ -1,0 +1,53 @@
+Top matches for predicate: "left"
+==================================================
+
+1. Match Details:
+   Property ID: P582
+   Label: end time
+   Similarity Score: 0.5875
+
+2. Match Details:
+   Property ID: P1622
+   Label: driving side
+   Similarity Score: 0.4983
+
+3. Match Details:
+   Property ID: P7469
+   Label: orientation
+   Similarity Score: 0.4908
+
+4. Match Details:
+   Property ID: P560
+   Label: direction
+   Similarity Score: 0.4908
+
+5. Match Details:
+   Property ID: P1365
+   Label: replaces
+   Similarity Score: 0.4841
+
+6. Match Details:
+   Property ID: P5051
+   Label: towards
+   Similarity Score: 0.4707
+
+7. Match Details:
+   Property ID: P10006
+   Label: AllSides ID
+   Similarity Score: 0.4595
+
+8. Match Details:
+   Property ID: P730
+   Label: service retirement
+   Similarity Score: 0.4569
+
+9. Match Details:
+   Property ID: P1317
+   Label: floruit
+   Similarity Score: 0.4529
+
+10. Match Details:
+   Property ID: P6426
+   Label: RightsStatements.org statement according to source website
+   Similarity Score: 0.4524
+

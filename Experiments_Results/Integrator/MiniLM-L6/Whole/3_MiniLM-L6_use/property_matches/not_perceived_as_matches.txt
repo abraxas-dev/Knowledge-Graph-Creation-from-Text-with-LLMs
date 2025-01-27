@@ -1,0 +1,53 @@
+Top matches for predicate: "not perceived as"
+==================================================
+
+1. Match Details:
+   Property ID: P518
+   Label: applies to part
+   Similarity Score: 0.6116
+
+2. Match Details:
+   Property ID: P7380
+   Label: identified in image by
+   Similarity Score: 0.5460
+
+3. Match Details:
+   Property ID: P4675
+   Label: appears in the form of
+   Similarity Score: 0.5404
+
+4. Match Details:
+   Property ID: P453
+   Label: character role
+   Similarity Score: 0.5063
+
+5. Match Details:
+   Property ID: P366
+   Label: has use
+   Similarity Score: 0.5063
+
+6. Match Details:
+   Property ID: P5276
+   Label: Slavistic Phonetic Alphabet transcription
+   Similarity Score: 0.5063
+
+7. Match Details:
+   Property ID: P3831
+   Label: object of statement has role
+   Similarity Score: 0.5063
+
+8. Match Details:
+   Property ID: P1932
+   Label: object named as
+   Similarity Score: 0.5063
+
+9. Match Details:
+   Property ID: P1889
+   Label: different from
+   Similarity Score: 0.4951
+
+10. Match Details:
+   Property ID: P461
+   Label: opposite of
+   Similarity Score: 0.4895
+

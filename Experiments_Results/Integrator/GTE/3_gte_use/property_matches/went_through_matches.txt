@@ -1,0 +1,53 @@
+Top matches for predicate: "went through"
+==================================================
+
+1. Match Details:
+   Property ID: P177
+   Label: crosses
+   Similarity Score: 0.8749
+
+2. Match Details:
+   Property ID: P571
+   Label: inception
+   Similarity Score: 0.8531
+
+3. Match Details:
+   Property ID: P6193
+   Label: ratified by
+   Similarity Score: 0.8344
+
+4. Match Details:
+   Property ID: P790
+   Label: approved by
+   Similarity Score: 0.8267
+
+5. Match Details:
+   Property ID: P582
+   Label: end time
+   Similarity Score: 0.8102
+
+6. Match Details:
+   Property ID: P576
+   Label: dissolved, abolished or demolished date
+   Similarity Score: 0.8065
+
+7. Match Details:
+   Property ID: P11738
+   Label: handled, mitigated, or managed by
+   Similarity Score: 0.8031
+
+8. Match Details:
+   Property ID: P1542
+   Label: has effect
+   Similarity Score: 0.8005
+
+9. Match Details:
+   Property ID: P3999
+   Label: date of official closure
+   Similarity Score: 0.7988
+
+10. Match Details:
+   Property ID: P2501
+   Label: results
+   Similarity Score: 0.7978
+

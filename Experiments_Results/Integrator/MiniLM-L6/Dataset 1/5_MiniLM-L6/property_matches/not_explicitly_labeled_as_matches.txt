@@ -1,0 +1,53 @@
+Top matches for predicate: "not explicitly labeled as"
+==================================================
+
+1. Match Details:
+   Property ID: P5997
+   Label: object stated in reference as
+   Similarity Score: 0.4479
+
+2. Match Details:
+   Property ID: P2521
+   Label: female form of label
+   Similarity Score: 0.4460
+
+3. Match Details:
+   Property ID: P4675
+   Label: appears in the form of
+   Similarity Score: 0.4304
+
+4. Match Details:
+   Property ID: P3321
+   Label: male form of label
+   Similarity Score: 0.4248
+
+5. Match Details:
+   Property ID: P1011
+   Label: excluding
+   Similarity Score: 0.4214
+
+6. Match Details:
+   Property ID: P6719
+   Label: specified by sense
+   Similarity Score: 0.4192
+
+7. Match Details:
+   Property ID: P1705
+   Label: native label
+   Similarity Score: 0.4191
+
+8. Match Details:
+   Property ID: P4952
+   Label: safety classification and labelling
+   Similarity Score: 0.4127
+
+9. Match Details:
+   Property ID: P6224
+   Label: level of description
+   Similarity Score: 0.4086
+
+10. Match Details:
+   Property ID: P2384
+   Label: statement describes
+   Similarity Score: 0.4020
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "plays in"
+==================================================
+
+1. Match Details:
+   Property ID: P1344
+   Label: participant in
+   Similarity Score: 0.5783
+
+2. Match Details:
+   Property ID: P2715
+   Label: elected in
+   Similarity Score: 0.5648
+
+3. Match Details:
+   Property ID: P741
+   Label: playing hand
+   Similarity Score: 0.5522
+
+4. Match Details:
+   Property ID: P2553
+   Label: in work
+   Similarity Score: 0.5448
+
+5. Match Details:
+   Property ID: P9143
+   Label: Play:Right ID
+   Similarity Score: 0.5402
+
+6. Match Details:
+   Property ID: P1923
+   Label: participating team
+   Similarity Score: 0.5329
+
+7. Match Details:
+   Property ID: P9140
+   Label: time played
+   Similarity Score: 0.5241
+
+8. Match Details:
+   Property ID: P641
+   Label: sport
+   Similarity Score: 0.5120
+
+9. Match Details:
+   Property ID: P277
+   Label: programmed in
+   Similarity Score: 0.4898
+
+10. Match Details:
+   Property ID: P5572
+   Label: expressed in
+   Similarity Score: 0.4791
+

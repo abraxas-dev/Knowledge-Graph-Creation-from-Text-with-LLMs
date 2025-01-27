@@ -1,0 +1,53 @@
+Top matches for predicate: "uses techniques from"
+==================================================
+
+1. Match Details:
+   Property ID: P2079
+   Label: fabrication method
+   Similarity Score: 0.8695
+
+2. Match Details:
+   Property ID: P937
+   Label: work location
+   Similarity Score: 0.7780
+
+3. Match Details:
+   Property ID: P2283
+   Label: uses
+   Similarity Score: 0.7780
+
+4. Match Details:
+   Property ID: P459
+   Label: determination method or standard
+   Similarity Score: 0.7154
+
+5. Match Details:
+   Property ID: P4988
+   Label: test method
+   Similarity Score: 0.7154
+
+6. Match Details:
+   Property ID: P12876
+   Label: writing technique
+   Similarity Score: 0.7145
+
+7. Match Details:
+   Property ID: P923
+   Label: medical examination
+   Similarity Score: 0.7104
+
+8. Match Details:
+   Property ID: P10672
+   Label: raw material processed
+   Similarity Score: 0.7068
+
+9. Match Details:
+   Property ID: P186
+   Label: made from material
+   Similarity Score: 0.7068
+
+10. Match Details:
+   Property ID: P3095
+   Label: practiced by
+   Similarity Score: 0.7036
+

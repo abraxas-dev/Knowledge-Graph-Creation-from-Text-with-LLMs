@@ -1,0 +1,53 @@
+Top matches for predicate: "regarded as"
+==================================================
+
+1. Match Details:
+   Property ID: P453
+   Label: character role
+   Similarity Score: 0.7982
+
+2. Match Details:
+   Property ID: P366
+   Label: has use
+   Similarity Score: 0.7982
+
+3. Match Details:
+   Property ID: P5276
+   Label: Slavistic Phonetic Alphabet transcription
+   Similarity Score: 0.7982
+
+4. Match Details:
+   Property ID: P3831
+   Label: object of statement has role
+   Similarity Score: 0.7982
+
+5. Match Details:
+   Property ID: P1932
+   Label: object named as
+   Similarity Score: 0.7982
+
+6. Match Details:
+   Property ID: P511
+   Label: honorific prefix
+   Similarity Score: 0.7936
+
+7. Match Details:
+   Property ID: P2561
+   Label: name
+   Similarity Score: 0.7936
+
+8. Match Details:
+   Property ID: P4970
+   Label: alternative name
+   Similarity Score: 0.7936
+
+9. Match Details:
+   Property ID: P5997
+   Label: object stated in reference as
+   Similarity Score: 0.7862
+
+10. Match Details:
+   Property ID: P1810
+   Label: subject named as
+   Similarity Score: 0.7862
+

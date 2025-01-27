@@ -1,0 +1,385 @@
+triples:
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: web search engines
+  expected_id:
+    subject: Q11660
+    predicate: P1012
+    object: Q56880266
+- triple:
+    subject: Google Search
+    predicate: instance of
+    object: web search engines
+  expected_id:
+    subject: Q9366
+    predicate: P31
+    object: Q56880266
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: recommendation systems
+  expected_id:
+    subject: Q11660
+    predicate: P1012
+    object: Q109330091
+- triple:
+    subject: YouTube
+    predicate: instance of
+    object: recommendation systems
+  expected_id:
+    subject: Q866
+    predicate: P31
+    object: Q109330091
+- triple:
+    subject: Amazon
+    predicate: instance of
+    object: recommendation systems
+  expected_id:
+    subject: Q3884
+    predicate: P31
+    object: Q109330091
+- triple:
+    subject: Netflix
+    predicate: instance of
+    object: recommendation systems
+  expected_id:
+    subject: Q907311
+    predicate: P31
+    object: Q109330091
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: virtual assistants
+  expected_id:
+    subject: Q11660
+    predicate: P1012
+    object: Q121329598
+- triple:
+    subject: Google Assistant
+    predicate: instance of
+    object: virtual assistants
+  expected_id:
+    subject: Q25025241
+    predicate: P31
+    object: Q121329598
+- triple:
+    subject: Siri
+    predicate: instance of
+    object: virtual assistants
+  expected_id:
+    subject: Q1772342
+    predicate: P31
+    object: Q121329598
+- triple:
+    subject: Alexa
+    predicate: instance of
+    object: virtual assistants
+  expected_id:
+    subject: Q1752733
+    predicate: P31
+    object: Q121329598
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: autonomous vehicles
+  expected_id:
+    subject: Q11660
+    predicate: P1012
+    object: Q88642937
+- triple:
+    subject: Waymo
+    predicate: instance of
+    object: autonomous vehicle
+  expected_id:
+    subject: Q15330
+    predicate: P31
+    object: Q116285085
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: generative and creative tools
+  expected_id:
+    subject: Q11660
+    predicate: P1012
+    object: not_found
+- triple:
+    subject: ChatGPT
+    predicate: instance of
+    object: generative tool
+  expected_id:
+    subject: Q115564437
+    predicate: P31
+    object: not_found
+- triple:
+    subject: AI art
+    predicate: instance of
+    object: generative tool
+  expected_id:
+    subject: Q65066631
+    predicate: P31
+    object: not_found
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: includes
+    object: strategy games
+  expected_id:
+    subject: Q11660
+    predicate: P1012
+    object: Q87194671
+- triple:
+    subject: Chess
+    predicate: instance of
+    object: strategy game
+  expected_id:
+    subject: Q718
+    predicate: P31
+    object: Q1150710
+- triple:
+    subject: Go
+    predicate: instance of
+    object: strategy game
+  expected_id:
+    subject: Q37227
+    predicate: P31
+    object: Q1150710
+- triple:
+    subject: AI applications
+    predicate: not perceived as
+    object: AI
+  expected_id:
+    subject: Q96325649
+    predicate: P1889
+    object: Q25228
+- triple:
+    subject: AI applications
+    predicate: filter into
+    object: general applications
+  expected_id:
+    subject: Q96325649
+    predicate: P4330
+    object: Q52578816
+- triple:
+    subject: AI applications
+    predicate: not explicitly labeled as
+    object: artificial intelligence
+  expected_id:
+    subject: Q96325649
+    predicate: P5997
+    object: Q11660
+- triple:
+    subject: Subfields of AI
+    predicate: centered around
+    object: goals
+  expected_id:
+    subject: not_found
+    predicate: P1776
+    object: Q4503831
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: knowledge representation and reasoning
+  expected_id:
+    subject: not_found
+    predicate: P1647
+    object: Q3478658
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: planning
+  expected_id:
+    subject: not_found
+    predicate: P1647
+    object: Q309100
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: learning
+  expected_id:
+    subject: not_found
+    predicate: P1647
+    object: Q133500
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: natural language processing
+  expected_id:
+    subject: not_found
+    predicate: P1647
+    object: Q30642
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: perception
+  expected_id:
+    subject: not_found
+    predicate: P1647
+    object: Q2070151
+- triple:
+    subject: Goals of Artificial intelligence (AI)
+    predicate: includes subfields
+    object: robotics
+  expected_id:
+    subject: not_found
+    predicate: P1647
+    object: Q170978
+- triple:
+    subject: General intelligence
+    predicate: is
+    object: the ability to perform tasks
+  expected_id:
+    subject: Q1753797
+    predicate: P642
+    object: not_found
+- triple:
+    subject: AI researchers
+    predicate: adapted and integrated
+    object: techniques
+  expected_id:
+    subject: Q59087900
+    predicate: P5202
+    object: Q23907496
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: search optimization
+  expected_id:
+    subject: Q11660
+    predicate: P2283
+    object: Q7441680
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: mathematical optimization
+  expected_id:
+    subject: Q11660
+    predicate: P2283
+    object: Q141495
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: formal logic
+  expected_id:
+    subject: Q11660
+    predicate: P2283
+    object: Q1003009
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: artificial neural networks
+  expected_id:
+    subject: Q11660
+    predicate: P2283
+    object: Q192776
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: statistics
+  expected_id:
+    subject: Q11660
+    predicate: P2283
+    object: Q12483
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: operations research
+  expected_id:
+    subject: Q11660
+    predicate: P2283
+    object: Q194292
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: uses techniques from
+    object: economics
+  expected_id:
+    subject: Q11660
+    predicate: P2283
+    object: Q8134
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: draws upon
+    object: psychology
+  expected_id:
+    subject: Q11660
+    predicate: P8824
+    object: Q9418
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: draws upon
+    object: linguistics
+  expected_id:
+    subject: Q11660
+    predicate: P8824
+    object: Q8162
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: draws upon
+    object: philosophy
+  expected_id:
+    subject: Q11660
+    predicate: P8824
+    object: Q5891
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: draws upon
+    object: neuroscience
+  expected_id:
+    subject: Q11660
+    predicate: P8824
+    object: Q15708571
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: draws upon
+    object: other fields
+  expected_id:
+    subject: Q11660
+    predicate: P8824
+    object: not_found
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: founded
+    object: '1956'
+  expected_id:
+    subject: Q11660
+    predicate: P112
+    object: Q5221
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: went through
+    object: cycles of optimism and disappointment
+  expected_id:
+    subject: Q11660
+    predicate: P2825
+    object: not_found
+- triple:
+    subject: Artificial intelligence (AI)
+    predicate: experienced loss of
+    object: funding
+  expected_id:
+    subject: Q11660
+    predicate: P12680
+    object: Q6055890
+- triple:
+    subject: 'Funding '
+    predicate: increased
+    object: after 2012
+  expected_id:
+    subject: Q372353
+    predicate: P1911
+    object: not_found
+- triple:
+    subject: Interest
+    predicate: increased
+    object: after 2012
+  expected_id:
+    subject: Q241625
+    predicate: P1911
+    object: not_found
+- triple:
+    subject: Deep learning
+    predicate: outperformed
+    object: previous AI techniques
+  expected_id:
+    subject: Q197536
+    predicate: P3452
+    object: not_found

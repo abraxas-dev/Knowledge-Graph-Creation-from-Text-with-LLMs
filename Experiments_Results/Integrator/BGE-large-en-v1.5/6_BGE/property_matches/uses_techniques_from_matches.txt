@@ -1,0 +1,53 @@
+Top matches for predicate: "uses techniques from"
+==================================================
+
+1. Match Details:
+   Property ID: P12876
+   Label: writing technique
+   Similarity Score: 0.7145
+
+2. Match Details:
+   Property ID: P3095
+   Label: practiced by
+   Similarity Score: 0.7036
+
+3. Match Details:
+   Property ID: P2392
+   Label: teaching method
+   Similarity Score: 0.7026
+
+4. Match Details:
+   Property ID: P2283
+   Label: uses
+   Similarity Score: 0.6888
+
+5. Match Details:
+   Property ID: P366
+   Label: has use
+   Similarity Score: 0.6856
+
+6. Match Details:
+   Property ID: P941
+   Label: inspired by
+   Similarity Score: 0.6810
+
+7. Match Details:
+   Property ID: P5707
+   Label: samples from work
+   Similarity Score: 0.6807
+
+8. Match Details:
+   Property ID: P5831
+   Label: usage example
+   Similarity Score: 0.6795
+
+9. Match Details:
+   Property ID: P2936
+   Label: language used
+   Similarity Score: 0.6774
+
+10. Match Details:
+   Property ID: P8192
+   Label: Joconde technique ID
+   Similarity Score: 0.6701
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "named"
+==================================================
+
+1. Match Details:
+   Property ID: P3938
+   Label: named by
+   Similarity Score: 0.8975
+
+2. Match Details:
+   Property ID: P138
+   Label: named after
+   Similarity Score: 0.8006
+
+3. Match Details:
+   Property ID: P735
+   Label: given name
+   Similarity Score: 0.7930
+
+4. Match Details:
+   Property ID: P2561
+   Label: name
+   Similarity Score: 0.7793
+
+5. Match Details:
+   Property ID: P7407
+   Label: name (image)
+   Similarity Score: 0.7710
+
+6. Match Details:
+   Property ID: P9687
+   Label: author given names
+   Similarity Score: 0.7680
+
+7. Match Details:
+   Property ID: P12089
+   Label: self-identified name
+   Similarity Score: 0.7657
+
+8. Match Details:
+   Property ID: P1449
+   Label: nickname
+   Similarity Score: 0.7580
+
+9. Match Details:
+   Property ID: P1813
+   Label: short name
+   Similarity Score: 0.7522
+
+10. Match Details:
+   Property ID: P4239
+   Label: vocalized name
+   Similarity Score: 0.7441
+

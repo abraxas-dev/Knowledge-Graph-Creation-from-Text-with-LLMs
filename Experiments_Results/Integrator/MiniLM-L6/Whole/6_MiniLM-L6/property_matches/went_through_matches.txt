@@ -1,0 +1,53 @@
+Top matches for predicate: "went through"
+==================================================
+
+1. Match Details:
+   Property ID: P2825
+   Label: via
+   Similarity Score: 0.5024
+
+2. Match Details:
+   Property ID: P156
+   Label: followed by
+   Similarity Score: 0.4632
+
+3. Match Details:
+   Property ID: P11801
+   Label: visited by
+   Similarity Score: 0.4463
+
+4. Match Details:
+   Property ID: P155
+   Label: follows
+   Similarity Score: 0.4200
+
+5. Match Details:
+   Property ID: P3093
+   Label: recovered by
+   Similarity Score: 0.4022
+
+6. Match Details:
+   Property ID: P9681
+   Label: voted on by
+   Similarity Score: 0.4005
+
+7. Match Details:
+   Property ID: P10818
+   Label: last entry
+   Similarity Score: 0.3996
+
+8. Match Details:
+   Property ID: P7209
+   Label: ordeal by
+   Similarity Score: 0.3964
+
+9. Match Details:
+   Property ID: P7787
+   Label: heading
+   Similarity Score: 0.3942
+
+10. Match Details:
+   Property ID: P361
+   Label: part of
+   Similarity Score: 0.3908
+

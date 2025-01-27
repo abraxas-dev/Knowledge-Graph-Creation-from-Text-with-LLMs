@@ -1,0 +1,53 @@
+Top matches for predicate: "founded"
+==================================================
+
+1. Match Details:
+   Property ID: P112
+   Label: founded by
+   Similarity Score: 0.8891
+
+2. Match Details:
+   Property ID: P1416
+   Label: affiliation
+   Similarity Score: 0.6022
+
+3. Match Details:
+   Property ID: P1830
+   Label: owner of
+   Similarity Score: 0.5397
+
+4. Match Details:
+   Property ID: P127
+   Label: owned by
+   Similarity Score: 0.5227
+
+5. Match Details:
+   Property ID: P463
+   Label: member of
+   Similarity Score: 0.4948
+
+6. Match Details:
+   Property ID: P495
+   Label: country of origin
+   Similarity Score: 0.4931
+
+7. Match Details:
+   Property ID: P170
+   Label: creator
+   Similarity Score: 0.4800
+
+8. Match Details:
+   Property ID: P1716
+   Label: brand
+   Similarity Score: 0.4789
+
+9. Match Details:
+   Property ID: P8001
+   Label: endorsed by
+   Similarity Score: 0.4661
+
+10. Match Details:
+   Property ID: P155
+   Label: follows
+   Similarity Score: 0.4590
+

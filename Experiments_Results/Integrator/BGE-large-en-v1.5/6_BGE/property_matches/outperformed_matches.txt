@@ -1,0 +1,53 @@
+Top matches for predicate: "outperformed"
+==================================================
+
+1. Match Details:
+   Property ID: P2522
+   Label: competition won
+   Similarity Score: 0.7179
+
+2. Match Details:
+   Property ID: P1346
+   Label: winner
+   Similarity Score: 0.6831
+
+3. Match Details:
+   Property ID: P991
+   Label: successful candidate
+   Similarity Score: 0.6786
+
+4. Match Details:
+   Property ID: P2881
+   Label: promoted
+   Similarity Score: 0.6584
+
+5. Match Details:
+   Property ID: P5202
+   Label: adapted by
+   Similarity Score: 0.6439
+
+6. Match Details:
+   Property ID: P2957
+   Label: throughput
+   Similarity Score: 0.6391
+
+7. Match Details:
+   Property ID: P5249
+   Label: sports competition competed at
+   Similarity Score: 0.6309
+
+8. Match Details:
+   Property ID: P750
+   Label: distributed by
+   Similarity Score: 0.6292
+
+9. Match Details:
+   Property ID: P3260
+   Label: points awarded
+   Similarity Score: 0.6287
+
+10. Match Details:
+   Property ID: P12475
+   Label: top scorer
+   Similarity Score: 0.6262
+

@@ -1,0 +1,53 @@
+Top matches for predicate: "not explicitly labeled as"
+==================================================
+
+1. Match Details:
+   Property ID: P10476
+   Label: identifies
+   Similarity Score: 0.5122
+
+2. Match Details:
+   Property ID: P9660
+   Label: not found in
+   Similarity Score: 0.5099
+
+3. Match Details:
+   Property ID: P511
+   Label: honorific prefix
+   Similarity Score: 0.5006
+
+4. Match Details:
+   Property ID: P2561
+   Label: name
+   Similarity Score: 0.5006
+
+5. Match Details:
+   Property ID: P4970
+   Label: alternative name
+   Similarity Score: 0.5006
+
+6. Match Details:
+   Property ID: P7380
+   Label: identified in image by
+   Similarity Score: 0.4942
+
+7. Match Details:
+   Property ID: P264
+   Label: record label
+   Similarity Score: 0.4941
+
+8. Match Details:
+   Property ID: P6191
+   Label: language style
+   Similarity Score: 0.4941
+
+9. Match Details:
+   Property ID: P2670
+   Label: has part(s) of the class
+   Similarity Score: 0.4687
+
+10. Match Details:
+   Property ID: P1932
+   Label: object named as
+   Similarity Score: 0.4614
+

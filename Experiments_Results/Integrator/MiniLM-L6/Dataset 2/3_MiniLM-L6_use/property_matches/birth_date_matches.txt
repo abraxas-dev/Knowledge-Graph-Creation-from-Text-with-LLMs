@@ -1,0 +1,53 @@
+Top matches for predicate: "birth date"
+==================================================
+
+1. Match Details:
+   Property ID: P569
+   Label: date of birth
+   Similarity Score: 1.0000
+
+2. Match Details:
+   Property ID: P3150
+   Label: birthday
+   Similarity Score: 0.7236
+
+3. Match Details:
+   Property ID: P837
+   Label: day in year for periodic occurrence
+   Similarity Score: 0.6946
+
+4. Match Details:
+   Property ID: P585
+   Label: point in time
+   Similarity Score: 0.6946
+
+5. Match Details:
+   Property ID: P6949
+   Label: announcement date
+   Similarity Score: 0.6946
+
+6. Match Details:
+   Property ID: P19
+   Label: place of birth
+   Similarity Score: 0.6463
+
+7. Match Details:
+   Property ID: P571
+   Label: inception
+   Similarity Score: 0.6430
+
+8. Match Details:
+   Property ID: P2913
+   Label: date depicted
+   Similarity Score: 0.6396
+
+9. Match Details:
+   Property ID: P2310
+   Label: minimum date (property constraint)
+   Similarity Score: 0.6249
+
+10. Match Details:
+   Property ID: P1319
+   Label: earliest date
+   Similarity Score: 0.6249
+

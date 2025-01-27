@@ -1,3 +1,7 @@
+"""
+Project : Knowledge Graph Creation from Text
+Author : @abraxas-dev
+"""
 from SPARQLWrapper import SPARQLWrapper, JSON
 from sentence_transformers import SentenceTransformer
 import json

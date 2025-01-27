@@ -1,3 +1,7 @@
+"""
+Project : Knowledge Graph Creation from Text
+Author : @abraxas-dev
+"""
 import os
 from pathlib import Path
 import tqdm
@@ -143,6 +147,7 @@ class TripleGenerator:
     def _parse_and_save_triples(self, response, output_file):
         """
         Parse the response text into formatted triples and write each directly to the file.
+        Author : @paza15
         """
         try:
             lines = response.strip().split("\n")
@@ -228,6 +233,7 @@ class TripleGenerator:
         """
         Validate and deduplicate triples from all `_triples.txt` files in the output directory.
         Only keeps valid triples and ensures no duplicates are added.
+        Author : @paza15
         """
         try:
             # Find all triple files

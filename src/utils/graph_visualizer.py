@@ -1,3 +1,7 @@
+"""
+Project : Knowledge Graph Creation from Text
+Author : @abraxas-dev
+"""
 import networkx as nx
 import matplotlib.pyplot as plt
 from rdflib import Graph, URIRef

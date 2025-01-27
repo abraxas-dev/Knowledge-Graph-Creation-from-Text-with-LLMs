@@ -1,3 +1,7 @@
+"""
+Project : Knowledge Graph Creation from Text
+Author : @abraxas-dev
+"""
 import json
 from typing import List, Tuple, Dict, Union
 import requests

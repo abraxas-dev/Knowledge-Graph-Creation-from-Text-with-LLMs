@@ -1,3 +1,7 @@
+"""
+Project : Knowledge Graph Creation from Text
+Author : @abraxas-dev
+"""
 import logging
 import os
 from datetime import datetime

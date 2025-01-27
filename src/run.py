@@ -1,8 +1,7 @@
 """
-Main execution script for the Knowledge Graph Generation Pipeline.
-Handles different run modes and configuration management.
+Project : Knowledge Graph Creation from Text
+Author : @abraxas-dev
 """
-
 import os
 import sys
 from pathlib import Path

@@ -1,3 +1,7 @@
+"""
+Project : Knowledge Graph Creation from Text
+Author : @paza15
+"""
 import re
 import yaml
 from sklearn.metrics import precision_score, recall_score, f1_score

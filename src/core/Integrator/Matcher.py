@@ -1,3 +1,7 @@
+"""
+Project : Knowledge Graph Creation from Text
+Author : @abraxas-dev
+"""
 from typing import List, Dict, Union
 import os
 from urllib.parse import quote

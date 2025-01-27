@@ -1,3 +1,7 @@
+"""
+Project : Knowledge Graph Creation from Text
+Author : @paza15
+"""
 import os
 import requests
 from bs4 import BeautifulSoup

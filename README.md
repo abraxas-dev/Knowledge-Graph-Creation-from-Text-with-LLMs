@@ -3,6 +3,8 @@ A robust system for automatically constructing knowledge graphs from unstructure
 
 The project was part of the **Practical Course: Data Engineering**.
 
+**README IS NOT FINISHED YET**
+
 ## Overview 📝
 
 This project implements an end-to-end pipeline for:
@@ -14,7 +16,22 @@ This project implements an end-to-end pipeline for:
 ## Performance Highlights 📊
 
 Our system outperforms the standart Wikidata API in property matching :
-![Property Matching Performance](images/Comparison of the Methods.png)
+![Property Matching Performance](images/performance_for_methods.png)
+
+## Developers :
+
+**Didarbek Baidaliyev - abraxas-dev**
+- System Architect
+- Developed Integrator, Generator & Evaluator
+- Data Analysis
+- Documentation and testing
+
+**Ar Pazari - paza15**
+- Developed Extractor & Metrics
+- Data Preparer
+
+**Supervisor - (?)**
+- Thanks to our supervisor for his guidance and support throughout the project.
 
 ## Key Features ✨
 
@@ -30,17 +47,25 @@ Our system outperforms the standart Wikidata API in property matching :
 1. Clone the repository
 ```bash
 git clone https://github.com/abraxas-dev/Knowledge-Graph-Creation-from-Text-with-LLMs.git
+```
+
+2. Navigate to the project directory
+```bash
 cd ./Knowledge-Graph-Creation-from-Text-with-LLMs
 ```
 
-2. Install the dependencies
+3. Create a virtual environment and install the dependencies
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+4. Install the dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Create a config file / Modify the main config file
-
-4. Run the pipeline
+5. Modify the config file and run the pipeline
 ```bash
 python run.py --config config/YourConfig.yaml --mode full
 ```

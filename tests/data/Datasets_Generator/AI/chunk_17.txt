@@ -1,0 +1,1 @@
+There is also the difficulty of knowledge acquisition, the problem of obtaining knowledge for AI applications. An "agent" is anything that perceives and takes actions in the world. A rational agent has goals or preferences and takes actions to make them happen. In automated planning, the agent has a specific goal.

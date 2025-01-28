@@ -1,15 +1,20 @@
 """
-Project : Knowledge Graph Creation from Text
-Author : @abraxas-dev
+Knowledge Graph Generation Pipeline
+
+This module serves as the main entry point for the Knowledge Graph Generation pipeline.
+It orchestrates the three main components: Extractor, TripleGenerator, and Integrator.
+
+The pipeline can be run in different modes:
+- full: Executes all components sequentially
+- extract: Only runs the content extraction phase
+- generate: Only runs the triple generation phase
+- integrate: Only runs the knowledge graph integration phase
+
+Author: @abraxas-dev
 """
 import os
 import sys
 from pathlib import Path
-
-# Add the project root directory to Python path
-project_root = str(Path(__file__).parent.parent)
-sys.path.insert(0, project_root)
-
 import argparse
 import yaml
 from typing import Dict
@@ -18,10 +23,22 @@ from src.core.TripleGenerator import TripleGenerator
 from src.core.Integrator.Integrator import Integrator
 from src.utils.logger_config import setup_logger   
 
+# Configure Python path to include project root for proper imports
+project_root = str(Path(__file__).parent.parent)
+sys.path.insert(0, project_root)
+
 logger = setup_logger(__name__)
 
 def load_config(config_path: str) -> Dict:
-    """Load configuration from YAML file."""
+    """
+    Load and parse the YAML configuration file.
+
+    Args:
+        config_path (str): Path to the YAML configuration file
+
+    Returns:
+        Dict: Parsed configuration dictionary
+    """
     try:
         with open(config_path, 'r') as f:
             return yaml.safe_load(f)
@@ -30,7 +47,19 @@ def load_config(config_path: str) -> Dict:
         sys.exit(1)
 
 def setup_directories(config: Dict) -> None:
-    """Create necessary directories from config."""
+    """
+    Create all necessary directories specified in the configuration.
+    
+    This ensures that all required directories exist before pipeline execution.
+    Creates directories for processed data, generated triples, and the final
+    knowledge graph.
+
+    Args:
+        config (Dict): Configuration dictionary containing data paths
+
+    Raises:
+        SystemExit: If directory creation fails
+    """
     try:
         for path in config["data_paths"].values():
             os.makedirs(path, exist_ok=True)
@@ -41,11 +70,18 @@ def setup_directories(config: Dict) -> None:
 
 def run_pipeline(config: Dict, mode: str = "full") -> None:
     """
-    Run the knowledge graph generation pipeline.
-    
+    This function orchestrates the three main components of the pipeline:
+    1. Extractor: Extracts content from specified URLs
+    2. TripleGenerator: Generates RDF triples from extracted content
+    3. Integrator: Integrates generated triples into a knowledge graph
+
     Args:
-        config: Configuration dictionary
-        mode: Pipeline execution mode ('full', 'extract', 'generate', or 'integrate')
+        config (Dict): Configuration dictionary containing all necessary parameters
+        mode (str): Pipeline execution mode. Options:
+                   - "full": Run all components
+                   - "extract": Only run content extraction
+                   - "generate": Only run triple generation
+                   - "integrate": Only run knowledge graph integration
     """
     try:
         logger.info("="*50)
@@ -96,7 +132,17 @@ def run_pipeline(config: Dict, mode: str = "full") -> None:
         raise
 
 def main():
-    """Main entry point with argument parsing."""
+    """
+    Main entry point for the Knowledge Graph Generation pipeline.
+
+    Handles command-line argument parsing and initiates the pipeline execution.
+    Supports different execution modes and custom configuration files.
+
+    Command-line Arguments:
+        --config: Path to the configuration file (default: ./config/main.yaml)
+        --mode: Pipeline execution mode (default: full)
+               Options: full, extractor, generator, integrator
+    """
     parser = argparse.ArgumentParser(
         description="Knowledge Graph Generation Pipeline",
         formatter_class=argparse.RawDescriptionHelpFormatter
@@ -105,25 +151,22 @@ def main():
     parser.add_argument(
         "--config", 
         default="./config/main.yaml",
-        help="Path to configuration file (default: config.yaml)"
+        help="Path to configuration file (default: main.yaml)"
     )
     
     parser.add_argument(
         "--mode",
-        choices=["full", "extract", "generate", "integrate"],
+        choices=["full", "extractor", "generator", "integrator"],
         default="full",
         help="Pipeline execution mode (default: full)"
     )
 
     args = parser.parse_args()
     
-    # Load configuration
     config = load_config(args.config)
     
-    # Setup directories
     setup_directories(config)
-    
-    # Run pipeline
+
     run_pipeline(config, args.mode)
 
 if __name__ == "__main__":

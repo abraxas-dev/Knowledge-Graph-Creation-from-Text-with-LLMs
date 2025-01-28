@@ -1,0 +1,15 @@
+("LeBron Raymone James Sr.", "is", "American");
+("LeBron Raymone James Sr.", "is a", "professional basketball player");
+("LeBron Raymone James Sr.", "plays for", "Los Angeles Lakers");
+("Los Angeles Lakers", "is in", "National Basketball Association");
+("Los Angeles Lakers", "are", "NBA");
+("LeBron Raymone James Sr.", "nationality", "American");
+("LeBron Raymone James Sr.", "profession", "professional basketball player");
+("LeBron Raymone James Sr.", "plays for", "Los Angeles Lakers");
+("Los Angeles Lakers", "participates in", "National Basketball Association");
+("Los Angeles Lakers", "league", "NBA");
+("LeBron Raymone James Sr.", "nationality", "American) - This triple indicates that LeBron Raymone James Sr. is American.");
+("LeBron Raymone James Sr.", "profession", "professional basketball player) - This triple indicates that LeBron Raymone James Sr.'s profession is a professional basketball player.");
+("LeBron Raymone James Sr.", "plays for", "Los Angeles Lakers) - This triple indicates that LeBron Raymone James Sr. plays for the Los Angeles Lakers.");
+("Los Angeles Lakers", "participates in", "National Basketball Association) - This triple indicates that the Los Angeles Lakers participate in the National Basketball Association.");
+("Los Angeles Lakers", "league", "NBA) - This triple indicates that the Los Angeles Lakers are part of the NBA league.");

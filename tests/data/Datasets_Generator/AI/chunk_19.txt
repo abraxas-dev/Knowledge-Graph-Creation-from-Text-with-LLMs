@@ -1,0 +1,1 @@
+For each possible action, it can calculate the "expected utility": the utility of all possible outcomes of the action, weighted by the probability that the outcome will occur. It can then choose the action with the maximum expected utility. In classical planning, the agent knows exactly what the effect of any action will be.

@@ -1,0 +1,30 @@
+
+Output:
+(LeBron Raymone James Sr., born, December 30, 1984)
+(LeBron Raymone James Sr., is, American)
+(LeBron Raymone James Sr., is a, professional basketball player)
+(LeBron Raymone James Sr., plays for, Los Angeles Lakers)
+(Los Angeles Lakers, is in, National Basketball Association)
+(Los Angeles Lakers, are, NBA)
+
+Note: The RDF triples are simplified and may not capture all possible semantic relationships. The actual extraction could be more complex depending on the context and the granularity of the information required.
+
+
+Output:
+(LeBron Raymone James Sr., born, December 30, 1984)
+(LeBron Raymone James Sr., nationality, American)
+(LeBron Raymone James Sr., profession, professional basketball player)
+(LeBron Raymone James Sr., plays for, Los Angeles Lakers)
+(Los Angeles Lakers, participates in, National Basketball Association)
+(Los Angeles Lakers, league, NBA)
+
+In the above triples:
+
+1. (LeBron Raymone James Sr., born, December 30, 1984) - This triple indicates the birth date of LeBron Raymone James Sr.
+2. (LeBron Raymone James Sr., nationality, American) - This triple indicates that LeBron Raymone James Sr. is American.
+3. (LeBron Raymone James Sr., profession, professional basketball player) - This triple indicates that LeBron Raymone James Sr.'s profession is a professional basketball player.
+4. (LeBron Raymone James Sr., plays for, Los Angeles Lakers) - This triple indicates that LeBron Raymone James Sr. plays for the Los Angeles Lakers.
+5. (Los Angeles Lakers, participates in, National Basketball Association) - This triple indicates that the Los Angeles Lakers participate in the National Basketball Association.
+6. (Los Angeles Lakers, league, NBA) - This triple indicates that the Los Angeles Lakers are part of the NBA league.
+
+These triples are extracted from the given text and represent the basic semantic relationships between the entities mentioned.

@@ -1,0 +1,1 @@
+However, many AI applications are not perceived as AI: "A lot of cutting edge AI has filtered into general applications, often without being called AI because once something becomes useful enough and common enough it's not labeled AI anymore." Various subfields of AI research are centered around particular goals and the use of particular tools.

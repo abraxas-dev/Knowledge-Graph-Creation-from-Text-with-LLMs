@@ -12,20 +12,21 @@ The pipeline can be run in different modes:
 
 Author: @abraxas-dev
 """
-import os
+
 import sys
 from pathlib import Path
+
+project_root = str(Path(__file__).parent.parent)
+sys.path.insert(0, project_root)
+
+import os
 import argparse
 import yaml
 from typing import Dict
 from src.core.Extractor import Extractor
-from core.Generator.TripleGenerator import TripleGenerator
-from src.core.Integrator.Integrator import Integrator
+from src.core.Generator import TripleGenerator
+from src.core.Integrator import Integrator
 from src.utils.logger_config import setup_logger   
-
-# Configure Python path to include project root for proper imports
-project_root = str(Path(__file__).parent.parent)
-sys.path.insert(0, project_root)
 
 logger = setup_logger(__name__)
 
@@ -56,9 +57,6 @@ def setup_directories(config: Dict) -> None:
 
     Args:
         config (Dict): Configuration dictionary containing data paths
-
-    Raises:
-        SystemExit: If directory creation fails
     """
     try:
         for path in config["data_paths"].values():
@@ -70,11 +68,7 @@ def setup_directories(config: Dict) -> None:
 
 def run_pipeline(config: Dict, mode: str = "full") -> None:
     """
-    This function orchestrates the three main components of the pipeline:
-    1. Extractor: Extracts content from specified URLs
-    2. TripleGenerator: Generates RDF triples from extracted content
-    3. Integrator: Integrates generated triples into a knowledge graph
-
+    This function orchestrates the three main components of the pipeline.
     Args:
         config (Dict): Configuration dictionary containing all necessary parameters
         mode (str): Pipeline execution mode. Options:
@@ -161,10 +155,8 @@ def main():
         help="Pipeline execution mode (default: full)"
     )
 
-    args = parser.parse_args()
-    
+    args = parser.parse_args()   
     config = load_config(args.config)
-    
     setup_directories(config)
 
     run_pipeline(config, args.mode)

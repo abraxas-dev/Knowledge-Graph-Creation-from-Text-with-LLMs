@@ -8,6 +8,7 @@ from typing import Dict, Tuple
 from urllib.parse import quote
 from src.utils.logger_config import setup_logger
 
+
 class GraphManager:
     """
     Class for managing RDF graph operations and statistics.

@@ -11,6 +11,7 @@ import requests
 from time import sleep
 from src.utils.logger_config import setup_logger
 
+
 class Matcher:
     """
     Class for finding and saving matches between predicates and Wikidata properties.

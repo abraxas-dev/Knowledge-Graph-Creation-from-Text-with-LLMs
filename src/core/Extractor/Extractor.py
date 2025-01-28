@@ -3,6 +3,8 @@ Project : Knowledge Graph Creation from Text
 Author : @paza15
 """
 import os
+import sys
+from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 import nltk
@@ -28,7 +30,7 @@ class Extractor:
             chunk_size (int): Maximum size of each text chunk.
         """
         self.logger = setup_logger(__name__)
-        self.urls = urls  # List of URLs to process
+        self.urls = urls 
         self.processed_data_path = processed_data_path
         self.chunk_size = chunk_size
 

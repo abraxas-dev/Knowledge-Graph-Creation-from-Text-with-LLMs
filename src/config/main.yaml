@@ -41,7 +41,7 @@ llm:
     {text}
   # Maximum number of chunks to process per run
   # Set to None to process all chunks
-  max_chunks: 10
+  max_chunks: 1
   # Model generation parameters for controlling output
   model_generate_parameters:
     # Controls randomness: 0.0 for deterministic, higher for more creative

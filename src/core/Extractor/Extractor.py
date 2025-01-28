@@ -145,7 +145,6 @@ class Extractor:
 
 
 if __name__ == "__main__":
-    # Sample test configuration
     test_urls = [
         "https://en.wikipedia.org/wiki/Artificial_intelligence",
         
@@ -153,6 +152,5 @@ if __name__ == "__main__":
     output_path = "./test_processed_data"
     chunk_size = 500
 
-    # Create and run the extractor
     extractor = Extractor(test_urls, output_path, chunk_size)
     extractor.preprocess()

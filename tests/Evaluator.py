@@ -15,7 +15,7 @@ project_root = str(Path(__file__).parent.parent)
 sys.path.insert(0, project_root)
 
 from src.core.Integrator.Integrator import Integrator
-from src.core.TripleGenerator import TripleGenerator
+from core.Generator.TripleGenerator import TripleGenerator
 from test_modules.metrics import TripleEvaluator
 from test_modules.metrics_generator import TextTripleEvaluator
 from src.utils.logger_config import setup_logger

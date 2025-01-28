@@ -19,7 +19,7 @@ import argparse
 import yaml
 from typing import Dict
 from src.core.Extractor import Extractor
-from src.core.TripleGenerator import TripleGenerator
+from core.Generator.TripleGenerator import TripleGenerator
 from src.core.Integrator.Integrator import Integrator
 from src.utils.logger_config import setup_logger   
 

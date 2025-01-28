@@ -3,7 +3,7 @@ Core module for knowledge graph construction
 """
 
 from .Extractor import Extractor
-from .TripleGenerator import TripleGenerator
+from .Generator import TripleGenerator
 from .Integrator import Integrator, GraphManager, Matcher, WikidataEmbeddingGenerator
 
 __all__ = [

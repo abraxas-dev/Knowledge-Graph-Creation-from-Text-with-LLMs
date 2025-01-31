@@ -54,7 +54,7 @@ git clone https://github.com/abraxas-dev/Knowledge-Graph-Creation-from-Text-with
 cd ./Knowledge-Graph-Creation-from-Text-with-LLMs
 ```
 
-3. Create a virtual environment and install the dependencies
+3. Create a virtual environment
 ```bash
 python -m venv venv
 source venv/bin/activate

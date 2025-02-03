@@ -30,8 +30,8 @@ Our system outperforms the standart Wikidata API in property matching :
 - Developed Extractor & Metrics
 - Data Preparer
 
-**Supervisor - (?)**
-- Thanks to our supervisor for his guidance and support throughout the project.
+**Supervisor - (Samuel Garcia (https://github.com/Sondeluz))**
+- Thanks to our supervisor for his guidance and support throughout the project :) 
 
 ## Key Features ✨
 

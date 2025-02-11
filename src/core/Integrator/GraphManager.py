@@ -7,6 +7,10 @@ from rdflib.namespace import RDF, RDFS, XSD
 from typing import Dict, Tuple
 from urllib.parse import quote
 from src.utils.logger_config import setup_logger
+import networkx as nx
+import matplotlib.pyplot as plt
+import re
+from pathlib import Path
 
 
 class GraphManager:
@@ -24,6 +28,10 @@ class GraphManager:
         # Bind namespaces
         self.g.bind("wd", self.wd)
         self.g.bind("wdt", self.wdt)
+        
+        # Initialize NetworkX graph for visualization
+        self.nx_graph = nx.DiGraph()
+        self.node_labels = {}
         
         self.logger.info("✅ Successfully initialized knowledge graph and namespaces")
 
@@ -110,4 +118,103 @@ class GraphManager:
             self.logger.info(f"✅ Successfully loaded graph from {input_file}")
         except Exception as e:
             self.logger.error(f"❌ Error loading graph: {str(e)}")
+            raise 
+
+    def _extract_id(self, uri: str) -> str:
+        """
+        Extract the ID or label from a URI.
+        
+        Args:
+            uri: URI to extract ID from
+            
+        Returns:
+            str: Extracted ID or label
+        """
+        wikidata_match = re.search(r'[QP]\d+$', uri)
+        if wikidata_match:
+            return wikidata_match.group()
+        return uri.split('/')[-1].replace('_', ' ')
+
+    def prepare_visualization(self) -> None:
+        """
+        Prepare the NetworkX graph for visualization by converting RDF graph.
+        """
+        self.nx_graph.clear()
+        self.node_labels.clear()
+        
+        for s, p, o in self.g:
+            if isinstance(s, URIRef) and isinstance(o, URIRef):
+                subject_id = self._extract_id(str(s))
+                object_id = self._extract_id(str(o))
+                predicate_label = self._extract_id(str(p))
+                
+                self.nx_graph.add_node(subject_id)
+                self.nx_graph.add_node(object_id)
+                self.nx_graph.add_edge(subject_id, object_id, label=predicate_label)
+                
+                self.node_labels[subject_id] = subject_id
+                self.node_labels[object_id] = object_id
+
+    def visualize(self, output_dir: str = "./visualizations", 
+                 figsize: Tuple[int, int] = (15, 10),
+                 node_size: int = 2000,
+                 font_size: int = 8,
+                 edge_label_font_size: int = 6,
+                 title: str = "Knowledge Graph Visualization") -> None:
+        """
+        Create and save a visualization of the graph.
+        
+        Args:
+            output_dir: Directory to save the visualization
+            figsize: Size of the figure (width, height)
+            node_size: Size of nodes in the visualization
+            font_size: Font size for node labels
+            edge_label_font_size: Font size for edge labels
+            title: Title of the visualization
+        """
+        try:
+            # Create output directory if it doesn't exist
+            output_dir = Path(output_dir)
+            output_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Prepare the graph for visualization
+            self.prepare_visualization()
+            
+            plt.figure(figsize=figsize)
+            pos = nx.spring_layout(self.nx_graph, k=1, iterations=50)
+            
+            # Draw nodes
+            nx.draw_networkx_nodes(self.nx_graph, pos, 
+                                 node_color='lightblue',
+                                 node_size=node_size)
+            
+            # Draw edges
+            nx.draw_networkx_edges(self.nx_graph, pos, 
+                                 edge_color='gray',
+                                 arrows=True,
+                                 arrowsize=20)
+            
+            # Draw node labels
+            nx.draw_networkx_labels(self.nx_graph, pos,
+                                  labels=self.node_labels,
+                                  font_size=font_size)
+            
+            # Draw edge labels
+            edge_labels = nx.get_edge_attributes(self.nx_graph, 'label')
+            nx.draw_networkx_edge_labels(self.nx_graph, pos,
+                                       edge_labels=edge_labels,
+                                       font_size=edge_label_font_size)
+            
+            plt.title(title)
+            plt.axis('off')
+            
+            # Save the visualization
+            output_file = output_dir / "knowledge_graph_visualization.png"
+            plt.savefig(output_file, format='png', dpi=300, bbox_inches='tight')
+            plt.close()
+            
+            self.logger.info(f"✅ Saved visualization to {output_file}")
+            
+        except Exception as e:
+            self.logger.error(f"❌ Error creating visualization: {str(e)}")
             raise 

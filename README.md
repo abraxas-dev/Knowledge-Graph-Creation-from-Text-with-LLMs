@@ -3,8 +3,6 @@ A robust system for automatically constructing knowledge graphs from unstructure
 
 The project was part of the **Practical Course: Data Engineering**.
 
-**README IS NOT FINISHED YET**
-
 ## Overview 📝
 
 This project implements an end-to-end pipeline for:
